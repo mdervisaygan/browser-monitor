@@ -4,7 +4,7 @@ name: Update data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *" 
+    - cron: "0 * * * *"
 
 jobs:
   update:
@@ -17,6 +17,8 @@ jobs:
         run: yarn install
       - name: Run update.js
         run: xvfb-run --auto-servernum node update.js
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: ls -lh browser_apis
         run: ls -lh browser_apis
       - uses: EndBug/add-and-commit@v7
