@@ -92,6 +92,11 @@ const sendSlackNotification = async (prefix, entry, apiChanges = null) => {
 
   const channel =
     prefix === "chrome-stable" ? "chrome-stable" : "chrome-unstable";
+
+  if (prefix !== "chrome-stable") {
+    return;
+  }
+
   const date = getSimpleDate(new Date(entry.time));
 
   const blocks = [
