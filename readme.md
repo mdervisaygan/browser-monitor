@@ -1197,6 +1197,32 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 137.0.7127.2 (`2025-4-17`) ⚡
+Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_137.0.7117.2_to_137.0.7127.2.diff), [json](./browser_apis/chrome-unstable_137.0.7117.2_to_137.0.7127.2.json), [full list](./browser_apis/chrome-unstable_137.0.7127.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_137.0.7117.2.json	2025-04-17 20:00:51.591322713 +0000
++++ ./browser_apis/chrome-unstable_137.0.7127.2.json	2025-04-17 20:01:19.146306795 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8709,
++  "browserApiCount": 8711,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -7005,7 +7005,9 @@
+     "VideoFrame.prototype.displayHeight",
+     "VideoFrame.prototype.displayWidth",
+     "VideoFrame.prototype.duration",
++    "VideoFrame.prototype.flip",
+     "VideoFrame.prototype.format",
++    "VideoFrame.prototype.rotation",
+     "VideoFrame.prototype.timestamp",
+     "VideoFrame.prototype.visibleRect",
+     "VideoPlaybackQuality",
+```
+
+  
 #### 137.0.7117.2 (`2025-4-10`) 
 No browser API changes.
 
@@ -2452,86 +2478,6 @@ Added 3 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_130.0.6683.2
      "DelegatedInkTrailPresenter.prototype.presentationArea",
      "DelegatedInkTrailPresenter.prototype.updateInkTrailStartPoint",
      "DeviceMotionEvent",
-```
-
-  
-#### 130.0.6683.2 (`2024-8-30`) ⚡
-Added 15 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_130.0.6669.2_to_130.0.6683.2.diff), [json](./browser_apis/chrome-unstable_130.0.6669.2_to_130.0.6683.2.json), [full list](./browser_apis/chrome-unstable_130.0.6683.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_130.0.6669.2.json	2024-08-31 01:06:15.379596834 +0000
-+++ ./browser_apis/chrome-unstable_130.0.6683.2.json	2024-08-31 01:06:44.687760791 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8492,
-+  "browserApiCount": 8507,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3318,6 +3318,8 @@
-     "MathMLElement.prototype.onresize",
-     "MathMLElement.prototype.onscroll",
-     "MathMLElement.prototype.onscrollend",
-+    "MathMLElement.prototype.onscrollsnapchange",
-+    "MathMLElement.prototype.onscrollsnapchanging",
-     "MathMLElement.prototype.onsecuritypolicyviolation",
-     "MathMLElement.prototype.onseeked",
-     "MathMLElement.prototype.onseeking",
-@@ -4215,6 +4217,8 @@
-     "Option.prototype.constructor.prototype.onresize",
-     "Option.prototype.constructor.prototype.onscroll",
-     "Option.prototype.constructor.prototype.onscrollend",
-+    "Option.prototype.constructor.prototype.onscrollsnapchange",
-+    "Option.prototype.constructor.prototype.onscrollsnapchanging",
-     "Option.prototype.constructor.prototype.onsearch",
-     "Option.prototype.constructor.prototype.onsecuritypolicyviolation",
-     "Option.prototype.constructor.prototype.onseeked",
-@@ -5876,6 +5880,8 @@
-     "SVGViewElement.prototype.onresize",
-     "SVGViewElement.prototype.onscroll",
-     "SVGViewElement.prototype.onscrollend",
-+    "SVGViewElement.prototype.onscrollsnapchange",
-+    "SVGViewElement.prototype.onscrollsnapchanging",
-     "SVGViewElement.prototype.onsecuritypolicyviolation",
-     "SVGViewElement.prototype.onseeked",
-     "SVGViewElement.prototype.onseeking",
-@@ -5909,6 +5915,7 @@
-     "Scheduler",
-     "Scheduler.prototype",
-     "Scheduler.prototype.postTask",
-+    "Scheduler.prototype.yield",
-     "Scheduling",
-     "Scheduling.prototype",
-     "Scheduling.prototype.isInputPending",
-@@ -6126,6 +6133,10 @@
-     "SharedWorker.prototype",
-     "SharedWorker.prototype.onerror",
-     "SharedWorker.prototype.port",
-+    "SnapEvent",
-+    "SnapEvent.prototype",
-+    "SnapEvent.prototype.snapTargetBlock",
-+    "SnapEvent.prototype.snapTargetInline",
-     "SourceBuffer",
-     "SourceBuffer.prototype",
-     "SourceBuffer.prototype.abort",
-@@ -7773,6 +7784,8 @@
-     "XMLDocument.prototype.onresume",
-     "XMLDocument.prototype.onscroll",
-     "XMLDocument.prototype.onscrollend",
-+    "XMLDocument.prototype.onscrollsnapchange",
-+    "XMLDocument.prototype.onscrollsnapchanging",
-     "XMLDocument.prototype.onsearch",
-     "XMLDocument.prototype.onsecuritypolicyviolation",
-     "XMLDocument.prototype.onseeked",
-@@ -8287,6 +8300,8 @@
-     "onresize",
-     "onscroll",
-     "onscrollend",
-+    "onscrollsnapchange",
-+    "onscrollsnapchanging",
-     "onsearch",
-     "onsecuritypolicyviolation",
-     "onseeked",
 ```
 
   <!-- browserapis:end -->

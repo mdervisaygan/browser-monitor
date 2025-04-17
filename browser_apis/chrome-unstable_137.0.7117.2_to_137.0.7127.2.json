@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "137.0.7117.2",
+    "to": "137.0.7127.2"
+  },
+  "browserApis": {
+    "added": [
+      "VideoFrame.prototype.flip",
+      "VideoFrame.prototype.rotation"
+    ],
+    "removed": []
+  }
+}
