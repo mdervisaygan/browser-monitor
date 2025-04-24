@@ -1197,6 +1197,53 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 137.0.7141.3 (`2025-4-24`) ⚡
+Added 6 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_137.0.7127.2_to_137.0.7141.3.diff), [json](./browser_apis/chrome-unstable_137.0.7127.2_to_137.0.7141.3.json), [full list](./browser_apis/chrome-unstable_137.0.7141.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_137.0.7127.2.json	2025-04-24 18:01:02.474216514 +0000
++++ ./browser_apis/chrome-unstable_137.0.7141.3.json	2025-04-24 18:01:26.956610333 +0000
+@@ -1,10 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8711,
++  "browserApiCount": 8714,
+   "browserApis": [
+-    "AICreateMonitor",
+-    "AICreateMonitor.prototype",
+-    "AICreateMonitor.prototype.ondownloadprogress",
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+     "AbsoluteOrientationSensor.prototype.constructor",
+@@ -2969,6 +2966,7 @@
+     "ImageData.prototype.colorSpace",
+     "ImageData.prototype.data",
+     "ImageData.prototype.height",
++    "ImageData.prototype.pixelFormat",
+     "ImageData.prototype.width",
+     "ImageDecoder",
+     "ImageDecoder.isTypeSupported",
+@@ -7146,6 +7144,10 @@
+     "WebAssembly.Module.prototype",
+     "WebAssembly.RuntimeError",
+     "WebAssembly.RuntimeError.prototype",
++    "WebAssembly.SuspendError",
++    "WebAssembly.SuspendError.prototype",
++    "WebAssembly.Suspending",
++    "WebAssembly.Suspending.prototype",
+     "WebAssembly.Table",
+     "WebAssembly.Table.prototype",
+     "WebAssembly.Table.prototype.get",
+@@ -7158,6 +7160,7 @@
+     "WebAssembly.compileStreaming",
+     "WebAssembly.instantiate",
+     "WebAssembly.instantiateStreaming",
++    "WebAssembly.promising",
+     "WebAssembly.validate",
+     "WebGL2RenderingContext",
+     "WebGL2RenderingContext.prototype",
+```
+
+  
 #### 137.0.7127.2 (`2025-4-17`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_137.0.7117.2_to_137.0.7127.2.diff), [json](./browser_apis/chrome-unstable_137.0.7117.2_to_137.0.7127.2.json), [full list](./browser_apis/chrome-unstable_137.0.7127.2.json))
  ```diff
@@ -2444,40 +2491,6 @@ Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_130.0.6699.3
      "SerialPort.prototype.forget",
      "SerialPort.prototype.getInfo",
      "SerialPort.prototype.getSignals",
-```
-
-  
-#### 130.0.6699.3 (`2024-9-9`) ⚡
-Added 3 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_130.0.6683.2_to_130.0.6699.3.diff), [json](./browser_apis/chrome-unstable_130.0.6683.2_to_130.0.6699.3.json), [full list](./browser_apis/chrome-unstable_130.0.6699.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_130.0.6683.2.json	2024-09-10 01:07:59.689190310 +0000
-+++ ./browser_apis/chrome-unstable_130.0.6699.3.json	2024-09-10 01:08:22.741300125 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8507,
-+  "browserApiCount": 8509,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -557,6 +557,9 @@
-     "CSSNamespaceRule.prototype",
-     "CSSNamespaceRule.prototype.namespaceURI",
-     "CSSNamespaceRule.prototype.prefix",
-+    "CSSNestedDeclarations",
-+    "CSSNestedDeclarations.prototype",
-+    "CSSNestedDeclarations.prototype.style",
-     "CSSNumericArray",
-     "CSSNumericArray.prototype",
-     "CSSNumericArray.prototype.length",
-@@ -1225,7 +1228,6 @@
-     "DelayNode.prototype.delayTime",
-     "DelegatedInkTrailPresenter",
-     "DelegatedInkTrailPresenter.prototype",
--    "DelegatedInkTrailPresenter.prototype.expectedImprovement",
-     "DelegatedInkTrailPresenter.prototype.presentationArea",
-     "DelegatedInkTrailPresenter.prototype.updateInkTrailStartPoint",
-     "DeviceMotionEvent",
 ```
 
   <!-- browserapis:end -->

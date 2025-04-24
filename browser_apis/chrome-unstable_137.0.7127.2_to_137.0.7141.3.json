@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "137.0.7127.2",
+    "to": "137.0.7141.3"
+  },
+  "browserApis": {
+    "added": [
+      "ImageData.prototype.pixelFormat",
+      "WebAssembly.SuspendError",
+      "WebAssembly.SuspendError.prototype",
+      "WebAssembly.Suspending",
+      "WebAssembly.Suspending.prototype",
+      "WebAssembly.promising"
+    ],
+    "removed": [
+      "AICreateMonitor",
+      "AICreateMonitor.prototype",
+      "AICreateMonitor.prototype.ondownloadprogress"
+    ]
+  }
+}
