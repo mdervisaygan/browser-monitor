@@ -1,0 +1,26 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "135.0.7049.114",
+    "to": "136.0.7103.59"
+  },
+  "browserApis": {
+    "added": [
+      "CanvasRenderingContext2D.prototype.lang",
+      "CaptureController.prototype.decreaseZoomLevel",
+      "CaptureController.prototype.forwardWheel",
+      "CaptureController.prototype.getSupportedZoomLevels",
+      "CaptureController.prototype.increaseZoomLevel",
+      "CaptureController.prototype.onzoomlevelchange",
+      "CaptureController.prototype.resetZoomLevel",
+      "CaptureController.prototype.zoomLevel",
+      "GPUAdapterInfo.prototype.isFallbackAdapter",
+      "IdentityCredential.prototype.configURL",
+      "OffscreenCanvasRenderingContext2D.prototype.lang",
+      "RegExp.escape",
+      "SVGAElement.prototype.rel",
+      "SVGAElement.prototype.relList"
+    ],
+    "removed": []
+  }
+}
