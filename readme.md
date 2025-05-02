@@ -1277,6 +1277,32 @@ Added 26 APIs, removed 2 (see: [diff](./browser_apis/chrome-stable_128.0.6613.13
   
 ### chrome-unstable
   
+#### 138.0.7153.0 (`2025-5-2`) ⚡
+Added 0 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_137.0.7141.3_to_138.0.7153.0.diff), [json](./browser_apis/chrome-unstable_137.0.7141.3_to_138.0.7153.0.json), [full list](./browser_apis/chrome-unstable_138.0.7153.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_137.0.7141.3.json	2025-05-02 17:00:48.812851333 +0000
++++ ./browser_apis/chrome-unstable_138.0.7153.0.json	2025-05-02 17:01:10.891932901 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8714,
++  "browserApiCount": 8712,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -7003,9 +7003,7 @@
+     "VideoFrame.prototype.displayHeight",
+     "VideoFrame.prototype.displayWidth",
+     "VideoFrame.prototype.duration",
+-    "VideoFrame.prototype.flip",
+     "VideoFrame.prototype.format",
+-    "VideoFrame.prototype.rotation",
+     "VideoFrame.prototype.timestamp",
+     "VideoFrame.prototype.visibleRect",
+     "VideoPlaybackQuality",
+```
+
+  
 #### 137.0.7141.3 (`2025-4-24`) ⚡
 Added 6 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_137.0.7127.2_to_137.0.7141.3.diff), [json](./browser_apis/chrome-unstable_137.0.7127.2_to_137.0.7141.3.json), [full list](./browser_apis/chrome-unstable_137.0.7141.3.json))
  ```diff
@@ -2534,43 +2560,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6724.0
   
 #### 131.0.6724.0 (`2024-9-19`) 
 No browser API changes.
-
-  
-#### 130.0.6710.0 (`2024-9-12`) ⚡
-Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_130.0.6699.3_to_130.0.6710.0.diff), [json](./browser_apis/chrome-unstable_130.0.6699.3_to_130.0.6710.0.json), [full list](./browser_apis/chrome-unstable_130.0.6710.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_130.0.6699.3.json	2024-09-13 01:07:54.727918184 +0000
-+++ ./browser_apis/chrome-unstable_130.0.6710.0.json	2024-09-13 01:08:27.760340277 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8509,
-+  "browserApiCount": 8517,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2990,6 +2990,13 @@
-     "Intl.Locale.prototype.collation",
-     "Intl.Locale.prototype.collations",
-     "Intl.Locale.prototype.firstDayOfWeek",
-+    "Intl.Locale.prototype.getCalendars",
-+    "Intl.Locale.prototype.getCollations",
-+    "Intl.Locale.prototype.getHourCycles",
-+    "Intl.Locale.prototype.getNumberingSystems",
-+    "Intl.Locale.prototype.getTextInfo",
-+    "Intl.Locale.prototype.getTimeZones",
-+    "Intl.Locale.prototype.getWeekInfo",
-     "Intl.Locale.prototype.hourCycle",
-     "Intl.Locale.prototype.hourCycles",
-     "Intl.Locale.prototype.language",
-@@ -6018,6 +6025,7 @@
-     "SerialPort",
-     "SerialPort.prototype",
-     "SerialPort.prototype.close",
-+    "SerialPort.prototype.connected",
-     "SerialPort.prototype.forget",
-     "SerialPort.prototype.getInfo",
-     "SerialPort.prototype.getSignals",
-```
 
   <!-- browserapis:end -->
