@@ -1153,6 +1153,32 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 138.0.7166.2 (`2025-5-8`) ⚡
+Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7153.0_to_138.0.7166.2.diff), [json](./browser_apis/chrome-unstable_138.0.7153.0_to_138.0.7166.2.json), [full list](./browser_apis/chrome-unstable_138.0.7166.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_138.0.7153.0.json	2025-05-08 19:00:47.190317401 +0000
++++ ./browser_apis/chrome-unstable_138.0.7166.2.json	2025-05-08 19:01:49.201089121 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8712,
++  "browserApiCount": 8714,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -7003,7 +7003,9 @@
+     "VideoFrame.prototype.displayHeight",
+     "VideoFrame.prototype.displayWidth",
+     "VideoFrame.prototype.duration",
++    "VideoFrame.prototype.flip",
+     "VideoFrame.prototype.format",
++    "VideoFrame.prototype.rotation",
+     "VideoFrame.prototype.timestamp",
+     "VideoFrame.prototype.visibleRect",
+     "VideoPlaybackQuality",
+```
+
+  
 #### 138.0.7153.0 (`2025-5-2`) ⚡
 Added 0 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_137.0.7141.3_to_138.0.7153.0.diff), [json](./browser_apis/chrome-unstable_137.0.7141.3_to_138.0.7153.0.json), [full list](./browser_apis/chrome-unstable_138.0.7153.0.json))
  ```diff
@@ -2432,9 +2458,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6724.0
      "Request.prototype.headers",
      "Request.prototype.integrity",
 ```
-
-  
-#### 131.0.6724.0 (`2024-9-19`) 
-No browser API changes.
 
   <!-- browserapis:end -->
