@@ -1,0 +1,50 @@
+--- ./browser_apis/chrome-unstable_138.0.7166.2.json	2025-05-16 20:00:55.425793783 +0000
++++ ./browser_apis/chrome-unstable_138.0.7180.2.json	2025-05-16 20:02:04.209267936 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8714,
++  "browserApiCount": 8726,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3018,6 +3018,13 @@
+     "Int32Array.prototype",
+     "Int8Array",
+     "Int8Array.prototype",
++    "IntegrityViolationReportBody",
++    "IntegrityViolationReportBody.prototype",
++    "IntegrityViolationReportBody.prototype.blockedURL",
++    "IntegrityViolationReportBody.prototype.destination",
++    "IntegrityViolationReportBody.prototype.documentURL",
++    "IntegrityViolationReportBody.prototype.reportOnly",
++    "IntegrityViolationReportBody.prototype.toJSON",
+     "IntersectionObserver",
+     "IntersectionObserver.prototype",
+     "IntersectionObserver.prototype.delay",
+@@ -3950,6 +3957,7 @@
+     "Object.prototype.__defineGetter__.arguments",
+     "Object.prototype.__defineGetter__.bind",
+     "Object.prototype.__defineGetter__.call",
++    "Object.prototype.__defineGetter__.caller",
+     "Object.prototype.__defineGetter__.constructor",
+     "Object.prototype.__defineGetter__.toString",
+     "Object.prototype.__defineSetter__",
+@@ -7043,6 +7051,9 @@
+     "ViewTransitionTypeSet.prototype.keys",
+     "ViewTransitionTypeSet.prototype.size",
+     "ViewTransitionTypeSet.prototype.values",
++    "Viewport",
++    "Viewport.prototype",
++    "Viewport.prototype.segments",
+     "VirtualKeyboard",
+     "VirtualKeyboard.prototype",
+     "VirtualKeyboard.prototype.boundingRect",
+@@ -8588,6 +8599,7 @@
+     "top",
+     "trustedTypes",
+     "unescape",
++    "viewport",
+     "visualViewport",
+     "webkitCancelAnimationFrame",
+     "webkitMediaStream",

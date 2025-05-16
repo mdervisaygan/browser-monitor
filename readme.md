@@ -1153,6 +1153,62 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 138.0.7180.2 (`2025-5-16`) ⚡
+Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7166.2_to_138.0.7180.2.diff), [json](./browser_apis/chrome-unstable_138.0.7166.2_to_138.0.7180.2.json), [full list](./browser_apis/chrome-unstable_138.0.7180.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_138.0.7166.2.json	2025-05-16 20:00:55.425793783 +0000
++++ ./browser_apis/chrome-unstable_138.0.7180.2.json	2025-05-16 20:02:04.209267936 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8714,
++  "browserApiCount": 8726,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3018,6 +3018,13 @@
+     "Int32Array.prototype",
+     "Int8Array",
+     "Int8Array.prototype",
++    "IntegrityViolationReportBody",
++    "IntegrityViolationReportBody.prototype",
++    "IntegrityViolationReportBody.prototype.blockedURL",
++    "IntegrityViolationReportBody.prototype.destination",
++    "IntegrityViolationReportBody.prototype.documentURL",
++    "IntegrityViolationReportBody.prototype.reportOnly",
++    "IntegrityViolationReportBody.prototype.toJSON",
+     "IntersectionObserver",
+     "IntersectionObserver.prototype",
+     "IntersectionObserver.prototype.delay",
+@@ -3950,6 +3957,7 @@
+     "Object.prototype.__defineGetter__.arguments",
+     "Object.prototype.__defineGetter__.bind",
+     "Object.prototype.__defineGetter__.call",
++    "Object.prototype.__defineGetter__.caller",
+     "Object.prototype.__defineGetter__.constructor",
+     "Object.prototype.__defineGetter__.toString",
+     "Object.prototype.__defineSetter__",
+@@ -7043,6 +7051,9 @@
+     "ViewTransitionTypeSet.prototype.keys",
+     "ViewTransitionTypeSet.prototype.size",
+     "ViewTransitionTypeSet.prototype.values",
++    "Viewport",
++    "Viewport.prototype",
++    "Viewport.prototype.segments",
+     "VirtualKeyboard",
+     "VirtualKeyboard.prototype",
+     "VirtualKeyboard.prototype.boundingRect",
+@@ -8588,6 +8599,7 @@
+     "top",
+     "trustedTypes",
+     "unescape",
++    "viewport",
+     "visualViewport",
+     "webkitCancelAnimationFrame",
+     "webkitMediaStream",
+```
+
+  
 #### 138.0.7166.2 (`2025-5-8`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7153.0_to_138.0.7166.2.diff), [json](./browser_apis/chrome-unstable_138.0.7153.0_to_138.0.7166.2.json), [full list](./browser_apis/chrome-unstable_138.0.7166.2.json))
  ```diff
@@ -2433,30 +2489,6 @@ Added 22 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_131.0.6738.
      "XRLayer",
      "XRLayer.prototype",
      "XRLightEstimate",
-```
-
-  
-#### 131.0.6738.0 (`2024-9-26`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6724.0_to_131.0.6738.0.diff), [json](./browser_apis/chrome-unstable_131.0.6724.0_to_131.0.6738.0.json), [full list](./browser_apis/chrome-unstable_131.0.6738.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_131.0.6724.0.json	2024-09-27 01:11:18.405484419 +0000
-+++ ./browser_apis/chrome-unstable_131.0.6738.0.json	2024-09-27 01:12:09.269957803 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8517,
-+  "browserApiCount": 8518,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -5092,6 +5092,7 @@
-     "Request.prototype.clone",
-     "Request.prototype.credentials",
-     "Request.prototype.destination",
-+    "Request.prototype.duplex",
-     "Request.prototype.formData",
-     "Request.prototype.headers",
-     "Request.prototype.integrity",
 ```
 
   <!-- browserapis:end -->

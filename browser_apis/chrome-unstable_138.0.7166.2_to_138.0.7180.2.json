@@ -1,0 +1,24 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "138.0.7166.2",
+    "to": "138.0.7180.2"
+  },
+  "browserApis": {
+    "added": [
+      "IntegrityViolationReportBody",
+      "IntegrityViolationReportBody.prototype",
+      "IntegrityViolationReportBody.prototype.blockedURL",
+      "IntegrityViolationReportBody.prototype.destination",
+      "IntegrityViolationReportBody.prototype.documentURL",
+      "IntegrityViolationReportBody.prototype.reportOnly",
+      "IntegrityViolationReportBody.prototype.toJSON",
+      "Object.prototype.__defineGetter__.caller",
+      "Viewport",
+      "Viewport.prototype",
+      "Viewport.prototype.segments",
+      "viewport"
+    ],
+    "removed": []
+  }
+}
