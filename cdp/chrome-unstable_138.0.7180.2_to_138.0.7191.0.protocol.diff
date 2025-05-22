@@ -1,0 +1,55 @@
+--- ./cdp/chrome-unstable_138.0.7180.2.protocol.json	2025-05-22 17:00:48.339503333 +0000
++++ ./cdp/chrome-unstable_138.0.7191.0.protocol.json	2025-05-22 17:01:13.989909797 +0000
+@@ -10262,7 +10262,7 @@
+         },
+         {
+           "name": "setPressureStateOverride",
+-          "description": "Provides a given pressure state that will be processed and eventually be\ndelivered to PressureObserver users. |source| must have been previously\noverridden by setPressureSourceOverrideEnabled.",
++          "description": "TODO: OBSOLETE: To remove when setPressureDataOverride is merged.\nProvides a given pressure state that will be processed and eventually be\ndelivered to PressureObserver users. |source| must have been previously\noverridden by setPressureSourceOverrideEnabled.",
+           "experimental": true,
+           "parameters": [
+             {
+@@ -10276,6 +10276,26 @@
+           ]
+         },
+         {
++          "name": "setPressureDataOverride",
++          "description": "Provides a given pressure data set that will be processed and eventually be\ndelivered to PressureObserver users. |source| must have been previously\noverridden by setPressureSourceOverrideEnabled.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "source",
++              "$ref": "PressureSource"
++            },
++            {
++              "name": "state",
++              "$ref": "PressureState"
++            },
++            {
++              "name": "ownContributionEstimate",
++              "optional": true,
++              "type": "number"
++            }
++          ]
++        },
++        {
+           "name": "setIdleOverride",
+           "description": "Overrides the Idle state.",
+           "parameters": [
+@@ -27652,7 +27672,6 @@
+             "InvalidSchemeRedirect",
+             "InvalidSchemeNavigation",
+             "NavigationRequestBlockedByCsp",
+-            "MainFrameNavigation",
+             "MojoBinderPolicy",
+             "RendererProcessCrashed",
+             "RendererProcessKilled",
+@@ -28816,7 +28835,7 @@
+             },
+             {
+               "name": "type",
+-              "$ref": "CharacteristicOperationType"
++              "$ref": "DescriptorOperationType"
+             },
+             {
+               "name": "data",

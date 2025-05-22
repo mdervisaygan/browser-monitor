@@ -1153,6 +1153,76 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 138.0.7191.0 (`2025-5-22`) ⚡
+Added 17 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_138.0.7180.2_to_138.0.7191.0.diff), [json](./browser_apis/chrome-unstable_138.0.7180.2_to_138.0.7191.0.json), [full list](./browser_apis/chrome-unstable_138.0.7191.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_138.0.7180.2.json	2025-05-22 17:00:48.010498484 +0000
++++ ./browser_apis/chrome-unstable_138.0.7191.0.json	2025-05-22 17:01:13.979909644 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8726,
++  "browserApiCount": 8738,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -759,14 +759,9 @@
+     "CSSSupportsRule.prototype.conditionText",
+     "CSSSupportsRule.prototype.constructor",
+     "CSSSupportsRule.prototype.constructor.prototype",
+-    "CSSSupportsRule.prototype.constructor.prototype.constructor",
+     "CSSSupportsRule.prototype.constructor.prototype.cssRules",
+-    "CSSSupportsRule.prototype.constructor.prototype.cssText",
+     "CSSSupportsRule.prototype.constructor.prototype.deleteRule",
+     "CSSSupportsRule.prototype.constructor.prototype.insertRule",
+-    "CSSSupportsRule.prototype.constructor.prototype.parentRule",
+-    "CSSSupportsRule.prototype.constructor.prototype.parentStyleSheet",
+-    "CSSSupportsRule.prototype.constructor.prototype.type",
+     "CSSTransformValue",
+     "CSSTransformValue.prototype",
+     "CSSTransformValue.prototype.is2D",
+@@ -839,7 +834,12 @@
+     "CSSVariableReferenceValue.prototype.variable",
+     "CSSViewTransitionRule",
+     "CSSViewTransitionRule.prototype",
++    "CSSViewTransitionRule.prototype.constructor",
++    "CSSViewTransitionRule.prototype.cssText",
+     "CSSViewTransitionRule.prototype.navigation",
++    "CSSViewTransitionRule.prototype.parentRule",
++    "CSSViewTransitionRule.prototype.parentStyleSheet",
++    "CSSViewTransitionRule.prototype.type",
+     "CSSViewTransitionRule.prototype.types",
+     "Cache",
+     "Cache.prototype",
+@@ -1040,6 +1040,9 @@
+     "CountQueuingStrategy.prototype",
+     "CountQueuingStrategy.prototype.highWaterMark",
+     "CountQueuingStrategy.prototype.size",
++    "CreateMonitor",
++    "CreateMonitor.prototype",
++    "CreateMonitor.prototype.ondownloadprogress",
+     "Credential",
+     "Credential.prototype",
+     "Credential.prototype.id",
+@@ -3204,6 +3207,15 @@
+     "KeyframeEffect.prototype.setKeyframes",
+     "KeyframeEffect.prototype.target",
+     "KeyframeEffect.prototype.updateTiming",
++    "LanguageDetector",
++    "LanguageDetector.availability",
++    "LanguageDetector.create",
++    "LanguageDetector.prototype",
++    "LanguageDetector.prototype.destroy",
++    "LanguageDetector.prototype.detect",
++    "LanguageDetector.prototype.expectedInputLanguages",
++    "LanguageDetector.prototype.inputQuota",
++    "LanguageDetector.prototype.measureInputUsage",
+     "LargestContentfulPaint",
+     "LargestContentfulPaint.prototype",
+     "LargestContentfulPaint.prototype.element",
+```
+
+  
 #### 138.0.7180.2 (`2025-5-16`) ⚡
 Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7166.2_to_138.0.7180.2.diff), [json](./browser_apis/chrome-unstable_138.0.7166.2_to_138.0.7180.2.json), [full list](./browser_apis/chrome-unstable_138.0.7180.2.json))
  ```diff
@@ -2384,111 +2454,6 @@ Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_131.0.6753.0
      "GPUAdapter.prototype.requestDevice",
      "GPUAdapterInfo",
      "GPUAdapterInfo.prototype",
-```
-
-  
-#### 131.0.6753.0 (`2024-10-4`) ⚡
-Added 22 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_131.0.6738.0_to_131.0.6753.0.diff), [json](./browser_apis/chrome-unstable_131.0.6738.0_to_131.0.6753.0.json), [full list](./browser_apis/chrome-unstable_131.0.6753.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_131.0.6738.0.json	2024-10-05 01:10:09.450323647 +0000
-+++ ./browser_apis/chrome-unstable_131.0.6753.0.json	2024-10-05 01:10:48.762182486 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8518,
-+  "browserApiCount": 8536,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -521,6 +521,10 @@
-     "CSSLayerStatementRule",
-     "CSSLayerStatementRule.prototype",
-     "CSSLayerStatementRule.prototype.nameList",
-+    "CSSMarginRule",
-+    "CSSMarginRule.prototype",
-+    "CSSMarginRule.prototype.name",
-+    "CSSMarginRule.prototype.style",
-     "CSSMathClamp",
-     "CSSMathClamp.prototype",
-     "CSSMathClamp.prototype.lower",
-@@ -581,14 +585,12 @@
-     "CSSPositionTryDescriptors.prototype.inline-size",
-     "CSSPositionTryDescriptors.prototype.inlineSize",
-     "CSSPositionTryDescriptors.prototype.inset",
--    "CSSPositionTryDescriptors.prototype.inset-area",
-     "CSSPositionTryDescriptors.prototype.inset-block",
-     "CSSPositionTryDescriptors.prototype.inset-block-end",
-     "CSSPositionTryDescriptors.prototype.inset-block-start",
-     "CSSPositionTryDescriptors.prototype.inset-inline",
-     "CSSPositionTryDescriptors.prototype.inset-inline-end",
-     "CSSPositionTryDescriptors.prototype.inset-inline-start",
--    "CSSPositionTryDescriptors.prototype.insetArea",
-     "CSSPositionTryDescriptors.prototype.insetBlock",
-     "CSSPositionTryDescriptors.prototype.insetBlockEnd",
-     "CSSPositionTryDescriptors.prototype.insetBlockStart",
-@@ -4118,7 +4120,6 @@
-     "Option.prototype.constructor.prototype.getElementsByTagName",
-     "Option.prototype.constructor.prototype.getElementsByTagNameNS",
-     "Option.prototype.constructor.prototype.getHTML",
--    "Option.prototype.constructor.prototype.getInnerHTML",
-     "Option.prototype.constructor.prototype.hasAttribute",
-     "Option.prototype.constructor.prototype.hasAttributeNS",
-     "Option.prototype.constructor.prototype.hasAttributes",
-@@ -6107,7 +6108,6 @@
-     "ShadowRoot.prototype.getAnimations",
-     "ShadowRoot.prototype.getElementById",
-     "ShadowRoot.prototype.getHTML",
--    "ShadowRoot.prototype.getInnerHTML",
-     "ShadowRoot.prototype.getSelection",
-     "ShadowRoot.prototype.host",
-     "ShadowRoot.prototype.innerHTML",
-@@ -7960,14 +7960,25 @@
-     "XRFrame",
-     "XRFrame.prototype",
-     "XRFrame.prototype.createAnchor",
-+    "XRFrame.prototype.fillJointRadii",
-+    "XRFrame.prototype.fillPoses",
-     "XRFrame.prototype.getDepthInformation",
-     "XRFrame.prototype.getHitTestResults",
-     "XRFrame.prototype.getHitTestResultsForTransientInput",
-+    "XRFrame.prototype.getJointPose",
-     "XRFrame.prototype.getLightEstimate",
-     "XRFrame.prototype.getPose",
-     "XRFrame.prototype.getViewerPose",
-     "XRFrame.prototype.session",
-     "XRFrame.prototype.trackedAnchors",
-+    "XRHand",
-+    "XRHand.prototype",
-+    "XRHand.prototype.entries",
-+    "XRHand.prototype.forEach",
-+    "XRHand.prototype.get",
-+    "XRHand.prototype.keys",
-+    "XRHand.prototype.size",
-+    "XRHand.prototype.values",
-     "XRHitTestResult",
-     "XRHitTestResult.prototype",
-     "XRHitTestResult.prototype.createAnchor",
-@@ -7979,6 +7990,7 @@
-     "XRInputSource.prototype",
-     "XRInputSource.prototype.gamepad",
-     "XRInputSource.prototype.gripSpace",
-+    "XRInputSource.prototype.hand",
-     "XRInputSource.prototype.handedness",
-     "XRInputSource.prototype.profiles",
-     "XRInputSource.prototype.targetRayMode",
-@@ -7995,6 +8007,12 @@
-     "XRInputSourcesChangeEvent.prototype.added",
-     "XRInputSourcesChangeEvent.prototype.removed",
-     "XRInputSourcesChangeEvent.prototype.session",
-+    "XRJointPose",
-+    "XRJointPose.prototype",
-+    "XRJointPose.prototype.radius",
-+    "XRJointSpace",
-+    "XRJointSpace.prototype",
-+    "XRJointSpace.prototype.jointName",
-     "XRLayer",
-     "XRLayer.prototype",
-     "XRLightEstimate",
 ```
 
   <!-- browserapis:end -->

@@ -1,0 +1,35 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "138.0.7180.2",
+    "to": "138.0.7191.0"
+  },
+  "browserApis": {
+    "added": [
+      "CSSViewTransitionRule.prototype.constructor",
+      "CSSViewTransitionRule.prototype.cssText",
+      "CSSViewTransitionRule.prototype.parentRule",
+      "CSSViewTransitionRule.prototype.parentStyleSheet",
+      "CSSViewTransitionRule.prototype.type",
+      "CreateMonitor",
+      "CreateMonitor.prototype",
+      "CreateMonitor.prototype.ondownloadprogress",
+      "LanguageDetector",
+      "LanguageDetector.availability",
+      "LanguageDetector.create",
+      "LanguageDetector.prototype",
+      "LanguageDetector.prototype.destroy",
+      "LanguageDetector.prototype.detect",
+      "LanguageDetector.prototype.expectedInputLanguages",
+      "LanguageDetector.prototype.inputQuota",
+      "LanguageDetector.prototype.measureInputUsage"
+    ],
+    "removed": [
+      "CSSSupportsRule.prototype.constructor.prototype.constructor",
+      "CSSSupportsRule.prototype.constructor.prototype.cssText",
+      "CSSSupportsRule.prototype.constructor.prototype.parentRule",
+      "CSSSupportsRule.prototype.constructor.prototype.parentStyleSheet",
+      "CSSSupportsRule.prototype.constructor.prototype.type"
+    ]
+  }
+}
