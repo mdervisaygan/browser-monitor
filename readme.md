@@ -5,6 +5,68 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 137.0.7151.55 (`2025-5-27`) ⚡
+Added 8 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_136.0.7103.113_to_137.0.7151.55.diff), [json](./browser_apis/chrome-stable_136.0.7103.113_to_137.0.7151.55.json), [full list](./browser_apis/chrome-stable_137.0.7151.55.json))
+ ```diff
+--- ./browser_apis/chrome-stable_136.0.7103.113.json	2025-05-27 18:01:41.946330478 +0000
++++ ./browser_apis/chrome-stable_137.0.7151.55.json	2025-05-27 18:02:07.205659919 +0000
+@@ -1,10 +1,7 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8707,
++  "browserApiCount": 8712,
+   "browserApis": [
+-    "AICreateMonitor",
+-    "AICreateMonitor.prototype",
+-    "AICreateMonitor.prototype.ondownloadprogress",
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+     "AbsoluteOrientationSensor.prototype.constructor",
+@@ -2969,6 +2966,7 @@
+     "ImageData.prototype.colorSpace",
+     "ImageData.prototype.data",
+     "ImageData.prototype.height",
++    "ImageData.prototype.pixelFormat",
+     "ImageData.prototype.width",
+     "ImageDecoder",
+     "ImageDecoder.isTypeSupported",
+@@ -6139,12 +6137,14 @@
+     "Selection.prototype.collapseToStart",
+     "Selection.prototype.containsNode",
+     "Selection.prototype.deleteFromDocument",
++    "Selection.prototype.direction",
+     "Selection.prototype.empty",
+     "Selection.prototype.extend",
+     "Selection.prototype.extentNode",
+     "Selection.prototype.extentOffset",
+     "Selection.prototype.focusNode",
+     "Selection.prototype.focusOffset",
++    "Selection.prototype.getComposedRanges",
+     "Selection.prototype.getRangeAt",
+     "Selection.prototype.isCollapsed",
+     "Selection.prototype.modify",
+@@ -7142,6 +7142,10 @@
+     "WebAssembly.Module.prototype",
+     "WebAssembly.RuntimeError",
+     "WebAssembly.RuntimeError.prototype",
++    "WebAssembly.SuspendError",
++    "WebAssembly.SuspendError.prototype",
++    "WebAssembly.Suspending",
++    "WebAssembly.Suspending.prototype",
+     "WebAssembly.Table",
+     "WebAssembly.Table.prototype",
+     "WebAssembly.Table.prototype.get",
+@@ -7154,6 +7158,7 @@
+     "WebAssembly.compileStreaming",
+     "WebAssembly.instantiate",
+     "WebAssembly.instantiateStreaming",
++    "WebAssembly.promising",
+     "WebAssembly.validate",
+     "WebGL2RenderingContext",
+     "WebGL2RenderingContext.prototype",
+```
+
+  
 #### 136.0.7103.113 (`2025-5-14`) 
 No browser API changes.
 
@@ -1144,10 +1206,6 @@ Added 11 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_129.0.6668.10
 
   
 #### 129.0.6668.100 (`2024-10-8`) 
-No browser API changes.
-
-  
-#### 129.0.6668.89 (`2024-10-1`) 
 No browser API changes.
 
   

@@ -1,0 +1,24 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "136.0.7103.113",
+    "to": "137.0.7151.55"
+  },
+  "browserApis": {
+    "added": [
+      "ImageData.prototype.pixelFormat",
+      "Selection.prototype.direction",
+      "Selection.prototype.getComposedRanges",
+      "WebAssembly.SuspendError",
+      "WebAssembly.SuspendError.prototype",
+      "WebAssembly.Suspending",
+      "WebAssembly.Suspending.prototype",
+      "WebAssembly.promising"
+    ],
+    "removed": [
+      "AICreateMonitor",
+      "AICreateMonitor.prototype",
+      "AICreateMonitor.prototype.ondownloadprogress"
+    ]
+  }
+}
