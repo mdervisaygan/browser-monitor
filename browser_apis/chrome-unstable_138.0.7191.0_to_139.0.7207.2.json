@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "138.0.7191.0",
+    "to": "139.0.7207.2"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLAnchorElement.prototype.hrefTranslate",
+      "QuotaExceededError",
+      "QuotaExceededError.prototype",
+      "QuotaExceededError.prototype.quota",
+      "QuotaExceededError.prototype.requested"
+    ],
+    "removed": [
+      "Request.prototype.targetAddressSpace"
+    ]
+  }
+}

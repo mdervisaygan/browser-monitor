@@ -1211,6 +1211,49 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 139.0.7207.2 (`2025-5-30`) ⚡
+Added 5 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_138.0.7191.0_to_139.0.7207.2.diff), [json](./browser_apis/chrome-unstable_138.0.7191.0_to_139.0.7207.2.json), [full list](./browser_apis/chrome-unstable_139.0.7207.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_138.0.7191.0.json	2025-05-30 17:01:05.731014161 +0000
++++ ./browser_apis/chrome-unstable_139.0.7207.2.json	2025-05-30 17:01:31.719206442 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8738,
++  "browserApiCount": 8742,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1996,6 +1996,7 @@
+     "HTMLAnchorElement.prototype.host",
+     "HTMLAnchorElement.prototype.hostname",
+     "HTMLAnchorElement.prototype.href",
++    "HTMLAnchorElement.prototype.hrefTranslate",
+     "HTMLAnchorElement.prototype.hreflang",
+     "HTMLAnchorElement.prototype.name",
+     "HTMLAnchorElement.prototype.origin",
+@@ -4910,6 +4911,10 @@
+     "PushSubscriptionOptions.prototype",
+     "PushSubscriptionOptions.prototype.applicationServerKey",
+     "PushSubscriptionOptions.prototype.userVisibleOnly",
++    "QuotaExceededError",
++    "QuotaExceededError.prototype",
++    "QuotaExceededError.prototype.quota",
++    "QuotaExceededError.prototype.requested",
+     "RTCCertificate",
+     "RTCCertificate.prototype",
+     "RTCCertificate.prototype.expires",
+@@ -5262,7 +5267,6 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
+-    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
+```
+
+  
 #### 138.0.7191.0 (`2025-5-22`) ⚡
 Added 17 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_138.0.7180.2_to_138.0.7191.0.diff), [json](./browser_apis/chrome-unstable_138.0.7180.2_to_138.0.7191.0.json), [full list](./browser_apis/chrome-unstable_138.0.7191.0.json))
  ```diff
@@ -2488,30 +2531,6 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6768.4
      "Response.prototype.clone",
      "Response.prototype.formData",
      "Response.prototype.headers",
-```
-
-  
-#### 131.0.6768.4 (`2024-10-11`) ⚡
-Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_131.0.6753.0_to_131.0.6768.4.diff), [json](./browser_apis/chrome-unstable_131.0.6753.0_to_131.0.6768.4.json), [full list](./browser_apis/chrome-unstable_131.0.6768.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_131.0.6753.0.json	2024-10-12 01:09:06.825782191 +0000
-+++ ./browser_apis/chrome-unstable_131.0.6768.4.json	2024-10-12 01:09:35.841720289 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8536,
-+  "browserApiCount": 8535,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1560,7 +1560,6 @@
-     "GPUAdapter.prototype.info",
-     "GPUAdapter.prototype.isFallbackAdapter",
-     "GPUAdapter.prototype.limits",
--    "GPUAdapter.prototype.requestAdapterInfo",
-     "GPUAdapter.prototype.requestDevice",
-     "GPUAdapterInfo",
-     "GPUAdapterInfo.prototype",
 ```
 
   <!-- browserapis:end -->

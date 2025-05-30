@@ -1,0 +1,37 @@
+--- ./browser_apis/chrome-unstable_138.0.7191.0.json	2025-05-30 17:01:05.731014161 +0000
++++ ./browser_apis/chrome-unstable_139.0.7207.2.json	2025-05-30 17:01:31.719206442 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8738,
++  "browserApiCount": 8742,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1996,6 +1996,7 @@
+     "HTMLAnchorElement.prototype.host",
+     "HTMLAnchorElement.prototype.hostname",
+     "HTMLAnchorElement.prototype.href",
++    "HTMLAnchorElement.prototype.hrefTranslate",
+     "HTMLAnchorElement.prototype.hreflang",
+     "HTMLAnchorElement.prototype.name",
+     "HTMLAnchorElement.prototype.origin",
+@@ -4910,6 +4911,10 @@
+     "PushSubscriptionOptions.prototype",
+     "PushSubscriptionOptions.prototype.applicationServerKey",
+     "PushSubscriptionOptions.prototype.userVisibleOnly",
++    "QuotaExceededError",
++    "QuotaExceededError.prototype",
++    "QuotaExceededError.prototype.quota",
++    "QuotaExceededError.prototype.requested",
+     "RTCCertificate",
+     "RTCCertificate.prototype",
+     "RTCCertificate.prototype.expires",
+@@ -5262,7 +5267,6 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
+-    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
