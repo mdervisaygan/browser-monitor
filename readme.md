@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 137.0.7151.68 (`2025-6-2`) 
+No browser API changes.
+
+  
 #### 137.0.7151.55 (`2025-5-27`) ⚡
 Added 8 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_136.0.7103.113_to_137.0.7151.55.diff), [json](./browser_apis/chrome-stable_136.0.7103.113_to_137.0.7151.55.json), [full list](./browser_apis/chrome-stable_137.0.7151.55.json))
  ```diff
@@ -1203,10 +1207,6 @@ Added 11 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_129.0.6668.10
      "SerialPort.prototype.getInfo",
      "SerialPort.prototype.getSignals",
 ```
-
-  
-#### 129.0.6668.100 (`2024-10-8`) 
-No browser API changes.
 
   
 ### chrome-unstable
