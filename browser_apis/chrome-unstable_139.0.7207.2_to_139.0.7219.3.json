@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "139.0.7207.2",
+    "to": "139.0.7219.3"
+  },
+  "browserApis": {
+    "added": [
+      "CSSFunctionDeclarations",
+      "CSSFunctionDeclarations.prototype",
+      "CSSFunctionDeclarations.prototype.style",
+      "CSSFunctionDescriptors",
+      "CSSFunctionDescriptors.prototype",
+      "CSSFunctionDescriptors.prototype.result",
+      "CSSFunctionRule",
+      "CSSFunctionRule.prototype",
+      "CSSFunctionRule.prototype.getParameters",
+      "CSSFunctionRule.prototype.name",
+      "CSSFunctionRule.prototype.returnType"
+    ],
+    "removed": []
+  }
+}

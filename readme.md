@@ -1211,6 +1211,40 @@ Added 11 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_129.0.6668.10
   
 ### chrome-unstable
   
+#### 139.0.7219.3 (`2025-6-5`) ⚡
+Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_139.0.7207.2_to_139.0.7219.3.diff), [json](./browser_apis/chrome-unstable_139.0.7207.2_to_139.0.7219.3.json), [full list](./browser_apis/chrome-unstable_139.0.7219.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_139.0.7207.2.json	2025-06-06 00:02:40.325521745 +0000
++++ ./browser_apis/chrome-unstable_139.0.7219.3.json	2025-06-06 00:03:12.741833406 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8742,
++  "browserApiCount": 8753,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -524,6 +524,17 @@
+     "CSSFontPaletteValuesRule.prototype.fontFamily",
+     "CSSFontPaletteValuesRule.prototype.name",
+     "CSSFontPaletteValuesRule.prototype.overrideColors",
++    "CSSFunctionDeclarations",
++    "CSSFunctionDeclarations.prototype",
++    "CSSFunctionDeclarations.prototype.style",
++    "CSSFunctionDescriptors",
++    "CSSFunctionDescriptors.prototype",
++    "CSSFunctionDescriptors.prototype.result",
++    "CSSFunctionRule",
++    "CSSFunctionRule.prototype",
++    "CSSFunctionRule.prototype.getParameters",
++    "CSSFunctionRule.prototype.name",
++    "CSSFunctionRule.prototype.returnType",
+     "CSSImageValue",
+     "CSSImageValue.prototype",
+     "CSSImportRule",
+```
+
+  
 #### 139.0.7207.2 (`2025-5-30`) ⚡
 Added 5 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_138.0.7191.0_to_139.0.7207.2.diff), [json](./browser_apis/chrome-unstable_138.0.7191.0_to_139.0.7207.2.json), [full list](./browser_apis/chrome-unstable_139.0.7207.2.json))
  ```diff
@@ -2491,46 +2525,6 @@ Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6779.0
      "PushManager",
      "PushManager.prototype",
      "PushManager.prototype.getSubscription",
-```
-
-  
-#### 132.0.6779.0 (`2024-10-17`) ⚡
-Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6768.4_to_132.0.6779.0.diff), [json](./browser_apis/chrome-unstable_131.0.6768.4_to_132.0.6779.0.json), [full list](./browser_apis/chrome-unstable_132.0.6779.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_131.0.6768.4.json	2024-10-18 01:11:32.976030732 +0000
-+++ ./browser_apis/chrome-unstable_132.0.6779.0.json	2024-10-18 01:12:30.664224574 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8535,
-+  "browserApiCount": 8538,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1588,6 +1588,7 @@
-     "GPUCanvasContext.prototype",
-     "GPUCanvasContext.prototype.canvas",
-     "GPUCanvasContext.prototype.configure",
-+    "GPUCanvasContext.prototype.getConfiguration",
-     "GPUCanvasContext.prototype.getCurrentTexture",
-     "GPUCanvasContext.prototype.unconfigure",
-     "GPUColorWrite",
-@@ -5088,6 +5089,7 @@
-     "Request.prototype.blob",
-     "Request.prototype.body",
-     "Request.prototype.bodyUsed",
-+    "Request.prototype.bytes",
-     "Request.prototype.cache",
-     "Request.prototype.clone",
-     "Request.prototype.credentials",
-@@ -5132,6 +5134,7 @@
-     "Response.prototype.blob",
-     "Response.prototype.body",
-     "Response.prototype.bodyUsed",
-+    "Response.prototype.bytes",
-     "Response.prototype.clone",
-     "Response.prototype.formData",
-     "Response.prototype.headers",
 ```
 
   <!-- browserapis:end -->

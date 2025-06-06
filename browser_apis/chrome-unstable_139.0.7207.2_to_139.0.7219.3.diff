@@ -1,0 +1,28 @@
+--- ./browser_apis/chrome-unstable_139.0.7207.2.json	2025-06-06 00:02:40.325521745 +0000
++++ ./browser_apis/chrome-unstable_139.0.7219.3.json	2025-06-06 00:03:12.741833406 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8742,
++  "browserApiCount": 8753,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -524,6 +524,17 @@
+     "CSSFontPaletteValuesRule.prototype.fontFamily",
+     "CSSFontPaletteValuesRule.prototype.name",
+     "CSSFontPaletteValuesRule.prototype.overrideColors",
++    "CSSFunctionDeclarations",
++    "CSSFunctionDeclarations.prototype",
++    "CSSFunctionDeclarations.prototype.style",
++    "CSSFunctionDescriptors",
++    "CSSFunctionDescriptors.prototype",
++    "CSSFunctionDescriptors.prototype.result",
++    "CSSFunctionRule",
++    "CSSFunctionRule.prototype",
++    "CSSFunctionRule.prototype.getParameters",
++    "CSSFunctionRule.prototype.name",
++    "CSSFunctionRule.prototype.returnType",
+     "CSSImageValue",
+     "CSSImageValue.prototype",
+     "CSSImportRule",
