@@ -1,0 +1,57 @@
+--- ./cdp/chrome-unstable_139.0.7219.3.protocol.json	2025-06-12 17:01:19.309945320 +0000
++++ ./cdp/chrome-unstable_139.0.7232.3.protocol.json	2025-06-12 17:01:43.487876790 +0000
+@@ -9618,6 +9618,21 @@
+           ]
+         },
+         {
++          "id": "UserAgentFormFactor",
++          "description": "Used to specify User Agent form-factor values. See https://wicg.github.io/ua-client-hints/#sec-ch-ua-form-factors",
++          "experimental": true,
++          "type": "string",
++          "enum": [
++            "Desktop",
++            "Automotive",
++            "Mobile",
++            "Tablet",
++            "XR",
++            "EInk",
++            "Watch"
++          ]
++        },
++        {
+           "id": "UserAgentBrandVersion",
+           "description": "Used to specify User Agent Client Hints to emulate. See https://wicg.github.io/ua-client-hints",
+           "experimental": true,
+@@ -9692,6 +9707,14 @@
+               "name": "wow64",
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "formFactors",
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "UserAgentFormFactor"
++              }
+             }
+           ]
+         },
+@@ -10151,6 +10174,17 @@
+             }
+           ]
+         },
++        {
++          "name": "setEmulatedOSTextScale",
++          "description": "Emulates the given OS text scale.",
++          "parameters": [
++            {
++              "name": "scale",
++              "optional": true,
++              "type": "number"
++            }
++          ]
++        },
+         {
+           "name": "setGeolocationOverride",
+           "description": "Overrides the Geolocation Position or Error. Omitting latitude, longitude or\naccuracy emulates position unavailable.",
