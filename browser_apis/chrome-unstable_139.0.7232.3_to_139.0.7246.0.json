@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "139.0.7232.3",
+    "to": "139.0.7246.0"
+  },
+  "browserApis": {
+    "added": [
+      "SpeechRecognition.available",
+      "SpeechRecognition.install",
+      "SpeechRecognition.prototype.processLocally"
+    ],
+    "removed": []
+  }
+}

@@ -1144,6 +1144,39 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 139.0.7246.0 (`2025-6-20`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_139.0.7232.3_to_139.0.7246.0.diff), [json](./browser_apis/chrome-unstable_139.0.7232.3_to_139.0.7246.0.json), [full list](./browser_apis/chrome-unstable_139.0.7246.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_139.0.7232.3.json	2025-06-20 08:00:47.221967071 +0000
++++ ./browser_apis/chrome-unstable_139.0.7246.0.json	2025-06-20 08:01:32.631061693 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8786,
++  "browserApiCount": 8789,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -6368,6 +6368,8 @@
+     "SpeechGrammarList.prototype.item",
+     "SpeechGrammarList.prototype.length",
+     "SpeechRecognition",
++    "SpeechRecognition.available",
++    "SpeechRecognition.install",
+     "SpeechRecognition.prototype",
+     "SpeechRecognition.prototype.abort",
+     "SpeechRecognition.prototype.continuous",
+@@ -6386,6 +6388,7 @@
+     "SpeechRecognition.prototype.onspeechend",
+     "SpeechRecognition.prototype.onspeechstart",
+     "SpeechRecognition.prototype.onstart",
++    "SpeechRecognition.prototype.processLocally",
+     "SpeechRecognition.prototype.start",
+     "SpeechRecognition.prototype.stop",
+     "SpeechRecognitionErrorEvent",
+```
+
+  
 #### 139.0.7232.3 (`2025-6-12`) ⚡
 Added 72 APIs, removed 39 (see: [diff](./browser_apis/chrome-unstable_139.0.7219.3_to_139.0.7232.3.diff), [json](./browser_apis/chrome-unstable_139.0.7219.3_to_139.0.7232.3.json), [full list](./browser_apis/chrome-unstable_139.0.7232.3.json))
  ```diff
@@ -2579,25 +2612,5 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6821.2
   
 #### 132.0.6821.2 (`2024-11-7`) 
 No browser API changes.
-
-  
-#### 132.0.6811.2 (`2024-11-5`) ⚡
-Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6793.2_to_132.0.6811.2.diff), [json](./browser_apis/chrome-unstable_132.0.6793.2_to_132.0.6811.2.json), [full list](./browser_apis/chrome-unstable_132.0.6811.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_132.0.6793.2.json	2024-11-06 01:10:05.078421815 +0000
-+++ ./browser_apis/chrome-unstable_132.0.6811.2.json	2024-11-06 01:11:23.418485507 +0000
-@@ -1,7 +1,10 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8546,
-+  "browserApiCount": 8549,
-   "browserApis": [
-+    "AICreateMonitor",
-+    "AICreateMonitor.prototype",
-+    "AICreateMonitor.prototype.ondownloadprogress",
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-     "AbsoluteOrientationSensor.prototype.constructor",
-```
 
   <!-- browserapis:end -->
