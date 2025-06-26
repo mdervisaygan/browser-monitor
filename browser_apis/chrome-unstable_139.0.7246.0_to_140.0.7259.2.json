@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "139.0.7246.0",
+    "to": "140.0.7259.2"
+  },
+  "browserApis": {
+    "added": [
+      "PaymentRequest.securePaymentConfirmationAvailability"
+    ],
+    "removed": [
+      "GPUAdapter.prototype.isFallbackAdapter"
+    ]
+  }
+}

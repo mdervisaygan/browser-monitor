@@ -1328,6 +1328,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 140.0.7259.2 (`2025-6-26`) ⚡
+Added 1 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_139.0.7246.0_to_140.0.7259.2.diff), [json](./browser_apis/chrome-unstable_139.0.7246.0_to_140.0.7259.2.json), [full list](./browser_apis/chrome-unstable_140.0.7259.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_139.0.7246.0.json	2025-06-26 18:01:09.814173108 +0000
++++ ./browser_apis/chrome-unstable_140.0.7259.2.json	2025-06-26 18:01:34.350306757 +0000
+@@ -1646,7 +1646,6 @@
+     "GPUAdapter.prototype",
+     "GPUAdapter.prototype.features",
+     "GPUAdapter.prototype.info",
+-    "GPUAdapter.prototype.isFallbackAdapter",
+     "GPUAdapter.prototype.limits",
+     "GPUAdapter.prototype.requestDevice",
+     "GPUAdapterInfo",
+@@ -4564,6 +4563,7 @@
+     "PaymentRequest.prototype.shippingOption",
+     "PaymentRequest.prototype.shippingType",
+     "PaymentRequest.prototype.show",
++    "PaymentRequest.securePaymentConfirmationAvailability",
+     "PaymentRequestUpdateEvent",
+     "PaymentRequestUpdateEvent.prototype",
+     "PaymentRequestUpdateEvent.prototype.updateWith",
+```
+
+  
 #### 139.0.7246.0 (`2025-6-20`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_139.0.7232.3_to_139.0.7246.0.diff), [json](./browser_apis/chrome-unstable_139.0.7232.3_to_139.0.7246.0.json), [full list](./browser_apis/chrome-unstable_139.0.7246.0.json))
  ```diff
@@ -2792,9 +2816,5 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6821.2
      "Navigator.prototype.gpu",
      "Navigator.prototype.hardwareConcurrency",
 ```
-
-  
-#### 132.0.6821.2 (`2024-11-7`) 
-No browser API changes.
 
   <!-- browserapis:end -->

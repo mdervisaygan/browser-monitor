@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_139.0.7246.0.json	2025-06-26 18:01:09.814173108 +0000
++++ ./browser_apis/chrome-unstable_140.0.7259.2.json	2025-06-26 18:01:34.350306757 +0000
+@@ -1646,7 +1646,6 @@
+     "GPUAdapter.prototype",
+     "GPUAdapter.prototype.features",
+     "GPUAdapter.prototype.info",
+-    "GPUAdapter.prototype.isFallbackAdapter",
+     "GPUAdapter.prototype.limits",
+     "GPUAdapter.prototype.requestDevice",
+     "GPUAdapterInfo",
+@@ -4564,6 +4563,7 @@
+     "PaymentRequest.prototype.shippingOption",
+     "PaymentRequest.prototype.shippingType",
+     "PaymentRequest.prototype.show",
++    "PaymentRequest.securePaymentConfirmationAvailability",
+     "PaymentRequestUpdateEvent",
+     "PaymentRequestUpdateEvent.prototype",
+     "PaymentRequestUpdateEvent.prototype.updateWith",
