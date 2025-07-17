@@ -1,0 +1,142 @@
+--- ./cdp/chrome-unstable_140.0.7259.2.protocol.json	2025-07-17 17:02:31.795527082 +0000
++++ ./cdp/chrome-unstable_140.0.7299.0.protocol.json	2025-07-17 17:02:56.125695991 +0000
+@@ -3424,6 +3424,30 @@
+           ]
+         },
+         {
++          "name": "setContentsSize",
++          "description": "Set size of the browser contents resizing browser window as necessary.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "windowId",
++              "description": "Browser window id.",
++              "$ref": "WindowID"
++            },
++            {
++              "name": "width",
++              "description": "The window contents width in DIP. Assumes current width if omitted.\nMust be specified if 'height' is omitted.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "height",
++              "description": "The window contents height in DIP. Assumes current height if omitted.\nMust be specified if 'width' is omitted.",
++              "optional": true,
++              "type": "integer"
++            }
++          ]
++        },
++        {
+           "name": "setDockTile",
+           "description": "Set dock tile details, platform-specific.",
+           "experimental": true,
+@@ -7153,6 +7177,13 @@
+               "description": "JavaScript object id of the node wrapper.",
+               "optional": true,
+               "$ref": "Runtime.RemoteObjectId"
++            },
++            {
++              "name": "includeShadowDOM",
++              "description": "Include all shadow roots. Equals to false if not specified.",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ],
+           "returns": [
+@@ -7861,6 +7892,33 @@
+               "$ref": "NodeId"
+             }
+           ]
++        },
++        {
++          "name": "forceShowPopover",
++          "description": "When enabling, this API force-opens the popover identified by nodeId\nand keeps it open until disabled.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "nodeId",
++              "description": "Id of the popover HTMLElement",
++              "$ref": "NodeId"
++            },
++            {
++              "name": "enable",
++              "description": "If true, opens the popover and keeps it open. If false, closes the\npopover if it was previously force-opened.",
++              "type": "boolean"
++            }
++          ],
++          "returns": [
++            {
++              "name": "nodeIds",
++              "description": "List of popovers that were closed in order to respect popover stacking order.",
++              "type": "array",
++              "items": {
++                "$ref": "NodeId"
++              }
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -10492,6 +10550,19 @@
+           ]
+         },
+         {
++          "name": "setDataSaverOverride",
++          "description": "Override the value of navigator.connection.saveData",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "dataSaverEnabled",
++              "description": "Override value. Omitting the parameter disables the override.",
++              "optional": true,
++              "type": "boolean"
++            }
++          ]
++        },
++        {
+           "name": "setHardwareConcurrencyOverride",
+           "experimental": true,
+           "parameters": [
+@@ -14762,7 +14833,7 @@
+           "experimental": true,
+           "type": "string",
+           "enum": [
+-            "Local",
++            "Loopback",
+             "Private",
+             "Public",
+             "Unknown"
+@@ -17610,7 +17681,6 @@
+             "searchForNode",
+             "searchForUAShadowDOM",
+             "captureAreaScreenshot",
+-            "showDistances",
+             "none"
+           ]
+         }
+@@ -18257,6 +18327,7 @@
+             "accelerometer",
+             "all-screens-capture",
+             "ambient-light-sensor",
++            "aria-notify",
+             "attribution-reporting",
+             "autoplay",
+             "bluetooth",
+@@ -22509,15 +22580,6 @@
+           "name": "enable"
+         },
+         {
+-          "name": "inspectWorker",
+-          "parameters": [
+-            {
+-              "name": "versionId",
+-              "type": "string"
+-            }
+-          ]
+-        },
+-        {
+           "name": "setForceUpdateOnPageLoad",
+           "parameters": [
+             {

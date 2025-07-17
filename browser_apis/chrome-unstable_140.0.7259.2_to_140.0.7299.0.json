@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "140.0.7259.2",
+    "to": "140.0.7299.0"
+  },
+  "browserApis": {
+    "added": [
+      "FontFace.prototype.variationSettings",
+      "HighlightRegistry.prototype.highlightsFromPoint",
+      "Uint8Array.fromBase64",
+      "Uint8Array.fromHex",
+      "Uint8Array.prototype.setFromBase64",
+      "Uint8Array.prototype.setFromHex",
+      "Uint8Array.prototype.toBase64",
+      "Uint8Array.prototype.toHex"
+    ],
+    "removed": []
+  }
+}

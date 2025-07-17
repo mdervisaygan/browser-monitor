@@ -1203,6 +1203,62 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 140.0.7299.0 (`2025-7-17`) ⚡
+Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_140.0.7259.2_to_140.0.7299.0.diff), [json](./browser_apis/chrome-unstable_140.0.7259.2_to_140.0.7299.0.json), [full list](./browser_apis/chrome-unstable_140.0.7299.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_140.0.7259.2.json	2025-07-17 17:02:31.448524767 +0000
++++ ./browser_apis/chrome-unstable_140.0.7299.0.json	2025-07-17 17:02:56.118695931 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8789,
++  "browserApiCount": 8797,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1616,6 +1616,7 @@
+     "FontFace.prototype.style",
+     "FontFace.prototype.unicodeRange",
+     "FontFace.prototype.variant",
++    "FontFace.prototype.variationSettings",
+     "FontFace.prototype.weight",
+     "FontFaceSetLoadEvent",
+     "FontFaceSetLoadEvent.prototype",
+@@ -2772,6 +2773,7 @@
+     "HighlightRegistry.prototype.forEach",
+     "HighlightRegistry.prototype.get",
+     "HighlightRegistry.prototype.has",
++    "HighlightRegistry.prototype.highlightsFromPoint",
+     "HighlightRegistry.prototype.keys",
+     "HighlightRegistry.prototype.set",
+     "HighlightRegistry.prototype.size",
+@@ -6990,6 +6992,8 @@
+     "Uint32Array",
+     "Uint32Array.prototype",
+     "Uint8Array",
++    "Uint8Array.fromBase64",
++    "Uint8Array.fromHex",
+     "Uint8Array.prototype",
+     "Uint8Array.prototype.at",
+     "Uint8Array.prototype.buffer",
+@@ -7019,10 +7023,14 @@
+     "Uint8Array.prototype.reduceRight",
+     "Uint8Array.prototype.reverse",
+     "Uint8Array.prototype.set",
++    "Uint8Array.prototype.setFromBase64",
++    "Uint8Array.prototype.setFromHex",
+     "Uint8Array.prototype.slice",
+     "Uint8Array.prototype.some",
+     "Uint8Array.prototype.sort",
+     "Uint8Array.prototype.subarray",
++    "Uint8Array.prototype.toBase64",
++    "Uint8Array.prototype.toHex",
+     "Uint8Array.prototype.toLocaleString",
+     "Uint8Array.prototype.toReversed",
+     "Uint8Array.prototype.toSorted",
+```
+
+  
 #### 140.0.7259.2 (`2025-6-26`) ⚡
 Added 1 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_139.0.7246.0_to_140.0.7259.2.diff), [json](./browser_apis/chrome-unstable_139.0.7246.0_to_140.0.7259.2.json), [full list](./browser_apis/chrome-unstable_140.0.7259.2.json))
  ```diff
@@ -2650,46 +2706,6 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6835.3
      "SVGAElement",
      "SVGAElement.prototype",
      "SVGAElement.prototype.href",
-```
-
-  
-#### 133.0.6835.3 (`2024-11-14`) ⚡
-Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6821.2_to_133.0.6835.3.diff), [json](./browser_apis/chrome-unstable_132.0.6821.2_to_133.0.6835.3.json), [full list](./browser_apis/chrome-unstable_133.0.6835.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_132.0.6821.2.json	2024-11-15 01:15:29.136658000 +0000
-+++ ./browser_apis/chrome-unstable_133.0.6835.3.json	2024-11-15 01:15:50.068761723 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8549,
-+  "browserApiCount": 8552,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -1646,6 +1646,7 @@
-     "GPUComputePipeline.prototype.label",
-     "GPUDevice",
-     "GPUDevice.prototype",
-+    "GPUDevice.prototype.adapterInfo",
-     "GPUDevice.prototype.createBindGroup",
-     "GPUDevice.prototype.createBindGroupLayout",
-     "GPUDevice.prototype.createBuffer",
-@@ -2822,6 +2823,7 @@
-     "IdentityProvider.close",
-     "IdentityProvider.getUserInfo",
-     "IdentityProvider.prototype",
-+    "IdentityProvider.resolve",
-     "IdleDeadline",
-     "IdleDeadline.prototype",
-     "IdleDeadline.prototype.didTimeout",
-@@ -3696,6 +3698,7 @@
-     "Navigator.prototype.getBattery",
-     "Navigator.prototype.getGamepads",
-     "Navigator.prototype.getInstalledRelatedApps",
-+    "Navigator.prototype.getInterestGroupAdAuctionData",
-     "Navigator.prototype.getUserMedia",
-     "Navigator.prototype.gpu",
-     "Navigator.prototype.hardwareConcurrency",
 ```
 
   <!-- browserapis:end -->

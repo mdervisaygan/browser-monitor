@@ -1,0 +1,50 @@
+--- ./browser_apis/chrome-unstable_140.0.7259.2.json	2025-07-17 17:02:31.448524767 +0000
++++ ./browser_apis/chrome-unstable_140.0.7299.0.json	2025-07-17 17:02:56.118695931 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8789,
++  "browserApiCount": 8797,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1616,6 +1616,7 @@
+     "FontFace.prototype.style",
+     "FontFace.prototype.unicodeRange",
+     "FontFace.prototype.variant",
++    "FontFace.prototype.variationSettings",
+     "FontFace.prototype.weight",
+     "FontFaceSetLoadEvent",
+     "FontFaceSetLoadEvent.prototype",
+@@ -2772,6 +2773,7 @@
+     "HighlightRegistry.prototype.forEach",
+     "HighlightRegistry.prototype.get",
+     "HighlightRegistry.prototype.has",
++    "HighlightRegistry.prototype.highlightsFromPoint",
+     "HighlightRegistry.prototype.keys",
+     "HighlightRegistry.prototype.set",
+     "HighlightRegistry.prototype.size",
+@@ -6990,6 +6992,8 @@
+     "Uint32Array",
+     "Uint32Array.prototype",
+     "Uint8Array",
++    "Uint8Array.fromBase64",
++    "Uint8Array.fromHex",
+     "Uint8Array.prototype",
+     "Uint8Array.prototype.at",
+     "Uint8Array.prototype.buffer",
+@@ -7019,10 +7023,14 @@
+     "Uint8Array.prototype.reduceRight",
+     "Uint8Array.prototype.reverse",
+     "Uint8Array.prototype.set",
++    "Uint8Array.prototype.setFromBase64",
++    "Uint8Array.prototype.setFromHex",
+     "Uint8Array.prototype.slice",
+     "Uint8Array.prototype.some",
+     "Uint8Array.prototype.sort",
+     "Uint8Array.prototype.subarray",
++    "Uint8Array.prototype.toBase64",
++    "Uint8Array.prototype.toHex",
+     "Uint8Array.prototype.toLocaleString",
+     "Uint8Array.prototype.toReversed",
+     "Uint8Array.prototype.toSorted",
