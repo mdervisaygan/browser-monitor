@@ -1203,6 +1203,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 140.0.7312.0 (`2025-7-24`) 
+No browser API changes.
+
+  
 #### 140.0.7299.0 (`2025-7-17`) ⚡
 Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_140.0.7259.2_to_140.0.7299.0.diff), [json](./browser_apis/chrome-unstable_140.0.7259.2_to_140.0.7299.0.json), [full list](./browser_apis/chrome-unstable_140.0.7299.0.json))
  ```diff
@@ -2672,40 +2676,6 @@ Added 26 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_133.0.6847.
      "ViewTimeline.prototype.startOffset",
      "ViewTimeline.prototype.subject",
      "ViewTransition",
-```
-
-  
-#### 133.0.6847.2 (`2024-11-21`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6835.3_to_133.0.6847.2.diff), [json](./browser_apis/chrome-unstable_133.0.6835.3_to_133.0.6847.2.json), [full list](./browser_apis/chrome-unstable_133.0.6847.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_133.0.6835.3.json	2024-11-22 01:15:24.339585110 +0000
-+++ ./browser_apis/chrome-unstable_133.0.6847.2.json	2024-11-22 01:16:19.780654637 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8552,
-+  "browserApiCount": 8556,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -389,6 +389,7 @@
-     "BrowserCaptureMediaStreamTrack",
-     "BrowserCaptureMediaStreamTrack.prototype",
-     "BrowserCaptureMediaStreamTrack.prototype.cropTo",
-+    "BrowserCaptureMediaStreamTrack.prototype.restrictTo",
-     "ByteLengthQueuingStrategy",
-     "ByteLengthQueuingStrategy.prototype",
-     "ByteLengthQueuingStrategy.prototype.highWaterMark",
-@@ -5161,6 +5162,9 @@
-     "Response.prototype.type",
-     "Response.prototype.url",
-     "Response.redirect",
-+    "RestrictionTarget",
-+    "RestrictionTarget.fromElement",
-+    "RestrictionTarget.prototype",
-     "SVGAElement",
-     "SVGAElement.prototype",
-     "SVGAElement.prototype.href",
 ```
 
   <!-- browserapis:end -->
