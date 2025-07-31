@@ -1203,6 +1203,63 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 140.0.7327.6 (`2025-7-31`) ⚡
+Added 8 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_140.0.7312.0_to_140.0.7327.6.diff), [json](./browser_apis/chrome-unstable_140.0.7312.0_to_140.0.7327.6.json), [full list](./browser_apis/chrome-unstable_140.0.7327.6.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_140.0.7312.0.json	2025-07-31 18:01:06.570395750 +0000
++++ ./browser_apis/chrome-unstable_140.0.7327.6.json	2025-07-31 18:01:35.172051865 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8797,
++  "browserApiCount": 8801,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4699,6 +4699,10 @@
+     "PerformanceResourceTiming.prototype.serverTiming",
+     "PerformanceResourceTiming.prototype.toJSON",
+     "PerformanceResourceTiming.prototype.transferSize",
++    "PerformanceResourceTiming.prototype.workerCacheLookupStart",
++    "PerformanceResourceTiming.prototype.workerFinalSourceType",
++    "PerformanceResourceTiming.prototype.workerMatchedSourceType",
++    "PerformanceResourceTiming.prototype.workerRouterEvaluationStart",
+     "PerformanceResourceTiming.prototype.workerStart",
+     "PerformanceScriptTiming",
+     "PerformanceScriptTiming.prototype",
+@@ -6765,6 +6769,7 @@
+     "ToggleEvent.prototype",
+     "ToggleEvent.prototype.newState",
+     "ToggleEvent.prototype.oldState",
++    "ToggleEvent.prototype.source",
+     "Touch",
+     "Touch.prototype",
+     "Touch.prototype.clientX",
+@@ -8303,7 +8308,10 @@
+     "XRInputSourcesChangeEvent.prototype.session",
+     "XRJointPose",
+     "XRJointPose.prototype",
++    "XRJointPose.prototype.constructor",
++    "XRJointPose.prototype.emulatedPosition",
+     "XRJointPose.prototype.radius",
++    "XRJointPose.prototype.transform",
+     "XRJointSpace",
+     "XRJointSpace.prototype",
+     "XRJointSpace.prototype.jointName",
+@@ -8318,10 +8326,6 @@
+     "XRLightProbe.prototype",
+     "XRLightProbe.prototype.onreflectionchange",
+     "XRLightProbe.prototype.probeSpace",
+-    "XRPose",
+-    "XRPose.prototype",
+-    "XRPose.prototype.emulatedPosition",
+-    "XRPose.prototype.transform",
+     "XRRay",
+     "XRRay.prototype",
+     "XRRay.prototype.direction",
+```
+
+  
 #### 140.0.7312.0 (`2025-7-24`) 
 No browser API changes.
 
@@ -2570,112 +2627,6 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6876.4
      "PublicKeyCredential.isConditionalMediationAvailable",
      "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
      "PublicKeyCredential.parseCreationOptionsFromJSON",
-```
-
-  
-#### 133.0.6876.4 (`2024-12-5`) ⚡
-Added 26 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_133.0.6847.2_to_133.0.6876.4.diff), [json](./browser_apis/chrome-unstable_133.0.6847.2_to_133.0.6876.4.json), [full list](./browser_apis/chrome-unstable_133.0.6876.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_133.0.6847.2.json	2024-12-06 01:17:17.174768734 +0000
-+++ ./browser_apis/chrome-unstable_133.0.6876.4.json	2024-12-06 01:17:49.166737937 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8556,
-+  "browserApiCount": 8575,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -110,6 +110,7 @@
-     "Atomics.load",
-     "Atomics.notify",
-     "Atomics.or",
-+    "Atomics.pause",
-     "Atomics.store",
-     "Atomics.sub",
-     "Atomics.wait",
-@@ -396,6 +397,20 @@
-     "ByteLengthQueuingStrategy.prototype.size",
-     "CDATASection",
-     "CDATASection.prototype",
-+    "CSPViolationReportBody",
-+    "CSPViolationReportBody.prototype",
-+    "CSPViolationReportBody.prototype.blockedURL",
-+    "CSPViolationReportBody.prototype.columnNumber",
-+    "CSPViolationReportBody.prototype.disposition",
-+    "CSPViolationReportBody.prototype.documentURL",
-+    "CSPViolationReportBody.prototype.effectiveDirective",
-+    "CSPViolationReportBody.prototype.lineNumber",
-+    "CSPViolationReportBody.prototype.originalPolicy",
-+    "CSPViolationReportBody.prototype.referrer",
-+    "CSPViolationReportBody.prototype.sample",
-+    "CSPViolationReportBody.prototype.sourceFile",
-+    "CSPViolationReportBody.prototype.statusCode",
-+    "CSPViolationReportBody.prototype.toJSON",
-     "CSS",
-     "CSS.Hz",
-     "CSS.Q",
-@@ -756,6 +771,7 @@
-     "CSSTransition.prototype.oncancel",
-     "CSSTransition.prototype.onfinish",
-     "CSSTransition.prototype.onremove",
-+    "CSSTransition.prototype.overallProgress",
-     "CSSTransition.prototype.pause",
-     "CSSTransition.prototype.pending",
-     "CSSTransition.prototype.persist",
-@@ -1272,9 +1288,6 @@
-     "DocumentPictureInPictureEvent.prototype.window",
-     "DocumentTimeline",
-     "DocumentTimeline.prototype",
--    "DocumentTimeline.prototype.constructor",
--    "DocumentTimeline.prototype.currentTime",
--    "DocumentTimeline.prototype.duration",
-     "DocumentType",
-     "DocumentType.prototype",
-     "DocumentType.prototype.after",
-@@ -4536,6 +4549,7 @@
-     "PerformanceResourceTiming.prototype.domainLookupStart",
-     "PerformanceResourceTiming.prototype.encodedBodySize",
-     "PerformanceResourceTiming.prototype.fetchStart",
-+    "PerformanceResourceTiming.prototype.finalResponseHeadersStart",
-     "PerformanceResourceTiming.prototype.firstInterimResponseStart",
-     "PerformanceResourceTiming.prototype.initiatorType",
-     "PerformanceResourceTiming.prototype.nextHopProtocol",
-@@ -5093,6 +5107,9 @@
-     "RemotePlayback.prototype.prompt",
-     "RemotePlayback.prototype.state",
-     "RemotePlayback.prototype.watchAvailability",
-+    "ReportBody",
-+    "ReportBody.prototype",
-+    "ReportBody.prototype.toJSON",
-     "ReportingObserver",
-     "ReportingObserver.prototype",
-     "ReportingObserver.prototype.disconnect",
-@@ -5988,10 +6005,6 @@
-     "ScriptProcessorNode.prototype",
-     "ScriptProcessorNode.prototype.bufferSize",
-     "ScriptProcessorNode.prototype.onaudioprocess",
--    "ScrollTimeline",
--    "ScrollTimeline.prototype",
--    "ScrollTimeline.prototype.axis",
--    "ScrollTimeline.prototype.source",
-     "SecurityPolicyViolationEvent",
-     "SecurityPolicyViolationEvent.prototype",
-     "SecurityPolicyViolationEvent.prototype.blockedURI",
-@@ -6872,7 +6885,13 @@
-     "VideoPlaybackQuality.prototype.totalVideoFrames",
-     "ViewTimeline",
-     "ViewTimeline.prototype",
-+    "ViewTimeline.prototype.axis",
-+    "ViewTimeline.prototype.constructor",
-+    "ViewTimeline.prototype.constructor.prototype",
-+    "ViewTimeline.prototype.constructor.prototype.currentTime",
-+    "ViewTimeline.prototype.constructor.prototype.duration",
-     "ViewTimeline.prototype.endOffset",
-+    "ViewTimeline.prototype.source",
-     "ViewTimeline.prototype.startOffset",
-     "ViewTimeline.prototype.subject",
-     "ViewTransition",
 ```
 
   <!-- browserapis:end -->
