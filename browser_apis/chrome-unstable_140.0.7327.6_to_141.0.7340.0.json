@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "140.0.7327.6",
+    "to": "141.0.7340.0"
+  },
+  "browserApis": {
+    "added": [
+      "IDBIndex.prototype.getAllRecords",
+      "IDBObjectStore.prototype.getAllRecords",
+      "IDBRecord",
+      "IDBRecord.prototype",
+      "IDBRecord.prototype.key",
+      "IDBRecord.prototype.primaryKey",
+      "IDBRecord.prototype.value"
+    ],
+    "removed": []
+  }
+}

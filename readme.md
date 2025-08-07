@@ -1372,6 +1372,50 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 141.0.7340.0 (`2025-8-7`) ⚡
+Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_140.0.7327.6_to_141.0.7340.0.diff), [json](./browser_apis/chrome-unstable_140.0.7327.6_to_141.0.7340.0.json), [full list](./browser_apis/chrome-unstable_141.0.7340.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_140.0.7327.6.json	2025-08-07 17:03:13.366565972 +0000
++++ ./browser_apis/chrome-unstable_141.0.7340.0.json	2025-08-07 17:03:43.085576095 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8801,
++  "browserApiCount": 8808,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2827,6 +2827,7 @@
+     "IDBIndex.prototype.get",
+     "IDBIndex.prototype.getAll",
+     "IDBIndex.prototype.getAllKeys",
++    "IDBIndex.prototype.getAllRecords",
+     "IDBIndex.prototype.getKey",
+     "IDBIndex.prototype.keyPath",
+     "IDBIndex.prototype.multiEntry",
+@@ -2858,6 +2859,7 @@
+     "IDBObjectStore.prototype.get",
+     "IDBObjectStore.prototype.getAll",
+     "IDBObjectStore.prototype.getAllKeys",
++    "IDBObjectStore.prototype.getAllRecords",
+     "IDBObjectStore.prototype.getKey",
+     "IDBObjectStore.prototype.index",
+     "IDBObjectStore.prototype.indexNames",
+@@ -2871,6 +2873,11 @@
+     "IDBOpenDBRequest.prototype",
+     "IDBOpenDBRequest.prototype.onblocked",
+     "IDBOpenDBRequest.prototype.onupgradeneeded",
++    "IDBRecord",
++    "IDBRecord.prototype",
++    "IDBRecord.prototype.key",
++    "IDBRecord.prototype.primaryKey",
++    "IDBRecord.prototype.value",
+     "IDBRequest",
+     "IDBRequest.prototype",
+     "IDBRequest.prototype.error",
+```
+
+  
 #### 140.0.7327.6 (`2025-7-31`) ⚡
 Added 8 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_140.0.7312.0_to_140.0.7327.6.diff), [json](./browser_apis/chrome-unstable_140.0.7312.0_to_140.0.7327.6.json), [full list](./browser_apis/chrome-unstable_140.0.7327.6.json))
  ```diff
@@ -2765,37 +2809,5 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6905.0
   
 #### 133.0.6905.0 (`2024-12-20`) 
 No browser API changes.
-
-  
-#### 133.0.6888.2 (`2024-12-12`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6876.4_to_133.0.6888.2.diff), [json](./browser_apis/chrome-unstable_133.0.6876.4_to_133.0.6888.2.json), [full list](./browser_apis/chrome-unstable_133.0.6888.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_133.0.6876.4.json	2024-12-13 01:18:52.651775575 +0000
-+++ ./browser_apis/chrome-unstable_133.0.6888.2.json	2024-12-13 01:19:47.091860938 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8575,
-+  "browserApiCount": 8577,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -1960,6 +1960,7 @@
-     "HTMLAreaElement",
-     "HTMLAreaElement.prototype",
-     "HTMLAreaElement.prototype.alt",
-+    "HTMLAreaElement.prototype.attributionSrc",
-     "HTMLAreaElement.prototype.coords",
-     "HTMLAreaElement.prototype.download",
-     "HTMLAreaElement.prototype.hash",
-@@ -4757,6 +4758,7 @@
-     "Proxy",
-     "Proxy.revocable",
-     "PublicKeyCredential",
-+    "PublicKeyCredential.getClientCapabilities",
-     "PublicKeyCredential.isConditionalMediationAvailable",
-     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
-     "PublicKeyCredential.parseCreationOptionsFromJSON",
-```
 
   <!-- browserapis:end -->
