@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 139.0.7258.127 (`2025-8-12`) 
+No browser API changes.
+
+  
 #### 139.0.7258.66 (`2025-8-5`) ⚡
 Added 60 APIs, removed 39 (see: [diff](./browser_apis/chrome-stable_138.0.7204.183_to_139.0.7258.66.diff), [json](./browser_apis/chrome-stable_138.0.7204.183_to_139.0.7258.66.json), [full list](./browser_apis/chrome-stable_139.0.7258.66.json))
  ```diff
@@ -1364,10 +1368,6 @@ Added 20 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_131.0.6778.26
      "SVGAElement.prototype",
      "SVGAElement.prototype.href",
 ```
-
-  
-#### 131.0.6778.264 (`2025-1-7`) 
-No browser API changes.
 
   
 ### chrome-unstable
