@@ -1372,6 +1372,10 @@ Added 20 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_131.0.6778.26
   
 ### chrome-unstable
   
+#### 141.0.7354.0 (`2025-8-14`) 
+No browser API changes.
+
+  
 #### 141.0.7340.0 (`2025-8-7`) ⚡
 Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_140.0.7327.6_to_141.0.7340.0.diff), [json](./browser_apis/chrome-unstable_140.0.7327.6_to_141.0.7340.0.json), [full list](./browser_apis/chrome-unstable_141.0.7340.0.json))
  ```diff
@@ -2805,9 +2809,5 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6905.0
      "XMLDocument.prototype.onanimationend",
      "XMLDocument.prototype.onanimationiteration",
 ```
-
-  
-#### 133.0.6905.0 (`2024-12-20`) 
-No browser API changes.
 
   <!-- browserapis:end -->
