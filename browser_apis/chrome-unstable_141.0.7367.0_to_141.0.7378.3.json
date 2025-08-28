@@ -1,0 +1,18 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "141.0.7367.0",
+    "to": "141.0.7378.3"
+  },
+  "browserApis": {
+    "added": [
+      "NavigationPrecommitController",
+      "NavigationPrecommitController.prototype",
+      "NavigationPrecommitController.prototype.redirect",
+      "NavigationTransition.prototype.committed",
+      "Option.prototype.constructor.prototype.ariaNotify",
+      "XMLDocument.prototype.ariaNotify"
+    ],
+    "removed": []
+  }
+}

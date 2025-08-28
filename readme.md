@@ -1271,6 +1271,56 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 141.0.7378.3 (`2025-8-28`) ⚡
+Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_141.0.7367.0_to_141.0.7378.3.diff), [json](./browser_apis/chrome-unstable_141.0.7367.0_to_141.0.7378.3.json), [full list](./browser_apis/chrome-unstable_141.0.7378.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_141.0.7367.0.json	2025-08-28 18:00:57.036333100 +0000
++++ ./browser_apis/chrome-unstable_141.0.7378.3.json	2025-08-28 18:01:49.102735022 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8808,
++  "browserApiCount": 8814,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3783,6 +3783,9 @@
+     "NavigationHistoryEntry.prototype.ondispose",
+     "NavigationHistoryEntry.prototype.sameDocument",
+     "NavigationHistoryEntry.prototype.url",
++    "NavigationPrecommitController",
++    "NavigationPrecommitController.prototype",
++    "NavigationPrecommitController.prototype.redirect",
+     "NavigationPreloadManager",
+     "NavigationPreloadManager.prototype",
+     "NavigationPreloadManager.prototype.disable",
+@@ -3791,6 +3794,7 @@
+     "NavigationPreloadManager.prototype.setHeaderValue",
+     "NavigationTransition",
+     "NavigationTransition.prototype",
++    "NavigationTransition.prototype.committed",
+     "NavigationTransition.prototype.finished",
+     "NavigationTransition.prototype.from",
+     "NavigationTransition.prototype.navigationType",
+@@ -4186,6 +4190,7 @@
+     "Option.prototype.constructor.prototype.ariaModal",
+     "Option.prototype.constructor.prototype.ariaMultiLine",
+     "Option.prototype.constructor.prototype.ariaMultiSelectable",
++    "Option.prototype.constructor.prototype.ariaNotify",
+     "Option.prototype.constructor.prototype.ariaOrientation",
+     "Option.prototype.constructor.prototype.ariaPlaceholder",
+     "Option.prototype.constructor.prototype.ariaPosInSet",
+@@ -7932,6 +7937,7 @@
+     "XMLDocument.prototype.anchors",
+     "XMLDocument.prototype.append",
+     "XMLDocument.prototype.applets",
++    "XMLDocument.prototype.ariaNotify",
+     "XMLDocument.prototype.bgColor",
+     "XMLDocument.prototype.body",
+     "XMLDocument.prototype.browsingTopics",
+```
+
+  
 #### 141.0.7367.0 (`2025-8-21`) 
 No browser API changes.
 
@@ -2589,80 +2639,6 @@ Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_134.0.6958.
      "GPUAdapterInfo.prototype.vendor",
      "GPUBindGroup",
      "GPUBindGroup.prototype",
-```
-
-  
-#### 134.0.6958.2 (`2025-1-16`) ⚡
-Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6943.6_to_134.0.6958.2.diff), [json](./browser_apis/chrome-unstable_133.0.6943.6_to_134.0.6958.2.json), [full list](./browser_apis/chrome-unstable_134.0.6958.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_133.0.6943.6.json	2025-01-17 01:09:33.253330925 +0000
-+++ ./browser_apis/chrome-unstable_134.0.6958.2.json	2025-01-17 01:10:43.062095356 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8581,
-+  "browserApiCount": 8604,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -101,6 +101,14 @@
-     "ArrayBuffer.prototype.slice",
-     "ArrayBuffer.prototype.transfer",
-     "ArrayBuffer.prototype.transferToFixedLength",
-+    "AsyncDisposableStack",
-+    "AsyncDisposableStack.prototype",
-+    "AsyncDisposableStack.prototype.adopt",
-+    "AsyncDisposableStack.prototype.defer",
-+    "AsyncDisposableStack.prototype.disposeAsync",
-+    "AsyncDisposableStack.prototype.disposed",
-+    "AsyncDisposableStack.prototype.move",
-+    "AsyncDisposableStack.prototype.use",
-     "Atomics",
-     "Atomics.add",
-     "Atomics.and",
-@@ -1278,6 +1286,14 @@
-     "DevicePosture.prototype",
-     "DevicePosture.prototype.onchange",
-     "DevicePosture.prototype.type",
-+    "DisposableStack",
-+    "DisposableStack.prototype",
-+    "DisposableStack.prototype.adopt",
-+    "DisposableStack.prototype.defer",
-+    "DisposableStack.prototype.dispose",
-+    "DisposableStack.prototype.disposed",
-+    "DisposableStack.prototype.move",
-+    "DisposableStack.prototype.use",
-     "DocumentPictureInPicture",
-     "DocumentPictureInPicture.prototype",
-     "DocumentPictureInPicture.prototype.onenter",
-@@ -1399,6 +1415,7 @@
-     "EncodedVideoChunk.prototype.type",
-     "Error",
-     "Error.captureStackTrace",
-+    "Error.isError",
-     "Error.prototype",
-     "Error.prototype.toString",
-     "ErrorEvent",
-@@ -1509,6 +1526,10 @@
-     "FileSystemFileHandle.prototype.createWritable",
-     "FileSystemFileHandle.prototype.getFile",
-     "FileSystemFileHandle.prototype.move",
-+    "FileSystemObserver",
-+    "FileSystemObserver.prototype",
-+    "FileSystemObserver.prototype.disconnect",
-+    "FileSystemObserver.prototype.observe",
-     "FileSystemWritableFileStream",
-     "FileSystemWritableFileStream.prototype",
-     "FileSystemWritableFileStream.prototype.mode",
-@@ -6398,6 +6419,8 @@
-     "SubtleCrypto.prototype.unwrapKey",
-     "SubtleCrypto.prototype.verify",
-     "SubtleCrypto.prototype.wrapKey",
-+    "SuppressedError",
-+    "SuppressedError.prototype",
-     "Symbol",
-     "Symbol.for",
-     "Symbol.keyFor",
 ```
 
   <!-- browserapis:end -->
