@@ -1,0 +1,50 @@
+--- ./browser_apis/chrome-unstable_141.0.7378.3.json	2025-09-08 22:01:00.959935212 +0000
++++ ./browser_apis/chrome-unstable_142.0.7393.6.json	2025-09-08 22:01:35.802060335 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8814,
++  "browserApiCount": 8825,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1320,6 +1320,12 @@
+     "DevicePosture.prototype",
+     "DevicePosture.prototype.onchange",
+     "DevicePosture.prototype.type",
++    "DigitalCredential",
++    "DigitalCredential.prototype",
++    "DigitalCredential.prototype.data",
++    "DigitalCredential.prototype.protocol",
++    "DigitalCredential.prototype.toJSON",
++    "DigitalCredential.userAgentAllowsProtocol",
+     "DisposableStack",
+     "DisposableStack.prototype",
+     "DisposableStack.prototype.adopt",
+@@ -5072,7 +5078,10 @@
+     "RTCRtpReceiver.prototype.playoutDelayHint",
+     "RTCRtpReceiver.prototype.rtcpTransport",
+     "RTCRtpReceiver.prototype.track",
++    "RTCRtpReceiver.prototype.transform",
+     "RTCRtpReceiver.prototype.transport",
++    "RTCRtpScriptTransform",
++    "RTCRtpScriptTransform.prototype",
+     "RTCRtpSender",
+     "RTCRtpSender.getCapabilities",
+     "RTCRtpSender.prototype",
+@@ -5085,6 +5094,7 @@
+     "RTCRtpSender.prototype.setParameters",
+     "RTCRtpSender.prototype.setStreams",
+     "RTCRtpSender.prototype.track",
++    "RTCRtpSender.prototype.transform",
+     "RTCRtpSender.prototype.transport",
+     "RTCRtpTransceiver",
+     "RTCRtpTransceiver.prototype",
+@@ -7930,6 +7940,7 @@
+     "XMLDocument.prototype",
+     "XMLDocument.prototype.URL",
+     "XMLDocument.prototype.activeElement",
++    "XMLDocument.prototype.activeViewTransition",
+     "XMLDocument.prototype.adoptNode",
+     "XMLDocument.prototype.adoptedStyleSheets",
+     "XMLDocument.prototype.alinkColor",

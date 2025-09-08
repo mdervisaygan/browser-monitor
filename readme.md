@@ -1372,6 +1372,62 @@ Added 36 APIs, removed 7 (see: [diff](./browser_apis/chrome-stable_132.0.6834.15
   
 ### chrome-unstable
   
+#### 142.0.7393.6 (`2025-9-8`) ⚡
+Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_141.0.7378.3_to_142.0.7393.6.diff), [json](./browser_apis/chrome-unstable_141.0.7378.3_to_142.0.7393.6.json), [full list](./browser_apis/chrome-unstable_142.0.7393.6.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_141.0.7378.3.json	2025-09-08 22:01:00.959935212 +0000
++++ ./browser_apis/chrome-unstable_142.0.7393.6.json	2025-09-08 22:01:35.802060335 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8814,
++  "browserApiCount": 8825,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1320,6 +1320,12 @@
+     "DevicePosture.prototype",
+     "DevicePosture.prototype.onchange",
+     "DevicePosture.prototype.type",
++    "DigitalCredential",
++    "DigitalCredential.prototype",
++    "DigitalCredential.prototype.data",
++    "DigitalCredential.prototype.protocol",
++    "DigitalCredential.prototype.toJSON",
++    "DigitalCredential.userAgentAllowsProtocol",
+     "DisposableStack",
+     "DisposableStack.prototype",
+     "DisposableStack.prototype.adopt",
+@@ -5072,7 +5078,10 @@
+     "RTCRtpReceiver.prototype.playoutDelayHint",
+     "RTCRtpReceiver.prototype.rtcpTransport",
+     "RTCRtpReceiver.prototype.track",
++    "RTCRtpReceiver.prototype.transform",
+     "RTCRtpReceiver.prototype.transport",
++    "RTCRtpScriptTransform",
++    "RTCRtpScriptTransform.prototype",
+     "RTCRtpSender",
+     "RTCRtpSender.getCapabilities",
+     "RTCRtpSender.prototype",
+@@ -5085,6 +5094,7 @@
+     "RTCRtpSender.prototype.setParameters",
+     "RTCRtpSender.prototype.setStreams",
+     "RTCRtpSender.prototype.track",
++    "RTCRtpSender.prototype.transform",
+     "RTCRtpSender.prototype.transport",
+     "RTCRtpTransceiver",
+     "RTCRtpTransceiver.prototype",
+@@ -7930,6 +7940,7 @@
+     "XMLDocument.prototype",
+     "XMLDocument.prototype.URL",
+     "XMLDocument.prototype.activeElement",
++    "XMLDocument.prototype.activeViewTransition",
+     "XMLDocument.prototype.adoptNode",
+     "XMLDocument.prototype.adoptedStyleSheets",
+     "XMLDocument.prototype.alinkColor",
+```
+
+  
 #### 141.0.7378.3 (`2025-8-28`) ⚡
 Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_141.0.7367.0_to_141.0.7378.3.diff), [json](./browser_apis/chrome-unstable_141.0.7367.0_to_141.0.7378.3.json), [full list](./browser_apis/chrome-unstable_141.0.7378.3.json))
  ```diff
@@ -2699,47 +2755,6 @@ Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_134.0.6974.
      "SharedStorageWorklet",
      "SharedStorageWorklet.prototype",
      "SharedStorageWorklet.prototype.addModule",
-```
-
-  
-#### 134.0.6974.3 (`2025-1-24`) ⚡
-Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_134.0.6958.2_to_134.0.6974.3.diff), [json](./browser_apis/chrome-unstable_134.0.6958.2_to_134.0.6974.3.json), [full list](./browser_apis/chrome-unstable_134.0.6974.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_134.0.6958.2.json	2025-01-25 01:06:31.095530173 +0000
-+++ ./browser_apis/chrome-unstable_134.0.6974.3.json	2025-01-25 01:07:06.543253723 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8604,
-+  "browserApiCount": 8615,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -512,6 +512,15 @@
-     "CSSFontFaceRule",
-     "CSSFontFaceRule.prototype",
-     "CSSFontFaceRule.prototype.style",
-+    "CSSFontFeatureValuesRule",
-+    "CSSFontFeatureValuesRule.prototype",
-+    "CSSFontFeatureValuesRule.prototype.annotation",
-+    "CSSFontFeatureValuesRule.prototype.characterVariant",
-+    "CSSFontFeatureValuesRule.prototype.fontFamily",
-+    "CSSFontFeatureValuesRule.prototype.ornaments",
-+    "CSSFontFeatureValuesRule.prototype.styleset",
-+    "CSSFontFeatureValuesRule.prototype.stylistic",
-+    "CSSFontFeatureValuesRule.prototype.swash",
-     "CSSFontPaletteValuesRule",
-     "CSSFontPaletteValuesRule.prototype",
-     "CSSFontPaletteValuesRule.prototype.basePalette",
-@@ -1608,6 +1617,8 @@
-     "GPUAdapterInfo.prototype.architecture",
-     "GPUAdapterInfo.prototype.description",
-     "GPUAdapterInfo.prototype.device",
-+    "GPUAdapterInfo.prototype.subgroupMaxSize",
-+    "GPUAdapterInfo.prototype.subgroupMinSize",
-     "GPUAdapterInfo.prototype.vendor",
-     "GPUBindGroup",
-     "GPUBindGroup.prototype",
 ```
 
   <!-- browserapis:end -->

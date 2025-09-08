@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "141.0.7378.3",
+    "to": "142.0.7393.6"
+  },
+  "browserApis": {
+    "added": [
+      "DigitalCredential",
+      "DigitalCredential.prototype",
+      "DigitalCredential.prototype.data",
+      "DigitalCredential.prototype.protocol",
+      "DigitalCredential.prototype.toJSON",
+      "DigitalCredential.userAgentAllowsProtocol",
+      "RTCRtpReceiver.prototype.transform",
+      "RTCRtpScriptTransform",
+      "RTCRtpScriptTransform.prototype",
+      "RTCRtpSender.prototype.transform",
+      "XMLDocument.prototype.activeViewTransition"
+    ],
+    "removed": []
+  }
+}
