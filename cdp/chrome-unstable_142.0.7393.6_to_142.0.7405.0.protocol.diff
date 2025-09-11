@@ -1,0 +1,15 @@
+--- ./cdp/chrome-unstable_142.0.7393.6.protocol.json	2025-09-11 21:00:52.775240405 +0000
++++ ./cdp/chrome-unstable_142.0.7405.0.protocol.json	2025-09-11 21:01:34.906265605 +0000
+@@ -24021,6 +24021,12 @@
+               "deprecated": true,
+               "optional": true,
+               "type": "string"
++            },
++            {
++              "name": "tag",
++              "description": "For more details, see:\nhttps://github.com/WICG/nav-speculation/blob/main/speculation-rules-tags.md",
++              "optional": true,
++              "type": "string"
+             }
+           ]
+         },

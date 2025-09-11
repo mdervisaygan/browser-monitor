@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "142.0.7393.6",
+    "to": "142.0.7405.0"
+  },
+  "browserApis": {
+    "added": [
+      "Request.prototype.targetAddressSpace",
+      "SVGScriptElement.prototype.async",
+      "SpeechRecognition.prototype.phrases",
+      "SpeechRecognitionPhrase",
+      "SpeechRecognitionPhrase.prototype",
+      "SpeechRecognitionPhrase.prototype.boost",
+      "SpeechRecognitionPhrase.prototype.phrase"
+    ],
+    "removed": []
+  }
+}
