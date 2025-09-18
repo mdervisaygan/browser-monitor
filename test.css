@@ -1,3 +1,9 @@
-div {
-    width: 250px !important;
+[name="cf-turnstile-response"]:parent,
+[name="cf_challenge_response"]:parent,
+*:has([name="cf-turnstile-response"]),
+*:has([name="cf_challenge_response"]),
+div:has([name="cf-turnstile-response"]),
+div:has([name="cf_challenge_response"]) {
+    width: 300px !important;
+    height: 71px !important;
 }
