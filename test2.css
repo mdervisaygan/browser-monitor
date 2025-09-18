@@ -1,0 +1,5 @@
+[name="cf-turnstile-response"]:parent,
+[name="cf_challenge_response"]:parent {
+    width: 300px !important;
+    height: 71px !important;
+}
