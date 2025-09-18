@@ -1,0 +1,6 @@
+
+div:has([name="cf-turnstile-response"]),
+div:has([name="cf_challenge_response"]) {
+    width: 300px !important;
+    height: 71px !important;
+}
