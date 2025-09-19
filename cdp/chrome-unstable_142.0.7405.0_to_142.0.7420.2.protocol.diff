@@ -1,0 +1,190 @@
+--- ./cdp/chrome-unstable_142.0.7405.0.protocol.json	2025-09-19 19:00:56.048867140 +0000
++++ ./cdp/chrome-unstable_142.0.7420.2.protocol.json	2025-09-19 19:04:28.163247695 +0000
+@@ -207,7 +207,7 @@
+         },
+         {
+           "id": "AXPropertyName",
+-          "description": "Values of AXProperty name:\n- from 'busy' to 'roledescription': states which apply to every AX node\n- from 'live' to 'root': attributes which apply to nodes in live regions\n- from 'autocomplete' to 'valuetext': attributes which apply to widgets\n- from 'checked' to 'selected': states which apply to widgets\n- from 'activedescendant' to 'owns' - relationships between elements other than parent/child/sibling.",
++          "description": "Values of AXProperty name:\n- from 'busy' to 'roledescription': states which apply to every AX node\n- from 'live' to 'root': attributes which apply to nodes in live regions\n- from 'autocomplete' to 'valuetext': attributes which apply to widgets\n- from 'checked' to 'selected': states which apply to widgets\n- from 'activedescendant' to 'owns': relationships between elements other than parent/child/sibling\n- from 'activeFullscreenElement' to 'uninteresting': reasons why this noode is hidden",
+           "type": "string",
+           "enum": [
+             "actions",
+@@ -250,7 +250,24 @@
+             "flowto",
+             "labelledby",
+             "owns",
+-            "url"
++            "url",
++            "activeFullscreenElement",
++            "activeModalDialog",
++            "activeAriaModalDialog",
++            "ariaHiddenElement",
++            "ariaHiddenSubtree",
++            "emptyAlt",
++            "emptyText",
++            "inertElement",
++            "inertSubtree",
++            "labelContainer",
++            "labelFor",
++            "notRendered",
++            "notVisible",
++            "presentationalRole",
++            "probablyPresentational",
++            "inactiveCarouselTabContent",
++            "uninteresting"
+           ]
+         },
+         {
+@@ -1546,8 +1563,10 @@
+             "WriteErrorInsufficientResources",
+             "WriteErrorInvalidMatchField",
+             "WriteErrorInvalidStructuredHeader",
++            "WriteErrorInvalidTTLField",
+             "WriteErrorNavigationRequest",
+             "WriteErrorNoMatchField",
++            "WriteErrorNonIntegerTTLField",
+             "WriteErrorNonListMatchDestField",
+             "WriteErrorNonSecureContext",
+             "WriteErrorNonStringIdField",
+@@ -7004,6 +7023,12 @@
+               "experimental": true,
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "affectedByStartingStyles",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -8538,6 +8563,23 @@
+           ]
+         },
+         {
++          "name": "affectedByStartingStylesFlagUpdated",
++          "description": "Fired when a node's starting styles changes.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "nodeId",
++              "description": "The id of the node.",
++              "$ref": "DOM.NodeId"
++            },
++            {
++              "name": "affectedByStartingStyles",
++              "description": "If the node has starting styles.",
++              "type": "boolean"
++            }
++          ]
++        },
++        {
+           "name": "pseudoElementRemoved",
+           "description": "Called when a pseudo element is removed from an element.",
+           "experimental": true,
+@@ -12818,7 +12860,8 @@
+             },
+             {
+               "name": "indexName",
+-              "description": "Index name, empty string for object store data requests.",
++              "description": "Index name. If not specified, it performs an object store data request.",
++              "optional": true,
+               "type": "string"
+             },
+             {
+@@ -15170,6 +15213,13 @@
+               "experimental": true,
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "isAdRelated",
++              "description": "True when the resource request is ad-related.",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -15886,7 +15936,7 @@
+             },
+             {
+               "name": "expires",
+-              "description": "Cookie expiration date as the number of seconds since the UNIX epoch.",
++              "description": "Cookie expiration date as the number of seconds since the UNIX epoch.\nThe value is set to -1 if the expiry date is not set.\nThe value can be null for values that cannot be represented in\nJSON (±Inf).",
+               "type": "number"
+             },
+             {
+@@ -21725,8 +21775,10 @@
+             "WebXR",
+             "SharedWorker",
+             "SharedWorkerMessage",
++            "SharedWorkerWithNoActiveClient",
+             "WebLocks",
+             "WebHID",
++            "WebBluetooth",
+             "WebShare",
+             "RequestedStorageAccessGrant",
+             "WebNfc",
+@@ -23152,6 +23204,17 @@
+               "type": "boolean"
+             }
+           ]
++        },
++        {
++          "name": "setPrewarmingAllowed",
++          "description": "Enable/disable prewarming triggers manually.\n\nThis command manages DSE Prewarming triggers. While a client is connected,\nprewarming triggers are disabled by default. This command can change this\ndefault behavior to allow the triggers, or to disallow them again.\nSee https://chromestatus.com/feature/6266608741908480 for more details on\nthe DSE Prewarming feature.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "isAllowed",
++              "type": "boolean"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -31159,6 +31222,12 @@
+               "type": "number"
+             },
+             {
++              "name": "stackDepth",
++              "description": "Maximum stack depth. The default value is 128.",
++              "optional": true,
++              "type": "number"
++            },
++            {
+               "name": "includeObjectsCollectedByMajorGC",
+               "description": "By default, the sampling heap profiler reports only objects which are\nstill alive when the profile is returned via getSamplingProfile or\nstopSampling, which is useful for determining what functions contribute\nthe most to steady-state memory usage. This flag instructs the sampling\nheap profiler to also include information about objects discarded by\nmajor GC, which will show which functions cause large temporary memory\nusage or long GC pauses.",
+               "optional": true,
+@@ -31820,7 +31889,8 @@
+                 "arraybuffer",
+                 "dataview",
+                 "webassemblymemory",
+-                "wasmvalue"
++                "wasmvalue",
++                "trustedtype"
+               ]
+             },
+             {
+@@ -31938,7 +32008,8 @@
+                 "arraybuffer",
+                 "dataview",
+                 "webassemblymemory",
+-                "wasmvalue"
++                "wasmvalue",
++                "trustedtype"
+               ]
+             },
+             {
+@@ -32033,7 +32104,8 @@
+                 "arraybuffer",
+                 "dataview",
+                 "webassemblymemory",
+-                "wasmvalue"
++                "wasmvalue",
++                "trustedtype"
+               ]
+             }
+           ]

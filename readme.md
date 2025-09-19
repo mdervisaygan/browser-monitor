@@ -1211,6 +1211,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 142.0.7420.2 (`2025-9-19`) 
+No browser API changes.
+
+  
 #### 142.0.7405.0 (`2025-9-11`) ⚡
 Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_142.0.7393.6_to_142.0.7405.0.diff), [json](./browser_apis/chrome-unstable_142.0.7393.6_to_142.0.7405.0.json), [full list](./browser_apis/chrome-unstable_142.0.7405.0.json))
  ```diff
@@ -2584,9 +2588,5 @@ Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_135.0.6999.2
      "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
      "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
 ```
-
-  
-#### 135.0.6999.2 (`2025-2-6`) 
-No browser API changes.
 
   <!-- browserapis:end -->
