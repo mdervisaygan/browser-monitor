@@ -1211,6 +1211,118 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 142.0.7432.0 (`2025-9-25`) ⚡
+Added 25 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_142.0.7420.2_to_142.0.7432.0.diff), [json](./browser_apis/chrome-unstable_142.0.7420.2_to_142.0.7432.0.json), [full list](./browser_apis/chrome-unstable_142.0.7432.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_142.0.7420.2.json	2025-09-25 18:01:00.597455545 +0000
++++ ./browser_apis/chrome-unstable_142.0.7432.0.json	2025-09-25 18:04:22.148957916 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8832,
++  "browserApiCount": 8839,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2015,6 +2015,7 @@
+     "HTMLAnchorElement.prototype.href",
+     "HTMLAnchorElement.prototype.hrefTranslate",
+     "HTMLAnchorElement.prototype.hreflang",
++    "HTMLAnchorElement.prototype.interestForElement",
+     "HTMLAnchorElement.prototype.name",
+     "HTMLAnchorElement.prototype.origin",
+     "HTMLAnchorElement.prototype.password",
+@@ -2043,6 +2044,7 @@
+     "HTMLAreaElement.prototype.host",
+     "HTMLAreaElement.prototype.hostname",
+     "HTMLAreaElement.prototype.href",
++    "HTMLAreaElement.prototype.interestForElement",
+     "HTMLAreaElement.prototype.noHref",
+     "HTMLAreaElement.prototype.origin",
+     "HTMLAreaElement.prototype.password",
+@@ -2107,6 +2109,7 @@
+     "HTMLButtonElement.prototype.formMethod",
+     "HTMLButtonElement.prototype.formNoValidate",
+     "HTMLButtonElement.prototype.formTarget",
++    "HTMLButtonElement.prototype.interestForElement",
+     "HTMLButtonElement.prototype.labels",
+     "HTMLButtonElement.prototype.name",
+     "HTMLButtonElement.prototype.popoverTargetAction",
+@@ -3054,6 +3057,9 @@
+     "IntegrityViolationReportBody.prototype.documentURL",
+     "IntegrityViolationReportBody.prototype.reportOnly",
+     "IntegrityViolationReportBody.prototype.toJSON",
++    "InterestEvent",
++    "InterestEvent.prototype",
++    "InterestEvent.prototype.source",
+     "IntersectionObserver",
+     "IntersectionObserver.prototype",
+     "IntersectionObserver.prototype.delay",
+@@ -5352,6 +5358,7 @@
+     "SVGAElement",
+     "SVGAElement.prototype",
+     "SVGAElement.prototype.href",
++    "SVGAElement.prototype.interestForElement",
+     "SVGAElement.prototype.rel",
+     "SVGAElement.prototype.relList",
+     "SVGAElement.prototype.target",
+@@ -7857,9 +7864,27 @@
+     "WheelEvent.prototype.clientY",
+     "WheelEvent.prototype.constructor",
+     "WheelEvent.prototype.constructor.prototype",
++    "WheelEvent.prototype.constructor.prototype.bubbles",
++    "WheelEvent.prototype.constructor.prototype.cancelBubble",
++    "WheelEvent.prototype.constructor.prototype.cancelable",
++    "WheelEvent.prototype.constructor.prototype.composed",
++    "WheelEvent.prototype.constructor.prototype.composedPath",
++    "WheelEvent.prototype.constructor.prototype.constructor",
++    "WheelEvent.prototype.constructor.prototype.currentTarget",
++    "WheelEvent.prototype.constructor.prototype.defaultPrevented",
+     "WheelEvent.prototype.constructor.prototype.detail",
++    "WheelEvent.prototype.constructor.prototype.eventPhase",
++    "WheelEvent.prototype.constructor.prototype.initEvent",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
++    "WheelEvent.prototype.constructor.prototype.preventDefault",
++    "WheelEvent.prototype.constructor.prototype.returnValue",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
++    "WheelEvent.prototype.constructor.prototype.srcElement",
++    "WheelEvent.prototype.constructor.prototype.stopImmediatePropagation",
++    "WheelEvent.prototype.constructor.prototype.stopPropagation",
++    "WheelEvent.prototype.constructor.prototype.target",
++    "WheelEvent.prototype.constructor.prototype.timeStamp",
++    "WheelEvent.prototype.constructor.prototype.type",
+     "WheelEvent.prototype.constructor.prototype.view",
+     "WheelEvent.prototype.constructor.prototype.which",
+     "WheelEvent.prototype.ctrlKey",
+@@ -7898,25 +7923,7 @@
+     "WindowControlsOverlay.prototype.visible",
+     "WindowControlsOverlayGeometryChangeEvent",
+     "WindowControlsOverlayGeometryChangeEvent.prototype",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.bubbles",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelBubble",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelable",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.composed",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.composedPath",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.constructor",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.currentTarget",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.defaultPrevented",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.eventPhase",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.initEvent",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.preventDefault",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.returnValue",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.srcElement",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.stopImmediatePropagation",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.stopPropagation",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.target",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.timeStamp",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.type",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
+     "Worker",
+     "Worker.prototype",
+```
+
+  
 #### 142.0.7420.2 (`2025-9-19`) 
 No browser API changes.
 
@@ -2563,30 +2675,6 @@ Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7012.
      "Option.prototype.constructor.prototype.ariaLevel",
      "Option.prototype.constructor.prototype.ariaLive",
      "Option.prototype.constructor.prototype.ariaModal",
-```
-
-  
-#### 135.0.7012.4 (`2025-2-13`) ⚡
-Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_135.0.6999.2_to_135.0.7012.4.diff), [json](./browser_apis/chrome-unstable_135.0.6999.2_to_135.0.7012.4.json), [full list](./browser_apis/chrome-unstable_135.0.7012.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_135.0.6999.2.json	2025-02-14 01:11:23.576987714 +0000
-+++ ./browser_apis/chrome-unstable_135.0.7012.4.json	2025-02-14 01:11:44.536787841 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8628,
-+  "browserApiCount": 8627,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -1829,7 +1829,6 @@
-     "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
-     "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
-     "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
--    "GPUSupportedLimits.prototype.maxInterStageShaderComponents",
-     "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
-     "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
-     "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
 ```
 
   <!-- browserapis:end -->
