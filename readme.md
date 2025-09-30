@@ -5,6 +5,124 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 141.0.7390.54 (`2025-9-30`) ⚡
+Added 24 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_140.0.7339.207_to_141.0.7390.54.diff), [json](./browser_apis/chrome-stable_140.0.7339.207_to_141.0.7390.54.json), [full list](./browser_apis/chrome-stable_141.0.7390.54.json))
+ ```diff
+--- ./browser_apis/chrome-stable_140.0.7339.207.json	2025-09-30 21:00:54.904425842 +0000
++++ ./browser_apis/chrome-stable_141.0.7390.54.json	2025-09-30 21:05:12.583449483 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8801,
++  "browserApiCount": 8825,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1320,6 +1320,12 @@
+     "DevicePosture.prototype",
+     "DevicePosture.prototype.onchange",
+     "DevicePosture.prototype.type",
++    "DigitalCredential",
++    "DigitalCredential.prototype",
++    "DigitalCredential.prototype.data",
++    "DigitalCredential.prototype.protocol",
++    "DigitalCredential.prototype.toJSON",
++    "DigitalCredential.userAgentAllowsProtocol",
+     "DisposableStack",
+     "DisposableStack.prototype",
+     "DisposableStack.prototype.adopt",
+@@ -2827,6 +2833,7 @@
+     "IDBIndex.prototype.get",
+     "IDBIndex.prototype.getAll",
+     "IDBIndex.prototype.getAllKeys",
++    "IDBIndex.prototype.getAllRecords",
+     "IDBIndex.prototype.getKey",
+     "IDBIndex.prototype.keyPath",
+     "IDBIndex.prototype.multiEntry",
+@@ -2858,6 +2865,7 @@
+     "IDBObjectStore.prototype.get",
+     "IDBObjectStore.prototype.getAll",
+     "IDBObjectStore.prototype.getAllKeys",
++    "IDBObjectStore.prototype.getAllRecords",
+     "IDBObjectStore.prototype.getKey",
+     "IDBObjectStore.prototype.index",
+     "IDBObjectStore.prototype.indexNames",
+@@ -2871,6 +2879,11 @@
+     "IDBOpenDBRequest.prototype",
+     "IDBOpenDBRequest.prototype.onblocked",
+     "IDBOpenDBRequest.prototype.onupgradeneeded",
++    "IDBRecord",
++    "IDBRecord.prototype",
++    "IDBRecord.prototype.key",
++    "IDBRecord.prototype.primaryKey",
++    "IDBRecord.prototype.value",
+     "IDBRequest",
+     "IDBRequest.prototype",
+     "IDBRequest.prototype.error",
+@@ -3776,6 +3789,9 @@
+     "NavigationHistoryEntry.prototype.ondispose",
+     "NavigationHistoryEntry.prototype.sameDocument",
+     "NavigationHistoryEntry.prototype.url",
++    "NavigationPrecommitController",
++    "NavigationPrecommitController.prototype",
++    "NavigationPrecommitController.prototype.redirect",
+     "NavigationPreloadManager",
+     "NavigationPreloadManager.prototype",
+     "NavigationPreloadManager.prototype.disable",
+@@ -3784,6 +3800,7 @@
+     "NavigationPreloadManager.prototype.setHeaderValue",
+     "NavigationTransition",
+     "NavigationTransition.prototype",
++    "NavigationTransition.prototype.committed",
+     "NavigationTransition.prototype.finished",
+     "NavigationTransition.prototype.from",
+     "NavigationTransition.prototype.navigationType",
+@@ -4179,6 +4196,7 @@
+     "Option.prototype.constructor.prototype.ariaModal",
+     "Option.prototype.constructor.prototype.ariaMultiLine",
+     "Option.prototype.constructor.prototype.ariaMultiSelectable",
++    "Option.prototype.constructor.prototype.ariaNotify",
+     "Option.prototype.constructor.prototype.ariaOrientation",
+     "Option.prototype.constructor.prototype.ariaPlaceholder",
+     "Option.prototype.constructor.prototype.ariaPosInSet",
+@@ -5060,7 +5078,10 @@
+     "RTCRtpReceiver.prototype.playoutDelayHint",
+     "RTCRtpReceiver.prototype.rtcpTransport",
+     "RTCRtpReceiver.prototype.track",
++    "RTCRtpReceiver.prototype.transform",
+     "RTCRtpReceiver.prototype.transport",
++    "RTCRtpScriptTransform",
++    "RTCRtpScriptTransform.prototype",
+     "RTCRtpSender",
+     "RTCRtpSender.getCapabilities",
+     "RTCRtpSender.prototype",
+@@ -5073,6 +5094,7 @@
+     "RTCRtpSender.prototype.setParameters",
+     "RTCRtpSender.prototype.setStreams",
+     "RTCRtpSender.prototype.track",
++    "RTCRtpSender.prototype.transform",
+     "RTCRtpSender.prototype.transport",
+     "RTCRtpTransceiver",
+     "RTCRtpTransceiver.prototype",
+@@ -5284,6 +5306,7 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
++    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
+@@ -7925,6 +7948,7 @@
+     "XMLDocument.prototype.anchors",
+     "XMLDocument.prototype.append",
+     "XMLDocument.prototype.applets",
++    "XMLDocument.prototype.ariaNotify",
+     "XMLDocument.prototype.bgColor",
+     "XMLDocument.prototype.body",
+     "XMLDocument.prototype.browsingTopics",
+```
+
+  
 #### 140.0.7339.207 (`2025-9-23`) 
 No browser API changes.
 
@@ -1203,10 +1321,6 @@ Added 43 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_133.0.6943.14
      "Symbol.for",
      "Symbol.keyFor",
 ```
-
-  
-#### 133.0.6943.141 (`2025-2-25`) 
-No browser API changes.
 
   
 ### chrome-unstable

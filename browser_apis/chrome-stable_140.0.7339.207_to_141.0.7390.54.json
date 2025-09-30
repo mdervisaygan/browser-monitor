@@ -1,0 +1,36 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "140.0.7339.207",
+    "to": "141.0.7390.54"
+  },
+  "browserApis": {
+    "added": [
+      "DigitalCredential",
+      "DigitalCredential.prototype",
+      "DigitalCredential.prototype.data",
+      "DigitalCredential.prototype.protocol",
+      "DigitalCredential.prototype.toJSON",
+      "DigitalCredential.userAgentAllowsProtocol",
+      "IDBIndex.prototype.getAllRecords",
+      "IDBObjectStore.prototype.getAllRecords",
+      "IDBRecord",
+      "IDBRecord.prototype",
+      "IDBRecord.prototype.key",
+      "IDBRecord.prototype.primaryKey",
+      "IDBRecord.prototype.value",
+      "NavigationPrecommitController",
+      "NavigationPrecommitController.prototype",
+      "NavigationPrecommitController.prototype.redirect",
+      "NavigationTransition.prototype.committed",
+      "Option.prototype.constructor.prototype.ariaNotify",
+      "RTCRtpReceiver.prototype.transform",
+      "RTCRtpScriptTransform",
+      "RTCRtpScriptTransform.prototype",
+      "RTCRtpSender.prototype.transform",
+      "Request.prototype.targetAddressSpace",
+      "XMLDocument.prototype.ariaNotify"
+    ],
+    "removed": []
+  }
+}
