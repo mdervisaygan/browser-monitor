@@ -1325,6 +1325,30 @@ Added 43 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_133.0.6943.14
   
 ### chrome-unstable
   
+#### 143.0.7445.0 (`2025-10-2`) ⚡
+Added 1 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_142.0.7432.0_to_143.0.7445.0.diff), [json](./browser_apis/chrome-unstable_142.0.7432.0_to_143.0.7445.0.json), [full list](./browser_apis/chrome-unstable_143.0.7445.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_142.0.7432.0.json	2025-10-02 22:00:50.540818821 +0000
++++ ./browser_apis/chrome-unstable_143.0.7445.0.json	2025-10-02 22:01:20.629042374 +0000
+@@ -5312,7 +5312,6 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
+-    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
+@@ -5357,6 +5356,7 @@
+     "RestrictionTarget.prototype",
+     "SVGAElement",
+     "SVGAElement.prototype",
++    "SVGAElement.prototype.download",
+     "SVGAElement.prototype.href",
+     "SVGAElement.prototype.interestForElement",
+     "SVGAElement.prototype.rel",
+```
+
+  
 #### 142.0.7432.0 (`2025-9-25`) ⚡
 Added 25 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_142.0.7420.2_to_142.0.7432.0.diff), [json](./browser_apis/chrome-unstable_142.0.7420.2_to_142.0.7432.0.json), [full list](./browser_apis/chrome-unstable_142.0.7432.0.json))
  ```diff
@@ -2696,99 +2720,6 @@ Added 9 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_135.0.7023.0
      "find",
      "focus",
      "frameElement",
-```
-
-  
-#### 135.0.7023.0 (`2025-2-20`) ⚡
-Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7012.4_to_135.0.7023.0.diff), [json](./browser_apis/chrome-unstable_135.0.7012.4_to_135.0.7023.0.json), [full list](./browser_apis/chrome-unstable_135.0.7023.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_135.0.7012.4.json	2025-02-20 22:01:17.454891600 +0000
-+++ ./browser_apis/chrome-unstable_135.0.7023.0.json	2025-02-20 22:02:27.630590846 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8627,
-+  "browserApiCount": 8644,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -1353,6 +1353,7 @@
-     "EditContext.prototype.updateText",
-     "ElementInternals",
-     "ElementInternals.prototype",
-+    "ElementInternals.prototype.ariaActiveDescendantElement",
-     "ElementInternals.prototype.ariaAtomic",
-     "ElementInternals.prototype.ariaAutoComplete",
-     "ElementInternals.prototype.ariaBrailleLabel",
-@@ -1363,15 +1364,21 @@
-     "ElementInternals.prototype.ariaColIndex",
-     "ElementInternals.prototype.ariaColIndexText",
-     "ElementInternals.prototype.ariaColSpan",
-+    "ElementInternals.prototype.ariaControlsElements",
-     "ElementInternals.prototype.ariaCurrent",
-+    "ElementInternals.prototype.ariaDescribedByElements",
-     "ElementInternals.prototype.ariaDescription",
-+    "ElementInternals.prototype.ariaDetailsElements",
-     "ElementInternals.prototype.ariaDisabled",
-+    "ElementInternals.prototype.ariaErrorMessageElements",
-     "ElementInternals.prototype.ariaExpanded",
-+    "ElementInternals.prototype.ariaFlowToElements",
-     "ElementInternals.prototype.ariaHasPopup",
-     "ElementInternals.prototype.ariaHidden",
-     "ElementInternals.prototype.ariaInvalid",
-     "ElementInternals.prototype.ariaKeyShortcuts",
-     "ElementInternals.prototype.ariaLabel",
-+    "ElementInternals.prototype.ariaLabelledByElements",
-     "ElementInternals.prototype.ariaLevel",
-     "ElementInternals.prototype.ariaLive",
-     "ElementInternals.prototype.ariaModal",
-@@ -2518,6 +2525,8 @@
-     "HTMLSelectElement.prototype.validity",
-     "HTMLSelectElement.prototype.value",
-     "HTMLSelectElement.prototype.willValidate",
-+    "HTMLSelectedContentElement",
-+    "HTMLSelectedContentElement.prototype",
-     "HTMLSlotElement",
-     "HTMLSlotElement.prototype",
-     "HTMLSlotElement.prototype.assign",
-@@ -3667,6 +3676,7 @@
-     "NavigateEvent.prototype.navigationType",
-     "NavigateEvent.prototype.scroll",
-     "NavigateEvent.prototype.signal",
-+    "NavigateEvent.prototype.sourceElement",
-     "NavigateEvent.prototype.userInitiated",
-     "Navigation",
-     "Navigation.prototype",
-@@ -4060,6 +4070,7 @@
-     "Option.prototype.constructor.prototype.after",
-     "Option.prototype.constructor.prototype.animate",
-     "Option.prototype.constructor.prototype.append",
-+    "Option.prototype.constructor.prototype.ariaActiveDescendantElement",
-     "Option.prototype.constructor.prototype.ariaAtomic",
-     "Option.prototype.constructor.prototype.ariaAutoComplete",
-     "Option.prototype.constructor.prototype.ariaBrailleLabel",
-@@ -4070,15 +4081,21 @@
-     "Option.prototype.constructor.prototype.ariaColIndex",
-     "Option.prototype.constructor.prototype.ariaColIndexText",
-     "Option.prototype.constructor.prototype.ariaColSpan",
-+    "Option.prototype.constructor.prototype.ariaControlsElements",
-     "Option.prototype.constructor.prototype.ariaCurrent",
-+    "Option.prototype.constructor.prototype.ariaDescribedByElements",
-     "Option.prototype.constructor.prototype.ariaDescription",
-+    "Option.prototype.constructor.prototype.ariaDetailsElements",
-     "Option.prototype.constructor.prototype.ariaDisabled",
-+    "Option.prototype.constructor.prototype.ariaErrorMessageElements",
-     "Option.prototype.constructor.prototype.ariaExpanded",
-+    "Option.prototype.constructor.prototype.ariaFlowToElements",
-     "Option.prototype.constructor.prototype.ariaHasPopup",
-     "Option.prototype.constructor.prototype.ariaHidden",
-     "Option.prototype.constructor.prototype.ariaInvalid",
-     "Option.prototype.constructor.prototype.ariaKeyShortcuts",
-     "Option.prototype.constructor.prototype.ariaLabel",
-+    "Option.prototype.constructor.prototype.ariaLabelledByElements",
-     "Option.prototype.constructor.prototype.ariaLevel",
-     "Option.prototype.constructor.prototype.ariaLive",
-     "Option.prototype.constructor.prototype.ariaModal",
 ```
 
   <!-- browserapis:end -->

@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "142.0.7432.0",
+    "to": "143.0.7445.0"
+  },
+  "browserApis": {
+    "added": [
+      "SVGAElement.prototype.download"
+    ],
+    "removed": [
+      "Request.prototype.targetAddressSpace"
+    ]
+  }
+}
