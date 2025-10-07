@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "141.0.7390.54",
+    "to": "141.0.7390.65"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "Request.prototype.targetAddressSpace"
+    ]
+  }
+}

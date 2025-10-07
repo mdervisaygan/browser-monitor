@@ -5,6 +5,30 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 141.0.7390.65 (`2025-10-7`) ⚡
+Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_141.0.7390.54_to_141.0.7390.65.diff), [json](./browser_apis/chrome-stable_141.0.7390.54_to_141.0.7390.65.json), [full list](./browser_apis/chrome-stable_141.0.7390.65.json))
+ ```diff
+--- ./browser_apis/chrome-stable_141.0.7390.54.json	2025-10-07 20:00:56.318563537 +0000
++++ ./browser_apis/chrome-stable_141.0.7390.65.json	2025-10-07 20:01:44.879844049 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8825,
++  "browserApiCount": 8824,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -5306,7 +5306,6 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
+-    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
+```
+
+  
 #### 141.0.7390.54 (`2025-9-30`) ⚡
 Added 24 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_140.0.7339.207_to_141.0.7390.54.diff), [json](./browser_apis/chrome-stable_140.0.7339.207_to_141.0.7390.54.json), [full list](./browser_apis/chrome-stable_141.0.7390.54.json))
  ```diff
@@ -1187,136 +1211,6 @@ Added 0 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_134.0.6998.35
      "SubtleCrypto.prototype.wrapKey",
 -    "SuppressedError",
 -    "SuppressedError.prototype",
-     "Symbol",
-     "Symbol.for",
-     "Symbol.keyFor",
-```
-
-  
-#### 134.0.6998.35 (`2025-3-4`) ⚡
-Added 43 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_133.0.6943.141_to_134.0.6998.35.diff), [json](./browser_apis/chrome-stable_133.0.6943.141_to_134.0.6998.35.json), [full list](./browser_apis/chrome-stable_134.0.6998.35.json))
- ```diff
---- ./browser_apis/chrome-stable_133.0.6943.141.json	2025-03-04 22:00:54.678954580 +0000
-+++ ./browser_apis/chrome-stable_134.0.6998.35.json	2025-03-04 22:01:14.302041265 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 8585,
-+  "browserApiCount": 8628,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -101,6 +101,14 @@
-     "ArrayBuffer.prototype.slice",
-     "ArrayBuffer.prototype.transfer",
-     "ArrayBuffer.prototype.transferToFixedLength",
-+    "AsyncDisposableStack",
-+    "AsyncDisposableStack.prototype",
-+    "AsyncDisposableStack.prototype.adopt",
-+    "AsyncDisposableStack.prototype.defer",
-+    "AsyncDisposableStack.prototype.disposeAsync",
-+    "AsyncDisposableStack.prototype.disposed",
-+    "AsyncDisposableStack.prototype.move",
-+    "AsyncDisposableStack.prototype.use",
-     "Atomics",
-     "Atomics.add",
-     "Atomics.and",
-@@ -504,6 +512,15 @@
-     "CSSFontFaceRule",
-     "CSSFontFaceRule.prototype",
-     "CSSFontFaceRule.prototype.style",
-+    "CSSFontFeatureValuesRule",
-+    "CSSFontFeatureValuesRule.prototype",
-+    "CSSFontFeatureValuesRule.prototype.annotation",
-+    "CSSFontFeatureValuesRule.prototype.characterVariant",
-+    "CSSFontFeatureValuesRule.prototype.fontFamily",
-+    "CSSFontFeatureValuesRule.prototype.ornaments",
-+    "CSSFontFeatureValuesRule.prototype.styleset",
-+    "CSSFontFeatureValuesRule.prototype.stylistic",
-+    "CSSFontFeatureValuesRule.prototype.swash",
-     "CSSFontPaletteValuesRule",
-     "CSSFontPaletteValuesRule.prototype",
-     "CSSFontPaletteValuesRule.prototype.basePalette",
-@@ -1278,6 +1295,14 @@
-     "DevicePosture.prototype",
-     "DevicePosture.prototype.onchange",
-     "DevicePosture.prototype.type",
-+    "DisposableStack",
-+    "DisposableStack.prototype",
-+    "DisposableStack.prototype.adopt",
-+    "DisposableStack.prototype.defer",
-+    "DisposableStack.prototype.dispose",
-+    "DisposableStack.prototype.disposed",
-+    "DisposableStack.prototype.move",
-+    "DisposableStack.prototype.use",
-     "DocumentPictureInPicture",
-     "DocumentPictureInPicture.prototype",
-     "DocumentPictureInPicture.prototype.onenter",
-@@ -1399,6 +1424,7 @@
-     "EncodedVideoChunk.prototype.type",
-     "Error",
-     "Error.captureStackTrace",
-+    "Error.isError",
-     "Error.prototype",
-     "Error.prototype.toString",
-     "ErrorEvent",
-@@ -1591,6 +1617,8 @@
-     "GPUAdapterInfo.prototype.architecture",
-     "GPUAdapterInfo.prototype.description",
-     "GPUAdapterInfo.prototype.device",
-+    "GPUAdapterInfo.prototype.subgroupMaxSize",
-+    "GPUAdapterInfo.prototype.subgroupMinSize",
-     "GPUAdapterInfo.prototype.vendor",
-     "GPUBindGroup",
-     "GPUBindGroup.prototype",
-@@ -2069,7 +2097,9 @@
-     "HTMLDialogElement",
-     "HTMLDialogElement.prototype",
-     "HTMLDialogElement.prototype.close",
-+    "HTMLDialogElement.prototype.closedBy",
-     "HTMLDialogElement.prototype.open",
-+    "HTMLDialogElement.prototype.requestClose",
-     "HTMLDialogElement.prototype.returnValue",
-     "HTMLDialogElement.prototype.show",
-     "HTMLDialogElement.prototype.showModal",
-@@ -3977,6 +4007,7 @@
-     "OffscreenCanvasRenderingContext2D.prototype.fontKerning",
-     "OffscreenCanvasRenderingContext2D.prototype.fontStretch",
-     "OffscreenCanvasRenderingContext2D.prototype.fontVariantCaps",
-+    "OffscreenCanvasRenderingContext2D.prototype.getContextAttributes",
-     "OffscreenCanvasRenderingContext2D.prototype.getImageData",
-     "OffscreenCanvasRenderingContext2D.prototype.getLineDash",
-     "OffscreenCanvasRenderingContext2D.prototype.getTransform",
-@@ -6169,6 +6200,7 @@
-     "SharedStorage",
-     "SharedStorage.prototype",
-     "SharedStorage.prototype.append",
-+    "SharedStorage.prototype.batchUpdate",
-     "SharedStorage.prototype.clear",
-     "SharedStorage.prototype.createWorklet",
-     "SharedStorage.prototype.delete",
-@@ -6177,6 +6209,15 @@
-     "SharedStorage.prototype.selectURL",
-     "SharedStorage.prototype.set",
-     "SharedStorage.prototype.worklet",
-+    "SharedStorageAppendMethod",
-+    "SharedStorageAppendMethod.prototype",
-+    "SharedStorageAppendMethod.prototype.constructor",
-+    "SharedStorageClearMethod",
-+    "SharedStorageClearMethod.prototype",
-+    "SharedStorageDeleteMethod",
-+    "SharedStorageDeleteMethod.prototype",
-+    "SharedStorageSetMethod",
-+    "SharedStorageSetMethod.prototype",
-     "SharedStorageWorklet",
-     "SharedStorageWorklet.prototype",
-     "SharedStorageWorklet.prototype.addModule",
-@@ -6402,6 +6443,8 @@
-     "SubtleCrypto.prototype.unwrapKey",
-     "SubtleCrypto.prototype.verify",
-     "SubtleCrypto.prototype.wrapKey",
-+    "SuppressedError",
-+    "SuppressedError.prototype",
      "Symbol",
      "Symbol.for",
      "Symbol.keyFor",
