@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 141.0.7390.76 (`2025-10-9`) 
+No browser API changes.
+
+  
 #### 141.0.7390.65 (`2025-10-7`) ⚡
 Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_141.0.7390.54_to_141.0.7390.65.diff), [json](./browser_apis/chrome-stable_141.0.7390.54_to_141.0.7390.65.json), [full list](./browser_apis/chrome-stable_141.0.7390.65.json))
  ```diff
@@ -1160,61 +1164,6 @@ No browser API changes.
   
 #### 134.0.6998.117 (`2025-3-19`) 
 No browser API changes.
-
-  
-#### 134.0.6998.88 (`2025-3-10`) ⚡
-Added 0 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_134.0.6998.35_to_134.0.6998.88.diff), [json](./browser_apis/chrome-stable_134.0.6998.35_to_134.0.6998.88.json), [full list](./browser_apis/chrome-stable_134.0.6998.88.json))
- ```diff
---- ./browser_apis/chrome-stable_134.0.6998.35.json	2025-03-10 21:00:54.325485187 +0000
-+++ ./browser_apis/chrome-stable_134.0.6998.88.json	2025-03-10 21:01:13.620570180 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 8628,
-+  "browserApiCount": 8610,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -101,14 +101,6 @@
-     "ArrayBuffer.prototype.slice",
-     "ArrayBuffer.prototype.transfer",
-     "ArrayBuffer.prototype.transferToFixedLength",
--    "AsyncDisposableStack",
--    "AsyncDisposableStack.prototype",
--    "AsyncDisposableStack.prototype.adopt",
--    "AsyncDisposableStack.prototype.defer",
--    "AsyncDisposableStack.prototype.disposeAsync",
--    "AsyncDisposableStack.prototype.disposed",
--    "AsyncDisposableStack.prototype.move",
--    "AsyncDisposableStack.prototype.use",
-     "Atomics",
-     "Atomics.add",
-     "Atomics.and",
-@@ -1295,14 +1287,6 @@
-     "DevicePosture.prototype",
-     "DevicePosture.prototype.onchange",
-     "DevicePosture.prototype.type",
--    "DisposableStack",
--    "DisposableStack.prototype",
--    "DisposableStack.prototype.adopt",
--    "DisposableStack.prototype.defer",
--    "DisposableStack.prototype.dispose",
--    "DisposableStack.prototype.disposed",
--    "DisposableStack.prototype.move",
--    "DisposableStack.prototype.use",
-     "DocumentPictureInPicture",
-     "DocumentPictureInPicture.prototype",
-     "DocumentPictureInPicture.prototype.onenter",
-@@ -6443,8 +6427,6 @@
-     "SubtleCrypto.prototype.unwrapKey",
-     "SubtleCrypto.prototype.verify",
-     "SubtleCrypto.prototype.wrapKey",
--    "SuppressedError",
--    "SuppressedError.prototype",
-     "Symbol",
-     "Symbol.for",
-     "Symbol.keyFor",
-```
 
   
 ### chrome-unstable
