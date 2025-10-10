@@ -1168,6 +1168,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 143.0.7461.2 (`2025-10-10`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7445.0_to_143.0.7461.2.diff), [json](./browser_apis/chrome-unstable_143.0.7445.0_to_143.0.7461.2.json), [full list](./browser_apis/chrome-unstable_143.0.7461.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_143.0.7445.0.json	2025-10-10 17:00:52.263603700 +0000
++++ ./browser_apis/chrome-unstable_143.0.7461.2.json	2025-10-10 17:01:30.964913296 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8839,
++  "browserApiCount": 8840,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -5312,6 +5312,7 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
++    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
+```
+
+  
 #### 143.0.7445.0 (`2025-10-2`) ⚡
 Added 1 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_142.0.7432.0_to_143.0.7445.0.diff), [json](./browser_apis/chrome-unstable_142.0.7432.0_to_143.0.7445.0.json), [full list](./browser_apis/chrome-unstable_143.0.7445.0.json))
  ```diff
@@ -2480,89 +2504,6 @@ Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7039.
      "oncontentvisibilityautostatechange",
      "oncontextlost",
      "oncontextmenu",
-```
-
-  
-#### 135.0.7039.0 (`2025-3-3`) ⚡
-Added 9 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_135.0.7023.0_to_135.0.7039.0.diff), [json](./browser_apis/chrome-unstable_135.0.7023.0_to_135.0.7039.0.json), [full list](./browser_apis/chrome-unstable_135.0.7039.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_135.0.7023.0.json	2025-03-03 23:00:54.880970520 +0000
-+++ ./browser_apis/chrome-unstable_135.0.7039.0.json	2025-03-03 23:01:32.824662655 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8644,
-+  "browserApiCount": 8651,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -1190,6 +1190,7 @@
-     "DataView.prototype.byteOffset",
-     "DataView.prototype.getBigInt64",
-     "DataView.prototype.getBigUint64",
-+    "DataView.prototype.getFloat16",
-     "DataView.prototype.getFloat32",
-     "DataView.prototype.getFloat64",
-     "DataView.prototype.getInt16",
-@@ -1200,6 +1201,7 @@
-     "DataView.prototype.getUint8",
-     "DataView.prototype.setBigInt64",
-     "DataView.prototype.setBigUint64",
-+    "DataView.prototype.setFloat16",
-     "DataView.prototype.setFloat32",
-     "DataView.prototype.setFloat64",
-     "DataView.prototype.setInt16",
-@@ -1488,6 +1490,9 @@
-     "FencedFrameConfig",
-     "FencedFrameConfig.prototype",
-     "FencedFrameConfig.prototype.setSharedStorageContext",
-+    "FetchLaterResult",
-+    "FetchLaterResult.prototype",
-+    "FetchLaterResult.prototype.activated",
-     "File",
-     "File.prototype",
-     "File.prototype.arrayBuffer",
-@@ -1556,6 +1561,8 @@
-     "FinalizationRegistry.prototype",
-     "FinalizationRegistry.prototype.register",
-     "FinalizationRegistry.prototype.unregister",
-+    "Float16Array",
-+    "Float16Array.prototype",
-     "Float32Array",
-     "Float32Array.prototype",
-     "Float64Array",
-@@ -3293,6 +3300,7 @@
-     "Math.cosh",
-     "Math.exp",
-     "Math.expm1",
-+    "Math.f16round",
-     "Math.floor",
-     "Math.fround",
-     "Math.hypot",
-@@ -3665,7 +3673,6 @@
-     "NavigateEvent",
-     "NavigateEvent.prototype",
-     "NavigateEvent.prototype.canIntercept",
--    "NavigateEvent.prototype.canTransition",
-     "NavigateEvent.prototype.destination",
-     "NavigateEvent.prototype.downloadRequest",
-     "NavigateEvent.prototype.formData",
-@@ -8194,7 +8201,6 @@
-     "XRSystem.prototype.isSessionSupported",
-     "XRSystem.prototype.ondevicechange",
-     "XRSystem.prototype.requestSession",
--    "XRSystem.prototype.supportsSession",
-     "XRTransientInputHitTestResult",
-     "XRTransientInputHitTestResult.prototype",
-     "XRTransientInputHitTestResult.prototype.inputSource",
-@@ -8318,6 +8324,7 @@
-     "external",
-     "fence",
-     "fetch",
-+    "fetchLater",
-     "find",
-     "focus",
-     "frameElement",
 ```
 
   <!-- browserapis:end -->
