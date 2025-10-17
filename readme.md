@@ -1168,6 +1168,53 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 143.0.7475.7 (`2025-10-17`) ⚡
+Added 0 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_143.0.7461.2_to_143.0.7475.7.diff), [json](./browser_apis/chrome-unstable_143.0.7461.2_to_143.0.7475.7.json), [full list](./browser_apis/chrome-unstable_143.0.7475.7.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_143.0.7461.2.json	2025-10-17 18:00:53.210926048 +0000
++++ ./browser_apis/chrome-unstable_143.0.7475.7.json	2025-10-17 18:01:27.361196366 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8840,
++  "browserApiCount": 8833,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3117,10 +3117,8 @@
+     "Intl.Locale.prototype",
+     "Intl.Locale.prototype.baseName",
+     "Intl.Locale.prototype.calendar",
+-    "Intl.Locale.prototype.calendars",
+     "Intl.Locale.prototype.caseFirst",
+     "Intl.Locale.prototype.collation",
+-    "Intl.Locale.prototype.collations",
+     "Intl.Locale.prototype.firstDayOfWeek",
+     "Intl.Locale.prototype.getCalendars",
+     "Intl.Locale.prototype.getCollations",
+@@ -3130,19 +3128,14 @@
+     "Intl.Locale.prototype.getTimeZones",
+     "Intl.Locale.prototype.getWeekInfo",
+     "Intl.Locale.prototype.hourCycle",
+-    "Intl.Locale.prototype.hourCycles",
+     "Intl.Locale.prototype.language",
+     "Intl.Locale.prototype.maximize",
+     "Intl.Locale.prototype.minimize",
+     "Intl.Locale.prototype.numberingSystem",
+-    "Intl.Locale.prototype.numberingSystems",
+     "Intl.Locale.prototype.numeric",
+     "Intl.Locale.prototype.region",
+     "Intl.Locale.prototype.script",
+-    "Intl.Locale.prototype.textInfo",
+-    "Intl.Locale.prototype.timeZones",
+     "Intl.Locale.prototype.toString",
+-    "Intl.Locale.prototype.weekInfo",
+     "Intl.NumberFormat",
+     "Intl.NumberFormat.prototype",
+     "Intl.NumberFormat.prototype.format",
+```
+
+  
 #### 143.0.7461.2 (`2025-10-10`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7445.0_to_143.0.7461.2.diff), [json](./browser_apis/chrome-unstable_143.0.7445.0_to_143.0.7461.2.json), [full list](./browser_apis/chrome-unstable_143.0.7461.2.json))
  ```diff
@@ -2407,103 +2454,6 @@ Added 31 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7052.
      "SubtleCrypto",
      "SubtleCrypto.prototype",
      "SubtleCrypto.prototype.decrypt",
-```
-
-  
-#### 136.0.7052.2 (`2025-3-7`) ⚡
-Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7039.0_to_136.0.7052.2.diff), [json](./browser_apis/chrome-unstable_135.0.7039.0_to_136.0.7052.2.json), [full list](./browser_apis/chrome-unstable_136.0.7052.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_135.0.7039.0.json	2025-03-07 19:01:06.989857607 +0000
-+++ ./browser_apis/chrome-unstable_136.0.7052.2.json	2025-03-07 19:01:36.354983558 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8651,
-+  "browserApiCount": 8665,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -991,6 +991,10 @@
-     "CloseWatcher.prototype.oncancel",
-     "CloseWatcher.prototype.onclose",
-     "CloseWatcher.prototype.requestClose",
-+    "CommandEvent",
-+    "CommandEvent.prototype",
-+    "CommandEvent.prototype.command",
-+    "CommandEvent.prototype.source",
-     "Comment",
-     "Comment.prototype",
-     "CompositionEvent",
-@@ -2067,6 +2071,8 @@
-     "HTMLButtonElement",
-     "HTMLButtonElement.prototype",
-     "HTMLButtonElement.prototype.checkValidity",
-+    "HTMLButtonElement.prototype.command",
-+    "HTMLButtonElement.prototype.commandForElement",
-     "HTMLButtonElement.prototype.disabled",
-     "HTMLButtonElement.prototype.form",
-     "HTMLButtonElement.prototype.formAction",
-@@ -3345,6 +3351,7 @@
-     "MathMLElement.prototype.onchange",
-     "MathMLElement.prototype.onclick",
-     "MathMLElement.prototype.onclose",
-+    "MathMLElement.prototype.oncommand",
-     "MathMLElement.prototype.oncontentvisibilityautostatechange",
-     "MathMLElement.prototype.oncontextlost",
-     "MathMLElement.prototype.oncontextmenu",
-@@ -4252,6 +4259,7 @@
-     "Option.prototype.constructor.prototype.onchange",
-     "Option.prototype.constructor.prototype.onclick",
-     "Option.prototype.constructor.prototype.onclose",
-+    "Option.prototype.constructor.prototype.oncommand",
-     "Option.prototype.constructor.prototype.oncontentvisibilityautostatechange",
-     "Option.prototype.constructor.prototype.oncontextlost",
-     "Option.prototype.constructor.prototype.oncontextmenu",
-@@ -5138,6 +5146,7 @@
-     "RegExp.$9",
-     "RegExp.$_",
-     "RegExp.# WIP
-
-## Browser APIs
-
-",
-+    "RegExp.escape",
-     "RegExp.input",
-     "RegExp.lastMatch",
-     "RegExp.lastParen",
-@@ -5247,6 +5256,8 @@
-     "SVGAElement",
-     "SVGAElement.prototype",
-     "SVGAElement.prototype.href",
-+    "SVGAElement.prototype.rel",
-+    "SVGAElement.prototype.relList",
-     "SVGAElement.prototype.target",
-     "SVGAngle",
-     "SVGAngle.prototype",
-@@ -5931,6 +5942,7 @@
-     "SVGViewElement.prototype.onchange",
-     "SVGViewElement.prototype.onclick",
-     "SVGViewElement.prototype.onclose",
-+    "SVGViewElement.prototype.oncommand",
-     "SVGViewElement.prototype.oncontentvisibilityautostatechange",
-     "SVGViewElement.prototype.oncontextlost",
-     "SVGViewElement.prototype.oncontextmenu",
-@@ -7843,6 +7855,7 @@
-     "XMLDocument.prototype.onchange",
-     "XMLDocument.prototype.onclick",
-     "XMLDocument.prototype.onclose",
-+    "XMLDocument.prototype.oncommand",
-     "XMLDocument.prototype.oncontentvisibilityautostatechange",
-     "XMLDocument.prototype.oncontextlost",
-     "XMLDocument.prototype.oncontextmenu",
-@@ -8373,6 +8386,7 @@
-     "onchange",
-     "onclick",
-     "onclose",
-+    "oncommand",
-     "oncontentvisibilityautostatechange",
-     "oncontextlost",
-     "oncontextmenu",
 ```
 
   <!-- browserapis:end -->

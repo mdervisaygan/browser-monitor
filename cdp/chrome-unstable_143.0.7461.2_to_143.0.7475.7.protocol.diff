@@ -1,0 +1,10 @@
+--- ./cdp/chrome-unstable_143.0.7461.2.protocol.json	2025-10-17 18:00:53.575928789 +0000
++++ ./cdp/chrome-unstable_143.0.7475.7.protocol.json	2025-10-17 18:01:27.369196428 +0000
+@@ -15864,6 +15864,7 @@
+                 "preload",
+                 "SignedExchange",
+                 "preflight",
++                "FedCM",
+                 "other"
+               ]
+             },

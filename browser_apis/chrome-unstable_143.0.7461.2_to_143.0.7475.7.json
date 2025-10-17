@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "143.0.7461.2",
+    "to": "143.0.7475.7"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "Intl.Locale.prototype.calendars",
+      "Intl.Locale.prototype.collations",
+      "Intl.Locale.prototype.hourCycles",
+      "Intl.Locale.prototype.numberingSystems",
+      "Intl.Locale.prototype.textInfo",
+      "Intl.Locale.prototype.timeZones",
+      "Intl.Locale.prototype.weekInfo"
+    ]
+  }
+}
