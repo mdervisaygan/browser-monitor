@@ -1168,6 +1168,10 @@ Added 86 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_134.0.6998.16
   
 ### chrome-unstable
   
+#### 143.0.7489.0 (`2025-10-24`) 
+No browser API changes.
+
+  
 #### 143.0.7475.7 (`2025-10-17`) ⚡
 Added 0 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_143.0.7461.2_to_143.0.7475.7.diff), [json](./browser_apis/chrome-unstable_143.0.7461.2_to_143.0.7475.7.json), [full list](./browser_apis/chrome-unstable_143.0.7475.7.json))
  ```diff
@@ -2386,74 +2390,6 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7064.0
      "OffscreenCanvasRenderingContext2D.prototype.letterSpacing",
      "OffscreenCanvasRenderingContext2D.prototype.lineCap",
      "OffscreenCanvasRenderingContext2D.prototype.lineDashOffset",
-```
-
-  
-#### 136.0.7064.0 (`2025-3-13`) ⚡
-Added 31 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7052.2_to_136.0.7064.0.diff), [json](./browser_apis/chrome-unstable_136.0.7052.2_to_136.0.7064.0.json), [full list](./browser_apis/chrome-unstable_136.0.7064.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_136.0.7052.2.json	2025-03-13 20:00:51.079360284 +0000
-+++ ./browser_apis/chrome-unstable_136.0.7064.0.json	2025-03-13 20:02:04.150540970 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8665,
-+  "browserApiCount": 8696,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -3957,6 +3957,28 @@
-     "Object.seal",
-     "Object.setPrototypeOf",
-     "Object.values",
-+    "Observable",
-+    "Observable.from",
-+    "Observable.prototype",
-+    "Observable.prototype.catch",
-+    "Observable.prototype.drop",
-+    "Observable.prototype.every",
-+    "Observable.prototype.filter",
-+    "Observable.prototype.finally",
-+    "Observable.prototype.find",
-+    "Observable.prototype.first",
-+    "Observable.prototype.flatMap",
-+    "Observable.prototype.forEach",
-+    "Observable.prototype.inspect",
-+    "Observable.prototype.last",
-+    "Observable.prototype.map",
-+    "Observable.prototype.reduce",
-+    "Observable.prototype.some",
-+    "Observable.prototype.subscribe",
-+    "Observable.prototype.switchMap",
-+    "Observable.prototype.take",
-+    "Observable.prototype.takeUntil",
-+    "Observable.prototype.toArray",
-     "OfflineAudioCompletionEvent",
-     "OfflineAudioCompletionEvent.prototype",
-     "OfflineAudioCompletionEvent.prototype.renderedBuffer",
-@@ -4190,6 +4212,7 @@
-     "Option.prototype.constructor.prototype.constructor.prototype.removeEventListener",
-     "Option.prototype.constructor.prototype.constructor.prototype.replaceChild",
-     "Option.prototype.constructor.prototype.constructor.prototype.textContent",
-+    "Option.prototype.constructor.prototype.constructor.prototype.when",
-     "Option.prototype.constructor.prototype.contentEditable",
-     "Option.prototype.constructor.prototype.currentCSSZoom",
-     "Option.prototype.constructor.prototype.dataset",
-@@ -6464,6 +6487,14 @@
-     "SubmitEvent",
-     "SubmitEvent.prototype",
-     "SubmitEvent.prototype.submitter",
-+    "Subscriber",
-+    "Subscriber.prototype",
-+    "Subscriber.prototype.active",
-+    "Subscriber.prototype.addTeardown",
-+    "Subscriber.prototype.complete",
-+    "Subscriber.prototype.error",
-+    "Subscriber.prototype.next",
-+    "Subscriber.prototype.signal",
-     "SubtleCrypto",
-     "SubtleCrypto.prototype",
-     "SubtleCrypto.prototype.decrypt",
 ```
 
   <!-- browserapis:end -->
