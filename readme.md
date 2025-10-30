@@ -1006,6 +1006,65 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 144.0.7500.2 (`2025-10-30`) ⚡
+Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7489.0_to_144.0.7500.2.diff), [json](./browser_apis/chrome-unstable_143.0.7489.0_to_144.0.7500.2.json), [full list](./browser_apis/chrome-unstable_144.0.7500.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_143.0.7489.0.json	2025-10-30 21:01:00.457924511 +0000
++++ ./browser_apis/chrome-unstable_144.0.7500.2.json	2025-10-30 21:02:02.323699251 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8833,
++  "browserApiCount": 8841,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2079,6 +2079,8 @@
+     "HTMLBodyElement.prototype.onblur",
+     "HTMLBodyElement.prototype.onerror",
+     "HTMLBodyElement.prototype.onfocus",
++    "HTMLBodyElement.prototype.ongamepadconnected",
++    "HTMLBodyElement.prototype.ongamepaddisconnected",
+     "HTMLBodyElement.prototype.onhashchange",
+     "HTMLBodyElement.prototype.onlanguagechange",
+     "HTMLBodyElement.prototype.onload",
+@@ -2239,6 +2241,8 @@
+     "HTMLFrameSetElement.prototype.onblur",
+     "HTMLFrameSetElement.prototype.onerror",
+     "HTMLFrameSetElement.prototype.onfocus",
++    "HTMLFrameSetElement.prototype.ongamepadconnected",
++    "HTMLFrameSetElement.prototype.ongamepaddisconnected",
+     "HTMLFrameSetElement.prototype.onhashchange",
+     "HTMLFrameSetElement.prototype.onlanguagechange",
+     "HTMLFrameSetElement.prototype.onload",
+@@ -4695,6 +4699,7 @@
+     "PerformanceResourceTiming.prototype",
+     "PerformanceResourceTiming.prototype.connectEnd",
+     "PerformanceResourceTiming.prototype.connectStart",
++    "PerformanceResourceTiming.prototype.contentEncoding",
+     "PerformanceResourceTiming.prototype.decodedBodySize",
+     "PerformanceResourceTiming.prototype.deliveryType",
+     "PerformanceResourceTiming.prototype.domainLookupEnd",
+@@ -7831,6 +7836,7 @@
+     "WebTransport.prototype.datagrams",
+     "WebTransport.prototype.incomingBidirectionalStreams",
+     "WebTransport.prototype.incomingUnidirectionalStreams",
++    "WebTransport.prototype.protocol",
+     "WebTransport.prototype.ready",
+     "WebTransportBidirectionalStream",
+     "WebTransportBidirectionalStream.prototype",
+@@ -8615,6 +8621,8 @@
+     "onerror",
+     "onfocus",
+     "onformdata",
++    "ongamepadconnected",
++    "ongamepaddisconnected",
+     "ongotpointercapture",
+     "onhashchange",
+     "oninput",
+```
+
+  
 #### 143.0.7489.0 (`2025-10-24`) 
 No browser API changes.
 
@@ -2196,38 +2255,6 @@ Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7081.2
      "CaretPosition",
      "CaretPosition.prototype",
      "CaretPosition.prototype.getClientRect",
-```
-
-  
-#### 136.0.7081.2 (`2025-3-24`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7064.0_to_136.0.7081.2.diff), [json](./browser_apis/chrome-unstable_136.0.7064.0_to_136.0.7081.2.json), [full list](./browser_apis/chrome-unstable_136.0.7081.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_136.0.7064.0.json	2025-03-24 19:00:44.910849414 +0000
-+++ ./browser_apis/chrome-unstable_136.0.7081.2.json	2025-03-24 19:01:35.605827719 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8696,
-+  "browserApiCount": 8698,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -909,6 +909,7 @@
-     "CanvasRenderingContext2D.prototype.isContextLost",
-     "CanvasRenderingContext2D.prototype.isPointInPath",
-     "CanvasRenderingContext2D.prototype.isPointInStroke",
-+    "CanvasRenderingContext2D.prototype.lang",
-     "CanvasRenderingContext2D.prototype.letterSpacing",
-     "CanvasRenderingContext2D.prototype.lineCap",
-     "CanvasRenderingContext2D.prototype.lineDashOffset",
-@@ -4063,6 +4064,7 @@
-     "OffscreenCanvasRenderingContext2D.prototype.isContextLost",
-     "OffscreenCanvasRenderingContext2D.prototype.isPointInPath",
-     "OffscreenCanvasRenderingContext2D.prototype.isPointInStroke",
-+    "OffscreenCanvasRenderingContext2D.prototype.lang",
-     "OffscreenCanvasRenderingContext2D.prototype.letterSpacing",
-     "OffscreenCanvasRenderingContext2D.prototype.lineCap",
-     "OffscreenCanvasRenderingContext2D.prototype.lineDashOffset",
 ```
 
   <!-- browserapis:end -->

@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "143.0.7489.0",
+    "to": "144.0.7500.2"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLBodyElement.prototype.ongamepadconnected",
+      "HTMLBodyElement.prototype.ongamepaddisconnected",
+      "HTMLFrameSetElement.prototype.ongamepadconnected",
+      "HTMLFrameSetElement.prototype.ongamepaddisconnected",
+      "PerformanceResourceTiming.prototype.contentEncoding",
+      "WebTransport.prototype.protocol",
+      "ongamepadconnected",
+      "ongamepaddisconnected"
+    ],
+    "removed": []
+  }
+}

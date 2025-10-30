@@ -1,0 +1,54 @@
+--- ./cdp/chrome-unstable_143.0.7489.0.protocol.json	2025-10-30 21:01:00.850930563 +0000
++++ ./cdp/chrome-unstable_144.0.7500.2.protocol.json	2025-10-30 21:02:02.332699358 +0000
+@@ -27462,36 +27462,6 @@
+           ]
+         },
+         {
+-          "id": "ImageDecodeAcceleratorCapability",
+-          "description": "Describes a supported image decoding profile with its associated minimum and\nmaximum resolutions and subsampling.",
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "imageType",
+-              "description": "Image coded, e.g. Jpeg.",
+-              "$ref": "ImageType"
+-            },
+-            {
+-              "name": "maxDimensions",
+-              "description": "Maximum supported dimensions of the image in pixels.",
+-              "$ref": "Size"
+-            },
+-            {
+-              "name": "minDimensions",
+-              "description": "Minimum supported dimensions of the image in pixels.",
+-              "$ref": "Size"
+-            },
+-            {
+-              "name": "subsamplings",
+-              "description": "Optional array of supported subsampling formats, e.g. 4:2:0, if known.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "SubsamplingFormat"
+-              }
+-            }
+-          ]
+-        },
+-        {
+           "id": "GPUInfo",
+           "description": "Provides information about the GPU(s) on the system.",
+           "type": "object",
+@@ -27539,14 +27509,6 @@
+               "items": {
+                 "$ref": "VideoEncodeAcceleratorCapability"
+               }
+-            },
+-            {
+-              "name": "imageDecoding",
+-              "description": "Supported accelerated image decoding capabilities.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "ImageDecodeAcceleratorCapability"
+-              }
+             }
+           ]
+         },
