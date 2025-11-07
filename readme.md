@@ -1006,6 +1006,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 144.0.7512.1 (`2025-11-7`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7500.2_to_144.0.7512.1.diff), [json](./browser_apis/chrome-unstable_144.0.7500.2_to_144.0.7512.1.json), [full list](./browser_apis/chrome-unstable_144.0.7512.1.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_144.0.7500.2.json	2025-11-07 19:00:55.614984883 +0000
++++ ./browser_apis/chrome-unstable_144.0.7512.1.json	2025-11-07 19:01:28.585191609 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8841,
++  "browserApiCount": 8842,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -7184,6 +7184,7 @@
+     "ViewTransition.prototype.skipTransition",
+     "ViewTransition.prototype.types",
+     "ViewTransition.prototype.updateCallbackDone",
++    "ViewTransition.prototype.waitUntil",
+     "ViewTransitionTypeSet",
+     "ViewTransitionTypeSet.prototype",
+     "ViewTransitionTypeSet.prototype.add",
+```
+
+  
 #### 144.0.7500.2 (`2025-10-30`) ⚡
 Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7489.0_to_144.0.7500.2.diff), [json](./browser_apis/chrome-unstable_143.0.7489.0_to_144.0.7500.2.json), [full list](./browser_apis/chrome-unstable_144.0.7500.2.json))
  ```diff
@@ -2224,37 +2248,6 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7091.2
      "Selection.prototype.getRangeAt",
      "Selection.prototype.isCollapsed",
      "Selection.prototype.modify",
-```
-
-  
-#### 136.0.7091.2 (`2025-3-27`) ⚡
-Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7081.2_to_136.0.7091.2.diff), [json](./browser_apis/chrome-unstable_136.0.7081.2_to_136.0.7091.2.json), [full list](./browser_apis/chrome-unstable_136.0.7091.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_136.0.7081.2.json	2025-03-27 19:00:44.056460207 +0000
-+++ ./browser_apis/chrome-unstable_136.0.7091.2.json	2025-03-27 19:01:09.071587763 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8698,
-+  "browserApiCount": 8705,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -947,7 +947,14 @@
-     "CanvasRenderingContext2D.prototype.wordSpacing",
-     "CaptureController",
-     "CaptureController.prototype",
-+    "CaptureController.prototype.decreaseZoomLevel",
-+    "CaptureController.prototype.forwardWheel",
-+    "CaptureController.prototype.getSupportedZoomLevels",
-+    "CaptureController.prototype.increaseZoomLevel",
-+    "CaptureController.prototype.onzoomlevelchange",
-+    "CaptureController.prototype.resetZoomLevel",
-     "CaptureController.prototype.setFocusBehavior",
-+    "CaptureController.prototype.zoomLevel",
-     "CaretPosition",
-     "CaretPosition.prototype",
-     "CaretPosition.prototype.getClientRect",
 ```
 
   <!-- browserapis:end -->

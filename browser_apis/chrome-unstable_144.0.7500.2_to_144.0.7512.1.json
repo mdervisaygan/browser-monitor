@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "144.0.7500.2",
+    "to": "144.0.7512.1"
+  },
+  "browserApis": {
+    "added": [
+      "ViewTransition.prototype.waitUntil"
+    ],
+    "removed": []
+  }
+}

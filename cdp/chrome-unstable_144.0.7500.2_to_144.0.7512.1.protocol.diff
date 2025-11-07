@@ -1,0 +1,32 @@
+--- ./cdp/chrome-unstable_144.0.7500.2.protocol.json	2025-11-07 19:00:55.998986827 +0000
++++ ./cdp/chrome-unstable_144.0.7512.1.protocol.json	2025-11-07 19:01:28.598191692 +0000
+@@ -734,7 +734,8 @@
+             },
+             {
+               "name": "iterations",
+-              "description": "`AnimationEffect`'s iterations.",
++              "description": "`AnimationEffect`'s iterations. Omitted if the value is infinite.",
++              "optional": true,
+               "type": "number"
+             },
+             {
+@@ -6775,7 +6776,9 @@
+             "file-selector-button",
+             "details-content",
+             "picker",
+-            "permission-icon"
++            "permission-icon",
++            "overscroll-area-parent",
++            "overscroll-client-area"
+           ]
+         },
+         {
+@@ -16740,8 +16743,6 @@
+             "Allow",
+             "BlockFromInsecureToMorePrivate",
+             "WarnFromInsecureToMorePrivate",
+-            "PreflightBlock",
+-            "PreflightWarn",
+             "PermissionBlock",
+             "PermissionWarn"
+           ]
