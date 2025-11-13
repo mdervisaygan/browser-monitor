@@ -1,0 +1,99 @@
+--- ./cdp/chrome-unstable_144.0.7512.1.protocol.json	2025-11-13 19:00:45.868183348 +0000
++++ ./cdp/chrome-unstable_144.0.7524.0.protocol.json	2025-11-13 19:01:12.727694609 +0000
+@@ -5178,6 +5178,59 @@
+           ]
+         },
+         {
++          "id": "CSSAtRule",
++          "description": "CSS generic @rule representation.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "type",
++              "description": "Type of at-rule.",
++              "type": "string",
++              "enum": [
++                "font-face",
++                "font-feature-values",
++                "font-palette-values"
++              ]
++            },
++            {
++              "name": "subsection",
++              "description": "Subsection of font-feature-values, if this is a subsection.",
++              "optional": true,
++              "type": "string",
++              "enum": [
++                "swash",
++                "annotation",
++                "ornaments",
++                "stylistic",
++                "styleset",
++                "character-variant"
++              ]
++            },
++            {
++              "name": "name",
++              "description": "LINT.ThenChange(//third_party/blink/renderer/core/inspector/inspector_style_sheet.cc:FontVariantAlternatesFeatureType,//third_party/blink/renderer/core/inspector/inspector_css_agent.cc:FontVariantAlternatesFeatureType)\nAssociated name, if applicable.",
++              "optional": true,
++              "$ref": "Value"
++            },
++            {
++              "name": "styleSheetId",
++              "description": "The css style sheet identifier (absent for user agent stylesheet and user-specified\nstylesheet rules) this rule came from.",
++              "optional": true,
++              "$ref": "StyleSheetId"
++            },
++            {
++              "name": "origin",
++              "description": "Parent stylesheet's origin.",
++              "$ref": "StyleSheetOrigin"
++            },
++            {
++              "name": "style",
++              "description": "Associated style declaration.",
++              "$ref": "CSSStyle"
++            }
++          ]
++        },
++        {
+           "id": "CSSPropertyRule",
+           "description": "CSS property at-rule representation.",
+           "type": "object",
+@@ -5789,6 +5842,15 @@
+               "$ref": "CSSFontPaletteValuesRule"
+             },
+             {
++              "name": "cssAtRules",
++              "description": "A list of simple @rules matching this node or its pseudo-elements.",
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "CSSAtRule"
++              }
++            },
++            {
+               "name": "parentLayoutNodeId",
+               "description": "Id of the first parent element that does not have display: contents.",
+               "experimental": true,
+@@ -20532,7 +20594,6 @@
+             "otp-credentials",
+             "payment",
+             "picture-in-picture",
+-            "popins",
+             "private-aggregation",
+             "private-state-token-issuance",
+             "private-state-token-redemption",
+@@ -28156,6 +28217,12 @@
+               "name": "targetId",
+               "description": "This can be the page or tab target ID.",
+               "$ref": "TargetID"
++            },
++            {
++              "name": "panelId",
++              "description": "The id of the panel we want DevTools to open initially. Currently\nsupported panels are elements, console, network, sources and resources.",
++              "optional": true,
++              "type": "string"
+             }
+           ],
+           "returns": [
