@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 142.0.7444.175 (`2025-11-17`) 
+No browser API changes.
+
+  
 #### 142.0.7444.162 (`2025-11-11`) 
 No browser API changes.
 
@@ -998,10 +1002,6 @@ Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_135.0.7049.11
      "SVGAngle",
      "SVGAngle.prototype",
 ```
-
-  
-#### 135.0.7049.114 (`2025-4-22`) 
-No browser API changes.
 
   
 ### chrome-unstable
