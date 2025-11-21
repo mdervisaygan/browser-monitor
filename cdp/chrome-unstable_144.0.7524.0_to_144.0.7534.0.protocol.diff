@@ -1,0 +1,153 @@
+--- ./cdp/chrome-unstable_144.0.7524.0.protocol.json	2025-11-21 18:00:59.222636340 +0000
++++ ./cdp/chrome-unstable_144.0.7534.0.protocol.json	2025-11-21 18:05:31.123443839 +0000
+@@ -1749,12 +1749,13 @@
+             "FormInputWithNoLabelError",
+             "FormAutocompleteAttributeEmptyError",
+             "FormEmptyIdAndNameAttributesForInputError",
+-            "FormAriaLabelledByToNonExistingId",
++            "FormAriaLabelledByToNonExistingIdError",
+             "FormInputAssignedAutocompleteValueToIdOrNameAttributeError",
+-            "FormLabelHasNeitherForNorNestedInput",
++            "FormLabelHasNeitherForNorNestedInputError",
+             "FormLabelForMatchesNonExistingIdError",
+             "FormInputHasWrongButWellIntendedAutocompleteValueError",
+-            "ResponseWasBlockedByORB"
++            "ResponseWasBlockedByORB",
++            "NavigationEntryMarkedSkippable"
+           ]
+         },
+         {
+@@ -15473,21 +15474,6 @@
+           ]
+         },
+         {
+-          "id": "IpProxyStatus",
+-          "description": "Sets Controls for IP Proxy of requests.\nPage reload is required before the new behavior will be observed.",
+-          "experimental": true,
+-          "type": "string",
+-          "enum": [
+-            "Available",
+-            "FeatureNotEnabled",
+-            "MaskedDomainListNotEnabled",
+-            "MaskedDomainListNotPopulated",
+-            "AuthTokensUnavailable",
+-            "Unavailable",
+-            "BypassedByDevTools"
+-          ]
+-        },
+-        {
+           "id": "CorsError",
+           "description": "The reason why request was blocked.",
+           "type": "string",
+@@ -15807,13 +15793,6 @@
+               "description": "Security details for the request.",
+               "optional": true,
+               "$ref": "SecurityDetails"
+-            },
+-            {
+-              "name": "isIpProtectionUsed",
+-              "description": "Indicates whether the request was sent through IP Protection proxies. If\nset to true, the request used the IP Protection privacy feature.",
+-              "experimental": true,
+-              "optional": true,
+-              "type": "boolean"
+             }
+           ]
+         },
+@@ -16771,6 +16750,22 @@
+               "description": "Expected to be unsigned integer.",
+               "optional": true,
+               "type": "number"
++            },
++            {
++              "name": "multicastLoopback",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
++              "name": "multicastTimeToLive",
++              "description": "Unsigned int 8.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "multicastAllowAddressSharing",
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -17121,30 +17116,6 @@
+       ],
+       "commands": [
+         {
+-          "name": "getIPProtectionProxyStatus",
+-          "description": "Returns enum representing if IP Proxy of requests is available\nor reason it is not active.",
+-          "experimental": true,
+-          "returns": [
+-            {
+-              "name": "status",
+-              "description": "Whether IP proxy is available",
+-              "$ref": "IpProxyStatus"
+-            }
+-          ]
+-        },
+-        {
+-          "name": "setIPProtectionProxyBypassEnabled",
+-          "description": "Sets bypass IP Protection Proxy boolean.",
+-          "experimental": true,
+-          "parameters": [
+-            {
+-              "name": "enabled",
+-              "description": "Whether IP Proxy is being bypassed by devtools; false by default.",
+-              "type": "boolean"
+-            }
+-          ]
+-        },
+-        {
+           "name": "setAcceptedEncodings",
+           "description": "Sets a list of content encodings that will be accepted. Empty list means no encoding is accepted.",
+           "experimental": true,
+@@ -18704,6 +18675,34 @@
+           ]
+         },
+         {
++          "name": "directUDPSocketJoinedMulticastGroup",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "identifier",
++              "$ref": "RequestId"
++            },
++            {
++              "name": "IPAddress",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "name": "directUDPSocketLeftMulticastGroup",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "identifier",
++              "$ref": "RequestId"
++            },
++            {
++              "name": "IPAddress",
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "name": "directUDPSocketCreated",
+           "description": "Fired upon direct_socket.UDPSocket creation.",
+           "experimental": true,
+@@ -28220,7 +28219,7 @@
+             },
+             {
+               "name": "panelId",
+-              "description": "The id of the panel we want DevTools to open initially. Currently\nsupported panels are elements, console, network, sources and resources.",
++              "description": "The id of the panel we want DevTools to open initially. Currently\nsupported panels are elements, console, network, sources, resources\nand performance.",
+               "optional": true,
+               "type": "string"
+             }

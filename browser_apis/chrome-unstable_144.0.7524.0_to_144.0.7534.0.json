@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "144.0.7524.0",
+    "to": "144.0.7534.0"
+  },
+  "browserApis": {
+    "added": [
+      "SVGAElement.prototype.hreflang",
+      "SVGAElement.prototype.ping",
+      "SVGAElement.prototype.referrerPolicy",
+      "SVGAElement.prototype.type"
+    ],
+    "removed": []
+  }
+}
