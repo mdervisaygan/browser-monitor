@@ -1,0 +1,28 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "142.0.7444.175",
+    "to": "143.0.7499.40"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLBodyElement.prototype.ongamepadconnected",
+      "HTMLBodyElement.prototype.ongamepaddisconnected",
+      "HTMLFrameSetElement.prototype.ongamepadconnected",
+      "HTMLFrameSetElement.prototype.ongamepaddisconnected",
+      "PerformanceResourceTiming.prototype.contentEncoding",
+      "WebTransport.prototype.protocol",
+      "ongamepadconnected",
+      "ongamepaddisconnected"
+    ],
+    "removed": [
+      "Intl.Locale.prototype.calendars",
+      "Intl.Locale.prototype.collations",
+      "Intl.Locale.prototype.hourCycles",
+      "Intl.Locale.prototype.numberingSystems",
+      "Intl.Locale.prototype.textInfo",
+      "Intl.Locale.prototype.timeZones",
+      "Intl.Locale.prototype.weekInfo"
+    ]
+  }
+}

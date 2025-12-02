@@ -5,6 +5,96 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 143.0.7499.40 (`2025-12-2`) ⚡
+Added 8 APIs, removed 7 (see: [diff](./browser_apis/chrome-stable_142.0.7444.175_to_143.0.7499.40.diff), [json](./browser_apis/chrome-stable_142.0.7444.175_to_143.0.7499.40.json), [full list](./browser_apis/chrome-stable_143.0.7499.40.json))
+ ```diff
+--- ./browser_apis/chrome-stable_142.0.7444.175.json	2025-12-02 19:02:33.560459989 +0000
++++ ./browser_apis/chrome-stable_143.0.7499.40.json	2025-12-02 19:03:07.196762870 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8840,
++  "browserApiCount": 8841,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2079,6 +2079,8 @@
+     "HTMLBodyElement.prototype.onblur",
+     "HTMLBodyElement.prototype.onerror",
+     "HTMLBodyElement.prototype.onfocus",
++    "HTMLBodyElement.prototype.ongamepadconnected",
++    "HTMLBodyElement.prototype.ongamepaddisconnected",
+     "HTMLBodyElement.prototype.onhashchange",
+     "HTMLBodyElement.prototype.onlanguagechange",
+     "HTMLBodyElement.prototype.onload",
+@@ -2239,6 +2241,8 @@
+     "HTMLFrameSetElement.prototype.onblur",
+     "HTMLFrameSetElement.prototype.onerror",
+     "HTMLFrameSetElement.prototype.onfocus",
++    "HTMLFrameSetElement.prototype.ongamepadconnected",
++    "HTMLFrameSetElement.prototype.ongamepaddisconnected",
+     "HTMLFrameSetElement.prototype.onhashchange",
+     "HTMLFrameSetElement.prototype.onlanguagechange",
+     "HTMLFrameSetElement.prototype.onload",
+@@ -3117,10 +3121,8 @@
+     "Intl.Locale.prototype",
+     "Intl.Locale.prototype.baseName",
+     "Intl.Locale.prototype.calendar",
+-    "Intl.Locale.prototype.calendars",
+     "Intl.Locale.prototype.caseFirst",
+     "Intl.Locale.prototype.collation",
+-    "Intl.Locale.prototype.collations",
+     "Intl.Locale.prototype.firstDayOfWeek",
+     "Intl.Locale.prototype.getCalendars",
+     "Intl.Locale.prototype.getCollations",
+@@ -3130,19 +3132,14 @@
+     "Intl.Locale.prototype.getTimeZones",
+     "Intl.Locale.prototype.getWeekInfo",
+     "Intl.Locale.prototype.hourCycle",
+-    "Intl.Locale.prototype.hourCycles",
+     "Intl.Locale.prototype.language",
+     "Intl.Locale.prototype.maximize",
+     "Intl.Locale.prototype.minimize",
+     "Intl.Locale.prototype.numberingSystem",
+-    "Intl.Locale.prototype.numberingSystems",
+     "Intl.Locale.prototype.numeric",
+     "Intl.Locale.prototype.region",
+     "Intl.Locale.prototype.script",
+-    "Intl.Locale.prototype.textInfo",
+-    "Intl.Locale.prototype.timeZones",
+     "Intl.Locale.prototype.toString",
+-    "Intl.Locale.prototype.weekInfo",
+     "Intl.NumberFormat",
+     "Intl.NumberFormat.prototype",
+     "Intl.NumberFormat.prototype.format",
+@@ -4702,6 +4699,7 @@
+     "PerformanceResourceTiming.prototype",
+     "PerformanceResourceTiming.prototype.connectEnd",
+     "PerformanceResourceTiming.prototype.connectStart",
++    "PerformanceResourceTiming.prototype.contentEncoding",
+     "PerformanceResourceTiming.prototype.decodedBodySize",
+     "PerformanceResourceTiming.prototype.deliveryType",
+     "PerformanceResourceTiming.prototype.domainLookupEnd",
+@@ -7838,6 +7836,7 @@
+     "WebTransport.prototype.datagrams",
+     "WebTransport.prototype.incomingBidirectionalStreams",
+     "WebTransport.prototype.incomingUnidirectionalStreams",
++    "WebTransport.prototype.protocol",
+     "WebTransport.prototype.ready",
+     "WebTransportBidirectionalStream",
+     "WebTransportBidirectionalStream.prototype",
+@@ -8622,6 +8621,8 @@
+     "onerror",
+     "onfocus",
+     "onformdata",
++    "ongamepadconnected",
++    "ongamepaddisconnected",
+     "ongotpointercapture",
+     "onhashchange",
+     "oninput",
+```
+
+  
 #### 142.0.7444.175 (`2025-11-17`) 
 No browser API changes.
 
@@ -918,90 +1008,6 @@ No browser API changes.
   
 #### 136.0.7103.92 (`2025-5-6`) 
 No browser API changes.
-
-  
-#### 136.0.7103.59 (`2025-4-29`) ⚡
-Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_135.0.7049.114_to_136.0.7103.59.diff), [json](./browser_apis/chrome-stable_135.0.7049.114_to_136.0.7103.59.json), [full list](./browser_apis/chrome-stable_136.0.7103.59.json))
- ```diff
---- ./browser_apis/chrome-stable_135.0.7049.114.json	2025-04-29 19:00:50.345427135 +0000
-+++ ./browser_apis/chrome-stable_136.0.7103.59.json	2025-04-29 19:01:11.517358989 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 8693,
-+  "browserApiCount": 8707,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -909,6 +909,7 @@
-     "CanvasRenderingContext2D.prototype.isContextLost",
-     "CanvasRenderingContext2D.prototype.isPointInPath",
-     "CanvasRenderingContext2D.prototype.isPointInStroke",
-+    "CanvasRenderingContext2D.prototype.lang",
-     "CanvasRenderingContext2D.prototype.letterSpacing",
-     "CanvasRenderingContext2D.prototype.lineCap",
-     "CanvasRenderingContext2D.prototype.lineDashOffset",
-@@ -946,7 +947,14 @@
-     "CanvasRenderingContext2D.prototype.wordSpacing",
-     "CaptureController",
-     "CaptureController.prototype",
-+    "CaptureController.prototype.decreaseZoomLevel",
-+    "CaptureController.prototype.forwardWheel",
-+    "CaptureController.prototype.getSupportedZoomLevels",
-+    "CaptureController.prototype.increaseZoomLevel",
-+    "CaptureController.prototype.onzoomlevelchange",
-+    "CaptureController.prototype.resetZoomLevel",
-     "CaptureController.prototype.setFocusBehavior",
-+    "CaptureController.prototype.zoomLevel",
-     "CaretPosition",
-     "CaretPosition.prototype",
-     "CaretPosition.prototype.getClientRect",
-@@ -1635,6 +1643,7 @@
-     "GPUAdapterInfo.prototype.architecture",
-     "GPUAdapterInfo.prototype.description",
-     "GPUAdapterInfo.prototype.device",
-+    "GPUAdapterInfo.prototype.isFallbackAdapter",
-     "GPUAdapterInfo.prototype.subgroupMaxSize",
-     "GPUAdapterInfo.prototype.subgroupMinSize",
-     "GPUAdapterInfo.prototype.vendor",
-@@ -2883,6 +2892,7 @@
-     "IdentityCredential",
-     "IdentityCredential.disconnect",
-     "IdentityCredential.prototype",
-+    "IdentityCredential.prototype.configURL",
-     "IdentityCredential.prototype.isAutoSelected",
-     "IdentityCredential.prototype.token",
-     "IdentityCredentialError",
-@@ -4063,6 +4073,7 @@
-     "OffscreenCanvasRenderingContext2D.prototype.isContextLost",
-     "OffscreenCanvasRenderingContext2D.prototype.isPointInPath",
-     "OffscreenCanvasRenderingContext2D.prototype.isPointInStroke",
-+    "OffscreenCanvasRenderingContext2D.prototype.lang",
-     "OffscreenCanvasRenderingContext2D.prototype.letterSpacing",
-     "OffscreenCanvasRenderingContext2D.prototype.lineCap",
-     "OffscreenCanvasRenderingContext2D.prototype.lineDashOffset",
-@@ -5169,6 +5180,7 @@
-     "RegExp.$9",
-     "RegExp.$_",
-     "RegExp.# WIP
-
-## Browser APIs
-
-",
-+    "RegExp.escape",
-     "RegExp.input",
-     "RegExp.lastMatch",
-     "RegExp.lastParen",
-@@ -5278,6 +5290,8 @@
-     "SVGAElement",
-     "SVGAElement.prototype",
-     "SVGAElement.prototype.href",
-+    "SVGAElement.prototype.rel",
-+    "SVGAElement.prototype.relList",
-     "SVGAElement.prototype.target",
-     "SVGAngle",
-     "SVGAngle.prototype",
-```
 
   
 ### chrome-unstable
