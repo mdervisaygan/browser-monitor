@@ -1012,6 +1012,91 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 144.0.7559.3 (`2025-12-3`) ⚡
+Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7534.0_to_144.0.7559.3.diff), [json](./browser_apis/chrome-unstable_144.0.7534.0_to_144.0.7559.3.json), [full list](./browser_apis/chrome-unstable_144.0.7559.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_144.0.7534.0.json	2025-12-03 22:00:51.452920700 +0000
++++ ./browser_apis/chrome-unstable_144.0.7559.3.json	2025-12-03 22:04:50.138311605 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9096,
++  "browserApiCount": 9123,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2267,6 +2267,21 @@
+     "HTMLFrameSetElement.prototype.onunhandledrejection",
+     "HTMLFrameSetElement.prototype.onunload",
+     "HTMLFrameSetElement.prototype.rows",
++    "HTMLGeolocationElement",
++    "HTMLGeolocationElement.prototype",
++    "HTMLGeolocationElement.prototype.accuracymode",
++    "HTMLGeolocationElement.prototype.autolocate",
++    "HTMLGeolocationElement.prototype.error",
++    "HTMLGeolocationElement.prototype.initialPermissionStatus",
++    "HTMLGeolocationElement.prototype.invalidReason",
++    "HTMLGeolocationElement.prototype.isValid",
++    "HTMLGeolocationElement.prototype.onlocation",
++    "HTMLGeolocationElement.prototype.onpromptaction",
++    "HTMLGeolocationElement.prototype.onpromptdismiss",
++    "HTMLGeolocationElement.prototype.onvalidationstatuschange",
++    "HTMLGeolocationElement.prototype.permissionStatus",
++    "HTMLGeolocationElement.prototype.position",
++    "HTMLGeolocationElement.prototype.watch",
+     "HTMLHRElement",
+     "HTMLHRElement.prototype",
+     "HTMLHRElement.prototype.align",
+@@ -4621,6 +4636,7 @@
+     "Performance.prototype.getEntries",
+     "Performance.prototype.getEntriesByName",
+     "Performance.prototype.getEntriesByType",
++    "Performance.prototype.interactionCount",
+     "Performance.prototype.mark",
+     "Performance.prototype.measure",
+     "Performance.prototype.memory",
+@@ -7547,6 +7563,8 @@
+     "WebAssembly.Memory.prototype",
+     "WebAssembly.Memory.prototype.buffer",
+     "WebAssembly.Memory.prototype.grow",
++    "WebAssembly.Memory.prototype.toFixedLengthBuffer",
++    "WebAssembly.Memory.prototype.toResizableBuffer",
+     "WebAssembly.Module",
+     "WebAssembly.Module.customSections",
+     "WebAssembly.Module.exports",
+@@ -8662,6 +8680,7 @@
+     "XRSession.prototype.onsqueezeend",
+     "XRSession.prototype.onsqueezestart",
+     "XRSession.prototype.onvisibilitychange",
++    "XRSession.prototype.onvisibilitymaskchange",
+     "XRSession.prototype.pauseDepthSensing",
+     "XRSession.prototype.preferredReflectionFormat",
+     "XRSession.prototype.renderState",
+@@ -8692,6 +8711,7 @@
+     "XRView.prototype",
+     "XRView.prototype.camera",
+     "XRView.prototype.eye",
++    "XRView.prototype.index",
+     "XRView.prototype.isFirstPersonObserver",
+     "XRView.prototype.projectionMatrix",
+     "XRView.prototype.recommendedViewportScale",
+@@ -8706,6 +8726,13 @@
+     "XRViewport.prototype.width",
+     "XRViewport.prototype.x",
+     "XRViewport.prototype.y",
++    "XRVisibilityMaskChangeEvent",
++    "XRVisibilityMaskChangeEvent.prototype",
++    "XRVisibilityMaskChangeEvent.prototype.eye",
++    "XRVisibilityMaskChangeEvent.prototype.index",
++    "XRVisibilityMaskChangeEvent.prototype.indices",
++    "XRVisibilityMaskChangeEvent.prototype.session",
++    "XRVisibilityMaskChangeEvent.prototype.vertices",
+     "XRWebGLBinding",
+     "XRWebGLBinding.prototype",
+     "XRWebGLBinding.prototype.getCameraImage",
+```
+
+  
 #### 144.0.7534.0 (`2025-11-21`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7524.0_to_144.0.7534.0.diff), [json](./browser_apis/chrome-unstable_144.0.7524.0_to_144.0.7534.0.json), [full list](./browser_apis/chrome-unstable_144.0.7534.0.json))
  ```diff
@@ -2513,32 +2598,6 @@ Added 6 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_137.0.7127.2
      "WebAssembly.validate",
      "WebGL2RenderingContext",
      "WebGL2RenderingContext.prototype",
-```
-
-  
-#### 137.0.7127.2 (`2025-4-17`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_137.0.7117.2_to_137.0.7127.2.diff), [json](./browser_apis/chrome-unstable_137.0.7117.2_to_137.0.7127.2.json), [full list](./browser_apis/chrome-unstable_137.0.7127.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_137.0.7117.2.json	2025-04-17 20:00:51.591322713 +0000
-+++ ./browser_apis/chrome-unstable_137.0.7127.2.json	2025-04-17 20:01:19.146306795 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8709,
-+  "browserApiCount": 8711,
-   "browserApis": [
-     "AICreateMonitor",
-     "AICreateMonitor.prototype",
-@@ -7005,7 +7005,9 @@
-     "VideoFrame.prototype.displayHeight",
-     "VideoFrame.prototype.displayWidth",
-     "VideoFrame.prototype.duration",
-+    "VideoFrame.prototype.flip",
-     "VideoFrame.prototype.format",
-+    "VideoFrame.prototype.rotation",
-     "VideoFrame.prototype.timestamp",
-     "VideoFrame.prototype.visibleRect",
-     "VideoPlaybackQuality",
 ```
 
   <!-- browserapis:end -->

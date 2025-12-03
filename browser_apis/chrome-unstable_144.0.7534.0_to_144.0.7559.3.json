@@ -1,0 +1,39 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "144.0.7534.0",
+    "to": "144.0.7559.3"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLGeolocationElement",
+      "HTMLGeolocationElement.prototype",
+      "HTMLGeolocationElement.prototype.accuracymode",
+      "HTMLGeolocationElement.prototype.autolocate",
+      "HTMLGeolocationElement.prototype.error",
+      "HTMLGeolocationElement.prototype.initialPermissionStatus",
+      "HTMLGeolocationElement.prototype.invalidReason",
+      "HTMLGeolocationElement.prototype.isValid",
+      "HTMLGeolocationElement.prototype.onlocation",
+      "HTMLGeolocationElement.prototype.onpromptaction",
+      "HTMLGeolocationElement.prototype.onpromptdismiss",
+      "HTMLGeolocationElement.prototype.onvalidationstatuschange",
+      "HTMLGeolocationElement.prototype.permissionStatus",
+      "HTMLGeolocationElement.prototype.position",
+      "HTMLGeolocationElement.prototype.watch",
+      "Performance.prototype.interactionCount",
+      "WebAssembly.Memory.prototype.toFixedLengthBuffer",
+      "WebAssembly.Memory.prototype.toResizableBuffer",
+      "XRSession.prototype.onvisibilitymaskchange",
+      "XRView.prototype.index",
+      "XRVisibilityMaskChangeEvent",
+      "XRVisibilityMaskChangeEvent.prototype",
+      "XRVisibilityMaskChangeEvent.prototype.eye",
+      "XRVisibilityMaskChangeEvent.prototype.index",
+      "XRVisibilityMaskChangeEvent.prototype.indices",
+      "XRVisibilityMaskChangeEvent.prototype.session",
+      "XRVisibilityMaskChangeEvent.prototype.vertices"
+    ],
+    "removed": []
+  }
+}
