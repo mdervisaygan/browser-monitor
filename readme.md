@@ -1012,6 +1012,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 145.0.7561.2 (`2025-12-5`) 
+No browser API changes.
+
+  
 #### 144.0.7559.3 (`2025-12-3`) ⚡
 Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7534.0_to_144.0.7559.3.diff), [json](./browser_apis/chrome-unstable_144.0.7534.0_to_144.0.7559.3.json), [full list](./browser_apis/chrome-unstable_144.0.7559.3.json))
  ```diff
@@ -2551,53 +2555,6 @@ Added 0 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_137.0.7141.3
      "VideoFrame.prototype.timestamp",
      "VideoFrame.prototype.visibleRect",
      "VideoPlaybackQuality",
-```
-
-  
-#### 137.0.7141.3 (`2025-4-24`) ⚡
-Added 6 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_137.0.7127.2_to_137.0.7141.3.diff), [json](./browser_apis/chrome-unstable_137.0.7127.2_to_137.0.7141.3.json), [full list](./browser_apis/chrome-unstable_137.0.7141.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_137.0.7127.2.json	2025-04-24 18:01:02.474216514 +0000
-+++ ./browser_apis/chrome-unstable_137.0.7141.3.json	2025-04-24 18:01:26.956610333 +0000
-@@ -1,10 +1,7 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8711,
-+  "browserApiCount": 8714,
-   "browserApis": [
--    "AICreateMonitor",
--    "AICreateMonitor.prototype",
--    "AICreateMonitor.prototype.ondownloadprogress",
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-     "AbsoluteOrientationSensor.prototype.constructor",
-@@ -2969,6 +2966,7 @@
-     "ImageData.prototype.colorSpace",
-     "ImageData.prototype.data",
-     "ImageData.prototype.height",
-+    "ImageData.prototype.pixelFormat",
-     "ImageData.prototype.width",
-     "ImageDecoder",
-     "ImageDecoder.isTypeSupported",
-@@ -7146,6 +7144,10 @@
-     "WebAssembly.Module.prototype",
-     "WebAssembly.RuntimeError",
-     "WebAssembly.RuntimeError.prototype",
-+    "WebAssembly.SuspendError",
-+    "WebAssembly.SuspendError.prototype",
-+    "WebAssembly.Suspending",
-+    "WebAssembly.Suspending.prototype",
-     "WebAssembly.Table",
-     "WebAssembly.Table.prototype",
-     "WebAssembly.Table.prototype.get",
-@@ -7158,6 +7160,7 @@
-     "WebAssembly.compileStreaming",
-     "WebAssembly.instantiate",
-     "WebAssembly.instantiateStreaming",
-+    "WebAssembly.promising",
-     "WebAssembly.validate",
-     "WebGL2RenderingContext",
-     "WebGL2RenderingContext.prototype",
 ```
 
   <!-- browserapis:end -->
