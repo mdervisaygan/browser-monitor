@@ -1,0 +1,12 @@
+--- ./cdp/chrome-unstable_145.0.7561.2.protocol.json	2025-12-11 20:00:57.428215753 +0000
++++ ./cdp/chrome-unstable_145.0.7572.2.protocol.json	2025-12-11 20:01:31.153991875 +0000
+@@ -6893,8 +6893,7 @@
+             "details-content",
+             "picker",
+             "permission-icon",
+-            "overscroll-area-parent",
+-            "overscroll-client-area"
++            "overscroll-area-parent"
+           ]
+         },
+         {

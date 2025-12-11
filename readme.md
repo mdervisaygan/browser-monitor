@@ -1012,6 +1012,130 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 145.0.7572.2 (`2025-12-11`) ⚡
+Added 24 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7561.2_to_145.0.7572.2.diff), [json](./browser_apis/chrome-unstable_145.0.7561.2_to_145.0.7572.2.json), [full list](./browser_apis/chrome-unstable_145.0.7572.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_145.0.7561.2.json	2025-12-11 20:00:57.160218440 +0000
++++ ./browser_apis/chrome-unstable_145.0.7572.2.json	2025-12-11 20:01:31.144991969 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9123,
++  "browserApiCount": 9147,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3273,6 +3273,8 @@
+     "LargestContentfulPaint.prototype.element",
+     "LargestContentfulPaint.prototype.id",
+     "LargestContentfulPaint.prototype.loadTime",
++    "LargestContentfulPaint.prototype.paintTime",
++    "LargestContentfulPaint.prototype.presentationTime",
+     "LargestContentfulPaint.prototype.renderTime",
+     "LargestContentfulPaint.prototype.size",
+     "LargestContentfulPaint.prototype.toJSON",
+@@ -3364,6 +3366,8 @@
+     "Map.prototype.entries",
+     "Map.prototype.forEach",
+     "Map.prototype.get",
++    "Map.prototype.getOrInsert",
++    "Map.prototype.getOrInsertComputed",
+     "Map.prototype.has",
+     "Map.prototype.keys",
+     "Map.prototype.set",
+@@ -3415,6 +3419,7 @@
+     "MathMLElement.prototype.focus",
+     "MathMLElement.prototype.nonce",
+     "MathMLElement.prototype.onabort",
++    "MathMLElement.prototype.onanimationcancel",
+     "MathMLElement.prototype.onanimationend",
+     "MathMLElement.prototype.onanimationiteration",
+     "MathMLElement.prototype.onanimationstart",
+@@ -4350,6 +4355,7 @@
+     "Option.prototype.constructor.prototype.offsetTop",
+     "Option.prototype.constructor.prototype.offsetWidth",
+     "Option.prototype.constructor.prototype.onabort",
++    "Option.prototype.constructor.prototype.onanimationcancel",
+     "Option.prototype.constructor.prototype.onanimationend",
+     "Option.prototype.constructor.prototype.onanimationiteration",
+     "Option.prototype.constructor.prototype.onanimationstart",
+@@ -4516,6 +4522,12 @@
+     "Option.prototype.selected",
+     "Option.prototype.text",
+     "Option.prototype.value",
++    "Origin",
++    "Origin.from",
++    "Origin.prototype",
++    "Origin.prototype.isSameOrigin",
++    "Origin.prototype.isSameSite",
++    "Origin.prototype.opaque",
+     "OscillatorNode",
+     "OscillatorNode.prototype",
+     "OscillatorNode.prototype.constructor",
+@@ -4656,6 +4668,8 @@
+     "PerformanceElementTiming.prototype.loadTime",
+     "PerformanceElementTiming.prototype.naturalHeight",
+     "PerformanceElementTiming.prototype.naturalWidth",
++    "PerformanceElementTiming.prototype.paintTime",
++    "PerformanceElementTiming.prototype.presentationTime",
+     "PerformanceElementTiming.prototype.renderTime",
+     "PerformanceElementTiming.prototype.toJSON",
+     "PerformanceElementTiming.prototype.url",
+@@ -4671,6 +4685,8 @@
+     "PerformanceLongAnimationFrameTiming.prototype",
+     "PerformanceLongAnimationFrameTiming.prototype.blockingDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.firstUIEventTimestamp",
++    "PerformanceLongAnimationFrameTiming.prototype.paintTime",
++    "PerformanceLongAnimationFrameTiming.prototype.presentationTime",
+     "PerformanceLongAnimationFrameTiming.prototype.renderStart",
+     "PerformanceLongAnimationFrameTiming.prototype.scripts",
+     "PerformanceLongAnimationFrameTiming.prototype.styleAndLayoutStart",
+@@ -4719,6 +4735,9 @@
+     "PerformanceObserverEntryList.prototype.getEntriesByType",
+     "PerformancePaintTiming",
+     "PerformancePaintTiming.prototype",
++    "PerformancePaintTiming.prototype.paintTime",
++    "PerformancePaintTiming.prototype.presentationTime",
++    "PerformancePaintTiming.prototype.toJSON",
+     "PerformanceResourceTiming",
+     "PerformanceResourceTiming.prototype",
+     "PerformanceResourceTiming.prototype.connectEnd",
+@@ -6058,6 +6077,7 @@
+     "SVGViewElement.prototype.focus",
+     "SVGViewElement.prototype.nonce",
+     "SVGViewElement.prototype.onabort",
++    "SVGViewElement.prototype.onanimationcancel",
+     "SVGViewElement.prototype.onanimationend",
+     "SVGViewElement.prototype.onanimationiteration",
+     "SVGViewElement.prototype.onanimationstart",
+@@ -7532,6 +7552,8 @@
+     "WeakMap.prototype",
+     "WeakMap.prototype.delete",
+     "WeakMap.prototype.get",
++    "WeakMap.prototype.getOrInsert",
++    "WeakMap.prototype.getOrInsertComputed",
+     "WeakMap.prototype.has",
+     "WeakMap.prototype.set",
+     "WeakRef",
+@@ -8317,6 +8339,7 @@
+     "XMLDocument.prototype.links",
+     "XMLDocument.prototype.moveBefore",
+     "XMLDocument.prototype.onabort",
++    "XMLDocument.prototype.onanimationcancel",
+     "XMLDocument.prototype.onanimationend",
+     "XMLDocument.prototype.onanimationiteration",
+     "XMLDocument.prototype.onanimationstart",
+@@ -8861,6 +8884,7 @@
+     "offscreenBuffering",
+     "onabort",
+     "onafterprint",
++    "onanimationcancel",
+     "onanimationend",
+     "onanimationiteration",
+     "onanimationstart",
+```
+
+  
 #### 145.0.7561.2 (`2025-12-5`) 
 No browser API changes.
 
@@ -2526,32 +2650,6 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7153.0
 +    "VideoFrame.prototype.flip",
      "VideoFrame.prototype.format",
 +    "VideoFrame.prototype.rotation",
-     "VideoFrame.prototype.timestamp",
-     "VideoFrame.prototype.visibleRect",
-     "VideoPlaybackQuality",
-```
-
-  
-#### 138.0.7153.0 (`2025-5-2`) ⚡
-Added 0 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_137.0.7141.3_to_138.0.7153.0.diff), [json](./browser_apis/chrome-unstable_137.0.7141.3_to_138.0.7153.0.json), [full list](./browser_apis/chrome-unstable_138.0.7153.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_137.0.7141.3.json	2025-05-02 17:00:48.812851333 +0000
-+++ ./browser_apis/chrome-unstable_138.0.7153.0.json	2025-05-02 17:01:10.891932901 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8714,
-+  "browserApiCount": 8712,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -7003,9 +7003,7 @@
-     "VideoFrame.prototype.displayHeight",
-     "VideoFrame.prototype.displayWidth",
-     "VideoFrame.prototype.duration",
--    "VideoFrame.prototype.flip",
-     "VideoFrame.prototype.format",
--    "VideoFrame.prototype.rotation",
      "VideoFrame.prototype.timestamp",
      "VideoFrame.prototype.visibleRect",
      "VideoPlaybackQuality",

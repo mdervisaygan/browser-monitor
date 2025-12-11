@@ -1,0 +1,36 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "145.0.7561.2",
+    "to": "145.0.7572.2"
+  },
+  "browserApis": {
+    "added": [
+      "LargestContentfulPaint.prototype.paintTime",
+      "LargestContentfulPaint.prototype.presentationTime",
+      "Map.prototype.getOrInsert",
+      "Map.prototype.getOrInsertComputed",
+      "MathMLElement.prototype.onanimationcancel",
+      "Option.prototype.constructor.prototype.onanimationcancel",
+      "Origin",
+      "Origin.from",
+      "Origin.prototype",
+      "Origin.prototype.isSameOrigin",
+      "Origin.prototype.isSameSite",
+      "Origin.prototype.opaque",
+      "PerformanceElementTiming.prototype.paintTime",
+      "PerformanceElementTiming.prototype.presentationTime",
+      "PerformanceLongAnimationFrameTiming.prototype.paintTime",
+      "PerformanceLongAnimationFrameTiming.prototype.presentationTime",
+      "PerformancePaintTiming.prototype.paintTime",
+      "PerformancePaintTiming.prototype.presentationTime",
+      "PerformancePaintTiming.prototype.toJSON",
+      "SVGViewElement.prototype.onanimationcancel",
+      "WeakMap.prototype.getOrInsert",
+      "WeakMap.prototype.getOrInsertComputed",
+      "XMLDocument.prototype.onanimationcancel",
+      "onanimationcancel"
+    ],
+    "removed": []
+  }
+}
