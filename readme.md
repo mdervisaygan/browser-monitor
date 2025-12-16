@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 143.0.7499.146 (`2025-12-16`) 
+No browser API changes.
+
+  
 #### 143.0.7499.109 (`2025-12-10`) 
 No browser API changes.
 
@@ -1004,10 +1008,6 @@ Added 8 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_136.0.7103.113
      "WebGL2RenderingContext",
      "WebGL2RenderingContext.prototype",
 ```
-
-  
-#### 136.0.7103.113 (`2025-5-14`) 
-No browser API changes.
 
   
 ### chrome-unstable
