@@ -954,6 +954,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 145.0.7587.4 (`2025-12-22`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7572.2_to_145.0.7587.4.diff), [json](./browser_apis/chrome-unstable_145.0.7572.2_to_145.0.7587.4.json), [full list](./browser_apis/chrome-unstable_145.0.7587.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_145.0.7572.2.json	2025-12-22 20:00:51.264849748 +0000
++++ ./browser_apis/chrome-unstable_145.0.7587.4.json	2025-12-22 20:01:32.157114250 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9147,
++  "browserApiCount": 9148,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -7447,6 +7447,7 @@
+     "VideoFrame.prototype.duration",
+     "VideoFrame.prototype.flip",
+     "VideoFrame.prototype.format",
++    "VideoFrame.prototype.metadata",
+     "VideoFrame.prototype.rotation",
+     "VideoFrame.prototype.timestamp",
+     "VideoFrame.prototype.visibleRect",
+```
+
+  
 #### 145.0.7572.2 (`2025-12-11`) ⚡
 Added 24 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7561.2_to_145.0.7572.2.diff), [json](./browser_apis/chrome-unstable_145.0.7561.2_to_145.0.7572.2.json), [full list](./browser_apis/chrome-unstable_145.0.7572.2.json))
  ```diff
@@ -2569,32 +2593,6 @@ Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7166.
      "visualViewport",
      "webkitCancelAnimationFrame",
      "webkitMediaStream",
-```
-
-  
-#### 138.0.7166.2 (`2025-5-8`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7153.0_to_138.0.7166.2.diff), [json](./browser_apis/chrome-unstable_138.0.7153.0_to_138.0.7166.2.json), [full list](./browser_apis/chrome-unstable_138.0.7166.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_138.0.7153.0.json	2025-05-08 19:00:47.190317401 +0000
-+++ ./browser_apis/chrome-unstable_138.0.7166.2.json	2025-05-08 19:01:49.201089121 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8712,
-+  "browserApiCount": 8714,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -7003,7 +7003,9 @@
-     "VideoFrame.prototype.displayHeight",
-     "VideoFrame.prototype.displayWidth",
-     "VideoFrame.prototype.duration",
-+    "VideoFrame.prototype.flip",
-     "VideoFrame.prototype.format",
-+    "VideoFrame.prototype.rotation",
-     "VideoFrame.prototype.timestamp",
-     "VideoFrame.prototype.visibleRect",
-     "VideoPlaybackQuality",
 ```
 
   <!-- browserapis:end -->

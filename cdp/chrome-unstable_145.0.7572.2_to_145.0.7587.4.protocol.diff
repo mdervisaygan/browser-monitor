@@ -1,0 +1,136 @@
+--- ./cdp/chrome-unstable_145.0.7572.2.protocol.json	2025-12-22 20:00:51.666852158 +0000
++++ ./cdp/chrome-unstable_145.0.7587.4.protocol.json	2025-12-22 20:01:32.166114304 +0000
+@@ -1755,7 +1755,10 @@
+             "FormLabelForMatchesNonExistingIdError",
+             "FormInputHasWrongButWellIntendedAutocompleteValueError",
+             "ResponseWasBlockedByORB",
+-            "NavigationEntryMarkedSkippable"
++            "NavigationEntryMarkedSkippable",
++            "AutofillAndManualTextPolicyControlledFeaturesInfo",
++            "AutofillPolicyControlledFeatureInfo",
++            "ManualTextPolicyControlledFeatureInfo"
+           ]
+         },
+         {
+@@ -3466,7 +3469,9 @@
+             "idleDetection",
+             "keyboardLock",
+             "localFonts",
++            "localNetwork",
+             "localNetworkAccess",
++            "loopbackNetwork",
+             "midi",
+             "midiSysex",
+             "nfc",
+@@ -15269,6 +15274,19 @@
+           ]
+         },
+         {
++          "id": "RenderBlockingBehavior",
++          "description": "The render blocking behavior of a resource request.",
++          "experimental": true,
++          "type": "string",
++          "enum": [
++            "Blocking",
++            "InBodyParserBlocking",
++            "NonBlocking",
++            "NonBlockingDynamic",
++            "PotentiallyBlocking"
++          ]
++        },
++        {
+           "id": "PostDataEntry",
+           "description": "Post data entry for HTTP request",
+           "type": "object",
+@@ -17505,7 +17523,7 @@
+             },
+             {
+               "name": "enableDurableMessages",
+-              "description": "Enable storing response bodies outside of renderer, so that these survive\na cross-process navigation. Requires maxTotalBufferSize to be set.\nCurrently defaults to false.",
++              "description": "Enable storing response bodies outside of renderer, so that these survive\na cross-process navigation. Requires maxTotalBufferSize to be set.\nCurrently defaults to false. This field is being deprecated in favor of the dedicated\nconfigureDurableMessages command, due to the possibility of deadlocks when awaiting\nNetwork.enable before issuing Runtime.runIfWaitingForDebugger.",
+               "experimental": true,
+               "optional": true,
+               "type": "boolean"
+@@ -17513,6 +17531,25 @@
+           ]
+         },
+         {
++          "name": "configureDurableMessages",
++          "description": "Configures storing response bodies outside of renderer, so that these survive\na cross-process navigation.\nIf maxTotalBufferSize is not set, durable messages are disabled.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "maxTotalBufferSize",
++              "description": "Buffer size in bytes to use when preserving network payloads (XHRs, etc).",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "maxResourceBufferSize",
++              "description": "Per-resource buffer size in bytes to use when preserving network payloads (XHRs, etc).",
++              "optional": true,
++              "type": "integer"
++            }
++          ]
++        },
++        {
+           "name": "getAllCookies",
+           "description": "Returns all browser cookies. Depending on the backend support, will return detailed cookie\ninformation in the `cookies` field.\nDeprecated. Use Storage.getCookies instead.",
+           "deprecated": true,
+@@ -18324,6 +18361,13 @@
+               "description": "Whether the request is initiated by a user gesture. Defaults to false.",
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "renderBlockingBehavior",
++              "description": "The render blocking behavior of the request.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "RenderBlockingBehavior"
+             }
+           ]
+         },
+@@ -20667,7 +20711,9 @@
+             "language-detector",
+             "language-model",
+             "local-fonts",
++            "local-network",
+             "local-network-access",
++            "loopback-network",
+             "magnetometer",
+             "manual-text",
+             "media-playback-while-not-visible",
+@@ -28037,6 +28083,13 @@
+               "items": {
+                 "$ref": "Browser.BrowserContextID"
+               }
++            },
++            {
++              "name": "defaultBrowserContextId",
++              "description": "The id of the default browser context if available.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "Browser.BrowserContextID"
+             }
+           ]
+         },
+@@ -28674,6 +28727,18 @@
+             }
+           ]
+         },
++        {
++          "name": "getTrackEventDescriptor",
++          "description": "Return a descriptor for all available tracing categories.",
++          "experimental": true,
++          "returns": [
++            {
++              "name": "descriptor",
++              "description": "Base64-encoded serialized perfetto.protos.TrackEventDescriptor protobuf message.",
++              "type": "binary"
++            }
++          ]
++        },
+         {
+           "name": "recordClockSyncMarker",
+           "description": "Record a clock sync marker in the trace.",
