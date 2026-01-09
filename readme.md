@@ -954,6 +954,50 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 145.0.7620.2 (`2026-1-9`) ⚡
+Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7587.4_to_145.0.7620.2.diff), [json](./browser_apis/chrome-unstable_145.0.7587.4_to_145.0.7620.2.json), [full list](./browser_apis/chrome-unstable_145.0.7620.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_145.0.7587.4.json	2026-01-09 18:01:05.116647824 +0000
++++ ./browser_apis/chrome-unstable_145.0.7620.2.json	2026-01-09 18:01:45.392450372 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9148,
++  "browserApiCount": 9155,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3835,6 +3835,7 @@
+     "NavigationTransition.prototype.finished",
+     "NavigationTransition.prototype.from",
+     "NavigationTransition.prototype.navigationType",
++    "NavigationTransition.prototype.to",
+     "Navigator",
+     "Navigator.prototype",
+     "Navigator.prototype.adAuctionComponents",
+@@ -4709,6 +4710,7 @@
+     "PerformanceNavigationTiming",
+     "PerformanceNavigationTiming.prototype",
+     "PerformanceNavigationTiming.prototype.activationStart",
++    "PerformanceNavigationTiming.prototype.confidence",
+     "PerformanceNavigationTiming.prototype.criticalCHRestart",
+     "PerformanceNavigationTiming.prototype.domComplete",
+     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
+@@ -4812,6 +4814,11 @@
+     "PerformanceTiming.prototype.toJSON",
+     "PerformanceTiming.prototype.unloadEventEnd",
+     "PerformanceTiming.prototype.unloadEventStart",
++    "PerformanceTimingConfidence",
++    "PerformanceTimingConfidence.prototype",
++    "PerformanceTimingConfidence.prototype.randomizedTriggerRate",
++    "PerformanceTimingConfidence.prototype.toJSON",
++    "PerformanceTimingConfidence.prototype.value",
+     "PeriodicSyncManager",
+     "PeriodicSyncManager.prototype",
+     "PeriodicSyncManager.prototype.getTags",
+```
+
+  
 #### 145.0.7587.4 (`2025-12-22`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7572.2_to_145.0.7587.4.diff), [json](./browser_apis/chrome-unstable_145.0.7572.2_to_145.0.7587.4.json), [full list](./browser_apis/chrome-unstable_145.0.7587.4.json))
  ```diff
@@ -2537,62 +2581,6 @@ Added 17 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_138.0.7180.
      "LargestContentfulPaint",
      "LargestContentfulPaint.prototype",
      "LargestContentfulPaint.prototype.element",
-```
-
-  
-#### 138.0.7180.2 (`2025-5-16`) ⚡
-Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_138.0.7166.2_to_138.0.7180.2.diff), [json](./browser_apis/chrome-unstable_138.0.7166.2_to_138.0.7180.2.json), [full list](./browser_apis/chrome-unstable_138.0.7180.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_138.0.7166.2.json	2025-05-16 20:00:55.425793783 +0000
-+++ ./browser_apis/chrome-unstable_138.0.7180.2.json	2025-05-16 20:02:04.209267936 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8714,
-+  "browserApiCount": 8726,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3018,6 +3018,13 @@
-     "Int32Array.prototype",
-     "Int8Array",
-     "Int8Array.prototype",
-+    "IntegrityViolationReportBody",
-+    "IntegrityViolationReportBody.prototype",
-+    "IntegrityViolationReportBody.prototype.blockedURL",
-+    "IntegrityViolationReportBody.prototype.destination",
-+    "IntegrityViolationReportBody.prototype.documentURL",
-+    "IntegrityViolationReportBody.prototype.reportOnly",
-+    "IntegrityViolationReportBody.prototype.toJSON",
-     "IntersectionObserver",
-     "IntersectionObserver.prototype",
-     "IntersectionObserver.prototype.delay",
-@@ -3950,6 +3957,7 @@
-     "Object.prototype.__defineGetter__.arguments",
-     "Object.prototype.__defineGetter__.bind",
-     "Object.prototype.__defineGetter__.call",
-+    "Object.prototype.__defineGetter__.caller",
-     "Object.prototype.__defineGetter__.constructor",
-     "Object.prototype.__defineGetter__.toString",
-     "Object.prototype.__defineSetter__",
-@@ -7043,6 +7051,9 @@
-     "ViewTransitionTypeSet.prototype.keys",
-     "ViewTransitionTypeSet.prototype.size",
-     "ViewTransitionTypeSet.prototype.values",
-+    "Viewport",
-+    "Viewport.prototype",
-+    "Viewport.prototype.segments",
-     "VirtualKeyboard",
-     "VirtualKeyboard.prototype",
-     "VirtualKeyboard.prototype.boundingRect",
-@@ -8588,6 +8599,7 @@
-     "top",
-     "trustedTypes",
-     "unescape",
-+    "viewport",
-     "visualViewport",
-     "webkitCancelAnimationFrame",
-     "webkitMediaStream",
 ```
 
   <!-- browserapis:end -->

@@ -1,0 +1,38 @@
+--- ./browser_apis/chrome-unstable_145.0.7587.4.json	2026-01-09 18:01:05.116647824 +0000
++++ ./browser_apis/chrome-unstable_145.0.7620.2.json	2026-01-09 18:01:45.392450372 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9148,
++  "browserApiCount": 9155,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3835,6 +3835,7 @@
+     "NavigationTransition.prototype.finished",
+     "NavigationTransition.prototype.from",
+     "NavigationTransition.prototype.navigationType",
++    "NavigationTransition.prototype.to",
+     "Navigator",
+     "Navigator.prototype",
+     "Navigator.prototype.adAuctionComponents",
+@@ -4709,6 +4710,7 @@
+     "PerformanceNavigationTiming",
+     "PerformanceNavigationTiming.prototype",
+     "PerformanceNavigationTiming.prototype.activationStart",
++    "PerformanceNavigationTiming.prototype.confidence",
+     "PerformanceNavigationTiming.prototype.criticalCHRestart",
+     "PerformanceNavigationTiming.prototype.domComplete",
+     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
+@@ -4812,6 +4814,11 @@
+     "PerformanceTiming.prototype.toJSON",
+     "PerformanceTiming.prototype.unloadEventEnd",
+     "PerformanceTiming.prototype.unloadEventStart",
++    "PerformanceTimingConfidence",
++    "PerformanceTimingConfidence.prototype",
++    "PerformanceTimingConfidence.prototype.randomizedTriggerRate",
++    "PerformanceTimingConfidence.prototype.toJSON",
++    "PerformanceTimingConfidence.prototype.value",
+     "PeriodicSyncManager",
+     "PeriodicSyncManager.prototype",
+     "PeriodicSyncManager.prototype.getTags",

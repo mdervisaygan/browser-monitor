@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "145.0.7587.4",
+    "to": "145.0.7620.2"
+  },
+  "browserApis": {
+    "added": [
+      "NavigationTransition.prototype.to",
+      "PerformanceNavigationTiming.prototype.confidence",
+      "PerformanceTimingConfidence",
+      "PerformanceTimingConfidence.prototype",
+      "PerformanceTimingConfidence.prototype.randomizedTriggerRate",
+      "PerformanceTimingConfidence.prototype.toJSON",
+      "PerformanceTimingConfidence.prototype.value"
+    ],
+    "removed": []
+  }
+}
