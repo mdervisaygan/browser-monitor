@@ -1347,6 +1347,78 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 146.0.7635.0 (`2026-1-16`) ⚡
+Added 16 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7620.2_to_146.0.7635.0.diff), [json](./browser_apis/chrome-unstable_145.0.7620.2_to_146.0.7635.0.json), [full list](./browser_apis/chrome-unstable_146.0.7635.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_145.0.7620.2.json	2026-01-16 18:00:58.980011057 +0000
++++ ./browser_apis/chrome-unstable_146.0.7635.0.json	2026-01-16 18:01:38.885178202 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9155,
++  "browserApiCount": 9171,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2560,11 +2560,13 @@
+     "HTMLScriptElement.prototype.event",
+     "HTMLScriptElement.prototype.fetchPriority",
+     "HTMLScriptElement.prototype.htmlFor",
++    "HTMLScriptElement.prototype.innerText",
+     "HTMLScriptElement.prototype.integrity",
+     "HTMLScriptElement.prototype.noModule",
+     "HTMLScriptElement.prototype.referrerPolicy",
+     "HTMLScriptElement.prototype.src",
+     "HTMLScriptElement.prototype.text",
++    "HTMLScriptElement.prototype.textContent",
+     "HTMLScriptElement.prototype.type",
+     "HTMLScriptElement.supports",
+     "HTMLSelectElement",
+@@ -4497,6 +4499,7 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
++    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setHTMLUnsafe",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+@@ -6192,6 +6195,17 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
++    "Sanitizer",
++    "Sanitizer.prototype",
++    "Sanitizer.prototype.allowAttribute",
++    "Sanitizer.prototype.allowElement",
++    "Sanitizer.prototype.get",
++    "Sanitizer.prototype.removeAttribute",
++    "Sanitizer.prototype.removeElement",
++    "Sanitizer.prototype.removeUnsafe",
++    "Sanitizer.prototype.replaceElementWithChildren",
++    "Sanitizer.prototype.setComments",
++    "Sanitizer.prototype.setDataAttributes",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+@@ -6389,6 +6403,7 @@
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
+     "ShadowRoot.prototype.serializable",
++    "ShadowRoot.prototype.setHTML",
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+@@ -8280,6 +8295,7 @@
+     "XMLDocument.prototype.close",
+     "XMLDocument.prototype.compatMode",
+     "XMLDocument.prototype.constructor",
++    "XMLDocument.prototype.constructor.parseHTML",
+     "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+     "XMLDocument.prototype.contentType",
+     "XMLDocument.prototype.cookie",
+```
+
+  
 #### 145.0.7620.2 (`2026-1-9`) ⚡
 Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7587.4_to_145.0.7620.2.diff), [json](./browser_apis/chrome-unstable_145.0.7587.4_to_145.0.7620.2.json), [full list](./browser_apis/chrome-unstable_145.0.7620.2.json))
  ```diff
@@ -2904,76 +2976,6 @@ Added 5 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_138.0.7191.0
      "Request.prototype.text",
      "Request.prototype.url",
      "ResizeObserver",
-```
-
-  
-#### 138.0.7191.0 (`2025-5-22`) ⚡
-Added 17 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_138.0.7180.2_to_138.0.7191.0.diff), [json](./browser_apis/chrome-unstable_138.0.7180.2_to_138.0.7191.0.json), [full list](./browser_apis/chrome-unstable_138.0.7191.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_138.0.7180.2.json	2025-05-22 17:00:48.010498484 +0000
-+++ ./browser_apis/chrome-unstable_138.0.7191.0.json	2025-05-22 17:01:13.979909644 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8726,
-+  "browserApiCount": 8738,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -759,14 +759,9 @@
-     "CSSSupportsRule.prototype.conditionText",
-     "CSSSupportsRule.prototype.constructor",
-     "CSSSupportsRule.prototype.constructor.prototype",
--    "CSSSupportsRule.prototype.constructor.prototype.constructor",
-     "CSSSupportsRule.prototype.constructor.prototype.cssRules",
--    "CSSSupportsRule.prototype.constructor.prototype.cssText",
-     "CSSSupportsRule.prototype.constructor.prototype.deleteRule",
-     "CSSSupportsRule.prototype.constructor.prototype.insertRule",
--    "CSSSupportsRule.prototype.constructor.prototype.parentRule",
--    "CSSSupportsRule.prototype.constructor.prototype.parentStyleSheet",
--    "CSSSupportsRule.prototype.constructor.prototype.type",
-     "CSSTransformValue",
-     "CSSTransformValue.prototype",
-     "CSSTransformValue.prototype.is2D",
-@@ -839,7 +834,12 @@
-     "CSSVariableReferenceValue.prototype.variable",
-     "CSSViewTransitionRule",
-     "CSSViewTransitionRule.prototype",
-+    "CSSViewTransitionRule.prototype.constructor",
-+    "CSSViewTransitionRule.prototype.cssText",
-     "CSSViewTransitionRule.prototype.navigation",
-+    "CSSViewTransitionRule.prototype.parentRule",
-+    "CSSViewTransitionRule.prototype.parentStyleSheet",
-+    "CSSViewTransitionRule.prototype.type",
-     "CSSViewTransitionRule.prototype.types",
-     "Cache",
-     "Cache.prototype",
-@@ -1040,6 +1040,9 @@
-     "CountQueuingStrategy.prototype",
-     "CountQueuingStrategy.prototype.highWaterMark",
-     "CountQueuingStrategy.prototype.size",
-+    "CreateMonitor",
-+    "CreateMonitor.prototype",
-+    "CreateMonitor.prototype.ondownloadprogress",
-     "Credential",
-     "Credential.prototype",
-     "Credential.prototype.id",
-@@ -3204,6 +3207,15 @@
-     "KeyframeEffect.prototype.setKeyframes",
-     "KeyframeEffect.prototype.target",
-     "KeyframeEffect.prototype.updateTiming",
-+    "LanguageDetector",
-+    "LanguageDetector.availability",
-+    "LanguageDetector.create",
-+    "LanguageDetector.prototype",
-+    "LanguageDetector.prototype.destroy",
-+    "LanguageDetector.prototype.detect",
-+    "LanguageDetector.prototype.expectedInputLanguages",
-+    "LanguageDetector.prototype.inputQuota",
-+    "LanguageDetector.prototype.measureInputUsage",
-     "LargestContentfulPaint",
-     "LargestContentfulPaint.prototype",
-     "LargestContentfulPaint.prototype.element",
 ```
 
   <!-- browserapis:end -->
