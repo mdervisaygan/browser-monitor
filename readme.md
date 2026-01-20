@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 144.0.7559.96 (`2026-1-20`) 
+No browser API changes.
+
+  
 #### 144.0.7559.59 (`2026-1-14`) ⚡
 Added 282 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_143.0.7499.192_to_144.0.7559.59.diff), [json](./browser_apis/chrome-stable_143.0.7499.192_to_144.0.7559.59.json), [full list](./browser_apis/chrome-stable_144.0.7559.59.json))
  ```diff
@@ -1339,10 +1343,6 @@ Added 63 APIs, removed 6 (see: [diff](./browser_apis/chrome-stable_137.0.7151.11
      "webkitCancelAnimationFrame",
      "webkitMediaStream",
 ```
-
-  
-#### 137.0.7151.119 (`2025-6-17`) 
-No browser API changes.
 
   
 ### chrome-unstable
