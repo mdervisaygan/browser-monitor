@@ -1,0 +1,43 @@
+--- ./browser_apis/chrome-unstable_146.0.7635.0.json	2026-01-22 20:00:55.971656179 +0000
++++ ./browser_apis/chrome-unstable_146.0.7647.3.json	2026-01-22 20:01:35.274371154 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9171,
++  "browserApiCount": 9190,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -43,6 +43,11 @@
+     "AnimationPlaybackEvent.prototype",
+     "AnimationPlaybackEvent.prototype.currentTime",
+     "AnimationPlaybackEvent.prototype.timelineTime",
++    "AnimationTrigger",
++    "AnimationTrigger.prototype",
++    "AnimationTrigger.prototype.addAnimation",
++    "AnimationTrigger.prototype.getAnimations",
++    "AnimationTrigger.prototype.removeAnimation",
+     "Array",
+     "Array.from",
+     "Array.fromAsync",
+@@ -7112,6 +7117,20 @@
+     "TimeRanges.prototype.end",
+     "TimeRanges.prototype.length",
+     "TimeRanges.prototype.start",
++    "TimelineTrigger",
++    "TimelineTrigger.prototype",
++    "TimelineTrigger.prototype.ranges",
++    "TimelineTriggerRange",
++    "TimelineTriggerRange.prototype",
++    "TimelineTriggerRange.prototype.activeRangeEnd",
++    "TimelineTriggerRange.prototype.activeRangeStart",
++    "TimelineTriggerRange.prototype.entryRangeEnd",
++    "TimelineTriggerRange.prototype.entryRangeStart",
++    "TimelineTriggerRange.prototype.timeline",
++    "TimelineTriggerRangeList",
++    "TimelineTriggerRangeList.prototype",
++    "TimelineTriggerRangeList.prototype.item",
++    "TimelineTriggerRangeList.prototype.length",
+     "ToggleEvent",
+     "ToggleEvent.prototype",
+     "ToggleEvent.prototype.newState",

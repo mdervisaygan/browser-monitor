@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "146.0.7635.0",
+    "to": "146.0.7647.3"
+  },
+  "browserApis": {
+    "added": [
+      "AnimationTrigger",
+      "AnimationTrigger.prototype",
+      "AnimationTrigger.prototype.addAnimation",
+      "AnimationTrigger.prototype.getAnimations",
+      "AnimationTrigger.prototype.removeAnimation",
+      "TimelineTrigger",
+      "TimelineTrigger.prototype",
+      "TimelineTrigger.prototype.ranges",
+      "TimelineTriggerRange",
+      "TimelineTriggerRange.prototype",
+      "TimelineTriggerRange.prototype.activeRangeEnd",
+      "TimelineTriggerRange.prototype.activeRangeStart",
+      "TimelineTriggerRange.prototype.entryRangeEnd",
+      "TimelineTriggerRange.prototype.entryRangeStart",
+      "TimelineTriggerRange.prototype.timeline",
+      "TimelineTriggerRangeList",
+      "TimelineTriggerRangeList.prototype",
+      "TimelineTriggerRangeList.prototype.item",
+      "TimelineTriggerRangeList.prototype.length"
+    ],
+    "removed": []
+  }
+}

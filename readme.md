@@ -1347,6 +1347,55 @@ Added 63 APIs, removed 6 (see: [diff](./browser_apis/chrome-stable_137.0.7151.11
   
 ### chrome-unstable
   
+#### 146.0.7647.3 (`2026-1-22`) ⚡
+Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_146.0.7635.0_to_146.0.7647.3.diff), [json](./browser_apis/chrome-unstable_146.0.7635.0_to_146.0.7647.3.json), [full list](./browser_apis/chrome-unstable_146.0.7647.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_146.0.7635.0.json	2026-01-22 20:00:55.971656179 +0000
++++ ./browser_apis/chrome-unstable_146.0.7647.3.json	2026-01-22 20:01:35.274371154 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9171,
++  "browserApiCount": 9190,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -43,6 +43,11 @@
+     "AnimationPlaybackEvent.prototype",
+     "AnimationPlaybackEvent.prototype.currentTime",
+     "AnimationPlaybackEvent.prototype.timelineTime",
++    "AnimationTrigger",
++    "AnimationTrigger.prototype",
++    "AnimationTrigger.prototype.addAnimation",
++    "AnimationTrigger.prototype.getAnimations",
++    "AnimationTrigger.prototype.removeAnimation",
+     "Array",
+     "Array.from",
+     "Array.fromAsync",
+@@ -7112,6 +7117,20 @@
+     "TimeRanges.prototype.end",
+     "TimeRanges.prototype.length",
+     "TimeRanges.prototype.start",
++    "TimelineTrigger",
++    "TimelineTrigger.prototype",
++    "TimelineTrigger.prototype.ranges",
++    "TimelineTriggerRange",
++    "TimelineTriggerRange.prototype",
++    "TimelineTriggerRange.prototype.activeRangeEnd",
++    "TimelineTriggerRange.prototype.activeRangeStart",
++    "TimelineTriggerRange.prototype.entryRangeEnd",
++    "TimelineTriggerRange.prototype.entryRangeStart",
++    "TimelineTriggerRange.prototype.timeline",
++    "TimelineTriggerRangeList",
++    "TimelineTriggerRangeList.prototype",
++    "TimelineTriggerRangeList.prototype.item",
++    "TimelineTriggerRangeList.prototype.length",
+     "ToggleEvent",
+     "ToggleEvent.prototype",
+     "ToggleEvent.prototype.newState",
+```
+
+  
 #### 146.0.7635.0 (`2026-1-16`) ⚡
 Added 16 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7620.2_to_146.0.7635.0.diff), [json](./browser_apis/chrome-unstable_145.0.7620.2_to_146.0.7635.0.json), [full list](./browser_apis/chrome-unstable_146.0.7635.0.json))
  ```diff
@@ -2933,49 +2982,6 @@ Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_139.0.7207.
      "CSSImageValue",
      "CSSImageValue.prototype",
      "CSSImportRule",
-```
-
-  
-#### 139.0.7207.2 (`2025-5-30`) ⚡
-Added 5 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_138.0.7191.0_to_139.0.7207.2.diff), [json](./browser_apis/chrome-unstable_138.0.7191.0_to_139.0.7207.2.json), [full list](./browser_apis/chrome-unstable_139.0.7207.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_138.0.7191.0.json	2025-05-30 17:01:05.731014161 +0000
-+++ ./browser_apis/chrome-unstable_139.0.7207.2.json	2025-05-30 17:01:31.719206442 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8738,
-+  "browserApiCount": 8742,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1996,6 +1996,7 @@
-     "HTMLAnchorElement.prototype.host",
-     "HTMLAnchorElement.prototype.hostname",
-     "HTMLAnchorElement.prototype.href",
-+    "HTMLAnchorElement.prototype.hrefTranslate",
-     "HTMLAnchorElement.prototype.hreflang",
-     "HTMLAnchorElement.prototype.name",
-     "HTMLAnchorElement.prototype.origin",
-@@ -4910,6 +4911,10 @@
-     "PushSubscriptionOptions.prototype",
-     "PushSubscriptionOptions.prototype.applicationServerKey",
-     "PushSubscriptionOptions.prototype.userVisibleOnly",
-+    "QuotaExceededError",
-+    "QuotaExceededError.prototype",
-+    "QuotaExceededError.prototype.quota",
-+    "QuotaExceededError.prototype.requested",
-     "RTCCertificate",
-     "RTCCertificate.prototype",
-     "RTCCertificate.prototype.expires",
-@@ -5262,7 +5267,6 @@
-     "Request.prototype.referrer",
-     "Request.prototype.referrerPolicy",
-     "Request.prototype.signal",
--    "Request.prototype.targetAddressSpace",
-     "Request.prototype.text",
-     "Request.prototype.url",
-     "ResizeObserver",
 ```
 
   <!-- browserapis:end -->
