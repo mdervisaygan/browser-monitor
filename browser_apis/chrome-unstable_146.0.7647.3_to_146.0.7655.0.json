@@ -1,0 +1,26 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "146.0.7647.3",
+    "to": "146.0.7655.0"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "Option.prototype.constructor.prototype.setHTML",
+      "Sanitizer",
+      "Sanitizer.prototype",
+      "Sanitizer.prototype.allowAttribute",
+      "Sanitizer.prototype.allowElement",
+      "Sanitizer.prototype.get",
+      "Sanitizer.prototype.removeAttribute",
+      "Sanitizer.prototype.removeElement",
+      "Sanitizer.prototype.removeUnsafe",
+      "Sanitizer.prototype.replaceElementWithChildren",
+      "Sanitizer.prototype.setComments",
+      "Sanitizer.prototype.setDataAttributes",
+      "ShadowRoot.prototype.setHTML",
+      "XMLDocument.prototype.constructor.parseHTML"
+    ]
+  }
+}

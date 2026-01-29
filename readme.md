@@ -1163,6 +1163,64 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 146.0.7655.0 (`2026-1-29`) ⚡
+Added 0 APIs, removed 14 (see: [diff](./browser_apis/chrome-unstable_146.0.7647.3_to_146.0.7655.0.diff), [json](./browser_apis/chrome-unstable_146.0.7647.3_to_146.0.7655.0.json), [full list](./browser_apis/chrome-unstable_146.0.7655.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_146.0.7647.3.json	2026-01-29 19:11:10.345583247 +0000
++++ ./browser_apis/chrome-unstable_146.0.7655.0.json	2026-01-29 19:11:52.419416394 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9190,
++  "browserApiCount": 9176,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4504,7 +4504,6 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
+-    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setHTMLUnsafe",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+@@ -6200,17 +6199,6 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
+-    "Sanitizer",
+-    "Sanitizer.prototype",
+-    "Sanitizer.prototype.allowAttribute",
+-    "Sanitizer.prototype.allowElement",
+-    "Sanitizer.prototype.get",
+-    "Sanitizer.prototype.removeAttribute",
+-    "Sanitizer.prototype.removeElement",
+-    "Sanitizer.prototype.removeUnsafe",
+-    "Sanitizer.prototype.replaceElementWithChildren",
+-    "Sanitizer.prototype.setComments",
+-    "Sanitizer.prototype.setDataAttributes",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+@@ -6408,7 +6396,6 @@
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
+     "ShadowRoot.prototype.serializable",
+-    "ShadowRoot.prototype.setHTML",
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+@@ -8314,7 +8301,6 @@
+     "XMLDocument.prototype.close",
+     "XMLDocument.prototype.compatMode",
+     "XMLDocument.prototype.constructor",
+-    "XMLDocument.prototype.constructor.parseHTML",
+     "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+     "XMLDocument.prototype.contentType",
+     "XMLDocument.prototype.cookie",
+```
+
+  
 #### 146.0.7647.3 (`2026-1-22`) ⚡
 Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_146.0.7635.0_to_146.0.7647.3.diff), [json](./browser_apis/chrome-unstable_146.0.7635.0_to_146.0.7647.3.json), [full list](./browser_apis/chrome-unstable_146.0.7647.3.json))
  ```diff
@@ -2764,40 +2822,6 @@ Added 72 APIs, removed 39 (see: [diff](./browser_apis/chrome-unstable_139.0.7219
      "webkitURL",
      "webkitURL.canParse",
      "webkitURL.createObjectURL",
-```
-
-  
-#### 139.0.7219.3 (`2025-6-5`) ⚡
-Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_139.0.7207.2_to_139.0.7219.3.diff), [json](./browser_apis/chrome-unstable_139.0.7207.2_to_139.0.7219.3.json), [full list](./browser_apis/chrome-unstable_139.0.7219.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_139.0.7207.2.json	2025-06-06 00:02:40.325521745 +0000
-+++ ./browser_apis/chrome-unstable_139.0.7219.3.json	2025-06-06 00:03:12.741833406 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8742,
-+  "browserApiCount": 8753,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -524,6 +524,17 @@
-     "CSSFontPaletteValuesRule.prototype.fontFamily",
-     "CSSFontPaletteValuesRule.prototype.name",
-     "CSSFontPaletteValuesRule.prototype.overrideColors",
-+    "CSSFunctionDeclarations",
-+    "CSSFunctionDeclarations.prototype",
-+    "CSSFunctionDeclarations.prototype.style",
-+    "CSSFunctionDescriptors",
-+    "CSSFunctionDescriptors.prototype",
-+    "CSSFunctionDescriptors.prototype.result",
-+    "CSSFunctionRule",
-+    "CSSFunctionRule.prototype",
-+    "CSSFunctionRule.prototype.getParameters",
-+    "CSSFunctionRule.prototype.name",
-+    "CSSFunctionRule.prototype.returnType",
-     "CSSImageValue",
-     "CSSImageValue.prototype",
-     "CSSImportRule",
 ```
 
   <!-- browserapis:end -->

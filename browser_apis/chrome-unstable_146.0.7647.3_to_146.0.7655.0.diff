@@ -1,0 +1,52 @@
+--- ./browser_apis/chrome-unstable_146.0.7647.3.json	2026-01-29 19:11:10.345583247 +0000
++++ ./browser_apis/chrome-unstable_146.0.7655.0.json	2026-01-29 19:11:52.419416394 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9190,
++  "browserApiCount": 9176,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4504,7 +4504,6 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
+-    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setHTMLUnsafe",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+@@ -6200,17 +6199,6 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
+-    "Sanitizer",
+-    "Sanitizer.prototype",
+-    "Sanitizer.prototype.allowAttribute",
+-    "Sanitizer.prototype.allowElement",
+-    "Sanitizer.prototype.get",
+-    "Sanitizer.prototype.removeAttribute",
+-    "Sanitizer.prototype.removeElement",
+-    "Sanitizer.prototype.removeUnsafe",
+-    "Sanitizer.prototype.replaceElementWithChildren",
+-    "Sanitizer.prototype.setComments",
+-    "Sanitizer.prototype.setDataAttributes",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+@@ -6408,7 +6396,6 @@
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
+     "ShadowRoot.prototype.serializable",
+-    "ShadowRoot.prototype.setHTML",
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+@@ -8314,7 +8301,6 @@
+     "XMLDocument.prototype.close",
+     "XMLDocument.prototype.compatMode",
+     "XMLDocument.prototype.constructor",
+-    "XMLDocument.prototype.constructor.parseHTML",
+     "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+     "XMLDocument.prototype.contentType",
+     "XMLDocument.prototype.cookie",
