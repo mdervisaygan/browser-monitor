@@ -1,0 +1,77 @@
+--- ./cdp/chrome-unstable_146.0.7655.0.protocol.json	2026-02-06 18:09:21.540108320 +0000
++++ ./cdp/chrome-unstable_146.0.7670.2.protocol.json	2026-02-06 18:09:57.624232464 +0000
+@@ -11590,6 +11590,22 @@
+       ],
+       "commands": [
+         {
++          "name": "triggerAction",
++          "description": "Runs an extension default action.\nAvailable if the client is connected using the --remote-debugging-pipe\nflag and the --enable-unsafe-extension-debugging flag is set.",
++          "parameters": [
++            {
++              "name": "id",
++              "description": "Extension id.",
++              "type": "string"
++            },
++            {
++              "name": "targetId",
++              "description": "A tab target ID to trigger the default extension action on.",
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "name": "loadUnpacked",
+           "description": "Installs an unpacked extension from the filesystem similar to\n--load-extension CLI flags. Returns extension ID once the extension\nhas been installed. Available if the client is connected using the\n--remote-debugging-pipe flag and the --enable-unsafe-extension-debugging\nflag is set.",
+           "parameters": [
+@@ -11597,6 +11613,12 @@
+               "name": "path",
+               "description": "Absolute file path.",
+               "type": "string"
++            },
++            {
++              "name": "enableInIncognito",
++              "description": "Enable the extension in incognito",
++              "optional": true,
++              "type": "boolean"
+             }
+           ],
+           "returns": [
+@@ -16867,7 +16889,7 @@
+           ]
+         },
+         {
+-          "id": "PrivateNetworkRequestPolicy",
++          "id": "LocalNetworkAccessRequestPolicy",
+           "experimental": true,
+           "type": "string",
+           "enum": [
+@@ -16915,8 +16937,8 @@
+               "$ref": "IPAddressSpace"
+             },
+             {
+-              "name": "privateNetworkRequestPolicy",
+-              "$ref": "PrivateNetworkRequestPolicy"
++              "name": "localNetworkAccessRequestPolicy",
++              "$ref": "LocalNetworkAccessRequestPolicy"
+             }
+           ]
+         },
+@@ -22491,6 +22513,7 @@
+             "SharedWorkerMessage",
+             "SharedWorkerWithNoActiveClient",
+             "WebLocks",
++            "WebLocksContention",
+             "WebHID",
+             "WebBluetooth",
+             "WebShare",
+@@ -26207,6 +26230,10 @@
+             {
+               "name": "requestId",
+               "type": "string"
++            },
++            {
++              "name": "handle",
++              "type": "integer"
+             }
+           ]
+         },

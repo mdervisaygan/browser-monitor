@@ -1,0 +1,29 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "146.0.7655.0",
+    "to": "146.0.7670.2"
+  },
+  "browserApis": {
+    "added": [
+      "CrashReportContext",
+      "CrashReportContext.prototype",
+      "CrashReportContext.prototype.delete",
+      "CrashReportContext.prototype.initialize",
+      "CrashReportContext.prototype.set",
+      "CustomElementRegistry.prototype.initialize",
+      "GPUSupportedLimits.prototype.maxStorageBuffersInFragmentStage",
+      "GPUSupportedLimits.prototype.maxStorageBuffersInVertexStage",
+      "GPUSupportedLimits.prototype.maxStorageTexturesInFragmentStage",
+      "GPUSupportedLimits.prototype.maxStorageTexturesInVertexStage",
+      "GPUTexture.prototype.textureBindingViewDimension",
+      "HTMLTemplateElement.prototype.shadowRootCustomElementRegistry",
+      "Iterator.concat",
+      "Option.prototype.constructor.prototype.customElementRegistry",
+      "ShadowRoot.prototype.customElementRegistry",
+      "XMLDocument.prototype.customElementRegistry",
+      "crashReport"
+    ],
+    "removed": []
+  }
+}
