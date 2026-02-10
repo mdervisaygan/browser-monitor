@@ -5,6 +5,200 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 145.0.7632.45 (`2026-2-10`) ⚡
+Added 40 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_144.0.7559.132_to_145.0.7632.45.diff), [json](./browser_apis/chrome-stable_144.0.7559.132_to_145.0.7632.45.json), [full list](./browser_apis/chrome-stable_145.0.7632.45.json))
+ ```diff
+--- ./browser_apis/chrome-stable_144.0.7559.132.json	2026-02-10 22:10:19.680763842 +0000
++++ ./browser_apis/chrome-stable_145.0.7632.45.json	2026-02-10 22:10:47.316737352 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9123,
++  "browserApiCount": 9163,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1056,6 +1056,11 @@
+     "CountQueuingStrategy.prototype",
+     "CountQueuingStrategy.prototype.highWaterMark",
+     "CountQueuingStrategy.prototype.size",
++    "CrashReportContext",
++    "CrashReportContext.prototype",
++    "CrashReportContext.prototype.delete",
++    "CrashReportContext.prototype.initialize",
++    "CrashReportContext.prototype.set",
+     "CreateMonitor",
+     "CreateMonitor.prototype",
+     "CreateMonitor.prototype.ondownloadprogress",
+@@ -2560,11 +2565,13 @@
+     "HTMLScriptElement.prototype.event",
+     "HTMLScriptElement.prototype.fetchPriority",
+     "HTMLScriptElement.prototype.htmlFor",
++    "HTMLScriptElement.prototype.innerText",
+     "HTMLScriptElement.prototype.integrity",
+     "HTMLScriptElement.prototype.noModule",
+     "HTMLScriptElement.prototype.referrerPolicy",
+     "HTMLScriptElement.prototype.src",
+     "HTMLScriptElement.prototype.text",
++    "HTMLScriptElement.prototype.textContent",
+     "HTMLScriptElement.prototype.type",
+     "HTMLScriptElement.supports",
+     "HTMLSelectElement",
+@@ -3273,6 +3280,8 @@
+     "LargestContentfulPaint.prototype.element",
+     "LargestContentfulPaint.prototype.id",
+     "LargestContentfulPaint.prototype.loadTime",
++    "LargestContentfulPaint.prototype.paintTime",
++    "LargestContentfulPaint.prototype.presentationTime",
+     "LargestContentfulPaint.prototype.renderTime",
+     "LargestContentfulPaint.prototype.size",
+     "LargestContentfulPaint.prototype.toJSON",
+@@ -3364,6 +3373,8 @@
+     "Map.prototype.entries",
+     "Map.prototype.forEach",
+     "Map.prototype.get",
++    "Map.prototype.getOrInsert",
++    "Map.prototype.getOrInsertComputed",
+     "Map.prototype.has",
+     "Map.prototype.keys",
+     "Map.prototype.set",
+@@ -3415,6 +3426,7 @@
+     "MathMLElement.prototype.focus",
+     "MathMLElement.prototype.nonce",
+     "MathMLElement.prototype.onabort",
++    "MathMLElement.prototype.onanimationcancel",
+     "MathMLElement.prototype.onanimationend",
+     "MathMLElement.prototype.onanimationiteration",
+     "MathMLElement.prototype.onanimationstart",
+@@ -3830,6 +3842,7 @@
+     "NavigationTransition.prototype.finished",
+     "NavigationTransition.prototype.from",
+     "NavigationTransition.prototype.navigationType",
++    "NavigationTransition.prototype.to",
+     "Navigator",
+     "Navigator.prototype",
+     "Navigator.prototype.adAuctionComponents",
+@@ -4350,6 +4363,7 @@
+     "Option.prototype.constructor.prototype.offsetTop",
+     "Option.prototype.constructor.prototype.offsetWidth",
+     "Option.prototype.constructor.prototype.onabort",
++    "Option.prototype.constructor.prototype.onanimationcancel",
+     "Option.prototype.constructor.prototype.onanimationend",
+     "Option.prototype.constructor.prototype.onanimationiteration",
+     "Option.prototype.constructor.prototype.onanimationstart",
+@@ -4516,6 +4530,12 @@
+     "Option.prototype.selected",
+     "Option.prototype.text",
+     "Option.prototype.value",
++    "Origin",
++    "Origin.from",
++    "Origin.prototype",
++    "Origin.prototype.isSameOrigin",
++    "Origin.prototype.isSameSite",
++    "Origin.prototype.opaque",
+     "OscillatorNode",
+     "OscillatorNode.prototype",
+     "OscillatorNode.prototype.constructor",
+@@ -4656,6 +4676,8 @@
+     "PerformanceElementTiming.prototype.loadTime",
+     "PerformanceElementTiming.prototype.naturalHeight",
+     "PerformanceElementTiming.prototype.naturalWidth",
++    "PerformanceElementTiming.prototype.paintTime",
++    "PerformanceElementTiming.prototype.presentationTime",
+     "PerformanceElementTiming.prototype.renderTime",
+     "PerformanceElementTiming.prototype.toJSON",
+     "PerformanceElementTiming.prototype.url",
+@@ -4671,6 +4693,8 @@
+     "PerformanceLongAnimationFrameTiming.prototype",
+     "PerformanceLongAnimationFrameTiming.prototype.blockingDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.firstUIEventTimestamp",
++    "PerformanceLongAnimationFrameTiming.prototype.paintTime",
++    "PerformanceLongAnimationFrameTiming.prototype.presentationTime",
+     "PerformanceLongAnimationFrameTiming.prototype.renderStart",
+     "PerformanceLongAnimationFrameTiming.prototype.scripts",
+     "PerformanceLongAnimationFrameTiming.prototype.styleAndLayoutStart",
+@@ -4693,6 +4717,7 @@
+     "PerformanceNavigationTiming",
+     "PerformanceNavigationTiming.prototype",
+     "PerformanceNavigationTiming.prototype.activationStart",
++    "PerformanceNavigationTiming.prototype.confidence",
+     "PerformanceNavigationTiming.prototype.criticalCHRestart",
+     "PerformanceNavigationTiming.prototype.domComplete",
+     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
+@@ -4719,6 +4744,9 @@
+     "PerformanceObserverEntryList.prototype.getEntriesByType",
+     "PerformancePaintTiming",
+     "PerformancePaintTiming.prototype",
++    "PerformancePaintTiming.prototype.paintTime",
++    "PerformancePaintTiming.prototype.presentationTime",
++    "PerformancePaintTiming.prototype.toJSON",
+     "PerformanceResourceTiming",
+     "PerformanceResourceTiming.prototype",
+     "PerformanceResourceTiming.prototype.connectEnd",
+@@ -4793,6 +4821,11 @@
+     "PerformanceTiming.prototype.toJSON",
+     "PerformanceTiming.prototype.unloadEventEnd",
+     "PerformanceTiming.prototype.unloadEventStart",
++    "PerformanceTimingConfidence",
++    "PerformanceTimingConfidence.prototype",
++    "PerformanceTimingConfidence.prototype.randomizedTriggerRate",
++    "PerformanceTimingConfidence.prototype.toJSON",
++    "PerformanceTimingConfidence.prototype.value",
+     "PeriodicSyncManager",
+     "PeriodicSyncManager.prototype",
+     "PeriodicSyncManager.prototype.getTags",
+@@ -6058,6 +6091,7 @@
+     "SVGViewElement.prototype.focus",
+     "SVGViewElement.prototype.nonce",
+     "SVGViewElement.prototype.onabort",
++    "SVGViewElement.prototype.onanimationcancel",
+     "SVGViewElement.prototype.onanimationend",
+     "SVGViewElement.prototype.onanimationiteration",
+     "SVGViewElement.prototype.onanimationstart",
+@@ -7427,6 +7461,7 @@
+     "VideoFrame.prototype.duration",
+     "VideoFrame.prototype.flip",
+     "VideoFrame.prototype.format",
++    "VideoFrame.prototype.metadata",
+     "VideoFrame.prototype.rotation",
+     "VideoFrame.prototype.timestamp",
+     "VideoFrame.prototype.visibleRect",
+@@ -7532,6 +7567,8 @@
+     "WeakMap.prototype",
+     "WeakMap.prototype.delete",
+     "WeakMap.prototype.get",
++    "WeakMap.prototype.getOrInsert",
++    "WeakMap.prototype.getOrInsertComputed",
+     "WeakMap.prototype.has",
+     "WeakMap.prototype.set",
+     "WeakRef",
+@@ -8317,6 +8354,7 @@
+     "XMLDocument.prototype.links",
+     "XMLDocument.prototype.moveBefore",
+     "XMLDocument.prototype.onabort",
++    "XMLDocument.prototype.onanimationcancel",
+     "XMLDocument.prototype.onanimationend",
+     "XMLDocument.prototype.onanimationiteration",
+     "XMLDocument.prototype.onanimationstart",
+@@ -8813,6 +8851,7 @@
+     "console.trace",
+     "console.warn",
+     "cookieStore",
++    "crashReport",
+     "createImageBitmap",
+     "credentialless",
+     "crossOriginIsolated",
+@@ -8861,6 +8900,7 @@
+     "offscreenBuffering",
+     "onabort",
+     "onafterprint",
++    "onanimationcancel",
+     "onanimationend",
+     "onanimationiteration",
+     "onanimationstart",
+```
+
+  
 #### 144.0.7559.132 (`2026-2-3`) 
 No browser API changes.
 
@@ -1154,10 +1348,6 @@ No browser API changes.
 
   
 #### 138.0.7204.157 (`2025-7-15`) 
-No browser API changes.
-
-  
-#### 138.0.7204.100 (`2025-7-8`) 
 No browser API changes.
 
   

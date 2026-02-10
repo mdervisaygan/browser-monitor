@@ -1,0 +1,52 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "144.0.7559.132",
+    "to": "145.0.7632.45"
+  },
+  "browserApis": {
+    "added": [
+      "CrashReportContext",
+      "CrashReportContext.prototype",
+      "CrashReportContext.prototype.delete",
+      "CrashReportContext.prototype.initialize",
+      "CrashReportContext.prototype.set",
+      "HTMLScriptElement.prototype.innerText",
+      "HTMLScriptElement.prototype.textContent",
+      "LargestContentfulPaint.prototype.paintTime",
+      "LargestContentfulPaint.prototype.presentationTime",
+      "Map.prototype.getOrInsert",
+      "Map.prototype.getOrInsertComputed",
+      "MathMLElement.prototype.onanimationcancel",
+      "NavigationTransition.prototype.to",
+      "Option.prototype.constructor.prototype.onanimationcancel",
+      "Origin",
+      "Origin.from",
+      "Origin.prototype",
+      "Origin.prototype.isSameOrigin",
+      "Origin.prototype.isSameSite",
+      "Origin.prototype.opaque",
+      "PerformanceElementTiming.prototype.paintTime",
+      "PerformanceElementTiming.prototype.presentationTime",
+      "PerformanceLongAnimationFrameTiming.prototype.paintTime",
+      "PerformanceLongAnimationFrameTiming.prototype.presentationTime",
+      "PerformanceNavigationTiming.prototype.confidence",
+      "PerformancePaintTiming.prototype.paintTime",
+      "PerformancePaintTiming.prototype.presentationTime",
+      "PerformancePaintTiming.prototype.toJSON",
+      "PerformanceTimingConfidence",
+      "PerformanceTimingConfidence.prototype",
+      "PerformanceTimingConfidence.prototype.randomizedTriggerRate",
+      "PerformanceTimingConfidence.prototype.toJSON",
+      "PerformanceTimingConfidence.prototype.value",
+      "SVGViewElement.prototype.onanimationcancel",
+      "VideoFrame.prototype.metadata",
+      "WeakMap.prototype.getOrInsert",
+      "WeakMap.prototype.getOrInsertComputed",
+      "XMLDocument.prototype.onanimationcancel",
+      "crashReport",
+      "onanimationcancel"
+    ],
+    "removed": []
+  }
+}
