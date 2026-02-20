@@ -1,0 +1,43 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "146.0.7670.2",
+    "to": "147.0.7695.0"
+  },
+  "browserApis": {
+    "added": [
+      "AudioContext.prototype.playbackStats",
+      "AudioPlaybackStats",
+      "AudioPlaybackStats.prototype",
+      "AudioPlaybackStats.prototype.averageLatency",
+      "AudioPlaybackStats.prototype.maximumLatency",
+      "AudioPlaybackStats.prototype.minimumLatency",
+      "AudioPlaybackStats.prototype.resetLatency",
+      "AudioPlaybackStats.prototype.toJSON",
+      "AudioPlaybackStats.prototype.totalDuration",
+      "AudioPlaybackStats.prototype.underrunDuration",
+      "AudioPlaybackStats.prototype.underrunEvents",
+      "NavigationPrecommitController.prototype.addHandler",
+      "Option.prototype.constructor.prototype.setHTML",
+      "Sanitizer",
+      "Sanitizer.prototype",
+      "Sanitizer.prototype.allowAttribute",
+      "Sanitizer.prototype.allowElement",
+      "Sanitizer.prototype.get",
+      "Sanitizer.prototype.removeAttribute",
+      "Sanitizer.prototype.removeElement",
+      "Sanitizer.prototype.removeUnsafe",
+      "Sanitizer.prototype.replaceElementWithChildren",
+      "Sanitizer.prototype.setComments",
+      "Sanitizer.prototype.setDataAttributes",
+      "ShadowRoot.prototype.setHTML",
+      "TimelineTriggerRange.prototype.activationRangeEnd",
+      "TimelineTriggerRange.prototype.activationRangeStart",
+      "XMLDocument.prototype.constructor.parseHTML"
+    ],
+    "removed": [
+      "TimelineTriggerRange.prototype.entryRangeEnd",
+      "TimelineTriggerRange.prototype.entryRangeStart"
+    ]
+  }
+}

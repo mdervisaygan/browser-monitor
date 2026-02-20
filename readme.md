@@ -1353,6 +1353,110 @@ Added 60 APIs, removed 39 (see: [diff](./browser_apis/chrome-stable_138.0.7204.1
   
 ### chrome-unstable
   
+#### 147.0.7695.0 (`2026-2-20`) ⚡
+Added 28 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_146.0.7670.2_to_147.0.7695.0.diff), [json](./browser_apis/chrome-unstable_146.0.7670.2_to_147.0.7695.0.json), [full list](./browser_apis/chrome-unstable_147.0.7695.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_146.0.7670.2.json	2026-02-20 18:07:32.491000272 +0000
++++ ./browser_apis/chrome-unstable_147.0.7695.0.json	2026-02-20 18:08:07.178055496 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9193,
++  "browserApiCount": 9219,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -211,6 +211,7 @@
+     "AudioContext.prototype.onerror",
+     "AudioContext.prototype.onsinkchange",
+     "AudioContext.prototype.outputLatency",
++    "AudioContext.prototype.playbackStats",
+     "AudioContext.prototype.resume",
+     "AudioContext.prototype.setSinkId",
+     "AudioContext.prototype.sinkId",
+@@ -288,6 +289,16 @@
+     "AudioParamMap.prototype.keys",
+     "AudioParamMap.prototype.size",
+     "AudioParamMap.prototype.values",
++    "AudioPlaybackStats",
++    "AudioPlaybackStats.prototype",
++    "AudioPlaybackStats.prototype.averageLatency",
++    "AudioPlaybackStats.prototype.maximumLatency",
++    "AudioPlaybackStats.prototype.minimumLatency",
++    "AudioPlaybackStats.prototype.resetLatency",
++    "AudioPlaybackStats.prototype.toJSON",
++    "AudioPlaybackStats.prototype.totalDuration",
++    "AudioPlaybackStats.prototype.underrunDuration",
++    "AudioPlaybackStats.prototype.underrunEvents",
+     "AudioProcessingEvent",
+     "AudioProcessingEvent.prototype",
+     "AudioProcessingEvent.prototype.inputBuffer",
+@@ -3842,6 +3853,7 @@
+     "NavigationHistoryEntry.prototype.url",
+     "NavigationPrecommitController",
+     "NavigationPrecommitController.prototype",
++    "NavigationPrecommitController.prototype.addHandler",
+     "NavigationPrecommitController.prototype.redirect",
+     "NavigationPreloadManager",
+     "NavigationPreloadManager.prototype",
+@@ -4518,6 +4530,7 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
++    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setHTMLUnsafe",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+@@ -6213,6 +6226,17 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
++    "Sanitizer",
++    "Sanitizer.prototype",
++    "Sanitizer.prototype.allowAttribute",
++    "Sanitizer.prototype.allowElement",
++    "Sanitizer.prototype.get",
++    "Sanitizer.prototype.removeAttribute",
++    "Sanitizer.prototype.removeElement",
++    "Sanitizer.prototype.removeUnsafe",
++    "Sanitizer.prototype.replaceElementWithChildren",
++    "Sanitizer.prototype.setComments",
++    "Sanitizer.prototype.setDataAttributes",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+@@ -6411,6 +6435,7 @@
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
+     "ShadowRoot.prototype.serializable",
++    "ShadowRoot.prototype.setHTML",
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+@@ -7124,10 +7149,10 @@
+     "TimelineTrigger.prototype.ranges",
+     "TimelineTriggerRange",
+     "TimelineTriggerRange.prototype",
++    "TimelineTriggerRange.prototype.activationRangeEnd",
++    "TimelineTriggerRange.prototype.activationRangeStart",
+     "TimelineTriggerRange.prototype.activeRangeEnd",
+     "TimelineTriggerRange.prototype.activeRangeStart",
+-    "TimelineTriggerRange.prototype.entryRangeEnd",
+-    "TimelineTriggerRange.prototype.entryRangeStart",
+     "TimelineTriggerRange.prototype.timeline",
+     "TimelineTriggerRangeList",
+     "TimelineTriggerRangeList.prototype",
+@@ -8316,6 +8341,7 @@
+     "XMLDocument.prototype.close",
+     "XMLDocument.prototype.compatMode",
+     "XMLDocument.prototype.constructor",
++    "XMLDocument.prototype.constructor.parseHTML",
+     "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+     "XMLDocument.prototype.contentType",
+     "XMLDocument.prototype.cookie",
+```
+
+  
 #### 146.0.7670.2 (`2026-2-6`) ⚡
 Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_146.0.7655.0_to_146.0.7670.2.diff), [json](./browser_apis/chrome-unstable_146.0.7655.0_to_146.0.7670.2.json), [full list](./browser_apis/chrome-unstable_146.0.7670.2.json))
  ```diff
@@ -2898,39 +3002,6 @@ Added 1 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_139.0.7246.0
      "PaymentRequestUpdateEvent",
      "PaymentRequestUpdateEvent.prototype",
      "PaymentRequestUpdateEvent.prototype.updateWith",
-```
-
-  
-#### 139.0.7246.0 (`2025-6-20`) ⚡
-Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_139.0.7232.3_to_139.0.7246.0.diff), [json](./browser_apis/chrome-unstable_139.0.7232.3_to_139.0.7246.0.json), [full list](./browser_apis/chrome-unstable_139.0.7246.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_139.0.7232.3.json	2025-06-20 08:00:47.221967071 +0000
-+++ ./browser_apis/chrome-unstable_139.0.7246.0.json	2025-06-20 08:01:32.631061693 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8786,
-+  "browserApiCount": 8789,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -6368,6 +6368,8 @@
-     "SpeechGrammarList.prototype.item",
-     "SpeechGrammarList.prototype.length",
-     "SpeechRecognition",
-+    "SpeechRecognition.available",
-+    "SpeechRecognition.install",
-     "SpeechRecognition.prototype",
-     "SpeechRecognition.prototype.abort",
-     "SpeechRecognition.prototype.continuous",
-@@ -6386,6 +6388,7 @@
-     "SpeechRecognition.prototype.onspeechend",
-     "SpeechRecognition.prototype.onspeechstart",
-     "SpeechRecognition.prototype.onstart",
-+    "SpeechRecognition.prototype.processLocally",
-     "SpeechRecognition.prototype.start",
-     "SpeechRecognition.prototype.stop",
-     "SpeechRecognitionErrorEvent",
 ```
 
   <!-- browserapis:end -->

@@ -1,0 +1,222 @@
+--- ./cdp/chrome-unstable_146.0.7670.2.protocol.json	2026-02-20 18:07:32.912996952 +0000
++++ ./cdp/chrome-unstable_147.0.7695.0.protocol.json	2026-02-20 18:08:07.187055618 +0000
+@@ -1184,6 +1184,29 @@
+           ]
+         },
+         {
++          "id": "PerformanceIssueType",
++          "type": "string",
++          "enum": [
++            "DocumentCookie"
++          ]
++        },
++        {
++          "id": "PerformanceIssueDetails",
++          "description": "Details for a performance issue.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "performanceIssueType",
++              "$ref": "PerformanceIssueType"
++            },
++            {
++              "name": "sourceCodeLocation",
++              "optional": true,
++              "$ref": "SourceCodeLocation"
++            }
++          ]
++        },
++        {
+           "id": "MixedContentResolutionStatus",
+           "type": "string",
+           "enum": [
+@@ -1616,6 +1639,18 @@
+           ]
+         },
+         {
++          "id": "ConnectionAllowlistError",
++          "type": "string",
++          "enum": [
++            "InvalidHeader",
++            "MoreThanOneList",
++            "ItemNotInnerList",
++            "InvalidAllowlistItemType",
++            "ReportingEndpointNotToken",
++            "InvalidUrlPattern"
++          ]
++        },
++        {
+           "id": "AttributionReportingIssueDetails",
+           "description": "Details for issues around \"Attribution Reporting API\" usage.\nExplainer: https://github.com/WICG/attribution-reporting-api",
+           "type": "object",
+@@ -1739,6 +1774,20 @@
+           ]
+         },
+         {
++          "id": "ConnectionAllowlistIssueDetails",
++          "type": "object",
++          "properties": [
++            {
++              "name": "error",
++              "$ref": "ConnectionAllowlistError"
++            },
++            {
++              "name": "request",
++              "$ref": "AffectedRequest"
++            }
++          ]
++        },
++        {
+           "id": "GenericIssueErrorType",
+           "type": "string",
+           "enum": [
+@@ -1888,10 +1937,6 @@
+             "ConfigNoResponse",
+             "ConfigInvalidResponse",
+             "ConfigInvalidContentType",
+-            "ClientMetadataHttpNotFound",
+-            "ClientMetadataNoResponse",
+-            "ClientMetadataInvalidResponse",
+-            "ClientMetadataInvalidContentType",
+             "IdpNotPotentiallyTrustworthy",
+             "DisabledInSettings",
+             "DisabledInFlags",
+@@ -1913,11 +1958,9 @@
+             "Canceled",
+             "RpPageNotVisible",
+             "SilentMediationFailure",
+-            "ThirdPartyCookiesBlocked",
+             "NotSignedInWithIdp",
+             "MissingTransientUserActivation",
+             "ReplacedByActiveMode",
+-            "InvalidFieldsSpecified",
+             "RelyingPartyOriginIsOpaque",
+             "TypeNotMatching",
+             "UiDismissedNoEmbargo",
+@@ -2248,8 +2291,10 @@
+             "ElementAccessibilityIssue",
+             "SRIMessageSignatureIssue",
+             "UnencodedDigestIssue",
++            "ConnectionAllowlistIssue",
+             "UserReidentificationIssue",
+-            "PermissionElementIssue"
++            "PermissionElementIssue",
++            "PerformanceIssue"
+           ]
+         },
+         {
+@@ -2384,6 +2429,11 @@
+               "$ref": "UnencodedDigestIssueDetails"
+             },
+             {
++              "name": "connectionAllowlistIssueDetails",
++              "optional": true,
++              "$ref": "ConnectionAllowlistIssueDetails"
++            },
++            {
+               "name": "userReidentificationIssueDetails",
+               "optional": true,
+               "$ref": "UserReidentificationIssueDetails"
+@@ -2392,6 +2442,11 @@
+               "name": "permissionElementIssueDetails",
+               "optional": true,
+               "$ref": "PermissionElementIssueDetails"
++            },
++            {
++              "name": "performanceIssueDetails",
++              "optional": true,
++              "$ref": "PerformanceIssueDetails"
+             }
+           ]
+         },
+@@ -11437,7 +11492,7 @@
+         },
+         {
+           "name": "getScreenInfos",
+-          "description": "Returns device's screen configuration.",
++          "description": "Returns device's screen configuration. In headful mode, the physical screens configuration is returned,\nwhereas in headless mode, a virtual headless screen configuration is provided instead.",
+           "experimental": true,
+           "returns": [
+             {
+@@ -15622,8 +15677,8 @@
+             "MethodDisallowedByPreflightResponse",
+             "HeaderDisallowedByPreflightResponse",
+             "RedirectContainsCredentials",
+-            "InsecurePrivateNetwork",
+-            "InvalidPrivateNetworkAccess",
++            "InsecureLocalNetwork",
++            "InvalidLocalNetworkAccess",
+             "NoCorsRedirectModeNotFollow",
+             "LocalNetworkAccessPermissionDenied"
+           ]
+@@ -20284,6 +20339,24 @@
+             "captureAreaScreenshot",
+             "none"
+           ]
++        },
++        {
++          "id": "InspectedElementAnchorConfig",
++          "type": "object",
++          "properties": [
++            {
++              "name": "nodeId",
++              "description": "Identifier of the node to highlight.",
++              "optional": true,
++              "$ref": "DOM.NodeId"
++            },
++            {
++              "name": "backendNodeId",
++              "description": "Identifier of the backend node to highlight.",
++              "optional": true,
++              "$ref": "DOM.BackendNodeId"
++            }
++          ]
+         }
+       ],
+       "commands": [
+@@ -20644,6 +20717,16 @@
+           ]
+         },
+         {
++          "name": "setShowInspectedElementAnchor",
++          "parameters": [
++            {
++              "name": "inspectedElementAnchorConfig",
++              "description": "Node identifier for which to show an anchor for.",
++              "$ref": "InspectedElementAnchorConfig"
++            }
++          ]
++        },
++        {
+           "name": "setShowPaintRects",
+           "description": "Requests that backend shows paint rectangles",
+           "parameters": [
+@@ -20782,6 +20865,28 @@
+             }
+           ]
+         },
++        {
++          "name": "inspectPanelShowRequested",
++          "description": "Fired when user asks to show the Inspect panel.",
++          "parameters": [
++            {
++              "name": "backendNodeId",
++              "description": "Id of the node to show in the panel.",
++              "$ref": "DOM.BackendNodeId"
++            }
++          ]
++        },
++        {
++          "name": "inspectedElementWindowRestored",
++          "description": "Fired when user asks to restore the Inspected Element floating window.",
++          "parameters": [
++            {
++              "name": "backendNodeId",
++              "description": "Id of the node to restore the floating window for.",
++              "$ref": "DOM.BackendNodeId"
++            }
++          ]
++        },
+         {
+           "name": "inspectModeCanceled",
+           "description": "Fired when user cancels the inspect mode."
