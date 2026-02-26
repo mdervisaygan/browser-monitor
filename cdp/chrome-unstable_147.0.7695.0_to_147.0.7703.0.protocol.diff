@@ -1,0 +1,225 @@
+--- ./cdp/chrome-unstable_147.0.7695.0.protocol.json	2026-02-26 18:10:55.718409930 +0000
++++ ./cdp/chrome-unstable_147.0.7703.0.protocol.json	2026-02-26 18:11:31.955128602 +0000
+@@ -1004,7 +1004,8 @@
+       "description": "Audits domain allows investigation of page violations and possible improvements.",
+       "experimental": true,
+       "dependencies": [
+-        "Network"
++        "Network",
++        "Runtime"
+       ],
+       "types": [
+         {
+@@ -2262,6 +2263,72 @@
+           ]
+         },
+         {
++          "id": "AdScriptIdentifier",
++          "description": "Metadata about the ad script that was on the stack that caused the current\nscript in the `AdAncestry` to be considered ad related.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "scriptId",
++              "description": "The script's v8 identifier.",
++              "$ref": "Runtime.ScriptId"
++            },
++            {
++              "name": "debuggerId",
++              "description": "v8's debugging id for the v8::Context.",
++              "$ref": "Runtime.UniqueDebuggerId"
++            },
++            {
++              "name": "name",
++              "description": "The script's url (or generated name based on id if inline script).",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "id": "AdAncestry",
++          "description": "Providence about how an ad script was determined to be such. It is an ad\nbecause its url matched a filterlist rule, or because some other ad script\nwas on the stack when this script was loaded.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "adAncestryChain",
++              "description": "The ad-script in the stack when the offending script was loaded. This is\nrecursive down to the root script that was tagged due to the filterlist\nrule.",
++              "type": "array",
++              "items": {
++                "$ref": "AdScriptIdentifier"
++              }
++            },
++            {
++              "name": "rootScriptFilterlistRule",
++              "description": "The filterlist rule that caused the root (last) script in\n`adAncestry` to be ad-tagged.",
++              "optional": true,
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "id": "SelectivePermissionsInterventionIssueDetails",
++          "description": "The issue warns about blocked calls to privacy sensitive APIs via the\nSelective Permissions Intervention.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "apiName",
++              "description": "Which API was intervened on.",
++              "type": "string"
++            },
++            {
++              "name": "adAncestry",
++              "description": "Why the ad script using the API is considered an ad.",
++              "$ref": "AdAncestry"
++            },
++            {
++              "name": "stackTrace",
++              "description": "The stack trace at the time of the intervention.",
++              "optional": true,
++              "$ref": "Runtime.StackTrace"
++            }
++          ]
++        },
++        {
+           "id": "InspectorIssueCode",
+           "description": "A unique identifier for the type of issue. Each type may use one of the\noptional fields in InspectorIssueDetails to convey more specific\ninformation about the kind of issue.",
+           "type": "string",
+@@ -2294,7 +2361,8 @@
+             "ConnectionAllowlistIssue",
+             "UserReidentificationIssue",
+             "PermissionElementIssue",
+-            "PerformanceIssue"
++            "PerformanceIssue",
++            "SelectivePermissionsInterventionIssue"
+           ]
+         },
+         {
+@@ -2447,6 +2515,11 @@
+               "name": "performanceIssueDetails",
+               "optional": true,
+               "$ref": "PerformanceIssueDetails"
++            },
++            {
++              "name": "selectivePermissionsInterventionIssueDetails",
++              "optional": true,
++              "$ref": "SelectivePermissionsInterventionIssueDetails"
+             }
+           ]
+         },
+@@ -7222,6 +7295,12 @@
+               "items": {
+                 "$ref": "StyleSheetId"
+               }
++            },
++            {
++              "name": "isAdRelated",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -8777,6 +8856,23 @@
+           ]
+         },
+         {
++          "name": "adRelatedStateUpdated",
++          "description": "Fired when a node's ad related state changes.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "nodeId",
++              "description": "The id of the node.",
++              "$ref": "DOM.NodeId"
++            },
++            {
++              "name": "isAdRelated",
++              "description": "If the node is ad related.",
++              "type": "boolean"
++            }
++          ]
++        },
++        {
+           "name": "affectedByStartingStylesFlagUpdated",
+           "description": "Fired when a node's starting styles changes.",
+           "experimental": true,
+@@ -10777,6 +10873,7 @@
+           "type": "string",
+           "enum": [
+             "avif",
++            "jxl",
+             "webp"
+           ]
+         }
+@@ -17477,6 +17574,37 @@
+           ]
+         },
+         {
++          "id": "DeviceBoundSessionFailedRequest",
++          "description": "Details about a failed device bound session network request.",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "requestUrl",
++              "description": "The failed request URL.",
++              "type": "string"
++            },
++            {
++              "name": "netError",
++              "description": "The net error of the response if it was not OK.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "responseError",
++              "description": "The response code if the net error was OK and the response code was not\n200.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "responseErrorBody",
++              "description": "The body of the response if the net error was OK, the response code was\nnot 200, and the response body was not empty.",
++              "optional": true,
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "id": "CreationEventDetails",
+           "description": "Session event details specific to creation.",
+           "experimental": true,
+@@ -17492,6 +17620,12 @@
+               "description": "The session if there was a newly created session. This is populated for\nall successful creation events.",
+               "optional": true,
+               "$ref": "DeviceBoundSession"
++            },
++            {
++              "name": "failedRequest",
++              "description": "Details about a failed device bound session network request if there was\none.",
++              "optional": true,
++              "$ref": "DeviceBoundSessionFailedRequest"
+             }
+           ]
+         },
+@@ -17531,6 +17665,12 @@
+               "name": "wasFullyProactiveRefresh",
+               "description": "See comments on `net::device_bound_sessions::RefreshEventResult::was_fully_proactive_refresh`.",
+               "type": "boolean"
++            },
++            {
++              "name": "failedRequest",
++              "description": "Details about a failed device bound session network request if there was\none.",
++              "optional": true,
++              "$ref": "DeviceBoundSessionFailedRequest"
+             }
+           ]
+         },
+@@ -17920,7 +18060,7 @@
+           "parameters": [
+             {
+               "name": "maxTotalBufferSize",
+-              "description": "Buffer size in bytes to use when preserving network payloads (XHRs, etc).",
++              "description": "Buffer size in bytes to use when preserving network payloads (XHRs, etc).\nThis is the maximum number of bytes that will be collected by this\nDevTools session.",
+               "experimental": true,
+               "optional": true,
+               "type": "integer"
