@@ -1,0 +1,353 @@
+--- ./cdp/chrome-unstable_147.0.7703.0.protocol.json	2026-03-06 20:03:19.728419351 +0000
++++ ./cdp/chrome-unstable_147.0.7719.3.protocol.json	2026-03-06 20:03:55.378484640 +0000
+@@ -1806,7 +1806,8 @@
+             "NavigationEntryMarkedSkippable",
+             "AutofillAndManualTextPolicyControlledFeaturesInfo",
+             "AutofillPolicyControlledFeatureInfo",
+-            "ManualTextPolicyControlledFeatureInfo"
++            "ManualTextPolicyControlledFeatureInfo",
++            "FormModelContextParameterMissingTitleAndDescription"
+           ]
+         },
+         {
+@@ -4632,6 +4633,16 @@
+               "items": {
+                 "$ref": "CSSStartingStyle"
+               }
++            },
++            {
++              "name": "navigations",
++              "description": "@navigation CSS at-rule array.\nThe array enumerates @navigation at-rules starting with the innermost one, going outwards.",
++              "experimental": true,
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "CSSNavigation"
++              }
+             }
+           ]
+         },
+@@ -4647,7 +4658,8 @@
+             "LayerRule",
+             "ScopeRule",
+             "StyleRule",
+-            "StartingStyleRule"
++            "StartingStyleRule",
++            "NavigationRule"
+           ]
+         },
+         {
+@@ -5048,6 +5060,37 @@
+           ]
+         },
+         {
++          "id": "CSSNavigation",
++          "description": "CSS Navigation at-rule descriptor.",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "text",
++              "description": "Navigation rule text.",
++              "type": "string"
++            },
++            {
++              "name": "active",
++              "description": "Whether the navigation condition is satisfied.",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
++              "name": "range",
++              "description": "The associated rule header range in the enclosing stylesheet (if\navailable).",
++              "optional": true,
++              "$ref": "SourceRange"
++            },
++            {
++              "name": "styleSheetId",
++              "description": "Identifier of the stylesheet containing this object (if exists).",
++              "optional": true,
++              "$ref": "DOM.StyleSheetId"
++            }
++          ]
++        },
++        {
+           "id": "CSSScope",
+           "description": "CSS Scope at-rule descriptor.",
+           "experimental": true,
+@@ -5485,6 +5528,12 @@
+               "$ref": "CSSSupports"
+             },
+             {
++              "name": "navigation",
++              "description": "@navigation condition. Only one type of condition should be set.",
++              "optional": true,
++              "$ref": "CSSNavigation"
++            },
++            {
+               "name": "children",
+               "description": "Block body.",
+               "type": "array",
+@@ -6339,6 +6388,32 @@
+           ]
+         },
+         {
++          "name": "setNavigationText",
++          "description": "Modifies the expression of a navigation at-rule.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "styleSheetId",
++              "$ref": "DOM.StyleSheetId"
++            },
++            {
++              "name": "range",
++              "$ref": "SourceRange"
++            },
++            {
++              "name": "text",
++              "type": "string"
++            }
++          ],
++          "returns": [
++            {
++              "name": "navigation",
++              "description": "The resulting CSS Navigation rule after modification.",
++              "$ref": "CSSNavigation"
++            }
++          ]
++        },
++        {
+           "name": "setScopeText",
+           "description": "Modifies the expression of a scope at-rule.",
+           "experimental": true,
+@@ -11057,6 +11132,24 @@
+               "deprecated": true,
+               "optional": true,
+               "$ref": "DevicePosture"
++            },
++            {
++              "name": "scrollbarType",
++              "description": "Scrollbar type. Default: `default`.",
++              "experimental": true,
++              "optional": true,
++              "type": "string",
++              "enum": [
++                "overlay",
++                "default"
++              ]
++            },
++            {
++              "name": "screenOrientationLockEmulation",
++              "description": "If set to true, enables screen orientation lock emulation, which\nintercepts screen.orientation.lock() calls from the page and reports\norientation changes via screenOrientationLockChanged events. This is\nuseful for emulating mobile device orientation lock behavior in\nresponsive design mode.",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -11671,6 +11764,84 @@
+           ]
+         },
+         {
++          "name": "updateScreen",
++          "description": "Updates specified screen parameters. Only supported in headless mode.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "screenId",
++              "description": "Target screen identifier.",
++              "$ref": "ScreenId"
++            },
++            {
++              "name": "left",
++              "description": "Offset of the left edge of the screen in pixels.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "top",
++              "description": "Offset of the top edge of the screen in pixels.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "width",
++              "description": "The width of the screen in pixels.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "height",
++              "description": "The height of the screen in pixels.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "workAreaInsets",
++              "description": "Specifies the screen's work area.",
++              "optional": true,
++              "$ref": "WorkAreaInsets"
++            },
++            {
++              "name": "devicePixelRatio",
++              "description": "Specifies the screen's device pixel ratio.",
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "rotation",
++              "description": "Specifies the screen's rotation angle. Available values are 0, 90, 180 and 270.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "colorDepth",
++              "description": "Specifies the screen's color depth in bits.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "label",
++              "description": "Specifies the descriptive label for the screen.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "isInternal",
++              "description": "Indicates whether the screen is internal to the device or external, attached to the device. Default is false.",
++              "optional": true,
++              "type": "boolean"
++            }
++          ],
++          "returns": [
++            {
++              "name": "screenInfo",
++              "$ref": "ScreenInfo"
++            }
++          ]
++        },
++        {
+           "name": "removeScreen",
+           "description": "Remove screen from the device. Only supported in headless mode.",
+           "experimental": true,
+@@ -11680,6 +11851,17 @@
+               "$ref": "ScreenId"
+             }
+           ]
++        },
++        {
++          "name": "setPrimaryScreen",
++          "description": "Set primary screen. Only supported in headless mode.\nNote that this changes the coordinate system origin to the top-left\nof the new primary screen, updating the bounds and work areas\nof all existing screens accordingly.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "screenId",
++              "$ref": "ScreenId"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -11687,6 +11869,24 @@
+           "name": "virtualTimeBudgetExpired",
+           "description": "Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.",
+           "experimental": true
++        },
++        {
++          "name": "screenOrientationLockChanged",
++          "description": "Fired when a page calls screen.orientation.lock() or screen.orientation.unlock()\nwhile device emulation is enabled. This allows the DevTools frontend to update the\nemulated device orientation accordingly.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "locked",
++              "description": "Whether the screen orientation is currently locked.",
++              "type": "boolean"
++            },
++            {
++              "name": "orientation",
++              "description": "The orientation lock type requested by the page. Only set when locked is true.",
++              "optional": true,
++              "$ref": "ScreenOrientation"
++            }
++          ]
+         }
+       ]
+     },
+@@ -11738,6 +11938,38 @@
+             "sync",
+             "managed"
+           ]
++        },
++        {
++          "id": "ExtensionInfo",
++          "description": "Detailed information about an extension.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "id",
++              "description": "Extension id.",
++              "type": "string"
++            },
++            {
++              "name": "name",
++              "description": "Extension name.",
++              "type": "string"
++            },
++            {
++              "name": "version",
++              "description": "Extension version.",
++              "type": "string"
++            },
++            {
++              "name": "path",
++              "description": "The path from which the extension was loaded.",
++              "type": "string"
++            },
++            {
++              "name": "enabled",
++              "description": "Extension enabled status.",
++              "type": "boolean"
++            }
++          ]
+         }
+       ],
+       "commands": [
+@@ -11782,6 +12014,19 @@
+           ]
+         },
+         {
++          "name": "getExtensions",
++          "description": "Gets a list of all unpacked extensions.\nAvailable if the client is connected using the --remote-debugging-pipe flag\nand the --enable-unsafe-extension-debugging flag is set.",
++          "returns": [
++            {
++              "name": "extensions",
++              "type": "array",
++              "items": {
++                "$ref": "ExtensionInfo"
++              }
++            }
++          ]
++        },
++        {
+           "name": "uninstall",
+           "description": "Uninstalls an unpacked extension (others not supported) from the profile.\nAvailable if the client is connected using the --remote-debugging-pipe flag\nand the --enable-unsafe-extension-debugging.",
+           "parameters": [
+@@ -15447,7 +15692,7 @@
+         },
+         {
+           "id": "RenderBlockingBehavior",
+-          "description": "The render blocking behavior of a resource request.",
++          "description": "The render-blocking behavior of a resource request.",
+           "experimental": true,
+           "type": "string",
+           "enum": [
+@@ -18957,7 +19202,7 @@
+             },
+             {
+               "name": "renderBlockingBehavior",
+-              "description": "The render blocking behavior of the request.",
++              "description": "The render-blocking behavior of the request.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "RenderBlockingBehavior"

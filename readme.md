@@ -1184,6 +1184,67 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 147.0.7719.3 (`2026-3-6`) ⚡
+Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_147.0.7703.0_to_147.0.7719.3.diff), [json](./browser_apis/chrome-unstable_147.0.7703.0_to_147.0.7719.3.json), [full list](./browser_apis/chrome-unstable_147.0.7719.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_147.0.7703.0.json	2026-03-06 20:03:19.287418601 +0000
++++ ./browser_apis/chrome-unstable_147.0.7719.3.json	2026-03-06 20:03:55.366484617 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9315,
++  "browserApiCount": 9325,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -39,6 +39,7 @@
+     "AnimationEvent.prototype.animationName",
+     "AnimationEvent.prototype.elapsedTime",
+     "AnimationEvent.prototype.pseudoElement",
++    "AnimationEvent.prototype.pseudoTarget",
+     "AnimationPlaybackEvent",
+     "AnimationPlaybackEvent.prototype",
+     "AnimationPlaybackEvent.prototype.currentTime",
+@@ -720,6 +721,12 @@
+     "CSSPropertyRule.prototype.initialValue",
+     "CSSPropertyRule.prototype.name",
+     "CSSPropertyRule.prototype.syntax",
++    "CSSPseudoElement",
++    "CSSPseudoElement.prototype",
++    "CSSPseudoElement.prototype.element",
++    "CSSPseudoElement.prototype.parent",
++    "CSSPseudoElement.prototype.pseudo",
++    "CSSPseudoElement.prototype.type",
+     "CSSRotate",
+     "CSSRotate.prototype",
+     "CSSRotate.prototype.angle",
+@@ -4507,6 +4514,7 @@
+     "Option.prototype.constructor.prototype.prefix",
+     "Option.prototype.constructor.prototype.prepend",
+     "Option.prototype.constructor.prototype.previousElementSibling",
++    "Option.prototype.constructor.prototype.pseudo",
+     "Option.prototype.constructor.prototype.querySelector",
+     "Option.prototype.constructor.prototype.querySelectorAll",
+     "Option.prototype.constructor.prototype.releasePointerCapture",
+@@ -7211,6 +7219,7 @@
+     "TransitionEvent.prototype.elapsedTime",
+     "TransitionEvent.prototype.propertyName",
+     "TransitionEvent.prototype.pseudoElement",
++    "TransitionEvent.prototype.pseudoTarget",
+     "Translator",
+     "Translator.availability",
+     "Translator.create",
+@@ -8245,6 +8254,7 @@
+     "WheelEvent.prototype.constructor.prototype.initEvent",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
+     "WheelEvent.prototype.constructor.prototype.preventDefault",
++    "WheelEvent.prototype.constructor.prototype.pseudoTarget",
+     "WheelEvent.prototype.constructor.prototype.returnValue",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
+     "WheelEvent.prototype.constructor.prototype.srcElement",
+```
+
+  
 #### 147.0.7703.0 (`2026-2-26`) ⚡
 Added 96 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_147.0.7695.0_to_147.0.7703.0.diff), [json](./browser_apis/chrome-unstable_147.0.7695.0_to_147.0.7703.0.json), [full list](./browser_apis/chrome-unstable_147.0.7703.0.json))
  ```diff
@@ -2961,61 +3022,5 @@ Added 8 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_140.0.7312.0
   
 #### 140.0.7312.0 (`2025-7-24`) 
 No browser API changes.
-
-  
-#### 140.0.7299.0 (`2025-7-17`) ⚡
-Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_140.0.7259.2_to_140.0.7299.0.diff), [json](./browser_apis/chrome-unstable_140.0.7259.2_to_140.0.7299.0.json), [full list](./browser_apis/chrome-unstable_140.0.7299.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_140.0.7259.2.json	2025-07-17 17:02:31.448524767 +0000
-+++ ./browser_apis/chrome-unstable_140.0.7299.0.json	2025-07-17 17:02:56.118695931 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8789,
-+  "browserApiCount": 8797,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1616,6 +1616,7 @@
-     "FontFace.prototype.style",
-     "FontFace.prototype.unicodeRange",
-     "FontFace.prototype.variant",
-+    "FontFace.prototype.variationSettings",
-     "FontFace.prototype.weight",
-     "FontFaceSetLoadEvent",
-     "FontFaceSetLoadEvent.prototype",
-@@ -2772,6 +2773,7 @@
-     "HighlightRegistry.prototype.forEach",
-     "HighlightRegistry.prototype.get",
-     "HighlightRegistry.prototype.has",
-+    "HighlightRegistry.prototype.highlightsFromPoint",
-     "HighlightRegistry.prototype.keys",
-     "HighlightRegistry.prototype.set",
-     "HighlightRegistry.prototype.size",
-@@ -6990,6 +6992,8 @@
-     "Uint32Array",
-     "Uint32Array.prototype",
-     "Uint8Array",
-+    "Uint8Array.fromBase64",
-+    "Uint8Array.fromHex",
-     "Uint8Array.prototype",
-     "Uint8Array.prototype.at",
-     "Uint8Array.prototype.buffer",
-@@ -7019,10 +7023,14 @@
-     "Uint8Array.prototype.reduceRight",
-     "Uint8Array.prototype.reverse",
-     "Uint8Array.prototype.set",
-+    "Uint8Array.prototype.setFromBase64",
-+    "Uint8Array.prototype.setFromHex",
-     "Uint8Array.prototype.slice",
-     "Uint8Array.prototype.some",
-     "Uint8Array.prototype.sort",
-     "Uint8Array.prototype.subarray",
-+    "Uint8Array.prototype.toBase64",
-+    "Uint8Array.prototype.toHex",
-     "Uint8Array.prototype.toLocaleString",
-     "Uint8Array.prototype.toReversed",
-     "Uint8Array.prototype.toSorted",
-```
 
   <!-- browserapis:end -->
