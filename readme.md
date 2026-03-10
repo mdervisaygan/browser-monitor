@@ -5,6 +5,198 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 146.0.7680.71 (`2026-3-10`) ⚡
+Added 56 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_145.0.7632.159_to_146.0.7680.71.diff), [json](./browser_apis/chrome-stable_145.0.7632.159_to_146.0.7680.71.json), [full list](./browser_apis/chrome-stable_146.0.7680.71.json))
+ ```diff
+--- ./browser_apis/chrome-stable_145.0.7632.159.json	2026-03-10 19:13:07.065564293 +0000
++++ ./browser_apis/chrome-stable_146.0.7680.71.json	2026-03-10 19:13:34.058568328 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9163,
++  "browserApiCount": 9219,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -43,6 +43,11 @@
+     "AnimationPlaybackEvent.prototype",
+     "AnimationPlaybackEvent.prototype.currentTime",
+     "AnimationPlaybackEvent.prototype.timelineTime",
++    "AnimationTrigger",
++    "AnimationTrigger.prototype",
++    "AnimationTrigger.prototype.addAnimation",
++    "AnimationTrigger.prototype.getAnimations",
++    "AnimationTrigger.prototype.removeAnimation",
+     "Array",
+     "Array.from",
+     "Array.fromAsync",
+@@ -206,6 +211,7 @@
+     "AudioContext.prototype.onerror",
+     "AudioContext.prototype.onsinkchange",
+     "AudioContext.prototype.outputLatency",
++    "AudioContext.prototype.playbackStats",
+     "AudioContext.prototype.resume",
+     "AudioContext.prototype.setSinkId",
+     "AudioContext.prototype.sinkId",
+@@ -283,6 +289,16 @@
+     "AudioParamMap.prototype.keys",
+     "AudioParamMap.prototype.size",
+     "AudioParamMap.prototype.values",
++    "AudioPlaybackStats",
++    "AudioPlaybackStats.prototype",
++    "AudioPlaybackStats.prototype.averageLatency",
++    "AudioPlaybackStats.prototype.maximumLatency",
++    "AudioPlaybackStats.prototype.minimumLatency",
++    "AudioPlaybackStats.prototype.resetLatency",
++    "AudioPlaybackStats.prototype.toJSON",
++    "AudioPlaybackStats.prototype.totalDuration",
++    "AudioPlaybackStats.prototype.underrunDuration",
++    "AudioPlaybackStats.prototype.underrunEvents",
+     "AudioProcessingEvent",
+     "AudioProcessingEvent.prototype",
+     "AudioProcessingEvent.prototype.inputBuffer",
+@@ -1093,6 +1109,7 @@
+     "CustomElementRegistry.prototype.define",
+     "CustomElementRegistry.prototype.get",
+     "CustomElementRegistry.prototype.getName",
++    "CustomElementRegistry.prototype.initialize",
+     "CustomElementRegistry.prototype.upgrade",
+     "CustomElementRegistry.prototype.whenDefined",
+     "CustomEvent",
+@@ -1889,7 +1906,11 @@
+     "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
+     "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
+     "GPUSupportedLimits.prototype.maxStorageBufferBindingSize",
++    "GPUSupportedLimits.prototype.maxStorageBuffersInFragmentStage",
++    "GPUSupportedLimits.prototype.maxStorageBuffersInVertexStage",
+     "GPUSupportedLimits.prototype.maxStorageBuffersPerShaderStage",
++    "GPUSupportedLimits.prototype.maxStorageTexturesInFragmentStage",
++    "GPUSupportedLimits.prototype.maxStorageTexturesInVertexStage",
+     "GPUSupportedLimits.prototype.maxStorageTexturesPerShaderStage",
+     "GPUSupportedLimits.prototype.maxTextureArrayLayers",
+     "GPUSupportedLimits.prototype.maxTextureDimension1D",
+@@ -1913,6 +1934,7 @@
+     "GPUTexture.prototype.label",
+     "GPUTexture.prototype.mipLevelCount",
+     "GPUTexture.prototype.sampleCount",
++    "GPUTexture.prototype.textureBindingViewDimension",
+     "GPUTexture.prototype.usage",
+     "GPUTexture.prototype.width",
+     "GPUTextureUsage",
+@@ -2705,6 +2727,7 @@
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
+     "HTMLTemplateElement.prototype.shadowRootClonable",
++    "HTMLTemplateElement.prototype.shadowRootCustomElementRegistry",
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTemplateElement.prototype.shadowRootSerializable",
+@@ -3207,6 +3230,7 @@
+     "Intl.v8BreakIterator.prototype.resolvedOptions",
+     "Intl.v8BreakIterator.supportedLocalesOf",
+     "Iterator",
++    "Iterator.concat",
+     "Iterator.from",
+     "Iterator.prototype",
+     "Iterator.prototype.constructor",
+@@ -3829,6 +3853,7 @@
+     "NavigationHistoryEntry.prototype.url",
+     "NavigationPrecommitController",
+     "NavigationPrecommitController.prototype",
++    "NavigationPrecommitController.prototype.addHandler",
+     "NavigationPrecommitController.prototype.redirect",
+     "NavigationPreloadManager",
+     "NavigationPreloadManager.prototype",
+@@ -4314,6 +4339,7 @@
+     "Option.prototype.constructor.prototype.constructor.prototype.when",
+     "Option.prototype.constructor.prototype.contentEditable",
+     "Option.prototype.constructor.prototype.currentCSSZoom",
++    "Option.prototype.constructor.prototype.customElementRegistry",
+     "Option.prototype.constructor.prototype.dataset",
+     "Option.prototype.constructor.prototype.dir",
+     "Option.prototype.constructor.prototype.draggable",
+@@ -4504,6 +4530,7 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
++    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setHTMLUnsafe",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+@@ -6199,6 +6226,17 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
++    "Sanitizer",
++    "Sanitizer.prototype",
++    "Sanitizer.prototype.allowAttribute",
++    "Sanitizer.prototype.allowElement",
++    "Sanitizer.prototype.get",
++    "Sanitizer.prototype.removeAttribute",
++    "Sanitizer.prototype.removeElement",
++    "Sanitizer.prototype.removeUnsafe",
++    "Sanitizer.prototype.replaceElementWithChildren",
++    "Sanitizer.prototype.setComments",
++    "Sanitizer.prototype.setDataAttributes",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+@@ -6374,6 +6412,7 @@
+     "ShadowRoot.prototype.children",
+     "ShadowRoot.prototype.clonable",
+     "ShadowRoot.prototype.constructor",
++    "ShadowRoot.prototype.customElementRegistry",
+     "ShadowRoot.prototype.delegatesFocus",
+     "ShadowRoot.prototype.elementFromPoint",
+     "ShadowRoot.prototype.elementsFromPoint",
+@@ -6396,6 +6435,7 @@
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
+     "ShadowRoot.prototype.serializable",
++    "ShadowRoot.prototype.setHTML",
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+@@ -7104,6 +7144,20 @@
+     "TimeRanges.prototype.end",
+     "TimeRanges.prototype.length",
+     "TimeRanges.prototype.start",
++    "TimelineTrigger",
++    "TimelineTrigger.prototype",
++    "TimelineTrigger.prototype.ranges",
++    "TimelineTriggerRange",
++    "TimelineTriggerRange.prototype",
++    "TimelineTriggerRange.prototype.activationRangeEnd",
++    "TimelineTriggerRange.prototype.activationRangeStart",
++    "TimelineTriggerRange.prototype.activeRangeEnd",
++    "TimelineTriggerRange.prototype.activeRangeStart",
++    "TimelineTriggerRange.prototype.timeline",
++    "TimelineTriggerRangeList",
++    "TimelineTriggerRangeList.prototype",
++    "TimelineTriggerRangeList.prototype.item",
++    "TimelineTriggerRangeList.prototype.length",
+     "ToggleEvent",
+     "ToggleEvent.prototype",
+     "ToggleEvent.prototype.newState",
+@@ -8287,6 +8341,7 @@
+     "XMLDocument.prototype.close",
+     "XMLDocument.prototype.compatMode",
+     "XMLDocument.prototype.constructor",
++    "XMLDocument.prototype.constructor.parseHTML",
+     "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+     "XMLDocument.prototype.contentType",
+     "XMLDocument.prototype.cookie",
+@@ -8306,6 +8361,7 @@
+     "XMLDocument.prototype.createTextNode",
+     "XMLDocument.prototype.createTreeWalker",
+     "XMLDocument.prototype.currentScript",
++    "XMLDocument.prototype.customElementRegistry",
+     "XMLDocument.prototype.defaultView",
+     "XMLDocument.prototype.designMode",
+     "XMLDocument.prototype.dir",
+```
+
+  
 #### 145.0.7632.159 (`2026-3-3`) 
 No browser API changes.
 
@@ -1175,10 +1367,6 @@ Added 16 APIs, removed 5 (see: [diff](./browser_apis/chrome-stable_139.0.7258.15
 
   
 #### 139.0.7258.154 (`2025-8-26`) 
-No browser API changes.
-
-  
-#### 139.0.7258.138 (`2025-8-19`) 
 No browser API changes.
 
   
