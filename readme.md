@@ -1372,6 +1372,10 @@ Added 16 APIs, removed 5 (see: [diff](./browser_apis/chrome-stable_139.0.7258.15
   
 ### chrome-unstable
   
+#### 148.0.7730.2 (`2026-3-13`) 
+No browser API changes.
+
+  
 #### 147.0.7719.3 (`2026-3-6`) ⚡
 Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_147.0.7703.0_to_147.0.7719.3.diff), [json](./browser_apis/chrome-unstable_147.0.7703.0_to_147.0.7719.3.json), [full list](./browser_apis/chrome-unstable_147.0.7719.3.json))
  ```diff
@@ -3206,9 +3210,5 @@ Added 8 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_140.0.7312.0
      "XRRay.prototype",
      "XRRay.prototype.direction",
 ```
-
-  
-#### 140.0.7312.0 (`2025-7-24`) 
-No browser API changes.
 
   <!-- browserapis:end -->
