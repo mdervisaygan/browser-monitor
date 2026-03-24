@@ -1271,6 +1271,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 148.0.7743.0 (`2026-3-24`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7730.2_to_148.0.7743.0.diff), [json](./browser_apis/chrome-unstable_148.0.7730.2_to_148.0.7743.0.json), [full list](./browser_apis/chrome-unstable_148.0.7743.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_148.0.7730.2.json	2026-03-24 17:17:19.955214282 +0000
++++ ./browser_apis/chrome-unstable_148.0.7743.0.json	2026-03-24 17:17:59.659789983 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9325,
++  "browserApiCount": 9326,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1088,6 +1088,7 @@
+     "CreateMonitor.prototype",
+     "CreateMonitor.prototype.ondownloadprogress",
+     "Credential",
++    "Credential.isConditionalMediationAvailable",
+     "Credential.prototype",
+     "Credential.prototype.id",
+     "Credential.prototype.type",
+```
+
+  
 #### 148.0.7730.2 (`2026-3-13`) 
 No browser API changes.
 
@@ -3051,63 +3075,6 @@ Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_140.0.7327.6
      "IDBRequest",
      "IDBRequest.prototype",
      "IDBRequest.prototype.error",
-```
-
-  
-#### 140.0.7327.6 (`2025-7-31`) ⚡
-Added 8 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_140.0.7312.0_to_140.0.7327.6.diff), [json](./browser_apis/chrome-unstable_140.0.7312.0_to_140.0.7327.6.json), [full list](./browser_apis/chrome-unstable_140.0.7327.6.json))
- ```diff
---- ./browser_apis/chrome-unstable_140.0.7312.0.json	2025-07-31 18:01:06.570395750 +0000
-+++ ./browser_apis/chrome-unstable_140.0.7327.6.json	2025-07-31 18:01:35.172051865 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8797,
-+  "browserApiCount": 8801,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4699,6 +4699,10 @@
-     "PerformanceResourceTiming.prototype.serverTiming",
-     "PerformanceResourceTiming.prototype.toJSON",
-     "PerformanceResourceTiming.prototype.transferSize",
-+    "PerformanceResourceTiming.prototype.workerCacheLookupStart",
-+    "PerformanceResourceTiming.prototype.workerFinalSourceType",
-+    "PerformanceResourceTiming.prototype.workerMatchedSourceType",
-+    "PerformanceResourceTiming.prototype.workerRouterEvaluationStart",
-     "PerformanceResourceTiming.prototype.workerStart",
-     "PerformanceScriptTiming",
-     "PerformanceScriptTiming.prototype",
-@@ -6765,6 +6769,7 @@
-     "ToggleEvent.prototype",
-     "ToggleEvent.prototype.newState",
-     "ToggleEvent.prototype.oldState",
-+    "ToggleEvent.prototype.source",
-     "Touch",
-     "Touch.prototype",
-     "Touch.prototype.clientX",
-@@ -8303,7 +8308,10 @@
-     "XRInputSourcesChangeEvent.prototype.session",
-     "XRJointPose",
-     "XRJointPose.prototype",
-+    "XRJointPose.prototype.constructor",
-+    "XRJointPose.prototype.emulatedPosition",
-     "XRJointPose.prototype.radius",
-+    "XRJointPose.prototype.transform",
-     "XRJointSpace",
-     "XRJointSpace.prototype",
-     "XRJointSpace.prototype.jointName",
-@@ -8318,10 +8326,6 @@
-     "XRLightProbe.prototype",
-     "XRLightProbe.prototype.onreflectionchange",
-     "XRLightProbe.prototype.probeSpace",
--    "XRPose",
--    "XRPose.prototype",
--    "XRPose.prototype.emulatedPosition",
--    "XRPose.prototype.transform",
-     "XRRay",
-     "XRRay.prototype",
-     "XRRay.prototype.direction",
 ```
 
   <!-- browserapis:end -->

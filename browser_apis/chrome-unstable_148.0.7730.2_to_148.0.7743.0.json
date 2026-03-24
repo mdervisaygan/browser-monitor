@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "148.0.7730.2",
+    "to": "148.0.7743.0"
+  },
+  "browserApis": {
+    "added": [
+      "Credential.isConditionalMediationAvailable"
+    ],
+    "removed": []
+  }
+}

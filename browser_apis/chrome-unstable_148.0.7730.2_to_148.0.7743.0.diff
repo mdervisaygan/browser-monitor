@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_148.0.7730.2.json	2026-03-24 17:17:19.955214282 +0000
++++ ./browser_apis/chrome-unstable_148.0.7743.0.json	2026-03-24 17:17:59.659789983 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9325,
++  "browserApiCount": 9326,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1088,6 +1088,7 @@
+     "CreateMonitor.prototype",
+     "CreateMonitor.prototype.ondownloadprogress",
+     "Credential",
++    "Credential.isConditionalMediationAvailable",
+     "Credential.prototype",
+     "Credential.prototype.id",
+     "Credential.prototype.type",
