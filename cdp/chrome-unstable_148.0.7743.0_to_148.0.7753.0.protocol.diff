@@ -1,0 +1,138 @@
+--- ./cdp/chrome-unstable_148.0.7743.0.protocol.json	2026-03-26 17:19:30.564992070 +0000
++++ ./cdp/chrome-unstable_148.0.7753.0.protocol.json	2026-03-26 17:20:01.167165917 +0000
+@@ -6925,6 +6925,51 @@
+       ]
+     },
+     {
++      "domain": "CrashReportContext",
++      "description": "This domain exposes the current state of the CrashReportContext API.",
++      "experimental": true,
++      "dependencies": [
++        "Page"
++      ],
++      "types": [
++        {
++          "id": "CrashReportContextEntry",
++          "description": "Key-value pair in CrashReportContext.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "key",
++              "type": "string"
++            },
++            {
++              "name": "value",
++              "type": "string"
++            },
++            {
++              "name": "frameId",
++              "description": "The ID of the frame where the key-value pair was set.",
++              "$ref": "Page.FrameId"
++            }
++          ]
++        }
++      ],
++      "commands": [
++        {
++          "name": "getEntries",
++          "description": "Returns all entries in the CrashReportContext across all frames in the page.",
++          "returns": [
++            {
++              "name": "entries",
++              "type": "array",
++              "items": {
++                "$ref": "CrashReportContextEntry"
++              }
++            }
++          ]
++        }
++      ]
++    },
++    {
+       "domain": "DOM",
+       "description": "This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object\nthat has an `id`. This `id` can be used to get additional information on the Node, resolve it into\nthe JavaScript object wrapper, etc. It is important that client receives DOM events only for the\nnodes that are known to the client. Backend keeps track of the nodes that were sent to the client\nand never sends the same node twice. It is client's responsibility to collect information about\nthe nodes that were sent to the client. Note that `iframe` owner elements will return\ncorresponding document elements as their child nodes.",
+       "dependencies": [
+@@ -31419,6 +31464,16 @@
+           ]
+         },
+         {
++          "id": "InvocationStatus",
++          "description": "Represents the status of a tool invocation.",
++          "type": "string",
++          "enum": [
++            "Success",
++            "Canceled",
++            "Error"
++          ]
++        },
++        {
+           "id": "Tool",
+           "description": "Definition of a tool that can be invoked.",
+           "type": "object",
+@@ -31499,6 +31554,66 @@
+               }
+             }
+           ]
++        },
++        {
++          "name": "toolInvoked",
++          "description": "Event fired when a tool invocation starts.",
++          "parameters": [
++            {
++              "name": "toolName",
++              "description": "Name of the tool to invoke.",
++              "type": "string"
++            },
++            {
++              "name": "frameId",
++              "description": "Frame id",
++              "$ref": "Page.FrameId"
++            },
++            {
++              "name": "invocationId",
++              "description": "Invocation identifier.",
++              "type": "string"
++            },
++            {
++              "name": "input",
++              "description": "The input parameters used for the invocation.",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "name": "toolResponded",
++          "description": "Event fired when a tool invocation completes or fails.",
++          "parameters": [
++            {
++              "name": "invocationId",
++              "description": "Invocation identifier.",
++              "type": "string"
++            },
++            {
++              "name": "status",
++              "description": "Status of the invocation.",
++              "$ref": "InvocationStatus"
++            },
++            {
++              "name": "output",
++              "description": "Output or error delivered as delivered to the agent. Missing if `status` is anything other than Success.",
++              "optional": true,
++              "type": "object"
++            },
++            {
++              "name": "errorText",
++              "description": "Error text for protocol users.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "exception",
++              "description": "The exception object, if the javascript tool threw an error>",
++              "optional": true,
++              "$ref": "Runtime.RemoteObject"
++            }
++          ]
+         }
+       ]
+     },

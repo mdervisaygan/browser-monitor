@@ -1271,6 +1271,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 148.0.7753.0 (`2026-3-26`) 
+No browser API changes.
+
+  
 #### 148.0.7743.0 (`2026-3-24`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7730.2_to_148.0.7743.0.diff), [json](./browser_apis/chrome-unstable_148.0.7730.2_to_148.0.7743.0.json), [full list](./browser_apis/chrome-unstable_148.0.7743.0.json))
  ```diff
@@ -3032,49 +3036,5 @@ No browser API changes.
   
 #### 141.0.7354.0 (`2025-8-14`) 
 No browser API changes.
-
-  
-#### 141.0.7340.0 (`2025-8-7`) ⚡
-Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_140.0.7327.6_to_141.0.7340.0.diff), [json](./browser_apis/chrome-unstable_140.0.7327.6_to_141.0.7340.0.json), [full list](./browser_apis/chrome-unstable_141.0.7340.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_140.0.7327.6.json	2025-08-07 17:03:13.366565972 +0000
-+++ ./browser_apis/chrome-unstable_141.0.7340.0.json	2025-08-07 17:03:43.085576095 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8801,
-+  "browserApiCount": 8808,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2827,6 +2827,7 @@
-     "IDBIndex.prototype.get",
-     "IDBIndex.prototype.getAll",
-     "IDBIndex.prototype.getAllKeys",
-+    "IDBIndex.prototype.getAllRecords",
-     "IDBIndex.prototype.getKey",
-     "IDBIndex.prototype.keyPath",
-     "IDBIndex.prototype.multiEntry",
-@@ -2858,6 +2859,7 @@
-     "IDBObjectStore.prototype.get",
-     "IDBObjectStore.prototype.getAll",
-     "IDBObjectStore.prototype.getAllKeys",
-+    "IDBObjectStore.prototype.getAllRecords",
-     "IDBObjectStore.prototype.getKey",
-     "IDBObjectStore.prototype.index",
-     "IDBObjectStore.prototype.indexNames",
-@@ -2871,6 +2873,11 @@
-     "IDBOpenDBRequest.prototype",
-     "IDBOpenDBRequest.prototype.onblocked",
-     "IDBOpenDBRequest.prototype.onupgradeneeded",
-+    "IDBRecord",
-+    "IDBRecord.prototype",
-+    "IDBRecord.prototype.key",
-+    "IDBRecord.prototype.primaryKey",
-+    "IDBRecord.prototype.value",
-     "IDBRequest",
-     "IDBRequest.prototype",
-     "IDBRequest.prototype.error",
-```
 
   <!-- browserapis:end -->
