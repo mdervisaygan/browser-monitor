@@ -1271,6 +1271,30 @@ Added 24 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_140.0.7339.20
   
 ### chrome-unstable
   
+#### 148.0.7766.3 (`2026-4-2`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7753.0_to_148.0.7766.3.diff), [json](./browser_apis/chrome-unstable_148.0.7753.0_to_148.0.7766.3.json), [full list](./browser_apis/chrome-unstable_148.0.7766.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_148.0.7753.0.json	2026-04-02 18:11:33.790315179 +0000
++++ ./browser_apis/chrome-unstable_148.0.7766.3.json	2026-04-02 18:12:09.000336238 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9326,
++  "browserApiCount": 9327,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4656,6 +4656,7 @@
+     "PaymentMethodChangeEvent.prototype.methodDetails",
+     "PaymentMethodChangeEvent.prototype.methodName",
+     "PaymentRequest",
++    "PaymentRequest.getSecurePaymentConfirmationCapabilities",
+     "PaymentRequest.prototype",
+     "PaymentRequest.prototype.abort",
+     "PaymentRequest.prototype.canMakePayment",
+```
+
+  
 #### 148.0.7753.0 (`2026-3-26`) 
 No browser API changes.
 
@@ -3031,10 +3055,6 @@ Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_141.0.7367.0
 
   
 #### 141.0.7367.0 (`2025-8-21`) 
-No browser API changes.
-
-  
-#### 141.0.7354.0 (`2025-8-14`) 
 No browser API changes.
 
   <!-- browserapis:end -->

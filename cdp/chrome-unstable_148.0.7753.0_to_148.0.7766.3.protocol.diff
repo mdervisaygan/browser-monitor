@@ -1,0 +1,14 @@
+--- ./cdp/chrome-unstable_148.0.7753.0.protocol.json	2026-04-02 18:11:34.226315450 +0000
++++ ./cdp/chrome-unstable_148.0.7766.3.protocol.json	2026-04-02 18:12:09.010336244 +0000
+@@ -25361,6 +25361,11 @@
+               "type": "string"
+             },
+             {
++              "name": "formSubmission",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
+               "name": "targetHint",
+               "optional": true,
+               "$ref": "SpeculationTargetHint"
