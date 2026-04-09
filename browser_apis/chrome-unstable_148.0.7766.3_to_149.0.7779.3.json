@@ -1,0 +1,27 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "148.0.7766.3",
+    "to": "149.0.7779.3"
+  },
+  "browserApis": {
+    "added": [
+      "Audio.prototype.constructor.prototype.loading",
+      "PerformanceResourceTiming.prototype.contentType",
+      "WebAssembly.Exception.prototype.stack"
+    ],
+    "removed": [
+      "AnimationEvent.prototype.pseudoTarget",
+      "CSSPseudoElement",
+      "CSSPseudoElement.prototype",
+      "CSSPseudoElement.prototype.element",
+      "CSSPseudoElement.prototype.parent",
+      "CSSPseudoElement.prototype.pseudo",
+      "CSSPseudoElement.prototype.type",
+      "Option.prototype.constructor.prototype.pseudo",
+      "SharedStorage.prototype.get",
+      "TransitionEvent.prototype.pseudoTarget",
+      "WheelEvent.prototype.constructor.prototype.pseudoTarget"
+    ]
+  }
+}
