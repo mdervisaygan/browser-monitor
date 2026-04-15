@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 147.0.7727.101 (`2026-4-15`) 
+No browser API changes.
+
+  
 #### 147.0.7727.55 (`2026-4-7`) ⚡
 Added 96 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_146.0.7680.177_to_147.0.7727.55.diff), [json](./browser_apis/chrome-stable_146.0.7680.177_to_147.0.7727.55.json), [full list](./browser_apis/chrome-stable_147.0.7727.55.json))
  ```diff
@@ -1332,30 +1336,6 @@ No browser API changes.
   
 #### 141.0.7390.76 (`2025-10-9`) 
 No browser API changes.
-
-  
-#### 141.0.7390.65 (`2025-10-7`) ⚡
-Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_141.0.7390.54_to_141.0.7390.65.diff), [json](./browser_apis/chrome-stable_141.0.7390.54_to_141.0.7390.65.json), [full list](./browser_apis/chrome-stable_141.0.7390.65.json))
- ```diff
---- ./browser_apis/chrome-stable_141.0.7390.54.json	2025-10-07 20:00:56.318563537 +0000
-+++ ./browser_apis/chrome-stable_141.0.7390.65.json	2025-10-07 20:01:44.879844049 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 8825,
-+  "browserApiCount": 8824,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -5306,7 +5306,6 @@
-     "Request.prototype.referrer",
-     "Request.prototype.referrerPolicy",
-     "Request.prototype.signal",
--    "Request.prototype.targetAddressSpace",
-     "Request.prototype.text",
-     "Request.prototype.url",
-     "ResizeObserver",
-```
 
   
 ### chrome-unstable
