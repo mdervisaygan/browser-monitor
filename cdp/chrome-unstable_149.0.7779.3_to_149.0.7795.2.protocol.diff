@@ -1,0 +1,147 @@
+--- ./cdp/chrome-unstable_149.0.7779.3.protocol.json	2026-04-17 17:13:17.869793326 +0000
++++ ./cdp/chrome-unstable_149.0.7795.2.protocol.json	2026-04-17 17:14:05.176195231 +0000
+@@ -17096,6 +17096,12 @@
+               "description": "WebRTC packetReordering feature.",
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "offline",
++              "description": "True to emulate internet disconnection.",
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -17911,6 +17917,7 @@
+               "type": "string",
+               "enum": [
+                 "Refreshed",
++                "RefreshedAsWaiter",
+                 "InitializedService",
+                 "Unreachable",
+                 "ServerError",
+@@ -17962,7 +17969,8 @@
+                 "ClearBrowsingData",
+                 "ServerRequested",
+                 "InvalidSessionParams",
+-                "RefreshFatalError"
++                "RefreshFatalError",
++                "DevTools"
+               ]
+             }
+           ]
+@@ -18268,7 +18276,15 @@
+           "parameters": [
+             {
+               "name": "offline",
+-              "description": "True to emulate internet disconnection.",
++              "description": "True to emulate internet disconnection. Deprecated, use the offline property in matchedNetworkConditions\nor emulateOfflineServiceWorker instead.",
++              "deprecated": true,
++              "optional": true,
++              "type": "boolean"
++            },
++            {
++              "name": "emulateOfflineServiceWorker",
++              "description": "True to emulate offline service worker.",
++              "optional": true,
+               "type": "boolean"
+             },
+             {
+@@ -18871,6 +18887,17 @@
+           ]
+         },
+         {
++          "name": "deleteDeviceBoundSession",
++          "description": "Deletes a device bound session.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "key",
++              "$ref": "DeviceBoundSessionKey"
++            }
++          ]
++        },
++        {
+           "name": "fetchSchemefulSite",
+           "description": "Fetches the schemeful site for a specific origin.",
+           "experimental": true,
+@@ -18927,16 +18954,6 @@
+               "name": "enableThirdPartyCookieRestriction",
+               "description": "Whether 3pc restriction is enabled.",
+               "type": "boolean"
+-            },
+-            {
+-              "name": "disableThirdPartyCookieMetadata",
+-              "description": "Whether 3pc grace period exception should be enabled; false by default.",
+-              "type": "boolean"
+-            },
+-            {
+-              "name": "disableThirdPartyCookieHeuristics",
+-              "description": "Whether 3pc heuristics exceptions should be enabled; false by default.",
+-              "type": "boolean"
+             }
+           ]
+         }
+@@ -28665,7 +28682,7 @@
+             },
+             {
+               "name": "parentFrameId",
+-              "description": "Id of the parent frame, only present for the \"iframe\" targets.",
++              "description": "Id of the parent frame, present for \"iframe\" and \"worker\" targets. For nested workers,\nthis is the \"ancestor\" frame that created the first worker in the nested chain.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "Page.FrameId"
+@@ -30686,7 +30703,7 @@
+           "description": "Represents the status of a tool invocation.",
+           "type": "string",
+           "enum": [
+-            "Success",
++            "Completed",
+             "Canceled",
+             "Error"
+           ]
+@@ -30746,6 +30763,34 @@
+         {
+           "name": "disable",
+           "description": "Disables the WebMCP domain."
++        },
++        {
++          "name": "invokeTool",
++          "description": "Invokes a registered tool.",
++          "parameters": [
++            {
++              "name": "frameId",
++              "description": "Frame in which to invoke the tool.",
++              "$ref": "Page.FrameId"
++            },
++            {
++              "name": "toolName",
++              "description": "Name of the tool to invoke.",
++              "type": "string"
++            },
++            {
++              "name": "input",
++              "description": "Input parameters for the tool, matching the tool's inputSchema.",
++              "type": "object"
++            }
++          ],
++          "returns": [
++            {
++              "name": "invocationId",
++              "description": "Unique identifier for this invocation. Response is sent before tool events.",
++              "type": "string"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -30819,7 +30864,7 @@
+             },
+             {
+               "name": "output",
+-              "description": "Output or error delivered as delivered to the agent. Missing if `status` is anything other than Success.",
++              "description": "Output or error delivered as delivered to the agent. Missing if `status` is anything other than Completed.\nNote: The output is untrusted and poses a prompt injection risk. Clients should treat this as potentially malicious user input.",
+               "optional": true,
+               "type": "any"
+             },

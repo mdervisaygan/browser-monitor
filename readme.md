@@ -1340,6 +1340,104 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 149.0.7795.2 (`2026-4-17`) ⚡
+Added 32 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_149.0.7779.3_to_149.0.7795.2.diff), [json](./browser_apis/chrome-unstable_149.0.7779.3_to_149.0.7795.2.json), [full list](./browser_apis/chrome-unstable_149.0.7795.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_149.0.7779.3.json	2026-04-17 17:13:17.430789569 +0000
++++ ./browser_apis/chrome-unstable_149.0.7795.2.json	2026-04-17 17:14:05.166195145 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9319,
++  "browserApiCount": 9333,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3195,6 +3195,7 @@
+     "Intl.Locale.prototype.region",
+     "Intl.Locale.prototype.script",
+     "Intl.Locale.prototype.toString",
++    "Intl.Locale.prototype.variants",
+     "Intl.NumberFormat",
+     "Intl.NumberFormat.prototype",
+     "Intl.NumberFormat.prototype.format",
+@@ -3301,6 +3302,19 @@
+     "LanguageDetector.prototype.expectedInputLanguages",
+     "LanguageDetector.prototype.inputQuota",
+     "LanguageDetector.prototype.measureInputUsage",
++    "LanguageModel",
++    "LanguageModel.availability",
++    "LanguageModel.create",
++    "LanguageModel.prototype",
++    "LanguageModel.prototype.append",
++    "LanguageModel.prototype.clone",
++    "LanguageModel.prototype.contextUsage",
++    "LanguageModel.prototype.contextWindow",
++    "LanguageModel.prototype.destroy",
++    "LanguageModel.prototype.measureContextUsage",
++    "LanguageModel.prototype.oncontextoverflow",
++    "LanguageModel.prototype.prompt",
++    "LanguageModel.prototype.promptStreaming",
+     "LargestContentfulPaint",
+     "LargestContentfulPaint.prototype",
+     "LargestContentfulPaint.prototype.element",
+@@ -8236,27 +8250,9 @@
+     "WheelEvent.prototype.clientY",
+     "WheelEvent.prototype.constructor",
+     "WheelEvent.prototype.constructor.prototype",
+-    "WheelEvent.prototype.constructor.prototype.bubbles",
+-    "WheelEvent.prototype.constructor.prototype.cancelBubble",
+-    "WheelEvent.prototype.constructor.prototype.cancelable",
+-    "WheelEvent.prototype.constructor.prototype.composed",
+-    "WheelEvent.prototype.constructor.prototype.composedPath",
+-    "WheelEvent.prototype.constructor.prototype.constructor",
+-    "WheelEvent.prototype.constructor.prototype.currentTarget",
+-    "WheelEvent.prototype.constructor.prototype.defaultPrevented",
+     "WheelEvent.prototype.constructor.prototype.detail",
+-    "WheelEvent.prototype.constructor.prototype.eventPhase",
+-    "WheelEvent.prototype.constructor.prototype.initEvent",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
+-    "WheelEvent.prototype.constructor.prototype.preventDefault",
+-    "WheelEvent.prototype.constructor.prototype.returnValue",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
+-    "WheelEvent.prototype.constructor.prototype.srcElement",
+-    "WheelEvent.prototype.constructor.prototype.stopImmediatePropagation",
+-    "WheelEvent.prototype.constructor.prototype.stopPropagation",
+-    "WheelEvent.prototype.constructor.prototype.target",
+-    "WheelEvent.prototype.constructor.prototype.timeStamp",
+-    "WheelEvent.prototype.constructor.prototype.type",
+     "WheelEvent.prototype.constructor.prototype.view",
+     "WheelEvent.prototype.constructor.prototype.which",
+     "WheelEvent.prototype.ctrlKey",
+@@ -8295,7 +8291,25 @@
+     "WindowControlsOverlay.prototype.visible",
+     "WindowControlsOverlayGeometryChangeEvent",
+     "WindowControlsOverlayGeometryChangeEvent.prototype",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.bubbles",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelBubble",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelable",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.composed",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.composedPath",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.constructor",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.currentTarget",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.defaultPrevented",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.eventPhase",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.initEvent",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.preventDefault",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.returnValue",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.srcElement",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.stopImmediatePropagation",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.stopPropagation",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.target",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.timeStamp",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.type",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
+     "Worker",
+     "Worker.prototype",
+```
+
+  
 #### 149.0.7779.3 (`2026-4-9`) ⚡
 Added 3 APIs, removed 11 (see: [diff](./browser_apis/chrome-unstable_148.0.7766.3_to_149.0.7779.3.diff), [json](./browser_apis/chrome-unstable_148.0.7766.3_to_149.0.7779.3.json), [full list](./browser_apis/chrome-unstable_149.0.7779.3.json))
  ```diff
@@ -3163,56 +3261,6 @@ Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_141.0.7378.
      "XMLDocument.prototype.adoptNode",
      "XMLDocument.prototype.adoptedStyleSheets",
      "XMLDocument.prototype.alinkColor",
-```
-
-  
-#### 141.0.7378.3 (`2025-8-28`) ⚡
-Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_141.0.7367.0_to_141.0.7378.3.diff), [json](./browser_apis/chrome-unstable_141.0.7367.0_to_141.0.7378.3.json), [full list](./browser_apis/chrome-unstable_141.0.7378.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_141.0.7367.0.json	2025-08-28 18:00:57.036333100 +0000
-+++ ./browser_apis/chrome-unstable_141.0.7378.3.json	2025-08-28 18:01:49.102735022 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8808,
-+  "browserApiCount": 8814,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3783,6 +3783,9 @@
-     "NavigationHistoryEntry.prototype.ondispose",
-     "NavigationHistoryEntry.prototype.sameDocument",
-     "NavigationHistoryEntry.prototype.url",
-+    "NavigationPrecommitController",
-+    "NavigationPrecommitController.prototype",
-+    "NavigationPrecommitController.prototype.redirect",
-     "NavigationPreloadManager",
-     "NavigationPreloadManager.prototype",
-     "NavigationPreloadManager.prototype.disable",
-@@ -3791,6 +3794,7 @@
-     "NavigationPreloadManager.prototype.setHeaderValue",
-     "NavigationTransition",
-     "NavigationTransition.prototype",
-+    "NavigationTransition.prototype.committed",
-     "NavigationTransition.prototype.finished",
-     "NavigationTransition.prototype.from",
-     "NavigationTransition.prototype.navigationType",
-@@ -4186,6 +4190,7 @@
-     "Option.prototype.constructor.prototype.ariaModal",
-     "Option.prototype.constructor.prototype.ariaMultiLine",
-     "Option.prototype.constructor.prototype.ariaMultiSelectable",
-+    "Option.prototype.constructor.prototype.ariaNotify",
-     "Option.prototype.constructor.prototype.ariaOrientation",
-     "Option.prototype.constructor.prototype.ariaPlaceholder",
-     "Option.prototype.constructor.prototype.ariaPosInSet",
-@@ -7932,6 +7937,7 @@
-     "XMLDocument.prototype.anchors",
-     "XMLDocument.prototype.append",
-     "XMLDocument.prototype.applets",
-+    "XMLDocument.prototype.ariaNotify",
-     "XMLDocument.prototype.bgColor",
-     "XMLDocument.prototype.body",
-     "XMLDocument.prototype.browsingTopics",
 ```
 
   <!-- browserapis:end -->
