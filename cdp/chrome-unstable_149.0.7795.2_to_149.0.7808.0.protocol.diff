@@ -1,0 +1,87 @@
+--- ./cdp/chrome-unstable_149.0.7795.2.protocol.json	2026-04-24 23:10:56.902437284 +0000
++++ ./cdp/chrome-unstable_149.0.7808.0.protocol.json	2026-04-24 23:11:29.746021729 +0000
+@@ -1773,7 +1773,11 @@
+             "AutofillAndManualTextPolicyControlledFeaturesInfo",
+             "AutofillPolicyControlledFeatureInfo",
+             "ManualTextPolicyControlledFeatureInfo",
+-            "FormModelContextParameterMissingTitleAndDescription"
++            "FormModelContextParameterMissingTitleAndDescription",
++            "FormModelContextMissingToolName",
++            "FormModelContextMissingToolDescription",
++            "FormModelContextRequiredParameterMissingName",
++            "FormModelContextParameterMissingName"
+           ]
+         },
+         {
+@@ -23063,6 +23067,7 @@
+             "EmbedderExtensionMessaging",
+             "EmbedderExtensionMessagingForOpenPort",
+             "EmbedderExtensionSentMessageToCachedFrame",
++            "EmbedderExtensionFrame",
+             "RequestedByWebViewClient",
+             "PostMessageByWebViewClient",
+             "CacheControlNoStoreDeviceBoundSessionTerminated",
+@@ -28662,6 +28667,12 @@
+               "type": "boolean"
+             },
+             {
++              "name": "parentId",
++              "description": "Id of the parent target, if any. For example, \"iframe\" target may have a \"page\" parent.",
++              "optional": true,
++              "$ref": "TargetID"
++            },
++            {
+               "name": "openerId",
+               "description": "Opener target Id",
+               "optional": true,
+@@ -30753,6 +30764,23 @@
+               "$ref": "Runtime.StackTrace"
+             }
+           ]
++        },
++        {
++          "id": "RemovedTool",
++          "description": "Definition of a tool that was removed.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "name",
++              "description": "Tool name.",
++              "type": "string"
++            },
++            {
++              "name": "frameId",
++              "description": "Frame identifier associated with the tool registration.",
++              "$ref": "Page.FrameId"
++            }
++          ]
+         }
+       ],
+       "commands": [
+@@ -30791,6 +30819,17 @@
+               "type": "string"
+             }
+           ]
++        },
++        {
++          "name": "cancelInvocation",
++          "description": "Cancels a pending tool invocation.",
++          "parameters": [
++            {
++              "name": "invocationId",
++              "description": "Invocation identifier to cancel.",
++              "type": "string"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -30817,7 +30856,7 @@
+               "description": "Array of tools that were removed.",
+               "type": "array",
+               "items": {
+-                "$ref": "Tool"
++                "$ref": "RemovedTool"
+               }
+             }
+           ]

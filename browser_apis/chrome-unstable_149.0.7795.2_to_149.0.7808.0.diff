@@ -1,0 +1,55 @@
+--- ./browser_apis/chrome-unstable_149.0.7795.2.json	2026-04-24 23:10:56.461429440 +0000
++++ ./browser_apis/chrome-unstable_149.0.7808.0.json	2026-04-24 23:11:29.737021568 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9333,
++  "browserApiCount": 9343,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -39,6 +39,7 @@
+     "AnimationEvent.prototype.animationName",
+     "AnimationEvent.prototype.elapsedTime",
+     "AnimationEvent.prototype.pseudoElement",
++    "AnimationEvent.prototype.pseudoTarget",
+     "AnimationPlaybackEvent",
+     "AnimationPlaybackEvent.prototype",
+     "AnimationPlaybackEvent.prototype.currentTime",
+@@ -721,6 +722,12 @@
+     "CSSPropertyRule.prototype.initialValue",
+     "CSSPropertyRule.prototype.name",
+     "CSSPropertyRule.prototype.syntax",
++    "CSSPseudoElement",
++    "CSSPseudoElement.prototype",
++    "CSSPseudoElement.prototype.element",
++    "CSSPseudoElement.prototype.parent",
++    "CSSPseudoElement.prototype.pseudo",
++    "CSSPseudoElement.prototype.type",
+     "CSSRotate",
+     "CSSRotate.prototype",
+     "CSSRotate.prototype.angle",
+@@ -4523,6 +4530,7 @@
+     "Option.prototype.constructor.prototype.prefix",
+     "Option.prototype.constructor.prototype.prepend",
+     "Option.prototype.constructor.prototype.previousElementSibling",
++    "Option.prototype.constructor.prototype.pseudo",
+     "Option.prototype.constructor.prototype.querySelector",
+     "Option.prototype.constructor.prototype.querySelectorAll",
+     "Option.prototype.constructor.prototype.releasePointerCapture",
+@@ -7228,6 +7236,7 @@
+     "TransitionEvent.prototype.elapsedTime",
+     "TransitionEvent.prototype.propertyName",
+     "TransitionEvent.prototype.pseudoElement",
++    "TransitionEvent.prototype.pseudoTarget",
+     "Translator",
+     "Translator.availability",
+     "Translator.create",
+@@ -8252,6 +8261,7 @@
+     "WheelEvent.prototype.constructor.prototype",
+     "WheelEvent.prototype.constructor.prototype.detail",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
++    "WheelEvent.prototype.constructor.prototype.pseudoTarget",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
+     "WheelEvent.prototype.constructor.prototype.view",
+     "WheelEvent.prototype.constructor.prototype.which",

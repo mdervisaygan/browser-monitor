@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "149.0.7795.2",
+    "to": "149.0.7808.0"
+  },
+  "browserApis": {
+    "added": [
+      "AnimationEvent.prototype.pseudoTarget",
+      "CSSPseudoElement",
+      "CSSPseudoElement.prototype",
+      "CSSPseudoElement.prototype.element",
+      "CSSPseudoElement.prototype.parent",
+      "CSSPseudoElement.prototype.pseudo",
+      "CSSPseudoElement.prototype.type",
+      "Option.prototype.constructor.prototype.pseudo",
+      "TransitionEvent.prototype.pseudoTarget",
+      "WheelEvent.prototype.constructor.prototype.pseudoTarget"
+    ],
+    "removed": []
+  }
+}

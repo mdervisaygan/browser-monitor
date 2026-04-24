@@ -1340,6 +1340,67 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 149.0.7808.0 (`2026-4-24`) ⚡
+Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_149.0.7795.2_to_149.0.7808.0.diff), [json](./browser_apis/chrome-unstable_149.0.7795.2_to_149.0.7808.0.json), [full list](./browser_apis/chrome-unstable_149.0.7808.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_149.0.7795.2.json	2026-04-24 23:10:56.461429440 +0000
++++ ./browser_apis/chrome-unstable_149.0.7808.0.json	2026-04-24 23:11:29.737021568 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9333,
++  "browserApiCount": 9343,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -39,6 +39,7 @@
+     "AnimationEvent.prototype.animationName",
+     "AnimationEvent.prototype.elapsedTime",
+     "AnimationEvent.prototype.pseudoElement",
++    "AnimationEvent.prototype.pseudoTarget",
+     "AnimationPlaybackEvent",
+     "AnimationPlaybackEvent.prototype",
+     "AnimationPlaybackEvent.prototype.currentTime",
+@@ -721,6 +722,12 @@
+     "CSSPropertyRule.prototype.initialValue",
+     "CSSPropertyRule.prototype.name",
+     "CSSPropertyRule.prototype.syntax",
++    "CSSPseudoElement",
++    "CSSPseudoElement.prototype",
++    "CSSPseudoElement.prototype.element",
++    "CSSPseudoElement.prototype.parent",
++    "CSSPseudoElement.prototype.pseudo",
++    "CSSPseudoElement.prototype.type",
+     "CSSRotate",
+     "CSSRotate.prototype",
+     "CSSRotate.prototype.angle",
+@@ -4523,6 +4530,7 @@
+     "Option.prototype.constructor.prototype.prefix",
+     "Option.prototype.constructor.prototype.prepend",
+     "Option.prototype.constructor.prototype.previousElementSibling",
++    "Option.prototype.constructor.prototype.pseudo",
+     "Option.prototype.constructor.prototype.querySelector",
+     "Option.prototype.constructor.prototype.querySelectorAll",
+     "Option.prototype.constructor.prototype.releasePointerCapture",
+@@ -7228,6 +7236,7 @@
+     "TransitionEvent.prototype.elapsedTime",
+     "TransitionEvent.prototype.propertyName",
+     "TransitionEvent.prototype.pseudoElement",
++    "TransitionEvent.prototype.pseudoTarget",
+     "Translator",
+     "Translator.availability",
+     "Translator.create",
+@@ -8252,6 +8261,7 @@
+     "WheelEvent.prototype.constructor.prototype",
+     "WheelEvent.prototype.constructor.prototype.detail",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
++    "WheelEvent.prototype.constructor.prototype.pseudoTarget",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
+     "WheelEvent.prototype.constructor.prototype.view",
+     "WheelEvent.prototype.constructor.prototype.which",
+```
+
+  
 #### 149.0.7795.2 (`2026-4-17`) ⚡
 Added 32 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_149.0.7779.3_to_149.0.7795.2.diff), [json](./browser_apis/chrome-unstable_149.0.7779.3_to_149.0.7795.2.json), [full list](./browser_apis/chrome-unstable_149.0.7795.2.json))
  ```diff
@@ -3205,62 +3266,6 @@ Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_142.0.7393.6
      "SpeechSynthesis",
      "SpeechSynthesis.prototype",
      "SpeechSynthesis.prototype.cancel",
-```
-
-  
-#### 142.0.7393.6 (`2025-9-8`) ⚡
-Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_141.0.7378.3_to_142.0.7393.6.diff), [json](./browser_apis/chrome-unstable_141.0.7378.3_to_142.0.7393.6.json), [full list](./browser_apis/chrome-unstable_142.0.7393.6.json))
- ```diff
---- ./browser_apis/chrome-unstable_141.0.7378.3.json	2025-09-08 22:01:00.959935212 +0000
-+++ ./browser_apis/chrome-unstable_142.0.7393.6.json	2025-09-08 22:01:35.802060335 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8814,
-+  "browserApiCount": 8825,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1320,6 +1320,12 @@
-     "DevicePosture.prototype",
-     "DevicePosture.prototype.onchange",
-     "DevicePosture.prototype.type",
-+    "DigitalCredential",
-+    "DigitalCredential.prototype",
-+    "DigitalCredential.prototype.data",
-+    "DigitalCredential.prototype.protocol",
-+    "DigitalCredential.prototype.toJSON",
-+    "DigitalCredential.userAgentAllowsProtocol",
-     "DisposableStack",
-     "DisposableStack.prototype",
-     "DisposableStack.prototype.adopt",
-@@ -5072,7 +5078,10 @@
-     "RTCRtpReceiver.prototype.playoutDelayHint",
-     "RTCRtpReceiver.prototype.rtcpTransport",
-     "RTCRtpReceiver.prototype.track",
-+    "RTCRtpReceiver.prototype.transform",
-     "RTCRtpReceiver.prototype.transport",
-+    "RTCRtpScriptTransform",
-+    "RTCRtpScriptTransform.prototype",
-     "RTCRtpSender",
-     "RTCRtpSender.getCapabilities",
-     "RTCRtpSender.prototype",
-@@ -5085,6 +5094,7 @@
-     "RTCRtpSender.prototype.setParameters",
-     "RTCRtpSender.prototype.setStreams",
-     "RTCRtpSender.prototype.track",
-+    "RTCRtpSender.prototype.transform",
-     "RTCRtpSender.prototype.transport",
-     "RTCRtpTransceiver",
-     "RTCRtpTransceiver.prototype",
-@@ -7930,6 +7940,7 @@
-     "XMLDocument.prototype",
-     "XMLDocument.prototype.URL",
-     "XMLDocument.prototype.activeElement",
-+    "XMLDocument.prototype.activeViewTransition",
-     "XMLDocument.prototype.adoptNode",
-     "XMLDocument.prototype.adoptedStyleSheets",
-     "XMLDocument.prototype.alinkColor",
 ```
 
   <!-- browserapis:end -->
