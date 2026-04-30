@@ -1340,6 +1340,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 149.0.7815.2 (`2026-4-30`) 
+No browser API changes.
+
+  
 #### 149.0.7808.0 (`2026-4-24`) ⚡
 Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_149.0.7795.2_to_149.0.7808.0.diff), [json](./browser_apis/chrome-unstable_149.0.7795.2_to_149.0.7808.0.json), [full list](./browser_apis/chrome-unstable_149.0.7808.0.json))
  ```diff
@@ -3216,56 +3220,5 @@ Added 25 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_142.0.7420
   
 #### 142.0.7420.2 (`2025-9-19`) 
 No browser API changes.
-
-  
-#### 142.0.7405.0 (`2025-9-11`) ⚡
-Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_142.0.7393.6_to_142.0.7405.0.diff), [json](./browser_apis/chrome-unstable_142.0.7393.6_to_142.0.7405.0.json), [full list](./browser_apis/chrome-unstable_142.0.7405.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_142.0.7393.6.json	2025-09-11 21:00:52.352239984 +0000
-+++ ./browser_apis/chrome-unstable_142.0.7405.0.json	2025-09-11 21:01:34.893265601 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8825,
-+  "browserApiCount": 8832,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -5306,6 +5306,7 @@
-     "Request.prototype.referrer",
-     "Request.prototype.referrerPolicy",
-     "Request.prototype.signal",
-+    "Request.prototype.targetAddressSpace",
-     "Request.prototype.text",
-     "Request.prototype.url",
-     "ResizeObserver",
-@@ -5893,6 +5894,7 @@
-     "SVGSVGElement.prototype.zoomAndPan",
-     "SVGScriptElement",
-     "SVGScriptElement.prototype",
-+    "SVGScriptElement.prototype.async",
-     "SVGScriptElement.prototype.href",
-     "SVGScriptElement.prototype.type",
-     "SVGSetElement",
-@@ -6416,6 +6418,7 @@
-     "SpeechRecognition.prototype.onspeechend",
-     "SpeechRecognition.prototype.onspeechstart",
-     "SpeechRecognition.prototype.onstart",
-+    "SpeechRecognition.prototype.phrases",
-     "SpeechRecognition.prototype.processLocally",
-     "SpeechRecognition.prototype.start",
-     "SpeechRecognition.prototype.stop",
-@@ -6427,6 +6430,10 @@
-     "SpeechRecognitionEvent.prototype",
-     "SpeechRecognitionEvent.prototype.resultIndex",
-     "SpeechRecognitionEvent.prototype.results",
-+    "SpeechRecognitionPhrase",
-+    "SpeechRecognitionPhrase.prototype",
-+    "SpeechRecognitionPhrase.prototype.boost",
-+    "SpeechRecognitionPhrase.prototype.phrase",
-     "SpeechSynthesis",
-     "SpeechSynthesis.prototype",
-     "SpeechSynthesis.prototype.cancel",
-```
 
   <!-- browserapis:end -->
