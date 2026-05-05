@@ -1,0 +1,32 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "147.0.7727.137",
+    "to": "148.0.7778.96"
+  },
+  "browserApis": {
+    "added": [
+      "Audio.prototype.constructor.prototype.loading",
+      "Credential.isConditionalMediationAvailable",
+      "LanguageModel",
+      "LanguageModel.availability",
+      "LanguageModel.create",
+      "LanguageModel.prototype",
+      "LanguageModel.prototype.append",
+      "LanguageModel.prototype.clone",
+      "LanguageModel.prototype.contextUsage",
+      "LanguageModel.prototype.contextWindow",
+      "LanguageModel.prototype.destroy",
+      "LanguageModel.prototype.measureContextUsage",
+      "LanguageModel.prototype.oncontextoverflow",
+      "LanguageModel.prototype.prompt",
+      "LanguageModel.prototype.promptStreaming",
+      "PaymentRequest.getSecurePaymentConfirmationCapabilities",
+      "PerformanceResourceTiming.prototype.contentType",
+      "WebAssembly.Exception.prototype.stack"
+    ],
+    "removed": [
+      "SharedStorage.prototype.get"
+    ]
+  }
+}
