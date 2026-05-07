@@ -1420,6 +1420,10 @@ Added 34 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_141.0.7390.1
   
 ### chrome-unstable
   
+#### 150.0.7828.2 (`2026-5-7`) 
+No browser API changes.
+
+  
 #### 149.0.7815.2 (`2026-4-30`) 
 No browser API changes.
 
@@ -3296,9 +3300,5 @@ Added 25 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_142.0.7420
      "Worker",
      "Worker.prototype",
 ```
-
-  
-#### 142.0.7420.2 (`2025-9-19`) 
-No browser API changes.
 
   <!-- browserapis:end -->
