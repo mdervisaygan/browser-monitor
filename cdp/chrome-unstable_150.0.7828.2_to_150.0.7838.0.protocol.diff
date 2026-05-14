@@ -1,0 +1,90 @@
+--- ./cdp/chrome-unstable_150.0.7828.2.protocol.json	2026-05-14 16:34:49.874338554 +0000
++++ ./cdp/chrome-unstable_150.0.7838.0.protocol.json	2026-05-14 16:35:19.626981120 +0000
+@@ -1592,7 +1592,11 @@
+             "ValidationFailedSignatureExpired",
+             "ValidationFailedInvalidLength",
+             "ValidationFailedSignatureMismatch",
+-            "ValidationFailedIntegrityMismatch"
++            "ValidationFailedIntegrityMismatch",
++            "SignatureBaseUnknownDerivedComponent",
++            "SignatureBaseMissingHeader",
++            "SignatureBaseInvalidUnencodedDigest",
++            "SignatureBaseUnsupportedComponent"
+           ]
+         },
+         {
+@@ -1770,6 +1774,7 @@
+             "FormInputHasWrongButWellIntendedAutocompleteValueError",
+             "ResponseWasBlockedByORB",
+             "NavigationEntryMarkedSkippable",
++            "BackUINavigationWouldSkipAd",
+             "AutofillAndManualTextPolicyControlledFeaturesInfo",
+             "AutofillPolicyControlledFeatureInfo",
+             "ManualTextPolicyControlledFeatureInfo",
+@@ -4891,7 +4896,8 @@
+           "properties": [
+             {
+               "name": "text",
+-              "description": "Container query text.",
++              "description": "Container query text.\nContains the query part without the container name for a single query.\nDeprecated in favor of conditionText which contains the full prelude\nafter @container.",
++              "deprecated": true,
+               "type": "string"
+             },
+             {
+@@ -4935,6 +4941,11 @@
+               "description": "true if the query contains anchored() queries.",
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "conditionText",
++              "description": "CSSContainerRule.conditionText",
++              "type": "string"
+             }
+           ]
+         },
+@@ -6254,7 +6265,33 @@
+         },
+         {
+           "name": "setContainerQueryText",
+-          "description": "Modifies the expression of a container query.",
++          "description": "Modifies the expression of a container query.\nDeprecated. Use setContainerQueryConditionText instead.",
++          "experimental": true,
++          "deprecated": true,
++          "parameters": [
++            {
++              "name": "styleSheetId",
++              "$ref": "DOM.StyleSheetId"
++            },
++            {
++              "name": "range",
++              "$ref": "SourceRange"
++            },
++            {
++              "name": "text",
++              "type": "string"
++            }
++          ],
++          "returns": [
++            {
++              "name": "containerQuery",
++              "description": "The resulting CSS container query rule after modification.",
++              "$ref": "CSSContainerQuery"
++            }
++          ]
++        },
++        {
++          "name": "setContainerQueryConditionText",
+           "experimental": true,
+           "parameters": [
+             {
+@@ -25506,7 +25543,8 @@
+             "PrerenderFailedDuringPrefetch",
+             "BrowsingDataRemoved",
+             "PrerenderHostReused",
+-            "FormSubmitWhenPrerendering"
++            "FormSubmitWhenPrerendering",
++            "CrossDocumentRestart"
+           ]
+         },
+         {

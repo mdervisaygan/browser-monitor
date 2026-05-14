@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "150.0.7828.2",
+    "to": "150.0.7838.0"
+  },
+  "browserApis": {
+    "added": [
+      "CSSContainerRule.prototype.conditions",
+      "MathMLElement.prototype.focusGroup",
+      "MathMLElement.prototype.focusGroupStart",
+      "Option.prototype.constructor.prototype.focusGroup",
+      "Option.prototype.constructor.prototype.focusGroupStart",
+      "SVGViewElement.prototype.focusGroup",
+      "SVGViewElement.prototype.focusGroupStart"
+    ],
+    "removed": []
+  }
+}

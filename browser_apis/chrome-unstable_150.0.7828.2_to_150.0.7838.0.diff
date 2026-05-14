@@ -1,0 +1,45 @@
+--- ./browser_apis/chrome-unstable_150.0.7828.2.json	2026-05-14 16:34:49.519330834 +0000
++++ ./browser_apis/chrome-unstable_150.0.7838.0.json	2026-05-14 16:35:19.617980926 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9343,
++  "browserApiCount": 9350,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -509,6 +509,7 @@
+     "CSSAnimation.prototype.animationName",
+     "CSSContainerRule",
+     "CSSContainerRule.prototype",
++    "CSSContainerRule.prototype.conditions",
+     "CSSContainerRule.prototype.containerName",
+     "CSSContainerRule.prototype.containerQuery",
+     "CSSCounterStyleRule",
+@@ -3472,6 +3473,8 @@
+     "MathMLElement.prototype.blur",
+     "MathMLElement.prototype.dataset",
+     "MathMLElement.prototype.focus",
++    "MathMLElement.prototype.focusGroup",
++    "MathMLElement.prototype.focusGroupStart",
+     "MathMLElement.prototype.nonce",
+     "MathMLElement.prototype.onabort",
+     "MathMLElement.prototype.onanimationcancel",
+@@ -4373,6 +4376,8 @@
+     "Option.prototype.constructor.prototype.enterKeyHint",
+     "Option.prototype.constructor.prototype.firstElementChild",
+     "Option.prototype.constructor.prototype.focus",
++    "Option.prototype.constructor.prototype.focusGroup",
++    "Option.prototype.constructor.prototype.focusGroupStart",
+     "Option.prototype.constructor.prototype.getAnimations",
+     "Option.prototype.constructor.prototype.getAttribute",
+     "Option.prototype.constructor.prototype.getAttributeNS",
+@@ -6145,6 +6150,8 @@
+     "SVGViewElement.prototype.constructor",
+     "SVGViewElement.prototype.dataset",
+     "SVGViewElement.prototype.focus",
++    "SVGViewElement.prototype.focusGroup",
++    "SVGViewElement.prototype.focusGroupStart",
+     "SVGViewElement.prototype.nonce",
+     "SVGViewElement.prototype.onabort",
+     "SVGViewElement.prototype.onanimationcancel",
