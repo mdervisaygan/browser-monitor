@@ -1,0 +1,12 @@
+--- ./cdp/chrome-stable_148.0.7778.167.protocol.json	2026-05-19 20:29:01.137416045 +0000
++++ ./cdp/chrome-stable_148.0.7778.178.protocol.json	2026-05-19 20:29:31.661564269 +0000
+@@ -25480,7 +25480,8 @@
+             "PrerenderFailedDuringPrefetch",
+             "BrowsingDataRemoved",
+             "PrerenderHostReused",
+-            "FormSubmitWhenPrerendering"
++            "FormSubmitWhenPrerendering",
++            "CrossDocumentRestart"
+           ]
+         },
+         {
