@@ -1267,6 +1267,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 150.0.7846.4 (`2026-5-21`) 
+No browser API changes.
+
+  
 #### 150.0.7838.0 (`2026-5-14`) ⚡
 Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_150.0.7828.2_to_150.0.7838.0.diff), [json](./browser_apis/chrome-unstable_150.0.7828.2_to_150.0.7838.0.json), [full list](./browser_apis/chrome-unstable_150.0.7838.0.json))
  ```diff
@@ -3061,30 +3065,6 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7445.0
      "Request.prototype.text",
      "Request.prototype.url",
      "ResizeObserver",
-```
-
-  
-#### 143.0.7445.0 (`2025-10-2`) ⚡
-Added 1 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_142.0.7432.0_to_143.0.7445.0.diff), [json](./browser_apis/chrome-unstable_142.0.7432.0_to_143.0.7445.0.json), [full list](./browser_apis/chrome-unstable_143.0.7445.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_142.0.7432.0.json	2025-10-02 22:00:50.540818821 +0000
-+++ ./browser_apis/chrome-unstable_143.0.7445.0.json	2025-10-02 22:01:20.629042374 +0000
-@@ -5312,7 +5312,6 @@
-     "Request.prototype.referrer",
-     "Request.prototype.referrerPolicy",
-     "Request.prototype.signal",
--    "Request.prototype.targetAddressSpace",
-     "Request.prototype.text",
-     "Request.prototype.url",
-     "ResizeObserver",
-@@ -5357,6 +5356,7 @@
-     "RestrictionTarget.prototype",
-     "SVGAElement",
-     "SVGAElement.prototype",
-+    "SVGAElement.prototype.download",
-     "SVGAElement.prototype.href",
-     "SVGAElement.prototype.interestForElement",
-     "SVGAElement.prototype.rel",
 ```
 
   <!-- browserapis:end -->
