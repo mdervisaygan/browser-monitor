@@ -1,0 +1,147 @@
+--- ./cdp/chrome-unstable_150.0.7846.4.protocol.json	2026-06-01 15:58:07.980648767 +0000
++++ ./cdp/chrome-unstable_150.0.7865.2.protocol.json	2026-06-01 15:58:48.606353642 +0000
+@@ -1560,6 +1560,7 @@
+             "WriteErrorNonSecureContext",
+             "WriteErrorNonStringIdField",
+             "WriteErrorNonStringInMatchDestList",
++            "WriteErrorInvalidMatchDestList",
+             "WriteErrorNonStringMatchField",
+             "WriteErrorNonTokenTypeField",
+             "WriteErrorRequestAborted",
+@@ -1972,6 +1973,45 @@
+           ]
+         },
+         {
++          "id": "EmailVerificationRequestIssueDetails",
++          "type": "object",
++          "properties": [
++            {
++              "name": "emailVerificationRequestIssueReason",
++              "$ref": "EmailVerificationRequestIssueReason"
++            }
++          ]
++        },
++        {
++          "id": "EmailVerificationRequestIssueReason",
++          "description": "Represents the failure reason when an email verification request fails.\nShould be updated alongside EmailVerificationRequestResult in\nthird_party/blink/public/mojom/devtools/inspector_issue.mojom.",
++          "type": "string",
++          "enum": [
++            "InvalidEmail",
++            "DnsFetchFailed",
++            "DnsInvalidRecord",
++            "WellKnownHttpNotFound",
++            "WellKnownNoResponse",
++            "WellKnownInvalidResponse",
++            "WellKnownListEmpty",
++            "WellKnownInvalidContentType",
++            "WellKnownMissingIssuanceEndpoint",
++            "WellKnownIssuanceEndpointCrossOrigin",
++            "WellKnownUnsupportedSigningAlgorithm",
++            "TokenHttpNotFound",
++            "TokenNoResponse",
++            "TokenInvalidResponse",
++            "TokenInvalidContentType",
++            "TokenMalformedSdJwt",
++            "TokenInvalidSdJwt",
++            "KeyBindingSigningFailed",
++            "RpOriginIsOpaque",
++            "WellKnownMissingAccountsEndpoint",
++            "UserLoggedOut",
++            "WellKnownAccountsEndpointCrossOrigin"
++          ]
++        },
++        {
+           "id": "ClientHintIssueDetails",
+           "description": "This issue tracks client hints related issues. It's used to deprecate old\nfeatures, encourage the use of new ones, and provide general guidance.",
+           "type": "object",
+@@ -2294,7 +2334,8 @@
+             "UserReidentificationIssue",
+             "PermissionElementIssue",
+             "PerformanceIssue",
+-            "SelectivePermissionsInterventionIssue"
++            "SelectivePermissionsInterventionIssue",
++            "EmailVerificationRequestIssue"
+           ]
+         },
+         {
+@@ -2447,6 +2488,11 @@
+               "name": "selectivePermissionsInterventionIssueDetails",
+               "optional": true,
+               "$ref": "SelectivePermissionsInterventionIssueDetails"
++            },
++            {
++              "name": "emailVerificationRequestIssueDetails",
++              "optional": true,
++              "$ref": "EmailVerificationRequestIssueDetails"
+             }
+           ]
+         },
+@@ -11406,22 +11452,7 @@
+         },
+         {
+           "name": "setPressureStateOverride",
+-          "description": "TODO: OBSOLETE: To remove when setPressureDataOverride is merged.\nProvides a given pressure state that will be processed and eventually be\ndelivered to PressureObserver users. |source| must have been previously\noverridden by setPressureSourceOverrideEnabled.",
+-          "experimental": true,
+-          "parameters": [
+-            {
+-              "name": "source",
+-              "$ref": "PressureSource"
+-            },
+-            {
+-              "name": "state",
+-              "$ref": "PressureState"
+-            }
+-          ]
+-        },
+-        {
+-          "name": "setPressureDataOverride",
+-          "description": "Provides a given pressure data set that will be processed and eventually be\ndelivered to PressureObserver users. |source| must have been previously\noverridden by setPressureSourceOverrideEnabled.",
++          "description": "Provides a given pressure state that will be processed and eventually be\ndelivered to PressureObserver users. |source| must have been previously\noverridden by setPressureSourceOverrideEnabled.",
+           "experimental": true,
+           "parameters": [
+             {
+@@ -11431,11 +11462,6 @@
+             {
+               "name": "state",
+               "$ref": "PressureState"
+-            },
+-            {
+-              "name": "ownContributionEstimate",
+-              "optional": true,
+-              "type": "number"
+             }
+           ]
+         },
+@@ -17889,7 +17915,8 @@
+             "InvalidConfigJson",
+             "InvalidFederatedSessionProviderFailedToRestoreKey",
+             "FailedToUnwrapKey",
+-            "SessionDeletedDuringRefresh"
++            "SessionDeletedDuringRefresh",
++            "CrossOriginRegistrationSiteNotIncluded"
+           ]
+         },
+         {
+@@ -28752,6 +28779,13 @@
+               "experimental": true,
+               "optional": true,
+               "type": "string"
++            },
++            {
++              "name": "embedderData",
++              "description": "Embedder-specific target metadata. This is only set for targets of\ntype \"tab\".",
++              "experimental": true,
++              "optional": true,
++              "type": "object"
+             }
+           ]
+         },
+@@ -29273,7 +29307,7 @@
+             },
+             {
+               "name": "panelId",
+-              "description": "The id of the panel we want DevTools to open initially. Currently\nsupported panels are elements, console, network, sources, resources\nand performance.",
++              "description": "The id of the panel we want DevTools to open initially. Currently\nsupported panels are elements, console, network, sources, resources,\ntimeline, chrome-recorder, heap-profiler, lighthouse, and security.",
+               "optional": true,
+               "type": "string"
+             }

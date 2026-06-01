@@ -1,0 +1,24 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "150.0.7846.4",
+    "to": "150.0.7865.2"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLTemplateElement.prototype.htmlFor",
+      "ProcessingInstruction.prototype.getAttribute",
+      "ProcessingInstruction.prototype.getAttributeNames",
+      "ProcessingInstruction.prototype.hasAttribute",
+      "ProcessingInstruction.prototype.hasAttributes",
+      "ProcessingInstruction.prototype.removeAttribute",
+      "ProcessingInstruction.prototype.setAttribute",
+      "ProcessingInstruction.prototype.toggleAttribute",
+      "Request.prototype.isReloadNavigation",
+      "Sanitizer.prototype.allowProcessingInstruction",
+      "Sanitizer.prototype.removeProcessingInstruction",
+      "SpeechRecognition.prototype.quality"
+    ],
+    "removed": []
+  }
+}

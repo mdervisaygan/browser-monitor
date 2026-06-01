@@ -1267,6 +1267,74 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 150.0.7865.2 (`2026-6-1`) ⚡
+Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_150.0.7846.4_to_150.0.7865.2.diff), [json](./browser_apis/chrome-unstable_150.0.7846.4_to_150.0.7865.2.json), [full list](./browser_apis/chrome-unstable_150.0.7865.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_150.0.7846.4.json	2026-06-01 15:58:07.515640708 +0000
++++ ./browser_apis/chrome-unstable_150.0.7865.2.json	2026-06-01 15:58:48.598353503 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9350,
++  "browserApiCount": 9362,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2736,6 +2736,7 @@
+     "HTMLTemplateElement",
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
++    "HTMLTemplateElement.prototype.htmlFor",
+     "HTMLTemplateElement.prototype.shadowRootClonable",
+     "HTMLTemplateElement.prototype.shadowRootCustomElementRegistry",
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+@@ -5001,8 +5002,15 @@
+     "PressureRecord.prototype.toJSON",
+     "ProcessingInstruction",
+     "ProcessingInstruction.prototype",
++    "ProcessingInstruction.prototype.getAttribute",
++    "ProcessingInstruction.prototype.getAttributeNames",
++    "ProcessingInstruction.prototype.hasAttribute",
++    "ProcessingInstruction.prototype.hasAttributes",
++    "ProcessingInstruction.prototype.removeAttribute",
++    "ProcessingInstruction.prototype.setAttribute",
+     "ProcessingInstruction.prototype.sheet",
+     "ProcessingInstruction.prototype.target",
++    "ProcessingInstruction.prototype.toggleAttribute",
+     "Profiler",
+     "Profiler.prototype",
+     "Profiler.prototype.sampleInterval",
+@@ -5420,6 +5428,7 @@
+     "Request.prototype.headers",
+     "Request.prototype.integrity",
+     "Request.prototype.isHistoryNavigation",
++    "Request.prototype.isReloadNavigation",
+     "Request.prototype.json",
+     "Request.prototype.keepalive",
+     "Request.prototype.method",
+@@ -6266,9 +6275,11 @@
+     "Sanitizer.prototype",
+     "Sanitizer.prototype.allowAttribute",
+     "Sanitizer.prototype.allowElement",
++    "Sanitizer.prototype.allowProcessingInstruction",
+     "Sanitizer.prototype.get",
+     "Sanitizer.prototype.removeAttribute",
+     "Sanitizer.prototype.removeElement",
++    "Sanitizer.prototype.removeProcessingInstruction",
+     "Sanitizer.prototype.removeUnsafe",
+     "Sanitizer.prototype.replaceElementWithChildren",
+     "Sanitizer.prototype.setComments",
+@@ -6563,6 +6574,7 @@
+     "SpeechRecognition.prototype.onstart",
+     "SpeechRecognition.prototype.phrases",
+     "SpeechRecognition.prototype.processLocally",
++    "SpeechRecognition.prototype.quality",
+     "SpeechRecognition.prototype.start",
+     "SpeechRecognition.prototype.stop",
+     "SpeechRecognitionErrorEvent",
+```
+
+  
 #### 150.0.7846.4 (`2026-5-21`) 
 No browser API changes.
 
@@ -3041,30 +3109,6 @@ Added 0 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_143.0.7461.2
      "Intl.NumberFormat",
      "Intl.NumberFormat.prototype",
      "Intl.NumberFormat.prototype.format",
-```
-
-  
-#### 143.0.7461.2 (`2025-10-10`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7445.0_to_143.0.7461.2.diff), [json](./browser_apis/chrome-unstable_143.0.7445.0_to_143.0.7461.2.json), [full list](./browser_apis/chrome-unstable_143.0.7461.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_143.0.7445.0.json	2025-10-10 17:00:52.263603700 +0000
-+++ ./browser_apis/chrome-unstable_143.0.7461.2.json	2025-10-10 17:01:30.964913296 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8839,
-+  "browserApiCount": 8840,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -5312,6 +5312,7 @@
-     "Request.prototype.referrer",
-     "Request.prototype.referrerPolicy",
-     "Request.prototype.signal",
-+    "Request.prototype.targetAddressSpace",
-     "Request.prototype.text",
-     "Request.prototype.url",
-     "ResizeObserver",
 ```
 
   <!-- browserapis:end -->
