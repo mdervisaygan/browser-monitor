@@ -5,6 +5,122 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 149.0.7827.53 (`2026-6-2`) ⚡
+Added 29 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_148.0.7778.215_to_149.0.7827.53.diff), [json](./browser_apis/chrome-stable_148.0.7778.215_to_149.0.7827.53.json), [full list](./browser_apis/chrome-stable_149.0.7827.53.json))
+ ```diff
+--- ./browser_apis/chrome-stable_148.0.7778.215.json	2026-06-02 20:57:53.276504794 +0000
++++ ./browser_apis/chrome-stable_149.0.7827.53.json	2026-06-02 20:58:34.821405987 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9332,
++  "browserApiCount": 9343,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -39,6 +39,7 @@
+     "AnimationEvent.prototype.animationName",
+     "AnimationEvent.prototype.elapsedTime",
+     "AnimationEvent.prototype.pseudoElement",
++    "AnimationEvent.prototype.pseudoTarget",
+     "AnimationPlaybackEvent",
+     "AnimationPlaybackEvent.prototype",
+     "AnimationPlaybackEvent.prototype.currentTime",
+@@ -721,6 +722,12 @@
+     "CSSPropertyRule.prototype.initialValue",
+     "CSSPropertyRule.prototype.name",
+     "CSSPropertyRule.prototype.syntax",
++    "CSSPseudoElement",
++    "CSSPseudoElement.prototype",
++    "CSSPseudoElement.prototype.element",
++    "CSSPseudoElement.prototype.parent",
++    "CSSPseudoElement.prototype.pseudo",
++    "CSSPseudoElement.prototype.type",
+     "CSSRotate",
+     "CSSRotate.prototype",
+     "CSSRotate.prototype.angle",
+@@ -3195,6 +3202,7 @@
+     "Intl.Locale.prototype.region",
+     "Intl.Locale.prototype.script",
+     "Intl.Locale.prototype.toString",
++    "Intl.Locale.prototype.variants",
+     "Intl.NumberFormat",
+     "Intl.NumberFormat.prototype",
+     "Intl.NumberFormat.prototype.format",
+@@ -4522,6 +4530,7 @@
+     "Option.prototype.constructor.prototype.prefix",
+     "Option.prototype.constructor.prototype.prepend",
+     "Option.prototype.constructor.prototype.previousElementSibling",
++    "Option.prototype.constructor.prototype.pseudo",
+     "Option.prototype.constructor.prototype.querySelector",
+     "Option.prototype.constructor.prototype.querySelectorAll",
+     "Option.prototype.constructor.prototype.releasePointerCapture",
+@@ -7227,6 +7236,7 @@
+     "TransitionEvent.prototype.elapsedTime",
+     "TransitionEvent.prototype.propertyName",
+     "TransitionEvent.prototype.pseudoElement",
++    "TransitionEvent.prototype.pseudoTarget",
+     "Translator",
+     "Translator.availability",
+     "Translator.create",
+@@ -8249,27 +8259,10 @@
+     "WheelEvent.prototype.clientY",
+     "WheelEvent.prototype.constructor",
+     "WheelEvent.prototype.constructor.prototype",
+-    "WheelEvent.prototype.constructor.prototype.bubbles",
+-    "WheelEvent.prototype.constructor.prototype.cancelBubble",
+-    "WheelEvent.prototype.constructor.prototype.cancelable",
+-    "WheelEvent.prototype.constructor.prototype.composed",
+-    "WheelEvent.prototype.constructor.prototype.composedPath",
+-    "WheelEvent.prototype.constructor.prototype.constructor",
+-    "WheelEvent.prototype.constructor.prototype.currentTarget",
+-    "WheelEvent.prototype.constructor.prototype.defaultPrevented",
+     "WheelEvent.prototype.constructor.prototype.detail",
+-    "WheelEvent.prototype.constructor.prototype.eventPhase",
+-    "WheelEvent.prototype.constructor.prototype.initEvent",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
+-    "WheelEvent.prototype.constructor.prototype.preventDefault",
+-    "WheelEvent.prototype.constructor.prototype.returnValue",
++    "WheelEvent.prototype.constructor.prototype.pseudoTarget",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
+-    "WheelEvent.prototype.constructor.prototype.srcElement",
+-    "WheelEvent.prototype.constructor.prototype.stopImmediatePropagation",
+-    "WheelEvent.prototype.constructor.prototype.stopPropagation",
+-    "WheelEvent.prototype.constructor.prototype.target",
+-    "WheelEvent.prototype.constructor.prototype.timeStamp",
+-    "WheelEvent.prototype.constructor.prototype.type",
+     "WheelEvent.prototype.constructor.prototype.view",
+     "WheelEvent.prototype.constructor.prototype.which",
+     "WheelEvent.prototype.ctrlKey",
+@@ -8308,7 +8301,25 @@
+     "WindowControlsOverlay.prototype.visible",
+     "WindowControlsOverlayGeometryChangeEvent",
+     "WindowControlsOverlayGeometryChangeEvent.prototype",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.bubbles",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelBubble",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelable",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.composed",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.composedPath",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.constructor",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.currentTarget",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.defaultPrevented",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.eventPhase",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.initEvent",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.preventDefault",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.returnValue",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.srcElement",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.stopImmediatePropagation",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.stopPropagation",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.target",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.timeStamp",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.type",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
+     "Worker",
+     "Worker.prototype",
+```
+
+  
 #### 148.0.7778.215 (`2026-5-27`) 
 No browser API changes.
 
@@ -1259,10 +1375,6 @@ Added 8 APIs, removed 7 (see: [diff](./browser_apis/chrome-stable_142.0.7444.175
      "onhashchange",
      "oninput",
 ```
-
-  
-#### 142.0.7444.175 (`2025-11-17`) 
-No browser API changes.
 
   
 ### chrome-unstable

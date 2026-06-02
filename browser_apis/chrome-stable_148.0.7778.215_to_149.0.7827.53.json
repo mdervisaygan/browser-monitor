@@ -1,0 +1,60 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "148.0.7778.215",
+    "to": "149.0.7827.53"
+  },
+  "browserApis": {
+    "added": [
+      "AnimationEvent.prototype.pseudoTarget",
+      "CSSPseudoElement",
+      "CSSPseudoElement.prototype",
+      "CSSPseudoElement.prototype.element",
+      "CSSPseudoElement.prototype.parent",
+      "CSSPseudoElement.prototype.pseudo",
+      "CSSPseudoElement.prototype.type",
+      "Intl.Locale.prototype.variants",
+      "Option.prototype.constructor.prototype.pseudo",
+      "TransitionEvent.prototype.pseudoTarget",
+      "WheelEvent.prototype.constructor.prototype.pseudoTarget",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.bubbles",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.cancelBubble",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.cancelable",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.composed",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.composedPath",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.constructor",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.currentTarget",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.defaultPrevented",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.eventPhase",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.initEvent",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.preventDefault",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.returnValue",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.srcElement",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.stopImmediatePropagation",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.stopPropagation",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.target",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.timeStamp",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.type"
+    ],
+    "removed": [
+      "WheelEvent.prototype.constructor.prototype.bubbles",
+      "WheelEvent.prototype.constructor.prototype.cancelBubble",
+      "WheelEvent.prototype.constructor.prototype.cancelable",
+      "WheelEvent.prototype.constructor.prototype.composed",
+      "WheelEvent.prototype.constructor.prototype.composedPath",
+      "WheelEvent.prototype.constructor.prototype.constructor",
+      "WheelEvent.prototype.constructor.prototype.currentTarget",
+      "WheelEvent.prototype.constructor.prototype.defaultPrevented",
+      "WheelEvent.prototype.constructor.prototype.eventPhase",
+      "WheelEvent.prototype.constructor.prototype.initEvent",
+      "WheelEvent.prototype.constructor.prototype.preventDefault",
+      "WheelEvent.prototype.constructor.prototype.returnValue",
+      "WheelEvent.prototype.constructor.prototype.srcElement",
+      "WheelEvent.prototype.constructor.prototype.stopImmediatePropagation",
+      "WheelEvent.prototype.constructor.prototype.stopPropagation",
+      "WheelEvent.prototype.constructor.prototype.target",
+      "WheelEvent.prototype.constructor.prototype.timeStamp",
+      "WheelEvent.prototype.constructor.prototype.type"
+    ]
+  }
+}
