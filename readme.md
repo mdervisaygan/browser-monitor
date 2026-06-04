@@ -1379,6 +1379,10 @@ Added 8 APIs, removed 7 (see: [diff](./browser_apis/chrome-stable_142.0.7444.175
   
 ### chrome-unstable
   
+#### 151.0.7872.0 (`2026-6-4`) 
+No browser API changes.
+
+  
 #### 150.0.7865.2 (`2026-6-1`) ⚡
 Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_150.0.7846.4_to_150.0.7865.2.diff), [json](./browser_apis/chrome-unstable_150.0.7846.4_to_150.0.7865.2.json), [full list](./browser_apis/chrome-unstable_150.0.7865.2.json))
  ```diff
@@ -3175,52 +3179,5 @@ Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7489.0
   
 #### 143.0.7489.0 (`2025-10-24`) 
 No browser API changes.
-
-  
-#### 143.0.7475.7 (`2025-10-17`) ⚡
-Added 0 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_143.0.7461.2_to_143.0.7475.7.diff), [json](./browser_apis/chrome-unstable_143.0.7461.2_to_143.0.7475.7.json), [full list](./browser_apis/chrome-unstable_143.0.7475.7.json))
- ```diff
---- ./browser_apis/chrome-unstable_143.0.7461.2.json	2025-10-17 18:00:53.210926048 +0000
-+++ ./browser_apis/chrome-unstable_143.0.7475.7.json	2025-10-17 18:01:27.361196366 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8840,
-+  "browserApiCount": 8833,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3117,10 +3117,8 @@
-     "Intl.Locale.prototype",
-     "Intl.Locale.prototype.baseName",
-     "Intl.Locale.prototype.calendar",
--    "Intl.Locale.prototype.calendars",
-     "Intl.Locale.prototype.caseFirst",
-     "Intl.Locale.prototype.collation",
--    "Intl.Locale.prototype.collations",
-     "Intl.Locale.prototype.firstDayOfWeek",
-     "Intl.Locale.prototype.getCalendars",
-     "Intl.Locale.prototype.getCollations",
-@@ -3130,19 +3128,14 @@
-     "Intl.Locale.prototype.getTimeZones",
-     "Intl.Locale.prototype.getWeekInfo",
-     "Intl.Locale.prototype.hourCycle",
--    "Intl.Locale.prototype.hourCycles",
-     "Intl.Locale.prototype.language",
-     "Intl.Locale.prototype.maximize",
-     "Intl.Locale.prototype.minimize",
-     "Intl.Locale.prototype.numberingSystem",
--    "Intl.Locale.prototype.numberingSystems",
-     "Intl.Locale.prototype.numeric",
-     "Intl.Locale.prototype.region",
-     "Intl.Locale.prototype.script",
--    "Intl.Locale.prototype.textInfo",
--    "Intl.Locale.prototype.timeZones",
-     "Intl.Locale.prototype.toString",
--    "Intl.Locale.prototype.weekInfo",
-     "Intl.NumberFormat",
-     "Intl.NumberFormat.prototype",
-     "Intl.NumberFormat.prototype.format",
-```
 
   <!-- browserapis:end -->
