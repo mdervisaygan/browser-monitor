@@ -1293,6 +1293,66 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 151.0.7886.2 (`2026-6-15`) ⚡
+Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_151.0.7872.0_to_151.0.7886.2.diff), [json](./browser_apis/chrome-unstable_151.0.7872.0_to_151.0.7886.2.json), [full list](./browser_apis/chrome-unstable_151.0.7886.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_151.0.7872.0.json	2026-06-15 16:44:12.215318812 +0000
++++ ./browser_apis/chrome-unstable_151.0.7886.2.json	2026-06-15 16:44:41.481572157 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9362,
++  "browserApiCount": 9368,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1767,6 +1767,7 @@
+     "GPUComputePassEncoder.prototype.popDebugGroup",
+     "GPUComputePassEncoder.prototype.pushDebugGroup",
+     "GPUComputePassEncoder.prototype.setBindGroup",
++    "GPUComputePassEncoder.prototype.setImmediates",
+     "GPUComputePassEncoder.prototype.setPipeline",
+     "GPUComputePassEncoder.prototype.writeTimestamp",
+     "GPUComputePipeline",
+@@ -1850,6 +1851,7 @@
+     "GPURenderBundleEncoder.prototype.popDebugGroup",
+     "GPURenderBundleEncoder.prototype.pushDebugGroup",
+     "GPURenderBundleEncoder.prototype.setBindGroup",
++    "GPURenderBundleEncoder.prototype.setImmediates",
+     "GPURenderBundleEncoder.prototype.setIndexBuffer",
+     "GPURenderBundleEncoder.prototype.setPipeline",
+     "GPURenderBundleEncoder.prototype.setVertexBuffer",
+@@ -1869,6 +1871,7 @@
+     "GPURenderPassEncoder.prototype.pushDebugGroup",
+     "GPURenderPassEncoder.prototype.setBindGroup",
+     "GPURenderPassEncoder.prototype.setBlendConstant",
++    "GPURenderPassEncoder.prototype.setImmediates",
+     "GPURenderPassEncoder.prototype.setIndexBuffer",
+     "GPURenderPassEncoder.prototype.setPipeline",
+     "GPURenderPassEncoder.prototype.setScissorRect",
+@@ -1912,6 +1915,7 @@
+     "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
+     "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
+     "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
++    "GPUSupportedLimits.prototype.maxImmediateSize",
+     "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
+     "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
+     "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
+@@ -8260,9 +8264,11 @@
+     "WebTransportDatagramDuplexStream.prototype",
+     "WebTransportDatagramDuplexStream.prototype.incomingHighWaterMark",
+     "WebTransportDatagramDuplexStream.prototype.incomingMaxAge",
++    "WebTransportDatagramDuplexStream.prototype.incomingMaxBufferedDatagrams",
+     "WebTransportDatagramDuplexStream.prototype.maxDatagramSize",
+     "WebTransportDatagramDuplexStream.prototype.outgoingHighWaterMark",
+     "WebTransportDatagramDuplexStream.prototype.outgoingMaxAge",
++    "WebTransportDatagramDuplexStream.prototype.outgoingMaxBufferedDatagrams",
+     "WebTransportDatagramDuplexStream.prototype.readable",
+     "WebTransportDatagramDuplexStream.prototype.writable",
+     "WebTransportError",
+```
+
+  
 #### 151.0.7872.0 (`2026-6-4`) 
 No browser API changes.
 
@@ -3089,9 +3149,5 @@ Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7489.0
      "onhashchange",
      "oninput",
 ```
-
-  
-#### 143.0.7489.0 (`2025-10-24`) 
-No browser API changes.
 
   <!-- browserapis:end -->
