@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 149.0.7827.155 (`2026-6-16`) 
+No browser API changes.
+
+  
 #### 149.0.7827.114 (`2026-6-11`) 
 No browser API changes.
 
@@ -1284,10 +1288,6 @@ No browser API changes.
 
   
 #### 143.0.7499.169 (`2025-12-18`) 
-No browser API changes.
-
-  
-#### 143.0.7499.146 (`2025-12-16`) 
 No browser API changes.
 
   
