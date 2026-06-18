@@ -1,0 +1,18 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "151.0.7886.2",
+    "to": "151.0.7896.2"
+  },
+  "browserApis": {
+    "added": [
+      "File.prototype.textStream",
+      "MediaStreamTrackProcessor.prototype.discardedFrames",
+      "MediaStreamTrackProcessor.prototype.totalFrames",
+      "Request.prototype.textStream",
+      "Response.prototype.textStream",
+      "SpeechRecognition.prototype.unspokenPunctuation"
+    ],
+    "removed": []
+  }
+}

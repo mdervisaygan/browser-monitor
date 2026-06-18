@@ -1293,6 +1293,64 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 151.0.7896.2 (`2026-6-18`) ⚡
+Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_151.0.7886.2_to_151.0.7896.2.diff), [json](./browser_apis/chrome-unstable_151.0.7886.2_to_151.0.7896.2.json), [full list](./browser_apis/chrome-unstable_151.0.7896.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_151.0.7886.2.json	2026-06-18 15:14:20.758982399 +0000
++++ ./browser_apis/chrome-unstable_151.0.7896.2.json	2026-06-18 15:14:47.635622655 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9368,
++  "browserApiCount": 9374,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1572,6 +1572,7 @@
+     "File.prototype.slice",
+     "File.prototype.stream",
+     "File.prototype.text",
++    "File.prototype.textStream",
+     "File.prototype.type",
+     "File.prototype.webkitRelativePath",
+     "FileList",
+@@ -3765,7 +3766,9 @@
+     "MediaStreamTrackGenerator.prototype.writable",
+     "MediaStreamTrackProcessor",
+     "MediaStreamTrackProcessor.prototype",
++    "MediaStreamTrackProcessor.prototype.discardedFrames",
+     "MediaStreamTrackProcessor.prototype.readable",
++    "MediaStreamTrackProcessor.prototype.totalFrames",
+     "MediaStreamTrackVideoStats",
+     "MediaStreamTrackVideoStats.prototype",
+     "MediaStreamTrackVideoStats.prototype.deliveredFrames",
+@@ -5443,6 +5446,7 @@
+     "Request.prototype.signal",
+     "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
++    "Request.prototype.textStream",
+     "Request.prototype.url",
+     "ResizeObserver",
+     "ResizeObserver.prototype",
+@@ -5478,6 +5482,7 @@
+     "Response.prototype.status",
+     "Response.prototype.statusText",
+     "Response.prototype.text",
++    "Response.prototype.textStream",
+     "Response.prototype.type",
+     "Response.prototype.url",
+     "Response.redirect",
+@@ -6581,6 +6586,7 @@
+     "SpeechRecognition.prototype.quality",
+     "SpeechRecognition.prototype.start",
+     "SpeechRecognition.prototype.stop",
++    "SpeechRecognition.prototype.unspokenPunctuation",
+     "SpeechRecognitionErrorEvent",
+     "SpeechRecognitionErrorEvent.prototype",
+     "SpeechRecognitionErrorEvent.prototype.error",
+```
+
+  
 #### 151.0.7886.2 (`2026-6-15`) ⚡
 Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_151.0.7872.0_to_151.0.7886.2.diff), [json](./browser_apis/chrome-unstable_151.0.7872.0_to_151.0.7886.2.json), [full list](./browser_apis/chrome-unstable_151.0.7886.2.json))
  ```diff
@@ -3089,65 +3147,6 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7500.2
      "ViewTransitionTypeSet",
      "ViewTransitionTypeSet.prototype",
      "ViewTransitionTypeSet.prototype.add",
-```
-
-  
-#### 144.0.7500.2 (`2025-10-30`) ⚡
-Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_143.0.7489.0_to_144.0.7500.2.diff), [json](./browser_apis/chrome-unstable_143.0.7489.0_to_144.0.7500.2.json), [full list](./browser_apis/chrome-unstable_144.0.7500.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_143.0.7489.0.json	2025-10-30 21:01:00.457924511 +0000
-+++ ./browser_apis/chrome-unstable_144.0.7500.2.json	2025-10-30 21:02:02.323699251 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8833,
-+  "browserApiCount": 8841,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2079,6 +2079,8 @@
-     "HTMLBodyElement.prototype.onblur",
-     "HTMLBodyElement.prototype.onerror",
-     "HTMLBodyElement.prototype.onfocus",
-+    "HTMLBodyElement.prototype.ongamepadconnected",
-+    "HTMLBodyElement.prototype.ongamepaddisconnected",
-     "HTMLBodyElement.prototype.onhashchange",
-     "HTMLBodyElement.prototype.onlanguagechange",
-     "HTMLBodyElement.prototype.onload",
-@@ -2239,6 +2241,8 @@
-     "HTMLFrameSetElement.prototype.onblur",
-     "HTMLFrameSetElement.prototype.onerror",
-     "HTMLFrameSetElement.prototype.onfocus",
-+    "HTMLFrameSetElement.prototype.ongamepadconnected",
-+    "HTMLFrameSetElement.prototype.ongamepaddisconnected",
-     "HTMLFrameSetElement.prototype.onhashchange",
-     "HTMLFrameSetElement.prototype.onlanguagechange",
-     "HTMLFrameSetElement.prototype.onload",
-@@ -4695,6 +4699,7 @@
-     "PerformanceResourceTiming.prototype",
-     "PerformanceResourceTiming.prototype.connectEnd",
-     "PerformanceResourceTiming.prototype.connectStart",
-+    "PerformanceResourceTiming.prototype.contentEncoding",
-     "PerformanceResourceTiming.prototype.decodedBodySize",
-     "PerformanceResourceTiming.prototype.deliveryType",
-     "PerformanceResourceTiming.prototype.domainLookupEnd",
-@@ -7831,6 +7836,7 @@
-     "WebTransport.prototype.datagrams",
-     "WebTransport.prototype.incomingBidirectionalStreams",
-     "WebTransport.prototype.incomingUnidirectionalStreams",
-+    "WebTransport.prototype.protocol",
-     "WebTransport.prototype.ready",
-     "WebTransportBidirectionalStream",
-     "WebTransportBidirectionalStream.prototype",
-@@ -8615,6 +8621,8 @@
-     "onerror",
-     "onfocus",
-     "onformdata",
-+    "ongamepadconnected",
-+    "ongamepaddisconnected",
-     "ongotpointercapture",
-     "onhashchange",
-     "oninput",
 ```
 
   <!-- browserapis:end -->

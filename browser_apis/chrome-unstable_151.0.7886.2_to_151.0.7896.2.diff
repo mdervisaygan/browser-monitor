@@ -1,0 +1,52 @@
+--- ./browser_apis/chrome-unstable_151.0.7886.2.json	2026-06-18 15:14:20.758982399 +0000
++++ ./browser_apis/chrome-unstable_151.0.7896.2.json	2026-06-18 15:14:47.635622655 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9368,
++  "browserApiCount": 9374,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1572,6 +1572,7 @@
+     "File.prototype.slice",
+     "File.prototype.stream",
+     "File.prototype.text",
++    "File.prototype.textStream",
+     "File.prototype.type",
+     "File.prototype.webkitRelativePath",
+     "FileList",
+@@ -3765,7 +3766,9 @@
+     "MediaStreamTrackGenerator.prototype.writable",
+     "MediaStreamTrackProcessor",
+     "MediaStreamTrackProcessor.prototype",
++    "MediaStreamTrackProcessor.prototype.discardedFrames",
+     "MediaStreamTrackProcessor.prototype.readable",
++    "MediaStreamTrackProcessor.prototype.totalFrames",
+     "MediaStreamTrackVideoStats",
+     "MediaStreamTrackVideoStats.prototype",
+     "MediaStreamTrackVideoStats.prototype.deliveredFrames",
+@@ -5443,6 +5446,7 @@
+     "Request.prototype.signal",
+     "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
++    "Request.prototype.textStream",
+     "Request.prototype.url",
+     "ResizeObserver",
+     "ResizeObserver.prototype",
+@@ -5478,6 +5482,7 @@
+     "Response.prototype.status",
+     "Response.prototype.statusText",
+     "Response.prototype.text",
++    "Response.prototype.textStream",
+     "Response.prototype.type",
+     "Response.prototype.url",
+     "Response.redirect",
+@@ -6581,6 +6586,7 @@
+     "SpeechRecognition.prototype.quality",
+     "SpeechRecognition.prototype.start",
+     "SpeechRecognition.prototype.stop",
++    "SpeechRecognition.prototype.unspokenPunctuation",
+     "SpeechRecognitionErrorEvent",
+     "SpeechRecognitionErrorEvent.prototype",
+     "SpeechRecognitionErrorEvent.prototype.error",
