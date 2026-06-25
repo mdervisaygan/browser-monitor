@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 149.0.7827.200 (`2026-6-25`) 
+No browser API changes.
+
+  
 #### 149.0.7827.196 (`2026-6-23`) 
 No browser API changes.
 
@@ -1285,10 +1289,6 @@ Added 282 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_143.0.7499.1
      "XRWebGLBinding.prototype",
      "XRWebGLBinding.prototype.getCameraImage",
 ```
-
-  
-#### 143.0.7499.192 (`2026-1-6`) 
-No browser API changes.
 
   
 ### chrome-unstable
