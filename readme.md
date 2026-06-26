@@ -1293,6 +1293,86 @@ Added 282 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_143.0.7499.1
   
 ### chrome-unstable
   
+#### 151.0.7912.0 (`2026-6-26`) ⚡
+Added 29 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_151.0.7896.2_to_151.0.7912.0.diff), [json](./browser_apis/chrome-unstable_151.0.7896.2_to_151.0.7912.0.json), [full list](./browser_apis/chrome-unstable_151.0.7912.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_151.0.7896.2.json	2026-06-26 15:41:46.511602233 +0000
++++ ./browser_apis/chrome-unstable_151.0.7912.0.json	2026-06-26 15:42:24.290554530 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9374,
++  "browserApiCount": 9403,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1422,6 +1422,7 @@
+     "EditContext.prototype.updateText",
+     "ElementInternals",
+     "ElementInternals.prototype",
++    "ElementInternals.prototype.ariaActionsElements",
+     "ElementInternals.prototype.ariaActiveDescendantElement",
+     "ElementInternals.prototype.ariaAtomic",
+     "ElementInternals.prototype.ariaAutoComplete",
+@@ -1664,6 +1665,24 @@
+     "FontFace.prototype.variant",
+     "FontFace.prototype.variationSettings",
+     "FontFace.prototype.weight",
++    "FontFaceSet",
++    "FontFaceSet.prototype",
++    "FontFaceSet.prototype.add",
++    "FontFaceSet.prototype.check",
++    "FontFaceSet.prototype.clear",
++    "FontFaceSet.prototype.delete",
++    "FontFaceSet.prototype.entries",
++    "FontFaceSet.prototype.forEach",
++    "FontFaceSet.prototype.has",
++    "FontFaceSet.prototype.keys",
++    "FontFaceSet.prototype.load",
++    "FontFaceSet.prototype.onloading",
++    "FontFaceSet.prototype.onloadingdone",
++    "FontFaceSet.prototype.onloadingerror",
++    "FontFaceSet.prototype.ready",
++    "FontFaceSet.prototype.size",
++    "FontFaceSet.prototype.status",
++    "FontFaceSet.prototype.values",
+     "FontFaceSetLoadEvent",
+     "FontFaceSetLoadEvent.prototype",
+     "FontFaceSetLoadEvent.prototype.fontfaces",
+@@ -2800,6 +2819,14 @@
+     "HTMLUListElement.prototype.type",
+     "HTMLUnknownElement",
+     "HTMLUnknownElement.prototype",
++    "HTMLUserMediaElement",
++    "HTMLUserMediaElement.prototype",
++    "HTMLUserMediaElement.prototype.error",
++    "HTMLUserMediaElement.prototype.oncancel",
++    "HTMLUserMediaElement.prototype.onerror",
++    "HTMLUserMediaElement.prototype.onstream",
++    "HTMLUserMediaElement.prototype.setConstraints",
++    "HTMLUserMediaElement.prototype.stream",
+     "HTMLVideoElement",
+     "HTMLVideoElement.prototype",
+     "HTMLVideoElement.prototype.cancelVideoFrameCallback",
+@@ -4265,6 +4292,7 @@
+     "Option.prototype.constructor.prototype.after",
+     "Option.prototype.constructor.prototype.animate",
+     "Option.prototype.constructor.prototype.append",
++    "Option.prototype.constructor.prototype.ariaActionsElements",
+     "Option.prototype.constructor.prototype.ariaActiveDescendantElement",
+     "Option.prototype.constructor.prototype.ariaAtomic",
+     "Option.prototype.constructor.prototype.ariaAutoComplete",
+@@ -8307,6 +8335,7 @@
+     "WheelEvent.prototype.layerX",
+     "WheelEvent.prototype.layerY",
+     "WheelEvent.prototype.metaKey",
++    "WheelEvent.prototype.momentum",
+     "WheelEvent.prototype.movementX",
+     "WheelEvent.prototype.movementY",
+     "WheelEvent.prototype.offsetX",
+```
+
+  
 #### 151.0.7896.2 (`2026-6-18`) ⚡
 Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_151.0.7886.2_to_151.0.7896.2.diff), [json](./browser_apis/chrome-unstable_151.0.7886.2_to_151.0.7896.2.json), [full list](./browser_apis/chrome-unstable_151.0.7896.2.json))
  ```diff
@@ -3123,30 +3203,6 @@ Added 250 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7512
      "Text",
      "Text.prototype",
      "Text.prototype.after",
-```
-
-  
-#### 144.0.7512.1 (`2025-11-7`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7500.2_to_144.0.7512.1.diff), [json](./browser_apis/chrome-unstable_144.0.7500.2_to_144.0.7512.1.json), [full list](./browser_apis/chrome-unstable_144.0.7512.1.json))
- ```diff
---- ./browser_apis/chrome-unstable_144.0.7500.2.json	2025-11-07 19:00:55.614984883 +0000
-+++ ./browser_apis/chrome-unstable_144.0.7512.1.json	2025-11-07 19:01:28.585191609 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8841,
-+  "browserApiCount": 8842,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -7184,6 +7184,7 @@
-     "ViewTransition.prototype.skipTransition",
-     "ViewTransition.prototype.types",
-     "ViewTransition.prototype.updateCallbackDone",
-+    "ViewTransition.prototype.waitUntil",
-     "ViewTransitionTypeSet",
-     "ViewTransitionTypeSet.prototype",
-     "ViewTransitionTypeSet.prototype.add",
 ```
 
   <!-- browserapis:end -->

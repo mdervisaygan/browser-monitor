@@ -1,0 +1,41 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "151.0.7896.2",
+    "to": "151.0.7912.0"
+  },
+  "browserApis": {
+    "added": [
+      "ElementInternals.prototype.ariaActionsElements",
+      "FontFaceSet",
+      "FontFaceSet.prototype",
+      "FontFaceSet.prototype.add",
+      "FontFaceSet.prototype.check",
+      "FontFaceSet.prototype.clear",
+      "FontFaceSet.prototype.delete",
+      "FontFaceSet.prototype.entries",
+      "FontFaceSet.prototype.forEach",
+      "FontFaceSet.prototype.has",
+      "FontFaceSet.prototype.keys",
+      "FontFaceSet.prototype.load",
+      "FontFaceSet.prototype.onloading",
+      "FontFaceSet.prototype.onloadingdone",
+      "FontFaceSet.prototype.onloadingerror",
+      "FontFaceSet.prototype.ready",
+      "FontFaceSet.prototype.size",
+      "FontFaceSet.prototype.status",
+      "FontFaceSet.prototype.values",
+      "HTMLUserMediaElement",
+      "HTMLUserMediaElement.prototype",
+      "HTMLUserMediaElement.prototype.error",
+      "HTMLUserMediaElement.prototype.oncancel",
+      "HTMLUserMediaElement.prototype.onerror",
+      "HTMLUserMediaElement.prototype.onstream",
+      "HTMLUserMediaElement.prototype.setConstraints",
+      "HTMLUserMediaElement.prototype.stream",
+      "Option.prototype.constructor.prototype.ariaActionsElements",
+      "WheelEvent.prototype.momentum"
+    ],
+    "removed": []
+  }
+}

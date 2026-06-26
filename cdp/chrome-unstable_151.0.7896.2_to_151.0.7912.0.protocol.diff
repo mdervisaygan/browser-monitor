@@ -1,0 +1,134 @@
+--- ./cdp/chrome-unstable_151.0.7896.2.protocol.json	2026-06-26 15:41:47.007601555 +0000
++++ ./cdp/chrome-unstable_151.0.7912.0.protocol.json	2026-06-26 15:42:24.299554519 +0000
+@@ -2082,6 +2082,7 @@
+             "JwksHttpNotFound",
+             "JwksInvalidResponse",
+             "TokenVerificationSdJwtUnsupportedHeaderAlg",
++            "TokenVerificationSdJwtInvalidTyp",
+             "TokenVerificationSdJwtMissingIss",
+             "TokenVerificationSdJwtMissingIat",
+             "TokenVerificationSdJwtMissingCnf",
+@@ -7278,6 +7279,7 @@
+             "file-selector-button",
+             "details-content",
+             "picker",
++            "select-listbox",
+             "permission-icon",
+             "overscroll-area-parent",
+             "skeleton"
+@@ -16797,10 +16799,6 @@
+           "enum": [
+             "None",
+             "UserSetting",
+-            "TPCDMetadata",
+-            "TPCDDeprecationTrial",
+-            "TopLevelTPCDDeprecationTrial",
+-            "TPCDHeuristics",
+             "EnterprisePolicy",
+             "StorageAccess",
+             "TopLevelStorageAccess",
+@@ -20873,6 +20871,76 @@
+           ]
+         },
+         {
++          "id": "DisplayCutoutShape",
++          "description": "Supported display cutout shapes.",
++          "type": "string",
++          "enum": [
++            "pill",
++            "notch",
++            "circle",
++            "rectangle"
++          ]
++        },
++        {
++          "id": "DisplayCutoutConfig",
++          "description": "Configuration for a display cutout.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "rect",
++              "description": "A rectangle representing the cutout bounds.",
++              "$ref": "DOM.Rect"
++            },
++            {
++              "name": "shape",
++              "description": "Shape used to draw the cutout.",
++              "$ref": "DisplayCutoutShape"
++            },
++            {
++              "name": "borderRadius",
++              "description": "Border radius for rounded cutout shapes.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "upperRadius",
++              "description": "Upper shoulder radius for notch cutout shapes.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "lowerRadius",
++              "description": "Lower transition radius for notch cutout shapes.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "cx",
++              "description": "Center x coordinate for circle cutout shapes.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "cy",
++              "description": "Center y coordinate for circle cutout shapes.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "radius",
++              "description": "Radius for circle cutout shapes.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "contentColor",
++              "description": "The cutout fill color (default: black).",
++              "optional": true,
++              "$ref": "DOM.RGBA"
++            }
++          ]
++        },
++        {
+           "id": "WindowControlsOverlayConfig",
+           "description": "Configuration for Window Controls Overlay",
+           "type": "object",
+@@ -21444,6 +21512,18 @@
+           ]
+         },
+         {
++          "name": "setShowDisplayCutout",
++          "description": "Add a display cutout overlay.",
++          "parameters": [
++            {
++              "name": "displayCutoutConfig",
++              "description": "display cutout data, null means hide display cutout",
++              "optional": true,
++              "$ref": "DisplayCutoutConfig"
++            }
++          ]
++        },
++        {
+           "name": "setShowIsolatedElements",
+           "description": "Show elements in isolation mode with overlays.",
+           "parameters": [
+@@ -29223,7 +29303,7 @@
+             },
+             {
+               "name": "focus",
+-              "description": "If specified, the option is used to determine if the new target should\nbe focused or not. By default, the focus behavior depends on the\nvalue of the background field. For example, background=false and focus=false\nwill result in the target tab being opened but the browser window remain\nunchanged (if it was in the background, it will remain in the background)\nand background=false with focus=undefined will result in the window being focused.\nUsing background: true and focus: true is not supported and will result in an error.",
++              "description": "If specified, determines whether the new target should be focused.\nBy default, the focus behavior depends on the `background` parameter:\n- If `background` is false (default) and `focus` is omitted, the new target is focused and the browser window is brought to the foreground.\n- If `background` is false and `focus` is false, the target is opened but the browser window's focus remains unchanged (e.g., if the window was in the background, it stays there).\n- If `background` is true, setting `focus` to true is not supported and will result in an error.",
+               "experimental": true,
+               "optional": true,
+               "type": "boolean"
