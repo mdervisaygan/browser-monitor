@@ -1,0 +1,37 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "149.0.7827.200",
+    "to": "150.0.7871.46"
+  },
+  "browserApis": {
+    "added": [
+      "CSSContainerRule.prototype.conditions",
+      "GPUComputePassEncoder.prototype.setImmediates",
+      "GPURenderBundleEncoder.prototype.setImmediates",
+      "GPURenderPassEncoder.prototype.setImmediates",
+      "GPUSupportedLimits.prototype.maxImmediateSize",
+      "HTMLTemplateElement.prototype.htmlFor",
+      "MathMLElement.prototype.focusGroup",
+      "MathMLElement.prototype.focusGroupStart",
+      "MediaStreamTrackProcessor.prototype.discardedFrames",
+      "MediaStreamTrackProcessor.prototype.totalFrames",
+      "Option.prototype.constructor.prototype.focusGroup",
+      "Option.prototype.constructor.prototype.focusGroupStart",
+      "ProcessingInstruction.prototype.getAttribute",
+      "ProcessingInstruction.prototype.getAttributeNames",
+      "ProcessingInstruction.prototype.hasAttribute",
+      "ProcessingInstruction.prototype.hasAttributes",
+      "ProcessingInstruction.prototype.removeAttribute",
+      "ProcessingInstruction.prototype.setAttribute",
+      "ProcessingInstruction.prototype.toggleAttribute",
+      "Request.prototype.isReloadNavigation",
+      "SVGViewElement.prototype.focusGroup",
+      "SVGViewElement.prototype.focusGroupStart",
+      "Sanitizer.prototype.allowProcessingInstruction",
+      "Sanitizer.prototype.removeProcessingInstruction",
+      "SpeechRecognition.prototype.quality"
+    ],
+    "removed": []
+  }
+}
