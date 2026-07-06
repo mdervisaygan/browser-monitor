@@ -1,0 +1,29 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "151.0.7912.0",
+    "to": "152.0.7928.2"
+  },
+  "browserApis": {
+    "added": [
+      "AnimationEvent.prototype.animation",
+      "InteractionContentfulPaint",
+      "InteractionContentfulPaint.prototype",
+      "InteractionContentfulPaint.prototype.interactionId",
+      "InteractionContentfulPaint.prototype.largestContentfulPaint",
+      "InteractionContentfulPaint.prototype.paintTime",
+      "InteractionContentfulPaint.prototype.presentationTime",
+      "InteractionContentfulPaint.prototype.toJSON",
+      "PerformanceSoftNavigation",
+      "PerformanceSoftNavigation.prototype",
+      "PerformanceSoftNavigation.prototype.getLargestInteractionContentfulPaint",
+      "PerformanceSoftNavigation.prototype.interactionId",
+      "PerformanceSoftNavigation.prototype.navigationType",
+      "PerformanceSoftNavigation.prototype.paintTime",
+      "PerformanceSoftNavigation.prototype.presentationTime",
+      "TransitionEvent.prototype.animation",
+      "VisibilityStateEntry.prototype.navigationId"
+    ],
+    "removed": []
+  }
+}
