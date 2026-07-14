@@ -1041,6 +1041,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 152.0.7939.5 (`2026-7-14`) 
+No browser API changes.
+
+  
 #### 152.0.7928.2 (`2026-7-6`) ⚡
 Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_151.0.7912.0_to_152.0.7928.2.diff), [json](./browser_apis/chrome-unstable_151.0.7912.0_to_152.0.7928.2.json), [full list](./browser_apis/chrome-unstable_152.0.7928.2.json))
  ```diff
@@ -2683,37 +2687,6 @@ Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7534.
      "XRWebGLBinding",
      "XRWebGLBinding.prototype",
      "XRWebGLBinding.prototype.getCameraImage",
-```
-
-  
-#### 144.0.7534.0 (`2025-11-21`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7524.0_to_144.0.7534.0.diff), [json](./browser_apis/chrome-unstable_144.0.7524.0_to_144.0.7534.0.json), [full list](./browser_apis/chrome-unstable_144.0.7534.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_144.0.7524.0.json	2025-11-21 18:00:58.819671689 +0000
-+++ ./browser_apis/chrome-unstable_144.0.7534.0.json	2025-11-21 18:05:31.115443867 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9092,
-+  "browserApiCount": 9096,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -5365,10 +5365,14 @@
-     "SVGAElement.prototype",
-     "SVGAElement.prototype.download",
-     "SVGAElement.prototype.href",
-+    "SVGAElement.prototype.hreflang",
-     "SVGAElement.prototype.interestForElement",
-+    "SVGAElement.prototype.ping",
-+    "SVGAElement.prototype.referrerPolicy",
-     "SVGAElement.prototype.rel",
-     "SVGAElement.prototype.relList",
-     "SVGAElement.prototype.target",
-+    "SVGAElement.prototype.type",
-     "SVGAngle",
-     "SVGAngle.prototype",
-     "SVGAngle.prototype.convertToSpecifiedUnits",
 ```
 
   <!-- browserapis:end -->
