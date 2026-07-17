@@ -1,0 +1,27 @@
+--- ./browser_apis/chrome-unstable_152.0.7939.5.json	2026-07-17 17:54:33.117804265 +0000
++++ ./browser_apis/chrome-unstable_152.0.7953.3.json	2026-07-17 17:55:05.718740198 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9420,
++  "browserApiCount": 9423,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2767,6 +2767,7 @@
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTemplateElement.prototype.shadowRootSerializable",
++    "HTMLTemplateElement.prototype.shadowRootSlotAssignment",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+     "HTMLTextAreaElement.prototype.autocomplete",
+@@ -4810,6 +4811,8 @@
+     "PerformanceMark",
+     "PerformanceMark.prototype",
+     "PerformanceMark.prototype.detail",
++    "PerformanceMarkConditional",
++    "PerformanceMarkConditional.prototype",
+     "PerformanceMeasure",
+     "PerformanceMeasure.prototype",
+     "PerformanceMeasure.prototype.detail",

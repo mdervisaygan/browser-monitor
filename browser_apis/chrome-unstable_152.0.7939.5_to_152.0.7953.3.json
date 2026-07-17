@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "152.0.7939.5",
+    "to": "152.0.7953.3"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLTemplateElement.prototype.shadowRootSlotAssignment",
+      "PerformanceMarkConditional",
+      "PerformanceMarkConditional.prototype"
+    ],
+    "removed": []
+  }
+}

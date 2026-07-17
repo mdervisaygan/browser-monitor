@@ -851,6 +851,39 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 152.0.7953.3 (`2026-7-17`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_152.0.7939.5_to_152.0.7953.3.diff), [json](./browser_apis/chrome-unstable_152.0.7939.5_to_152.0.7953.3.json), [full list](./browser_apis/chrome-unstable_152.0.7953.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_152.0.7939.5.json	2026-07-17 17:54:33.117804265 +0000
++++ ./browser_apis/chrome-unstable_152.0.7953.3.json	2026-07-17 17:55:05.718740198 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9420,
++  "browserApiCount": 9423,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2767,6 +2767,7 @@
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTemplateElement.prototype.shadowRootSerializable",
++    "HTMLTemplateElement.prototype.shadowRootSlotAssignment",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+     "HTMLTextAreaElement.prototype.autocomplete",
+@@ -4810,6 +4811,8 @@
+     "PerformanceMark",
+     "PerformanceMark.prototype",
+     "PerformanceMark.prototype.detail",
++    "PerformanceMarkConditional",
++    "PerformanceMarkConditional.prototype",
+     "PerformanceMeasure",
+     "PerformanceMeasure.prototype",
+     "PerformanceMeasure.prototype.detail",
+```
+
+  
 #### 152.0.7939.5 (`2026-7-14`) 
 No browser API changes.
 
@@ -2413,90 +2446,5 @@ Added 24 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7561.
   
 #### 145.0.7561.2 (`2025-12-5`) 
 No browser API changes.
-
-  
-#### 144.0.7559.3 (`2025-12-3`) ⚡
-Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_144.0.7534.0_to_144.0.7559.3.diff), [json](./browser_apis/chrome-unstable_144.0.7534.0_to_144.0.7559.3.json), [full list](./browser_apis/chrome-unstable_144.0.7559.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_144.0.7534.0.json	2025-12-03 22:00:51.452920700 +0000
-+++ ./browser_apis/chrome-unstable_144.0.7559.3.json	2025-12-03 22:04:50.138311605 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9096,
-+  "browserApiCount": 9123,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2267,6 +2267,21 @@
-     "HTMLFrameSetElement.prototype.onunhandledrejection",
-     "HTMLFrameSetElement.prototype.onunload",
-     "HTMLFrameSetElement.prototype.rows",
-+    "HTMLGeolocationElement",
-+    "HTMLGeolocationElement.prototype",
-+    "HTMLGeolocationElement.prototype.accuracymode",
-+    "HTMLGeolocationElement.prototype.autolocate",
-+    "HTMLGeolocationElement.prototype.error",
-+    "HTMLGeolocationElement.prototype.initialPermissionStatus",
-+    "HTMLGeolocationElement.prototype.invalidReason",
-+    "HTMLGeolocationElement.prototype.isValid",
-+    "HTMLGeolocationElement.prototype.onlocation",
-+    "HTMLGeolocationElement.prototype.onpromptaction",
-+    "HTMLGeolocationElement.prototype.onpromptdismiss",
-+    "HTMLGeolocationElement.prototype.onvalidationstatuschange",
-+    "HTMLGeolocationElement.prototype.permissionStatus",
-+    "HTMLGeolocationElement.prototype.position",
-+    "HTMLGeolocationElement.prototype.watch",
-     "HTMLHRElement",
-     "HTMLHRElement.prototype",
-     "HTMLHRElement.prototype.align",
-@@ -4621,6 +4636,7 @@
-     "Performance.prototype.getEntries",
-     "Performance.prototype.getEntriesByName",
-     "Performance.prototype.getEntriesByType",
-+    "Performance.prototype.interactionCount",
-     "Performance.prototype.mark",
-     "Performance.prototype.measure",
-     "Performance.prototype.memory",
-@@ -7547,6 +7563,8 @@
-     "WebAssembly.Memory.prototype",
-     "WebAssembly.Memory.prototype.buffer",
-     "WebAssembly.Memory.prototype.grow",
-+    "WebAssembly.Memory.prototype.toFixedLengthBuffer",
-+    "WebAssembly.Memory.prototype.toResizableBuffer",
-     "WebAssembly.Module",
-     "WebAssembly.Module.customSections",
-     "WebAssembly.Module.exports",
-@@ -8662,6 +8680,7 @@
-     "XRSession.prototype.onsqueezeend",
-     "XRSession.prototype.onsqueezestart",
-     "XRSession.prototype.onvisibilitychange",
-+    "XRSession.prototype.onvisibilitymaskchange",
-     "XRSession.prototype.pauseDepthSensing",
-     "XRSession.prototype.preferredReflectionFormat",
-     "XRSession.prototype.renderState",
-@@ -8692,6 +8711,7 @@
-     "XRView.prototype",
-     "XRView.prototype.camera",
-     "XRView.prototype.eye",
-+    "XRView.prototype.index",
-     "XRView.prototype.isFirstPersonObserver",
-     "XRView.prototype.projectionMatrix",
-     "XRView.prototype.recommendedViewportScale",
-@@ -8706,6 +8726,13 @@
-     "XRViewport.prototype.width",
-     "XRViewport.prototype.x",
-     "XRViewport.prototype.y",
-+    "XRVisibilityMaskChangeEvent",
-+    "XRVisibilityMaskChangeEvent.prototype",
-+    "XRVisibilityMaskChangeEvent.prototype.eye",
-+    "XRVisibilityMaskChangeEvent.prototype.index",
-+    "XRVisibilityMaskChangeEvent.prototype.indices",
-+    "XRVisibilityMaskChangeEvent.prototype.session",
-+    "XRVisibilityMaskChangeEvent.prototype.vertices",
-     "XRWebGLBinding",
-     "XRWebGLBinding.prototype",
-     "XRWebGLBinding.prototype.getCameraImage",
-```
 
   <!-- browserapis:end -->
