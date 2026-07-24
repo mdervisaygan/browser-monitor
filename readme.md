@@ -851,6 +851,73 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 152.0.7967.2 (`2026-7-24`) ⚡
+Added 10 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_152.0.7953.3_to_152.0.7967.2.diff), [json](./browser_apis/chrome-unstable_152.0.7953.3_to_152.0.7967.2.json), [full list](./browser_apis/chrome-unstable_152.0.7967.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_152.0.7953.3.json	2026-07-24 14:40:30.306831425 +0000
++++ ./browser_apis/chrome-unstable_152.0.7967.2.json	2026-07-24 14:40:59.050959331 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9423,
++  "browserApiCount": 9428,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1339,6 +1339,7 @@
+     "DeviceMotionEvent.prototype.accelerationIncludingGravity",
+     "DeviceMotionEvent.prototype.interval",
+     "DeviceMotionEvent.prototype.rotationRate",
++    "DeviceMotionEvent.requestPermission",
+     "DeviceMotionEventAcceleration",
+     "DeviceMotionEventAcceleration.prototype",
+     "DeviceMotionEventAcceleration.prototype.x",
+@@ -1355,6 +1356,7 @@
+     "DeviceOrientationEvent.prototype.alpha",
+     "DeviceOrientationEvent.prototype.beta",
+     "DeviceOrientationEvent.prototype.gamma",
++    "DeviceOrientationEvent.requestPermission",
+     "DevicePosture",
+     "DevicePosture.prototype",
+     "DevicePosture.prototype.onchange",
+@@ -2766,6 +2768,7 @@
+     "HTMLTemplateElement.prototype.shadowRootCustomElementRegistry",
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
++    "HTMLTemplateElement.prototype.shadowRootReferenceTarget",
+     "HTMLTemplateElement.prototype.shadowRootSerializable",
+     "HTMLTemplateElement.prototype.shadowRootSlotAssignment",
+     "HTMLTextAreaElement",
+@@ -6535,6 +6538,7 @@
+     "ShadowRoot.prototype.prepend",
+     "ShadowRoot.prototype.querySelector",
+     "ShadowRoot.prototype.querySelectorAll",
++    "ShadowRoot.prototype.referenceTarget",
+     "ShadowRoot.prototype.replaceChildren",
+     "ShadowRoot.prototype.serializable",
+     "ShadowRoot.prototype.setHTML",
+@@ -6689,12 +6693,13 @@
+     "SpeechSynthesisVoice.prototype.voiceURI",
+     "StaticRange",
+     "StaticRange.prototype",
+-    "StaticRange.prototype.collapsed",
+     "StaticRange.prototype.constructor",
+-    "StaticRange.prototype.endContainer",
+-    "StaticRange.prototype.endOffset",
+-    "StaticRange.prototype.startContainer",
+-    "StaticRange.prototype.startOffset",
++    "StaticRange.prototype.constructor.prototype",
++    "StaticRange.prototype.constructor.prototype.collapsed",
++    "StaticRange.prototype.constructor.prototype.endContainer",
++    "StaticRange.prototype.constructor.prototype.endOffset",
++    "StaticRange.prototype.constructor.prototype.startContainer",
++    "StaticRange.prototype.constructor.prototype.startOffset",
+     "StereoPannerNode",
+     "StereoPannerNode.prototype",
+     "StereoPannerNode.prototype.pan",
+```
+
+  
 #### 152.0.7953.3 (`2026-7-17`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_152.0.7939.5_to_152.0.7953.3.diff), [json](./browser_apis/chrome-unstable_152.0.7939.5_to_152.0.7953.3.json), [full list](./browser_apis/chrome-unstable_152.0.7953.3.json))
  ```diff
@@ -2442,9 +2509,5 @@ Added 24 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7561.
      "onanimationiteration",
      "onanimationstart",
 ```
-
-  
-#### 145.0.7561.2 (`2025-12-5`) 
-No browser API changes.
 
   <!-- browserapis:end -->

@@ -1,0 +1,28 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "152.0.7953.3",
+    "to": "152.0.7967.2"
+  },
+  "browserApis": {
+    "added": [
+      "DeviceMotionEvent.requestPermission",
+      "DeviceOrientationEvent.requestPermission",
+      "HTMLTemplateElement.prototype.shadowRootReferenceTarget",
+      "ShadowRoot.prototype.referenceTarget",
+      "StaticRange.prototype.constructor.prototype",
+      "StaticRange.prototype.constructor.prototype.collapsed",
+      "StaticRange.prototype.constructor.prototype.endContainer",
+      "StaticRange.prototype.constructor.prototype.endOffset",
+      "StaticRange.prototype.constructor.prototype.startContainer",
+      "StaticRange.prototype.constructor.prototype.startOffset"
+    ],
+    "removed": [
+      "StaticRange.prototype.collapsed",
+      "StaticRange.prototype.endContainer",
+      "StaticRange.prototype.endOffset",
+      "StaticRange.prototype.startContainer",
+      "StaticRange.prototype.startOffset"
+    ]
+  }
+}
