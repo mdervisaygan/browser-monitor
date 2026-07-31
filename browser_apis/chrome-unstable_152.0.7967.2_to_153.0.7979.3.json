@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "152.0.7967.2",
+    "to": "153.0.7979.3"
+  },
+  "browserApis": {
+    "added": [
+      "Navigator.prototype.cpuPerformance"
+    ],
+    "removed": []
+  }
+}

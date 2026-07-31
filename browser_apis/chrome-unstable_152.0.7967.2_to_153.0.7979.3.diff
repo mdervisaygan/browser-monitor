@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_152.0.7967.2.json	2026-07-31 15:51:12.194870541 +0000
++++ ./browser_apis/chrome-unstable_153.0.7979.3.json	2026-07-31 15:51:54.656137516 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9428,
++  "browserApiCount": 9429,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3954,6 +3954,7 @@
+     "Navigator.prototype.clipboard",
+     "Navigator.prototype.connection",
+     "Navigator.prototype.cookieEnabled",
++    "Navigator.prototype.cpuPerformance",
+     "Navigator.prototype.createAuctionNonce",
+     "Navigator.prototype.credentials",
+     "Navigator.prototype.deprecatedReplaceInURN",
