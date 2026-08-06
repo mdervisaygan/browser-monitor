@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 151.0.7922.108 (`2026-8-6`) 
+No browser API changes.
+
+  
 #### 151.0.7922.75 (`2026-8-4`) 
 No browser API changes.
 
@@ -1015,10 +1019,6 @@ Added 56 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_145.0.7632.15
      "XMLDocument.prototype.designMode",
      "XMLDocument.prototype.dir",
 ```
-
-  
-#### 145.0.7632.159 (`2026-3-3`) 
-No browser API changes.
 
   
 ### chrome-unstable
