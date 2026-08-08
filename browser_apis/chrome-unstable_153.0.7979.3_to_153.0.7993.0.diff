@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_153.0.7979.3.json	2026-08-08 00:40:41.560456615 +0000
++++ ./browser_apis/chrome-unstable_153.0.7993.0.json	2026-08-08 00:41:08.890149622 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9429,
++  "browserApiCount": 9428,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2243,7 +2243,6 @@
+     "HTMLEmbedElement.prototype.type",
+     "HTMLEmbedElement.prototype.width",
+     "HTMLFencedFrameElement",
+-    "HTMLFencedFrameElement.canLoadOpaqueURL",
+     "HTMLFencedFrameElement.prototype",
+     "HTMLFencedFrameElement.prototype.allow",
+     "HTMLFencedFrameElement.prototype.config",

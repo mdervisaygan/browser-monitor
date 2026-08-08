@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "153.0.7979.3",
+    "to": "153.0.7993.0"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "HTMLFencedFrameElement.canLoadOpaqueURL"
+    ]
+  }
+}

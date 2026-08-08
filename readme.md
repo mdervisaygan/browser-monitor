@@ -1023,6 +1023,30 @@ Added 56 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_145.0.7632.15
   
 ### chrome-unstable
   
+#### 153.0.7993.0 (`2026-8-7`) ⚡
+Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_153.0.7979.3_to_153.0.7993.0.diff), [json](./browser_apis/chrome-unstable_153.0.7979.3_to_153.0.7993.0.json), [full list](./browser_apis/chrome-unstable_153.0.7993.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_153.0.7979.3.json	2026-08-08 00:40:41.560456615 +0000
++++ ./browser_apis/chrome-unstable_153.0.7993.0.json	2026-08-08 00:41:08.890149622 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9429,
++  "browserApiCount": 9428,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2243,7 +2243,6 @@
+     "HTMLEmbedElement.prototype.type",
+     "HTMLEmbedElement.prototype.width",
+     "HTMLFencedFrameElement",
+-    "HTMLFencedFrameElement.canLoadOpaqueURL",
+     "HTMLFencedFrameElement.prototype",
+     "HTMLFencedFrameElement.prototype.allow",
+     "HTMLFencedFrameElement.prototype.config",
+```
+
+  
 #### 153.0.7979.3 (`2026-7-31`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_152.0.7967.2_to_153.0.7979.3.diff), [json](./browser_apis/chrome-unstable_152.0.7967.2_to_153.0.7979.3.json), [full list](./browser_apis/chrome-unstable_153.0.7979.3.json))
  ```diff
@@ -2556,30 +2580,6 @@ Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7587.4
      "PeriodicSyncManager",
      "PeriodicSyncManager.prototype",
      "PeriodicSyncManager.prototype.getTags",
-```
-
-  
-#### 145.0.7587.4 (`2025-12-22`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7572.2_to_145.0.7587.4.diff), [json](./browser_apis/chrome-unstable_145.0.7572.2_to_145.0.7587.4.json), [full list](./browser_apis/chrome-unstable_145.0.7587.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_145.0.7572.2.json	2025-12-22 20:00:51.264849748 +0000
-+++ ./browser_apis/chrome-unstable_145.0.7587.4.json	2025-12-22 20:01:32.157114250 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9147,
-+  "browserApiCount": 9148,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -7447,6 +7447,7 @@
-     "VideoFrame.prototype.duration",
-     "VideoFrame.prototype.flip",
-     "VideoFrame.prototype.format",
-+    "VideoFrame.prototype.metadata",
-     "VideoFrame.prototype.rotation",
-     "VideoFrame.prototype.timestamp",
-     "VideoFrame.prototype.visibleRect",
 ```
 
   <!-- browserapis:end -->
