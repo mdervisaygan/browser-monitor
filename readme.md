@@ -835,6 +835,145 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 153.0.8003.0 (`2026-8-13`) ⚡
+Added 12 APIs, removed 32 (see: [diff](./browser_apis/chrome-unstable_153.0.7993.0_to_153.0.8003.0.diff), [json](./browser_apis/chrome-unstable_153.0.7993.0_to_153.0.8003.0.json), [full list](./browser_apis/chrome-unstable_153.0.8003.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_153.0.7993.0.json	2026-08-13 18:43:24.428133278 +0000
++++ ./browser_apis/chrome-unstable_153.0.8003.0.json	2026-08-13 18:43:55.878207481 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9428,
++  "browserApiCount": 9408,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2385,7 +2385,6 @@
+     "HTMLIFrameElement.prototype.referrerPolicy",
+     "HTMLIFrameElement.prototype.sandbox",
+     "HTMLIFrameElement.prototype.scrolling",
+-    "HTMLIFrameElement.prototype.sharedStorageWritable",
+     "HTMLIFrameElement.prototype.src",
+     "HTMLIFrameElement.prototype.srcdoc",
+     "HTMLIFrameElement.prototype.width",
+@@ -2397,6 +2396,7 @@
+     "HTMLInputElement.prototype.autocomplete",
+     "HTMLInputElement.prototype.checkValidity",
+     "HTMLInputElement.prototype.checked",
++    "HTMLInputElement.prototype.createValueRange",
+     "HTMLInputElement.prototype.defaultChecked",
+     "HTMLInputElement.prototype.defaultValue",
+     "HTMLInputElement.prototype.dirName",
+@@ -2775,6 +2775,7 @@
+     "HTMLTextAreaElement.prototype.autocomplete",
+     "HTMLTextAreaElement.prototype.checkValidity",
+     "HTMLTextAreaElement.prototype.cols",
++    "HTMLTextAreaElement.prototype.createValueRange",
+     "HTMLTextAreaElement.prototype.defaultValue",
+     "HTMLTextAreaElement.prototype.dirName",
+     "HTMLTextAreaElement.prototype.disabled",
+@@ -3072,7 +3073,6 @@
+     "Image.prototype.naturalHeight",
+     "Image.prototype.naturalWidth",
+     "Image.prototype.referrerPolicy",
+-    "Image.prototype.sharedStorageWritable",
+     "Image.prototype.sizes",
+     "Image.prototype.src",
+     "Image.prototype.srcset",
+@@ -3300,6 +3300,8 @@
+     "Iterator.prototype.some",
+     "Iterator.prototype.take",
+     "Iterator.prototype.toArray",
++    "Iterator.zip",
++    "Iterator.zipKeyed",
+     "JSON",
+     "JSON.isRawJSON",
+     "JSON.parse",
+@@ -4295,6 +4297,11 @@
+     "OffscreenCanvasRenderingContext2D.prototype.transform",
+     "OffscreenCanvasRenderingContext2D.prototype.translate",
+     "OffscreenCanvasRenderingContext2D.prototype.wordSpacing",
++    "OpaqueRange",
++    "OpaqueRange.prototype",
++    "OpaqueRange.prototype.disconnect",
++    "OpaqueRange.prototype.getBoundingClientRect",
++    "OpaqueRange.prototype.getClientRects",
+     "Option",
+     "Option.prototype",
+     "Option.prototype.constructor",
+@@ -4362,6 +4369,7 @@
+     "Option.prototype.constructor.prototype.attributeStyleMap",
+     "Option.prototype.constructor.prototype.attributes",
+     "Option.prototype.constructor.prototype.autocapitalize",
++    "Option.prototype.constructor.prototype.autocorrect",
+     "Option.prototype.constructor.prototype.autofocus",
+     "Option.prototype.constructor.prototype.before",
+     "Option.prototype.constructor.prototype.blur",
+@@ -4814,8 +4822,6 @@
+     "PerformanceMark",
+     "PerformanceMark.prototype",
+     "PerformanceMark.prototype.detail",
+-    "PerformanceMarkConditional",
+-    "PerformanceMarkConditional.prototype",
+     "PerformanceMeasure",
+     "PerformanceMeasure.prototype",
+     "PerformanceMeasure.prototype.detail",
+@@ -6545,31 +6551,6 @@
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+-    "SharedStorage",
+-    "SharedStorage.prototype",
+-    "SharedStorage.prototype.append",
+-    "SharedStorage.prototype.batchUpdate",
+-    "SharedStorage.prototype.clear",
+-    "SharedStorage.prototype.createWorklet",
+-    "SharedStorage.prototype.delete",
+-    "SharedStorage.prototype.run",
+-    "SharedStorage.prototype.selectURL",
+-    "SharedStorage.prototype.set",
+-    "SharedStorage.prototype.worklet",
+-    "SharedStorageAppendMethod",
+-    "SharedStorageAppendMethod.prototype",
+-    "SharedStorageAppendMethod.prototype.constructor",
+-    "SharedStorageClearMethod",
+-    "SharedStorageClearMethod.prototype",
+-    "SharedStorageDeleteMethod",
+-    "SharedStorageDeleteMethod.prototype",
+-    "SharedStorageSetMethod",
+-    "SharedStorageSetMethod.prototype",
+-    "SharedStorageWorklet",
+-    "SharedStorageWorklet.prototype",
+-    "SharedStorageWorklet.prototype.addModule",
+-    "SharedStorageWorklet.prototype.run",
+-    "SharedStorageWorklet.prototype.selectURL",
+     "SharedWorker",
+     "SharedWorker.prototype",
+     "SharedWorker.prototype.onerror",
+@@ -6696,10 +6677,10 @@
+     "StaticRange.prototype.constructor",
+     "StaticRange.prototype.constructor.prototype",
+     "StaticRange.prototype.constructor.prototype.collapsed",
+-    "StaticRange.prototype.constructor.prototype.endContainer",
+     "StaticRange.prototype.constructor.prototype.endOffset",
+-    "StaticRange.prototype.constructor.prototype.startContainer",
+     "StaticRange.prototype.constructor.prototype.startOffset",
++    "StaticRange.prototype.endContainer",
++    "StaticRange.prototype.startContainer",
+     "StereoPannerNode",
+     "StereoPannerNode.prototype",
+     "StereoPannerNode.prototype.pan",
+@@ -9326,7 +9307,6 @@
+     "sessionStorage",
+     "setInterval",
+     "setTimeout",
+-    "sharedStorage",
+     "showDirectoryPicker",
+     "showOpenFilePicker",
+     "showSaveFilePicker",
+```
+
+  
 #### 153.0.7993.0 (`2026-8-7`) ⚡
 Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_153.0.7979.3_to_153.0.7993.0.diff), [json](./browser_apis/chrome-unstable_153.0.7979.3_to_153.0.7993.0.json), [full list](./browser_apis/chrome-unstable_153.0.7993.0.json))
  ```diff
@@ -2348,50 +2487,6 @@ Added 16 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7620.
      "XMLDocument.prototype.constructor.parseHTMLUnsafe",
      "XMLDocument.prototype.contentType",
      "XMLDocument.prototype.cookie",
-```
-
-  
-#### 145.0.7620.2 (`2026-1-9`) ⚡
-Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_145.0.7587.4_to_145.0.7620.2.diff), [json](./browser_apis/chrome-unstable_145.0.7587.4_to_145.0.7620.2.json), [full list](./browser_apis/chrome-unstable_145.0.7620.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_145.0.7587.4.json	2026-01-09 18:01:05.116647824 +0000
-+++ ./browser_apis/chrome-unstable_145.0.7620.2.json	2026-01-09 18:01:45.392450372 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9148,
-+  "browserApiCount": 9155,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3835,6 +3835,7 @@
-     "NavigationTransition.prototype.finished",
-     "NavigationTransition.prototype.from",
-     "NavigationTransition.prototype.navigationType",
-+    "NavigationTransition.prototype.to",
-     "Navigator",
-     "Navigator.prototype",
-     "Navigator.prototype.adAuctionComponents",
-@@ -4709,6 +4710,7 @@
-     "PerformanceNavigationTiming",
-     "PerformanceNavigationTiming.prototype",
-     "PerformanceNavigationTiming.prototype.activationStart",
-+    "PerformanceNavigationTiming.prototype.confidence",
-     "PerformanceNavigationTiming.prototype.criticalCHRestart",
-     "PerformanceNavigationTiming.prototype.domComplete",
-     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
-@@ -4812,6 +4814,11 @@
-     "PerformanceTiming.prototype.toJSON",
-     "PerformanceTiming.prototype.unloadEventEnd",
-     "PerformanceTiming.prototype.unloadEventStart",
-+    "PerformanceTimingConfidence",
-+    "PerformanceTimingConfidence.prototype",
-+    "PerformanceTimingConfidence.prototype.randomizedTriggerRate",
-+    "PerformanceTimingConfidence.prototype.toJSON",
-+    "PerformanceTimingConfidence.prototype.value",
-     "PeriodicSyncManager",
-     "PeriodicSyncManager.prototype",
-     "PeriodicSyncManager.prototype.getTags",
 ```
 
   <!-- browserapis:end -->

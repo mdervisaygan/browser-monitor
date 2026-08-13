@@ -1,0 +1,57 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "153.0.7993.0",
+    "to": "153.0.8003.0"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLInputElement.prototype.createValueRange",
+      "HTMLTextAreaElement.prototype.createValueRange",
+      "Iterator.zip",
+      "Iterator.zipKeyed",
+      "OpaqueRange",
+      "OpaqueRange.prototype",
+      "OpaqueRange.prototype.disconnect",
+      "OpaqueRange.prototype.getBoundingClientRect",
+      "OpaqueRange.prototype.getClientRects",
+      "Option.prototype.constructor.prototype.autocorrect",
+      "StaticRange.prototype.endContainer",
+      "StaticRange.prototype.startContainer"
+    ],
+    "removed": [
+      "HTMLIFrameElement.prototype.sharedStorageWritable",
+      "Image.prototype.sharedStorageWritable",
+      "PerformanceMarkConditional",
+      "PerformanceMarkConditional.prototype",
+      "SharedStorage",
+      "SharedStorage.prototype",
+      "SharedStorage.prototype.append",
+      "SharedStorage.prototype.batchUpdate",
+      "SharedStorage.prototype.clear",
+      "SharedStorage.prototype.createWorklet",
+      "SharedStorage.prototype.delete",
+      "SharedStorage.prototype.run",
+      "SharedStorage.prototype.selectURL",
+      "SharedStorage.prototype.set",
+      "SharedStorage.prototype.worklet",
+      "SharedStorageAppendMethod",
+      "SharedStorageAppendMethod.prototype",
+      "SharedStorageAppendMethod.prototype.constructor",
+      "SharedStorageClearMethod",
+      "SharedStorageClearMethod.prototype",
+      "SharedStorageDeleteMethod",
+      "SharedStorageDeleteMethod.prototype",
+      "SharedStorageSetMethod",
+      "SharedStorageSetMethod.prototype",
+      "SharedStorageWorklet",
+      "SharedStorageWorklet.prototype",
+      "SharedStorageWorklet.prototype.addModule",
+      "SharedStorageWorklet.prototype.run",
+      "SharedStorageWorklet.prototype.selectURL",
+      "StaticRange.prototype.constructor.prototype.endContainer",
+      "StaticRange.prototype.constructor.prototype.startContainer",
+      "sharedStorage"
+    ]
+  }
+}
