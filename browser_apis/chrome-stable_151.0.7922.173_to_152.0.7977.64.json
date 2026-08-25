@@ -1,0 +1,33 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "151.0.7922.173",
+    "to": "152.0.7977.64"
+  },
+  "browserApis": {
+    "added": [
+      "DeviceMotionEvent.requestPermission",
+      "DeviceOrientationEvent.requestPermission",
+      "HTMLInputElement.prototype.createValueRange",
+      "HTMLTemplateElement.prototype.shadowRootReferenceTarget",
+      "HTMLTemplateElement.prototype.shadowRootSlotAssignment",
+      "HTMLTextAreaElement.prototype.createValueRange",
+      "Navigator.prototype.cpuPerformance",
+      "OpaqueRange",
+      "OpaqueRange.prototype",
+      "OpaqueRange.prototype.disconnect",
+      "OpaqueRange.prototype.getBoundingClientRect",
+      "OpaqueRange.prototype.getClientRects",
+      "ShadowRoot.prototype.referenceTarget",
+      "StaticRange.prototype.constructor.prototype",
+      "StaticRange.prototype.constructor.prototype.collapsed",
+      "StaticRange.prototype.constructor.prototype.endOffset",
+      "StaticRange.prototype.constructor.prototype.startOffset"
+    ],
+    "removed": [
+      "StaticRange.prototype.collapsed",
+      "StaticRange.prototype.endOffset",
+      "StaticRange.prototype.startOffset"
+    ]
+  }
+}

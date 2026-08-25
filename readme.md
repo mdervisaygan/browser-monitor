@@ -5,6 +5,107 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 152.0.7977.64 (`2026-8-25`) ⚡
+Added 17 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_151.0.7922.173_to_152.0.7977.64.diff), [json](./browser_apis/chrome-stable_151.0.7922.173_to_152.0.7977.64.json), [full list](./browser_apis/chrome-stable_152.0.7977.64.json))
+ ```diff
+--- ./browser_apis/chrome-stable_151.0.7922.173.json	2026-08-25 19:20:26.360393777 +0000
++++ ./browser_apis/chrome-stable_152.0.7977.64.json	2026-08-25 19:20:55.692116855 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9420,
++  "browserApiCount": 9434,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1339,6 +1339,7 @@
+     "DeviceMotionEvent.prototype.accelerationIncludingGravity",
+     "DeviceMotionEvent.prototype.interval",
+     "DeviceMotionEvent.prototype.rotationRate",
++    "DeviceMotionEvent.requestPermission",
+     "DeviceMotionEventAcceleration",
+     "DeviceMotionEventAcceleration.prototype",
+     "DeviceMotionEventAcceleration.prototype.x",
+@@ -1355,6 +1356,7 @@
+     "DeviceOrientationEvent.prototype.alpha",
+     "DeviceOrientationEvent.prototype.beta",
+     "DeviceOrientationEvent.prototype.gamma",
++    "DeviceOrientationEvent.requestPermission",
+     "DevicePosture",
+     "DevicePosture.prototype",
+     "DevicePosture.prototype.onchange",
+@@ -2396,6 +2398,7 @@
+     "HTMLInputElement.prototype.autocomplete",
+     "HTMLInputElement.prototype.checkValidity",
+     "HTMLInputElement.prototype.checked",
++    "HTMLInputElement.prototype.createValueRange",
+     "HTMLInputElement.prototype.defaultChecked",
+     "HTMLInputElement.prototype.defaultValue",
+     "HTMLInputElement.prototype.dirName",
+@@ -2766,12 +2769,15 @@
+     "HTMLTemplateElement.prototype.shadowRootCustomElementRegistry",
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
++    "HTMLTemplateElement.prototype.shadowRootReferenceTarget",
+     "HTMLTemplateElement.prototype.shadowRootSerializable",
++    "HTMLTemplateElement.prototype.shadowRootSlotAssignment",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+     "HTMLTextAreaElement.prototype.autocomplete",
+     "HTMLTextAreaElement.prototype.checkValidity",
+     "HTMLTextAreaElement.prototype.cols",
++    "HTMLTextAreaElement.prototype.createValueRange",
+     "HTMLTextAreaElement.prototype.defaultValue",
+     "HTMLTextAreaElement.prototype.dirName",
+     "HTMLTextAreaElement.prototype.disabled",
+@@ -3950,6 +3956,7 @@
+     "Navigator.prototype.clipboard",
+     "Navigator.prototype.connection",
+     "Navigator.prototype.cookieEnabled",
++    "Navigator.prototype.cpuPerformance",
+     "Navigator.prototype.createAuctionNonce",
+     "Navigator.prototype.credentials",
+     "Navigator.prototype.deprecatedReplaceInURN",
+@@ -4291,6 +4298,11 @@
+     "OffscreenCanvasRenderingContext2D.prototype.transform",
+     "OffscreenCanvasRenderingContext2D.prototype.translate",
+     "OffscreenCanvasRenderingContext2D.prototype.wordSpacing",
++    "OpaqueRange",
++    "OpaqueRange.prototype",
++    "OpaqueRange.prototype.disconnect",
++    "OpaqueRange.prototype.getBoundingClientRect",
++    "OpaqueRange.prototype.getClientRects",
+     "Option",
+     "Option.prototype",
+     "Option.prototype.constructor",
+@@ -6532,6 +6544,7 @@
+     "ShadowRoot.prototype.prepend",
+     "ShadowRoot.prototype.querySelector",
+     "ShadowRoot.prototype.querySelectorAll",
++    "ShadowRoot.prototype.referenceTarget",
+     "ShadowRoot.prototype.replaceChildren",
+     "ShadowRoot.prototype.serializable",
+     "ShadowRoot.prototype.setHTML",
+@@ -6686,12 +6699,13 @@
+     "SpeechSynthesisVoice.prototype.voiceURI",
+     "StaticRange",
+     "StaticRange.prototype",
+-    "StaticRange.prototype.collapsed",
+     "StaticRange.prototype.constructor",
++    "StaticRange.prototype.constructor.prototype",
++    "StaticRange.prototype.constructor.prototype.collapsed",
++    "StaticRange.prototype.constructor.prototype.endOffset",
++    "StaticRange.prototype.constructor.prototype.startOffset",
+     "StaticRange.prototype.endContainer",
+-    "StaticRange.prototype.endOffset",
+     "StaticRange.prototype.startContainer",
+-    "StaticRange.prototype.startOffset",
+     "StereoPannerNode",
+     "StereoPannerNode.prototype",
+     "StereoPannerNode.prototype.pan",
+```
+
+  
 #### 151.0.7922.173 (`2026-8-20`) 
 No browser API changes.
 
@@ -826,10 +927,6 @@ No browser API changes.
 
   
 #### 146.0.7680.164 (`2026-3-23`) 
-No browser API changes.
-
-  
-#### 146.0.7680.153 (`2026-3-18`) 
 No browser API changes.
 
   
