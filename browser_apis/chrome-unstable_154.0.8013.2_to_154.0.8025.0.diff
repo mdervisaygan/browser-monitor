@@ -1,0 +1,34 @@
+--- ./browser_apis/chrome-unstable_154.0.8013.2.json	2026-08-27 23:17:14.442186739 +0000
++++ ./browser_apis/chrome-unstable_154.0.8025.0.json	2026-08-27 23:18:26.325845439 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9487,
++  "browserApiCount": 9486,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1572,7 +1572,6 @@
+     "Fence.prototype.setReportEventDataForAutomaticBeacons",
+     "FencedFrameConfig",
+     "FencedFrameConfig.prototype",
+-    "FencedFrameConfig.prototype.setSharedStorageContext",
+     "FetchLaterResult",
+     "FetchLaterResult.prototype",
+     "FetchLaterResult.prototype.activated",
+@@ -3323,6 +3322,7 @@
+     "Iterator.prototype.find",
+     "Iterator.prototype.flatMap",
+     "Iterator.prototype.forEach",
++    "Iterator.prototype.includes",
+     "Iterator.prototype.join",
+     "Iterator.prototype.map",
+     "Iterator.prototype.reduce",
+@@ -8722,7 +8722,6 @@
+     "XMLDocument.prototype.releaseEvents",
+     "XMLDocument.prototype.replaceChildren",
+     "XMLDocument.prototype.requestStorageAccess",
+-    "XMLDocument.prototype.requestStorageAccessFor",
+     "XMLDocument.prototype.rootElement",
+     "XMLDocument.prototype.scripts",
+     "XMLDocument.prototype.scrollingElement",

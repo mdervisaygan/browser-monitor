@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "154.0.8013.2",
+    "to": "154.0.8025.0"
+  },
+  "browserApis": {
+    "added": [
+      "Iterator.prototype.includes"
+    ],
+    "removed": [
+      "FencedFrameConfig.prototype.setSharedStorageContext",
+      "XMLDocument.prototype.requestStorageAccessFor"
+    ]
+  }
+}

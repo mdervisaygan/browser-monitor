@@ -932,6 +932,46 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 154.0.8025.0 (`2026-8-27`) ⚡
+Added 1 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_154.0.8013.2_to_154.0.8025.0.diff), [json](./browser_apis/chrome-unstable_154.0.8013.2_to_154.0.8025.0.json), [full list](./browser_apis/chrome-unstable_154.0.8025.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_154.0.8013.2.json	2026-08-27 23:17:14.442186739 +0000
++++ ./browser_apis/chrome-unstable_154.0.8025.0.json	2026-08-27 23:18:26.325845439 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9487,
++  "browserApiCount": 9486,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1572,7 +1572,6 @@
+     "Fence.prototype.setReportEventDataForAutomaticBeacons",
+     "FencedFrameConfig",
+     "FencedFrameConfig.prototype",
+-    "FencedFrameConfig.prototype.setSharedStorageContext",
+     "FetchLaterResult",
+     "FetchLaterResult.prototype",
+     "FetchLaterResult.prototype.activated",
+@@ -3323,6 +3322,7 @@
+     "Iterator.prototype.find",
+     "Iterator.prototype.flatMap",
+     "Iterator.prototype.forEach",
++    "Iterator.prototype.includes",
+     "Iterator.prototype.join",
+     "Iterator.prototype.map",
+     "Iterator.prototype.reduce",
+@@ -8722,7 +8722,6 @@
+     "XMLDocument.prototype.releaseEvents",
+     "XMLDocument.prototype.replaceChildren",
+     "XMLDocument.prototype.requestStorageAccess",
+-    "XMLDocument.prototype.requestStorageAccessFor",
+     "XMLDocument.prototype.rootElement",
+     "XMLDocument.prototype.scripts",
+     "XMLDocument.prototype.scrollingElement",
+```
+
+  
 #### 154.0.8013.2 (`2026-8-21`) ⚡
 Added 79 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_153.0.8003.0_to_154.0.8013.2.diff), [json](./browser_apis/chrome-unstable_153.0.8003.0_to_154.0.8013.2.json), [full list](./browser_apis/chrome-unstable_154.0.8013.2.json))
  ```diff
@@ -2688,55 +2728,6 @@ Added 0 APIs, removed 14 (see: [diff](./browser_apis/chrome-unstable_146.0.7647.
      "XMLDocument.prototype.constructor.parseHTMLUnsafe",
      "XMLDocument.prototype.contentType",
      "XMLDocument.prototype.cookie",
-```
-
-  
-#### 146.0.7647.3 (`2026-1-22`) ⚡
-Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_146.0.7635.0_to_146.0.7647.3.diff), [json](./browser_apis/chrome-unstable_146.0.7635.0_to_146.0.7647.3.json), [full list](./browser_apis/chrome-unstable_146.0.7647.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_146.0.7635.0.json	2026-01-22 20:00:55.971656179 +0000
-+++ ./browser_apis/chrome-unstable_146.0.7647.3.json	2026-01-22 20:01:35.274371154 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9171,
-+  "browserApiCount": 9190,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -43,6 +43,11 @@
-     "AnimationPlaybackEvent.prototype",
-     "AnimationPlaybackEvent.prototype.currentTime",
-     "AnimationPlaybackEvent.prototype.timelineTime",
-+    "AnimationTrigger",
-+    "AnimationTrigger.prototype",
-+    "AnimationTrigger.prototype.addAnimation",
-+    "AnimationTrigger.prototype.getAnimations",
-+    "AnimationTrigger.prototype.removeAnimation",
-     "Array",
-     "Array.from",
-     "Array.fromAsync",
-@@ -7112,6 +7117,20 @@
-     "TimeRanges.prototype.end",
-     "TimeRanges.prototype.length",
-     "TimeRanges.prototype.start",
-+    "TimelineTrigger",
-+    "TimelineTrigger.prototype",
-+    "TimelineTrigger.prototype.ranges",
-+    "TimelineTriggerRange",
-+    "TimelineTriggerRange.prototype",
-+    "TimelineTriggerRange.prototype.activeRangeEnd",
-+    "TimelineTriggerRange.prototype.activeRangeStart",
-+    "TimelineTriggerRange.prototype.entryRangeEnd",
-+    "TimelineTriggerRange.prototype.entryRangeStart",
-+    "TimelineTriggerRange.prototype.timeline",
-+    "TimelineTriggerRangeList",
-+    "TimelineTriggerRangeList.prototype",
-+    "TimelineTriggerRangeList.prototype.item",
-+    "TimelineTriggerRangeList.prototype.length",
-     "ToggleEvent",
-     "ToggleEvent.prototype",
-     "ToggleEvent.prototype.newState",
 ```
 
   <!-- browserapis:end -->
