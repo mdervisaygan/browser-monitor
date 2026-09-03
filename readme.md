@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 152.0.7977.82 (`2026-9-3`) 
+No browser API changes.
+
+  
 #### 152.0.7977.75 (`2026-9-1`) 
 No browser API changes.
 
@@ -924,10 +928,6 @@ Added 96 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_146.0.7680.17
      "XSLTProcessor.prototype",
      "XSLTProcessor.prototype.clearParameters",
 ```
-
-  
-#### 146.0.7680.177 (`2026-3-31`) 
-No browser API changes.
 
   
 ### chrome-unstable
