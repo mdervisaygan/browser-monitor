@@ -1,0 +1,26 @@
+--- ./browser_apis/chrome-unstable_154.0.8025.0.json	2026-09-04 18:37:17.140575173 +0000
++++ ./browser_apis/chrome-unstable_155.0.8040.2.json	2026-09-04 18:37:58.907625126 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9486,
++  "browserApiCount": 9488,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1679,6 +1679,7 @@
+     "FontFace.prototype.variant",
+     "FontFace.prototype.variationSettings",
+     "FontFace.prototype.weight",
++    "FontFace.prototype.width",
+     "FontFaceSet",
+     "FontFaceSet.prototype",
+     "FontFaceSet.prototype.add",
+@@ -9367,6 +9368,7 @@
+     "reportError",
+     "requestAnimationFrame",
+     "requestIdleCallback",
++    "requestResize",
+     "resizeBy",
+     "resizeTo",
+     "scheduler",

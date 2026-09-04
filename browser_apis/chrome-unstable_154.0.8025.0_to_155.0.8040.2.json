@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "154.0.8025.0",
+    "to": "155.0.8040.2"
+  },
+  "browserApis": {
+    "added": [
+      "FontFace.prototype.width",
+      "requestResize"
+    ],
+    "removed": []
+  }
+}
