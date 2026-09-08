@@ -1,0 +1,63 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "152.0.7977.82",
+    "to": "153.0.8010.36"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLCameraElement",
+      "HTMLCameraElement.prototype",
+      "HTMLCameraElement.prototype.error",
+      "HTMLCameraElement.prototype.oncancel",
+      "HTMLCameraElement.prototype.onerror",
+      "HTMLCameraElement.prototype.ontrack",
+      "HTMLCameraElement.prototype.setConstraints",
+      "HTMLCameraElement.prototype.track",
+      "HTMLMicrophoneElement",
+      "HTMLMicrophoneElement.prototype",
+      "HTMLMicrophoneElement.prototype.error",
+      "HTMLMicrophoneElement.prototype.oncancel",
+      "HTMLMicrophoneElement.prototype.onerror",
+      "HTMLMicrophoneElement.prototype.ontrack",
+      "HTMLMicrophoneElement.prototype.setConstraints",
+      "HTMLMicrophoneElement.prototype.track",
+      "Iterator.prototype.join",
+      "Iterator.zip",
+      "Iterator.zipKeyed",
+      "OfflineAudioContext.prototype.renderQuantumSize",
+      "Option.prototype.constructor.prototype.autocorrect"
+    ],
+    "removed": [
+      "HTMLFencedFrameElement.canLoadOpaqueURL",
+      "HTMLIFrameElement.prototype.sharedStorageWritable",
+      "Image.prototype.sharedStorageWritable",
+      "SharedStorage",
+      "SharedStorage.prototype",
+      "SharedStorage.prototype.append",
+      "SharedStorage.prototype.batchUpdate",
+      "SharedStorage.prototype.clear",
+      "SharedStorage.prototype.createWorklet",
+      "SharedStorage.prototype.delete",
+      "SharedStorage.prototype.run",
+      "SharedStorage.prototype.selectURL",
+      "SharedStorage.prototype.set",
+      "SharedStorage.prototype.worklet",
+      "SharedStorageAppendMethod",
+      "SharedStorageAppendMethod.prototype",
+      "SharedStorageAppendMethod.prototype.constructor",
+      "SharedStorageClearMethod",
+      "SharedStorageClearMethod.prototype",
+      "SharedStorageDeleteMethod",
+      "SharedStorageDeleteMethod.prototype",
+      "SharedStorageSetMethod",
+      "SharedStorageSetMethod.prototype",
+      "SharedStorageWorklet",
+      "SharedStorageWorklet.prototype",
+      "SharedStorageWorklet.prototype.addModule",
+      "SharedStorageWorklet.prototype.run",
+      "SharedStorageWorklet.prototype.selectURL",
+      "sharedStorage"
+    ]
+  }
+}
