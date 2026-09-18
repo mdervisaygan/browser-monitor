@@ -866,6 +866,47 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 156.0.8063.3 (`2026-9-18`) ⚡
+Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_155.0.8048.0_to_156.0.8063.3.diff), [json](./browser_apis/chrome-unstable_155.0.8048.0_to_156.0.8063.3.json), [full list](./browser_apis/chrome-unstable_156.0.8063.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_155.0.8048.0.json	2026-09-18 18:41:17.648086323 +0000
++++ ./browser_apis/chrome-unstable_156.0.8063.3.json	2026-09-18 18:41:46.481355110 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9427,
++  "browserApiCount": 9433,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -6836,18 +6836,24 @@
+     "Subscriber.prototype.signal",
+     "SubtleCrypto",
+     "SubtleCrypto.prototype",
++    "SubtleCrypto.prototype.decapsulateBits",
++    "SubtleCrypto.prototype.decapsulateKey",
+     "SubtleCrypto.prototype.decrypt",
+     "SubtleCrypto.prototype.deriveBits",
+     "SubtleCrypto.prototype.deriveKey",
+     "SubtleCrypto.prototype.digest",
++    "SubtleCrypto.prototype.encapsulateBits",
++    "SubtleCrypto.prototype.encapsulateKey",
+     "SubtleCrypto.prototype.encrypt",
+     "SubtleCrypto.prototype.exportKey",
+     "SubtleCrypto.prototype.generateKey",
++    "SubtleCrypto.prototype.getPublicKey",
+     "SubtleCrypto.prototype.importKey",
+     "SubtleCrypto.prototype.sign",
+     "SubtleCrypto.prototype.unwrapKey",
+     "SubtleCrypto.prototype.verify",
+     "SubtleCrypto.prototype.wrapKey",
++    "SubtleCrypto.supports",
+     "Summarizer",
+     "Summarizer.availability",
+     "Summarizer.create",
+```
+
+  
 #### 155.0.8048.0 (`2026-9-10`) ⚡
 Added 0 APIs, removed 61 (see: [diff](./browser_apis/chrome-unstable_155.0.8040.2_to_155.0.8048.0.diff), [json](./browser_apis/chrome-unstable_155.0.8040.2_to_155.0.8048.0.json), [full list](./browser_apis/chrome-unstable_155.0.8048.0.json))
  ```diff
@@ -2607,110 +2648,6 @@ Added 96 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_147.0.7695.
      "XSLTProcessor",
      "XSLTProcessor.prototype",
      "XSLTProcessor.prototype.clearParameters",
-```
-
-  
-#### 147.0.7695.0 (`2026-2-20`) ⚡
-Added 28 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_146.0.7670.2_to_147.0.7695.0.diff), [json](./browser_apis/chrome-unstable_146.0.7670.2_to_147.0.7695.0.json), [full list](./browser_apis/chrome-unstable_147.0.7695.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_146.0.7670.2.json	2026-02-20 18:07:32.491000272 +0000
-+++ ./browser_apis/chrome-unstable_147.0.7695.0.json	2026-02-20 18:08:07.178055496 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9193,
-+  "browserApiCount": 9219,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -211,6 +211,7 @@
-     "AudioContext.prototype.onerror",
-     "AudioContext.prototype.onsinkchange",
-     "AudioContext.prototype.outputLatency",
-+    "AudioContext.prototype.playbackStats",
-     "AudioContext.prototype.resume",
-     "AudioContext.prototype.setSinkId",
-     "AudioContext.prototype.sinkId",
-@@ -288,6 +289,16 @@
-     "AudioParamMap.prototype.keys",
-     "AudioParamMap.prototype.size",
-     "AudioParamMap.prototype.values",
-+    "AudioPlaybackStats",
-+    "AudioPlaybackStats.prototype",
-+    "AudioPlaybackStats.prototype.averageLatency",
-+    "AudioPlaybackStats.prototype.maximumLatency",
-+    "AudioPlaybackStats.prototype.minimumLatency",
-+    "AudioPlaybackStats.prototype.resetLatency",
-+    "AudioPlaybackStats.prototype.toJSON",
-+    "AudioPlaybackStats.prototype.totalDuration",
-+    "AudioPlaybackStats.prototype.underrunDuration",
-+    "AudioPlaybackStats.prototype.underrunEvents",
-     "AudioProcessingEvent",
-     "AudioProcessingEvent.prototype",
-     "AudioProcessingEvent.prototype.inputBuffer",
-@@ -3842,6 +3853,7 @@
-     "NavigationHistoryEntry.prototype.url",
-     "NavigationPrecommitController",
-     "NavigationPrecommitController.prototype",
-+    "NavigationPrecommitController.prototype.addHandler",
-     "NavigationPrecommitController.prototype.redirect",
-     "NavigationPreloadManager",
-     "NavigationPreloadManager.prototype",
-@@ -4518,6 +4530,7 @@
-     "Option.prototype.constructor.prototype.setAttributeNS",
-     "Option.prototype.constructor.prototype.setAttributeNode",
-     "Option.prototype.constructor.prototype.setAttributeNodeNS",
-+    "Option.prototype.constructor.prototype.setHTML",
-     "Option.prototype.constructor.prototype.setHTMLUnsafe",
-     "Option.prototype.constructor.prototype.setPointerCapture",
-     "Option.prototype.constructor.prototype.shadowRoot",
-@@ -6213,6 +6226,17 @@
-     "SVGViewElement.prototype.viewBox",
-     "SVGViewElement.prototype.viewportElement",
-     "SVGViewElement.prototype.zoomAndPan",
-+    "Sanitizer",
-+    "Sanitizer.prototype",
-+    "Sanitizer.prototype.allowAttribute",
-+    "Sanitizer.prototype.allowElement",
-+    "Sanitizer.prototype.get",
-+    "Sanitizer.prototype.removeAttribute",
-+    "Sanitizer.prototype.removeElement",
-+    "Sanitizer.prototype.removeUnsafe",
-+    "Sanitizer.prototype.replaceElementWithChildren",
-+    "Sanitizer.prototype.setComments",
-+    "Sanitizer.prototype.setDataAttributes",
-     "Scheduler",
-     "Scheduler.prototype",
-     "Scheduler.prototype.postTask",
-@@ -6411,6 +6435,7 @@
-     "ShadowRoot.prototype.querySelectorAll",
-     "ShadowRoot.prototype.replaceChildren",
-     "ShadowRoot.prototype.serializable",
-+    "ShadowRoot.prototype.setHTML",
-     "ShadowRoot.prototype.setHTMLUnsafe",
-     "ShadowRoot.prototype.slotAssignment",
-     "ShadowRoot.prototype.styleSheets",
-@@ -7124,10 +7149,10 @@
-     "TimelineTrigger.prototype.ranges",
-     "TimelineTriggerRange",
-     "TimelineTriggerRange.prototype",
-+    "TimelineTriggerRange.prototype.activationRangeEnd",
-+    "TimelineTriggerRange.prototype.activationRangeStart",
-     "TimelineTriggerRange.prototype.activeRangeEnd",
-     "TimelineTriggerRange.prototype.activeRangeStart",
--    "TimelineTriggerRange.prototype.entryRangeEnd",
--    "TimelineTriggerRange.prototype.entryRangeStart",
-     "TimelineTriggerRange.prototype.timeline",
-     "TimelineTriggerRangeList",
-     "TimelineTriggerRangeList.prototype",
-@@ -8316,6 +8341,7 @@
-     "XMLDocument.prototype.close",
-     "XMLDocument.prototype.compatMode",
-     "XMLDocument.prototype.constructor",
-+    "XMLDocument.prototype.constructor.parseHTML",
-     "XMLDocument.prototype.constructor.parseHTMLUnsafe",
-     "XMLDocument.prototype.contentType",
-     "XMLDocument.prototype.cookie",
 ```
 
   <!-- browserapis:end -->

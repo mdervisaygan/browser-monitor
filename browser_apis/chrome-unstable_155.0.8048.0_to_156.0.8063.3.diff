@@ -1,0 +1,35 @@
+--- ./browser_apis/chrome-unstable_155.0.8048.0.json	2026-09-18 18:41:17.648086323 +0000
++++ ./browser_apis/chrome-unstable_156.0.8063.3.json	2026-09-18 18:41:46.481355110 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9427,
++  "browserApiCount": 9433,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -6836,18 +6836,24 @@
+     "Subscriber.prototype.signal",
+     "SubtleCrypto",
+     "SubtleCrypto.prototype",
++    "SubtleCrypto.prototype.decapsulateBits",
++    "SubtleCrypto.prototype.decapsulateKey",
+     "SubtleCrypto.prototype.decrypt",
+     "SubtleCrypto.prototype.deriveBits",
+     "SubtleCrypto.prototype.deriveKey",
+     "SubtleCrypto.prototype.digest",
++    "SubtleCrypto.prototype.encapsulateBits",
++    "SubtleCrypto.prototype.encapsulateKey",
+     "SubtleCrypto.prototype.encrypt",
+     "SubtleCrypto.prototype.exportKey",
+     "SubtleCrypto.prototype.generateKey",
++    "SubtleCrypto.prototype.getPublicKey",
+     "SubtleCrypto.prototype.importKey",
+     "SubtleCrypto.prototype.sign",
+     "SubtleCrypto.prototype.unwrapKey",
+     "SubtleCrypto.prototype.verify",
+     "SubtleCrypto.prototype.wrapKey",
++    "SubtleCrypto.supports",
+     "Summarizer",
+     "Summarizer.availability",
+     "Summarizer.create",
