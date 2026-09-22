@@ -5,6 +5,62 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 154.0.8037.57 (`2026-9-22`) ⚡
+Added 3 APIs, removed 2 (see: [diff](./browser_apis/chrome-stable_153.0.8010.52_to_154.0.8037.57.diff), [json](./browser_apis/chrome-stable_153.0.8010.52_to_154.0.8037.57.json), [full list](./browser_apis/chrome-stable_154.0.8037.57.json))
+ ```diff
+--- ./browser_apis/chrome-stable_153.0.8010.52.json	2026-09-22 20:33:39.701565279 +0000
++++ ./browser_apis/chrome-stable_154.0.8037.57.json	2026-09-22 20:34:38.713484880 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9426,
++  "browserApiCount": 9427,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1560,7 +1560,6 @@
+     "Fence.prototype.setReportEventDataForAutomaticBeacons",
+     "FencedFrameConfig",
+     "FencedFrameConfig.prototype",
+-    "FencedFrameConfig.prototype.setSharedStorageContext",
+     "FetchLaterResult",
+     "FetchLaterResult.prototype",
+     "FetchLaterResult.prototype.activated",
+@@ -1668,6 +1667,7 @@
+     "FontFace.prototype.variant",
+     "FontFace.prototype.variationSettings",
+     "FontFace.prototype.weight",
++    "FontFace.prototype.width",
+     "FontFaceSet",
+     "FontFaceSet.prototype",
+     "FontFaceSet.prototype.add",
+@@ -3311,6 +3311,7 @@
+     "Iterator.prototype.find",
+     "Iterator.prototype.flatMap",
+     "Iterator.prototype.forEach",
++    "Iterator.prototype.includes",
+     "Iterator.prototype.join",
+     "Iterator.prototype.map",
+     "Iterator.prototype.reduce",
+@@ -8661,7 +8662,6 @@
+     "XMLDocument.prototype.releaseEvents",
+     "XMLDocument.prototype.replaceChildren",
+     "XMLDocument.prototype.requestStorageAccess",
+-    "XMLDocument.prototype.requestStorageAccessFor",
+     "XMLDocument.prototype.rootElement",
+     "XMLDocument.prototype.scripts",
+     "XMLDocument.prototype.scrollingElement",
+@@ -9307,6 +9307,7 @@
+     "reportError",
+     "requestAnimationFrame",
+     "requestIdleCallback",
++    "requestResize",
+     "resizeBy",
+     "resizeTo",
+     "scheduler",
+```
+
+  
 #### 153.0.8010.52 (`2026-9-18`) 
 No browser API changes.
 
@@ -858,10 +914,6 @@ Added 18 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_147.0.7727.13
      "WebAssembly.Global.prototype",
      "WebAssembly.Global.prototype.value",
 ```
-
-  
-#### 147.0.7727.137 (`2026-4-28`) 
-No browser API changes.
 
   
 ### chrome-unstable

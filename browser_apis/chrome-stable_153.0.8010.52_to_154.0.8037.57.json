@@ -1,0 +1,18 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "153.0.8010.52",
+    "to": "154.0.8037.57"
+  },
+  "browserApis": {
+    "added": [
+      "FontFace.prototype.width",
+      "Iterator.prototype.includes",
+      "requestResize"
+    ],
+    "removed": [
+      "FencedFrameConfig.prototype.setSharedStorageContext",
+      "XMLDocument.prototype.requestStorageAccessFor"
+    ]
+  }
+}
