@@ -5,6 +5,52 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 154.0.8037.92 (`2026-9-29`) ⚡
+Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_154.0.8037.57_to_154.0.8037.92.diff), [json](./browser_apis/chrome-stable_154.0.8037.57_to_154.0.8037.92.json), [full list](./browser_apis/chrome-stable_154.0.8037.92.json))
+ ```diff
+--- ./browser_apis/chrome-stable_154.0.8037.57.json	2026-09-29 18:56:30.041792199 +0000
++++ ./browser_apis/chrome-stable_154.0.8037.92.json	2026-09-29 18:57:03.649938135 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9427,
++  "browserApiCount": 9436,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -333,6 +333,7 @@
+     "AuthenticatorAttestationResponse.prototype.getPublicKey",
+     "AuthenticatorAttestationResponse.prototype.getPublicKeyAlgorithm",
+     "AuthenticatorAttestationResponse.prototype.getTransports",
++    "B",
+     "BackgroundFetchManager",
+     "BackgroundFetchManager.prototype",
+     "BackgroundFetchManager.prototype.fetch",
+@@ -4683,6 +4684,13 @@
+     "OverconstrainedError",
+     "OverconstrainedError.prototype",
+     "OverconstrainedError.prototype.constraint",
++    "P",
++    "P.0",
++    "P.1",
++    "P.2",
++    "P.3",
++    "P.4",
++    "P.5",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
+     "PageRevealEvent.prototype.viewTransition",
+@@ -9132,6 +9140,7 @@
+     "eval",
+     "event",
+     "external",
++    "f",
+     "fence",
+     "fetch",
+     "fetchLater",
+```
+
+  
 #### 154.0.8037.57 (`2026-9-22`) ⚡
 Added 3 APIs, removed 2 (see: [diff](./browser_apis/chrome-stable_153.0.8010.52_to_154.0.8037.57.diff), [json](./browser_apis/chrome-stable_153.0.8010.52_to_154.0.8037.57.json), [full list](./browser_apis/chrome-stable_154.0.8037.57.json))
  ```diff
@@ -830,90 +876,6 @@ No browser API changes.
   
 #### 148.0.7778.167 (`2026-5-12`) 
 No browser API changes.
-
-  
-#### 148.0.7778.96 (`2026-5-5`) ⚡
-Added 18 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_147.0.7727.137_to_148.0.7778.96.diff), [json](./browser_apis/chrome-stable_147.0.7727.137_to_148.0.7778.96.json), [full list](./browser_apis/chrome-stable_148.0.7778.96.json))
- ```diff
---- ./browser_apis/chrome-stable_147.0.7727.137.json	2026-05-05 20:19:13.216100976 +0000
-+++ ./browser_apis/chrome-stable_148.0.7778.96.json	2026-05-05 20:19:55.938322731 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 9315,
-+  "browserApiCount": 9332,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -156,6 +156,7 @@
-     "Audio.prototype.constructor.prototype.ended",
-     "Audio.prototype.constructor.prototype.error",
-     "Audio.prototype.constructor.prototype.load",
-+    "Audio.prototype.constructor.prototype.loading",
-     "Audio.prototype.constructor.prototype.loop",
-     "Audio.prototype.constructor.prototype.mediaKeys",
-     "Audio.prototype.constructor.prototype.muted",
-@@ -1081,6 +1082,7 @@
-     "CreateMonitor.prototype",
-     "CreateMonitor.prototype.ondownloadprogress",
-     "Credential",
-+    "Credential.isConditionalMediationAvailable",
-     "Credential.prototype",
-     "Credential.prototype.id",
-     "Credential.prototype.type",
-@@ -3299,6 +3301,19 @@
-     "LanguageDetector.prototype.expectedInputLanguages",
-     "LanguageDetector.prototype.inputQuota",
-     "LanguageDetector.prototype.measureInputUsage",
-+    "LanguageModel",
-+    "LanguageModel.availability",
-+    "LanguageModel.create",
-+    "LanguageModel.prototype",
-+    "LanguageModel.prototype.append",
-+    "LanguageModel.prototype.clone",
-+    "LanguageModel.prototype.contextUsage",
-+    "LanguageModel.prototype.contextWindow",
-+    "LanguageModel.prototype.destroy",
-+    "LanguageModel.prototype.measureContextUsage",
-+    "LanguageModel.prototype.oncontextoverflow",
-+    "LanguageModel.prototype.prompt",
-+    "LanguageModel.prototype.promptStreaming",
-     "LargestContentfulPaint",
-     "LargestContentfulPaint.prototype",
-     "LargestContentfulPaint.prototype.element",
-@@ -4647,6 +4662,7 @@
-     "PaymentMethodChangeEvent.prototype.methodDetails",
-     "PaymentMethodChangeEvent.prototype.methodName",
-     "PaymentRequest",
-+    "PaymentRequest.getSecurePaymentConfirmationCapabilities",
-     "PaymentRequest.prototype",
-     "PaymentRequest.prototype.abort",
-     "PaymentRequest.prototype.canMakePayment",
-@@ -4782,6 +4798,7 @@
-     "PerformanceResourceTiming.prototype.connectEnd",
-     "PerformanceResourceTiming.prototype.connectStart",
-     "PerformanceResourceTiming.prototype.contentEncoding",
-+    "PerformanceResourceTiming.prototype.contentType",
-     "PerformanceResourceTiming.prototype.decodedBodySize",
-     "PerformanceResourceTiming.prototype.deliveryType",
-     "PerformanceResourceTiming.prototype.domainLookupEnd",
-@@ -6449,7 +6466,6 @@
-     "SharedStorage.prototype.clear",
-     "SharedStorage.prototype.createWorklet",
-     "SharedStorage.prototype.delete",
--    "SharedStorage.prototype.get",
-     "SharedStorage.prototype.run",
-     "SharedStorage.prototype.selectURL",
-     "SharedStorage.prototype.set",
-@@ -7644,6 +7660,7 @@
-     "WebAssembly.Exception.prototype",
-     "WebAssembly.Exception.prototype.getArg",
-     "WebAssembly.Exception.prototype.is",
-+    "WebAssembly.Exception.prototype.stack",
-     "WebAssembly.Global",
-     "WebAssembly.Global.prototype",
-     "WebAssembly.Global.prototype.value",
-```
 
   
 ### chrome-unstable
