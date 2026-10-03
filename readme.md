@@ -880,6 +880,44 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 157.0.8081.0 (`2026-10-3`) ⚡
+Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_156.0.8072.0_to_157.0.8081.0.diff), [json](./browser_apis/chrome-unstable_156.0.8072.0_to_157.0.8081.0.json), [full list](./browser_apis/chrome-unstable_157.0.8081.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_156.0.8072.0.json	2026-10-03 02:34:40.855323945 +0000
++++ ./browser_apis/chrome-unstable_157.0.8081.0.json	2026-10-03 02:35:05.376644394 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9433,
++  "browserApiCount": 9441,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -333,6 +333,7 @@
+     "AuthenticatorAttestationResponse.prototype.getPublicKey",
+     "AuthenticatorAttestationResponse.prototype.getPublicKeyAlgorithm",
+     "AuthenticatorAttestationResponse.prototype.getTransports",
++    "B",
+     "BackgroundFetchManager",
+     "BackgroundFetchManager.prototype",
+     "BackgroundFetchManager.prototype.fetch",
+@@ -4683,6 +4684,13 @@
+     "OverconstrainedError",
+     "OverconstrainedError.prototype",
+     "OverconstrainedError.prototype.constraint",
++    "P",
++    "P.0",
++    "P.1",
++    "P.2",
++    "P.3",
++    "P.4",
++    "P.5",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
+     "PageRevealEvent.prototype.viewTransition",
+```
+
+  
 #### 156.0.8072.0 (`2026-9-25`) 
 No browser API changes.
 
@@ -2399,66 +2437,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7730.2
   
 #### 148.0.7730.2 (`2026-3-13`) 
 No browser API changes.
-
-  
-#### 147.0.7719.3 (`2026-3-6`) ⚡
-Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_147.0.7703.0_to_147.0.7719.3.diff), [json](./browser_apis/chrome-unstable_147.0.7703.0_to_147.0.7719.3.json), [full list](./browser_apis/chrome-unstable_147.0.7719.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_147.0.7703.0.json	2026-03-06 20:03:19.287418601 +0000
-+++ ./browser_apis/chrome-unstable_147.0.7719.3.json	2026-03-06 20:03:55.366484617 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9315,
-+  "browserApiCount": 9325,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -39,6 +39,7 @@
-     "AnimationEvent.prototype.animationName",
-     "AnimationEvent.prototype.elapsedTime",
-     "AnimationEvent.prototype.pseudoElement",
-+    "AnimationEvent.prototype.pseudoTarget",
-     "AnimationPlaybackEvent",
-     "AnimationPlaybackEvent.prototype",
-     "AnimationPlaybackEvent.prototype.currentTime",
-@@ -720,6 +721,12 @@
-     "CSSPropertyRule.prototype.initialValue",
-     "CSSPropertyRule.prototype.name",
-     "CSSPropertyRule.prototype.syntax",
-+    "CSSPseudoElement",
-+    "CSSPseudoElement.prototype",
-+    "CSSPseudoElement.prototype.element",
-+    "CSSPseudoElement.prototype.parent",
-+    "CSSPseudoElement.prototype.pseudo",
-+    "CSSPseudoElement.prototype.type",
-     "CSSRotate",
-     "CSSRotate.prototype",
-     "CSSRotate.prototype.angle",
-@@ -4507,6 +4514,7 @@
-     "Option.prototype.constructor.prototype.prefix",
-     "Option.prototype.constructor.prototype.prepend",
-     "Option.prototype.constructor.prototype.previousElementSibling",
-+    "Option.prototype.constructor.prototype.pseudo",
-     "Option.prototype.constructor.prototype.querySelector",
-     "Option.prototype.constructor.prototype.querySelectorAll",
-     "Option.prototype.constructor.prototype.releasePointerCapture",
-@@ -7211,6 +7219,7 @@
-     "TransitionEvent.prototype.elapsedTime",
-     "TransitionEvent.prototype.propertyName",
-     "TransitionEvent.prototype.pseudoElement",
-+    "TransitionEvent.prototype.pseudoTarget",
-     "Translator",
-     "Translator.availability",
-     "Translator.create",
-@@ -8245,6 +8254,7 @@
-     "WheelEvent.prototype.constructor.prototype.initEvent",
-     "WheelEvent.prototype.constructor.prototype.initUIEvent",
-     "WheelEvent.prototype.constructor.prototype.preventDefault",
-+    "WheelEvent.prototype.constructor.prototype.pseudoTarget",
-     "WheelEvent.prototype.constructor.prototype.returnValue",
-     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
-     "WheelEvent.prototype.constructor.prototype.srcElement",
-```
 
   <!-- browserapis:end -->

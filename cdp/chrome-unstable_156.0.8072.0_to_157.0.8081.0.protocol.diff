@@ -1,0 +1,86 @@
+--- ./cdp/chrome-unstable_156.0.8072.0.protocol.json	2026-10-03 02:34:41.023326207 +0000
++++ ./cdp/chrome-unstable_157.0.8081.0.protocol.json	2026-10-03 02:35:05.380644445 +0000
+@@ -11603,6 +11603,17 @@
+                 "enable",
+                 "default"
+               ]
++            },
++            {
++              "name": "textLayoutMode",
++              "description": "Text layout mode. Default: `default`. Note: if `mobile` is `true`,\nmobile text layout mode (text autosizing) is always enabled.",
++              "experimental": true,
++              "optional": true,
++              "type": "string",
++              "enum": [
++                "mobile",
++                "default"
++              ]
+             }
+           ]
+         },
+@@ -13351,6 +13362,35 @@
+       ]
+     },
+     {
++      "domain": "FindInPage",
++      "description": "This domain provides commands to trigger the \"Find in page\" feature.",
++      "experimental": true,
++      "commands": [
++        {
++          "name": "findFirst",
++          "description": "Forwards `query` to the find-in-page facility, starting a new find session.\nWhere exactly the search starts from is implementation-specific.",
++          "parameters": [
++            {
++              "name": "query",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "name": "findNext",
++          "description": "Moves to the next match for the query passed to the most recent\nfindFirst() call."
++        },
++        {
++          "name": "findPrev",
++          "description": "Moves to the previous match for the query passed to the most recent\nfindFirst() call."
++        },
++        {
++          "name": "stop",
++          "description": "Ends the current find session, if any, and clears its highlighting."
++        }
++      ]
++    },
++    {
+       "domain": "HeadlessExperimental",
+       "description": "This domain provides experimental commands only supported in headless mode.",
+       "experimental": true,
+@@ -22075,6 +22115,7 @@
+             "private-state-token-redemption",
+             "publickey-credentials-create",
+             "publickey-credentials-get",
++            "publickey-credentials-remote-client-data-json",
+             "rewriter",
+             "screen-wake-lock",
+             "serial",
+@@ -26206,6 +26247,12 @@
+               "$ref": "PreloadingStatus"
+             },
+             {
++              "name": "effectiveAction",
++              "description": "The action currently performed by this attempt. This differs from\n`key.action` after a prerender-until-script attempt is upgraded in place\nto a full prerender.",
++              "optional": true,
++              "$ref": "SpeculationAction"
++            },
++            {
+               "name": "prerenderStatus",
+               "optional": true,
+               "$ref": "PrerenderFinalStatus"
+@@ -31357,7 +31404,7 @@
+             },
+             {
+               "name": "empty",
+-              "description": "True if the scope does not declare any variables or have a runtime context.\nOnly present if true.\nEmpty scopes are retained in the scope chain because\nthey can be targeted via `evaluateOnCallFrame` (using `scopeNumber`) or\nmatched against scopes in source maps.",
++              "description": "True if the scope does not declare any variables.\nOnly present if true.\nEmpty scopes are retained in the scope chain because\nthey can be targeted via `evaluateOnCallFrame` (using `scopeNumber`) or\nmatched against scopes in source maps.",
+               "experimental": true,
+               "optional": true,
+               "type": "boolean"

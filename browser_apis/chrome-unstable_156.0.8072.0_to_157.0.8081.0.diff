@@ -1,0 +1,32 @@
+--- ./browser_apis/chrome-unstable_156.0.8072.0.json	2026-10-03 02:34:40.855323945 +0000
++++ ./browser_apis/chrome-unstable_157.0.8081.0.json	2026-10-03 02:35:05.376644394 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9433,
++  "browserApiCount": 9441,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -333,6 +333,7 @@
+     "AuthenticatorAttestationResponse.prototype.getPublicKey",
+     "AuthenticatorAttestationResponse.prototype.getPublicKeyAlgorithm",
+     "AuthenticatorAttestationResponse.prototype.getTransports",
++    "B",
+     "BackgroundFetchManager",
+     "BackgroundFetchManager.prototype",
+     "BackgroundFetchManager.prototype.fetch",
+@@ -4683,6 +4684,13 @@
+     "OverconstrainedError",
+     "OverconstrainedError.prototype",
+     "OverconstrainedError.prototype.constraint",
++    "P",
++    "P.0",
++    "P.1",
++    "P.2",
++    "P.3",
++    "P.4",
++    "P.5",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
+     "PageRevealEvent.prototype.viewTransition",
