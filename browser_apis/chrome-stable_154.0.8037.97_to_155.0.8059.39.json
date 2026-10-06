@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "154.0.8037.97",
+    "to": "155.0.8059.39"
+  },
+  "browserApis": {
+    "added": [
+      "SubtleCrypto.prototype.decapsulateBits",
+      "SubtleCrypto.prototype.decapsulateKey",
+      "SubtleCrypto.prototype.encapsulateBits",
+      "SubtleCrypto.prototype.encapsulateKey",
+      "SubtleCrypto.prototype.getPublicKey",
+      "SubtleCrypto.supports"
+    ],
+    "removed": [
+      "f"
+    ]
+  }
+}

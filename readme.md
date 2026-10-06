@@ -5,6 +5,55 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 155.0.8059.39 (`2026-10-6`) ⚡
+Added 6 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_154.0.8037.97_to_155.0.8059.39.diff), [json](./browser_apis/chrome-stable_154.0.8037.97_to_155.0.8059.39.json), [full list](./browser_apis/chrome-stable_155.0.8059.39.json))
+ ```diff
+--- ./browser_apis/chrome-stable_154.0.8037.97.json	2026-10-06 19:09:18.511637774 +0000
++++ ./browser_apis/chrome-stable_155.0.8059.39.json	2026-10-06 19:09:45.803645539 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9436,
++  "browserApiCount": 9441,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -6844,18 +6844,24 @@
+     "Subscriber.prototype.signal",
+     "SubtleCrypto",
+     "SubtleCrypto.prototype",
++    "SubtleCrypto.prototype.decapsulateBits",
++    "SubtleCrypto.prototype.decapsulateKey",
+     "SubtleCrypto.prototype.decrypt",
+     "SubtleCrypto.prototype.deriveBits",
+     "SubtleCrypto.prototype.deriveKey",
+     "SubtleCrypto.prototype.digest",
++    "SubtleCrypto.prototype.encapsulateBits",
++    "SubtleCrypto.prototype.encapsulateKey",
+     "SubtleCrypto.prototype.encrypt",
+     "SubtleCrypto.prototype.exportKey",
+     "SubtleCrypto.prototype.generateKey",
++    "SubtleCrypto.prototype.getPublicKey",
+     "SubtleCrypto.prototype.importKey",
+     "SubtleCrypto.prototype.sign",
+     "SubtleCrypto.prototype.unwrapKey",
+     "SubtleCrypto.prototype.verify",
+     "SubtleCrypto.prototype.wrapKey",
++    "SubtleCrypto.supports",
+     "Summarizer",
+     "Summarizer.availability",
+     "Summarizer.create",
+@@ -9140,7 +9146,6 @@
+     "eval",
+     "event",
+     "external",
+-    "f",
+     "fence",
+     "fetch",
+     "fetchLater",
+```
+
+  
 #### 154.0.8037.97 (`2026-10-2`) 
 No browser API changes.
 
@@ -871,10 +920,6 @@ Added 29 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_148.0.7778.2
 
   
 #### 148.0.7778.215 (`2026-5-27`) 
-No browser API changes.
-
-  
-#### 148.0.7778.178 (`2026-5-19`) 
 No browser API changes.
 
   
