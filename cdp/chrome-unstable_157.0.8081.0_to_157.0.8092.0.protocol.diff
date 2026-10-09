@@ -1,0 +1,99 @@
+--- ./cdp/chrome-unstable_157.0.8081.0.protocol.json	2026-10-09 16:39:15.649731964 +0000
++++ ./cdp/chrome-unstable_157.0.8092.0.protocol.json	2026-10-09 16:39:47.115377291 +0000
+@@ -1876,7 +1876,8 @@
+             "FormModelContextMissingToolName",
+             "FormModelContextMissingToolDescription",
+             "FormModelContextRequiredParameterMissingName",
+-            "FormModelContextParameterMissingName"
++            "FormModelContextParameterMissingName",
++            "GeolocationPromptWithoutUserGesture"
+           ]
+         },
+         {
+@@ -5991,6 +5992,23 @@
+           ]
+         },
+         {
++          "name": "forcePositionTryOption",
++          "description": "Forces a position-try option for the given node.",
++          "parameters": [
++            {
++              "name": "nodeId",
++              "description": "The element id for which to force the position-try option.",
++              "$ref": "DOM.NodeId"
++            },
++            {
++              "name": "index",
++              "description": "The 1-based index of the position-try fallback option, 0 for base position (no fallback),\nor omitted to clear the forced state.",
++              "optional": true,
++              "type": "integer"
++            }
++          ]
++        },
++        {
+           "name": "getBackgroundColors",
+           "parameters": [
+             {
+@@ -24004,6 +24022,26 @@
+           ]
+         },
+         {
++          "name": "getSpellCheckCustomDictionary",
++          "description": "Returns the words that the frame's document added to its spell check custom\ndictionary with `document.spellCheckCustomDictionary.addWords()`, sorted.\nPage script cannot read the dictionary back; this lets developers inspect\nit.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "frameId",
++              "$ref": "FrameId"
++            }
++          ],
++          "returns": [
++            {
++              "name": "words",
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            }
++          ]
++        },
++        {
+           "name": "getFrameTree",
+           "description": "Returns present frame tree structure.",
+           "returns": [
+@@ -31403,11 +31441,15 @@
+               "$ref": "Location"
+             },
+             {
+-              "name": "empty",
+-              "description": "True if the scope does not declare any variables.\nOnly present if true.\nEmpty scopes are retained in the scope chain because\nthey can be targeted via `evaluateOnCallFrame` (using `scopeNumber`) or\nmatched against scopes in source maps.",
++              "name": "emptyReason",
++              "description": "Present if the scope has no variable values to show. Absent means that\nthe scope declares at least one variable with an available value.\nEmpty scopes are retained in the scope chain because\nthey can be targeted via `evaluateOnCallFrame` (using `scopeNumber`) or\nmatched against scopes in source maps.",
+               "experimental": true,
+               "optional": true,
+-              "type": "boolean"
++              "type": "string",
++              "enum": [
++                "no-variables",
++                "all-unavailable"
++              ]
+             }
+           ]
+         },
+@@ -32322,6 +32364,16 @@
+               "experimental": true,
+               "optional": true,
+               "type": "array",
++              "items": {
++                "$ref": "LocationRange"
++              }
++            },
++            {
++              "name": "enterRanges",
++              "description": "Functions whose source range lies within one of the enterRanges are\nentered as if by stepInto, even when they are called (directly or\nindirectly) from a call that is stepped over.",
++              "experimental": true,
++              "optional": true,
++              "type": "array",
+               "items": {
+                 "$ref": "LocationRange"
+               }
