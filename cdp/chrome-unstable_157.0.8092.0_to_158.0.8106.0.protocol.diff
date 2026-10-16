@@ -1,0 +1,61 @@
+--- ./cdp/chrome-unstable_157.0.8092.0.protocol.json	2026-10-16 19:09:06.383760529 +0000
++++ ./cdp/chrome-unstable_158.0.8106.0.protocol.json	2026-10-16 19:09:38.709778231 +0000
+@@ -13570,6 +13570,7 @@
+         {
+           "name": "resolveBlob",
+           "description": "Return UUID of Blob object specified by a remote object id.",
++          "deprecated": true,
+           "parameters": [
+             {
+               "name": "objectId",
+@@ -19456,6 +19457,13 @@
+               "name": "encodedDataLength",
+               "description": "Total number of bytes received for this request.",
+               "type": "number"
++            },
++            {
++              "name": "encodedBodyLength",
++              "description": "Size of the response body before removing content encodings.\nIncludes cached bodies, but excludes headers and transfer framing.",
++              "experimental": true,
++              "optional": true,
++              "type": "number"
+             }
+           ]
+         },
+@@ -22137,8 +22145,6 @@
+             "rewriter",
+             "screen-wake-lock",
+             "serial",
+-            "shared-storage",
+-            "shared-storage-select-url",
+             "smart-card",
+             "speaker-selection",
+             "storage-access",
+@@ -22147,6 +22153,7 @@
+             "sync-xhr",
+             "tools",
+             "translator",
++            "unbounded-element",
+             "unload",
+             "usb",
+             "usb-unrestricted",
+@@ -25052,6 +25059,19 @@
+               "type": "binary"
+             }
+           ]
++        },
++        {
++          "name": "setInputVisualization",
++          "description": "Configures input visualization on the page.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "clicks",
++              "description": "Whether to enable click visualization.",
++              "optional": true,
++              "type": "boolean"
++            }
++          ]
+         }
+       ],
+       "events": [

@@ -1,0 +1,51 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "157.0.8092.0",
+    "to": "158.0.8106.0"
+  },
+  "browserApis": {
+    "added": [
+      "CanvasPaintEvent",
+      "CanvasPaintEvent.prototype",
+      "CanvasPaintEvent.prototype.changedElements",
+      "CanvasRenderingContext2D.prototype.drawElementImage",
+      "ElementGeometryUpdateEvent",
+      "ElementGeometryUpdateEvent.prototype",
+      "ElementGeometryUpdateEvent.prototype.elements",
+      "ElementImage",
+      "ElementImage.prototype",
+      "ElementImage.prototype.close",
+      "GPUQueue.prototype.drawElementImageToTexture",
+      "HTMLCanvasElement.prototype.captureElementImage",
+      "HTMLCanvasElement.prototype.clearElementGeometry",
+      "HTMLCanvasElement.prototype.content",
+      "HTMLCanvasElement.prototype.getElementImageDefaultSize",
+      "HTMLCanvasElement.prototype.getElementTransform",
+      "HTMLCanvasElement.prototype.onelementgeometryupdate",
+      "HTMLCanvasElement.prototype.onpaint",
+      "HTMLCanvasElement.prototype.requestPaint",
+      "HTMLCanvasElement.prototype.updateElementGeometry",
+      "OffscreenCanvas.prototype.clearElementGeometry",
+      "OffscreenCanvas.prototype.getElementImageDefaultSize",
+      "OffscreenCanvas.prototype.updateElementGeometry",
+      "OffscreenCanvasRenderingContext2D.prototype.drawElementImage",
+      "WebGL2RenderingContext.prototype.texElementSubImage2D",
+      "WebGLRenderingContext.prototype.texElementSubImage2D",
+      "WebTransport.prototype.reliability",
+      "WebTransport.supportsReliableOnly"
+    ],
+    "removed": [
+      "XSLTProcessor",
+      "XSLTProcessor.prototype",
+      "XSLTProcessor.prototype.clearParameters",
+      "XSLTProcessor.prototype.getParameter",
+      "XSLTProcessor.prototype.importStylesheet",
+      "XSLTProcessor.prototype.removeParameter",
+      "XSLTProcessor.prototype.reset",
+      "XSLTProcessor.prototype.setParameter",
+      "XSLTProcessor.prototype.transformToDocument",
+      "XSLTProcessor.prototype.transformToFragment"
+    ]
+  }
+}

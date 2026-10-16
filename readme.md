@@ -813,6 +813,150 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 158.0.8106.0 (`2026-10-16`) ⚡
+Added 28 APIs, removed 10 (see: [diff](./browser_apis/chrome-unstable_157.0.8092.0_to_158.0.8106.0.diff), [json](./browser_apis/chrome-unstable_157.0.8092.0_to_158.0.8106.0.json), [full list](./browser_apis/chrome-unstable_158.0.8106.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_157.0.8092.0.json	2026-10-16 19:09:05.833760064 +0000
++++ ./browser_apis/chrome-unstable_158.0.8106.0.json	2026-10-16 19:09:38.696778226 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9479,
++  "browserApiCount": 9497,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -902,6 +902,9 @@
+     "CanvasGradient",
+     "CanvasGradient.prototype",
+     "CanvasGradient.prototype.addColorStop",
++    "CanvasPaintEvent",
++    "CanvasPaintEvent.prototype",
++    "CanvasPaintEvent.prototype.changedElements",
+     "CanvasPattern",
+     "CanvasPattern.prototype",
+     "CanvasPattern.prototype.setTransform",
+@@ -921,6 +924,7 @@
+     "CanvasRenderingContext2D.prototype.createPattern",
+     "CanvasRenderingContext2D.prototype.createRadialGradient",
+     "CanvasRenderingContext2D.prototype.direction",
++    "CanvasRenderingContext2D.prototype.drawElementImage",
+     "CanvasRenderingContext2D.prototype.drawFocusIfNeeded",
+     "CanvasRenderingContext2D.prototype.drawImage",
+     "CanvasRenderingContext2D.prototype.ellipse",
+@@ -1424,6 +1428,12 @@
+     "EditContext.prototype.updateSelection",
+     "EditContext.prototype.updateSelectionBounds",
+     "EditContext.prototype.updateText",
++    "ElementGeometryUpdateEvent",
++    "ElementGeometryUpdateEvent.prototype",
++    "ElementGeometryUpdateEvent.prototype.elements",
++    "ElementImage",
++    "ElementImage.prototype",
++    "ElementImage.prototype.close",
+     "ElementInternals",
+     "ElementInternals.prototype",
+     "ElementInternals.prototype.ariaActionsElements",
+@@ -1855,6 +1865,7 @@
+     "GPUQueue",
+     "GPUQueue.prototype",
+     "GPUQueue.prototype.copyExternalImageToTexture",
++    "GPUQueue.prototype.drawElementImageToTexture",
+     "GPUQueue.prototype.label",
+     "GPUQueue.prototype.onSubmittedWorkDone",
+     "GPUQueue.prototype.submit",
+@@ -2205,12 +2216,21 @@
+     "HTMLCameraElement.prototype.track",
+     "HTMLCanvasElement",
+     "HTMLCanvasElement.prototype",
++    "HTMLCanvasElement.prototype.captureElementImage",
+     "HTMLCanvasElement.prototype.captureStream",
++    "HTMLCanvasElement.prototype.clearElementGeometry",
++    "HTMLCanvasElement.prototype.content",
+     "HTMLCanvasElement.prototype.getContext",
++    "HTMLCanvasElement.prototype.getElementImageDefaultSize",
++    "HTMLCanvasElement.prototype.getElementTransform",
+     "HTMLCanvasElement.prototype.height",
++    "HTMLCanvasElement.prototype.onelementgeometryupdate",
++    "HTMLCanvasElement.prototype.onpaint",
++    "HTMLCanvasElement.prototype.requestPaint",
+     "HTMLCanvasElement.prototype.toBlob",
+     "HTMLCanvasElement.prototype.toDataURL",
+     "HTMLCanvasElement.prototype.transferControlToOffscreen",
++    "HTMLCanvasElement.prototype.updateElementGeometry",
+     "HTMLCanvasElement.prototype.width",
+     "HTMLDListElement",
+     "HTMLDListElement.prototype",
+@@ -4223,12 +4243,15 @@
+     "OfflineAudioContext.prototype.suspend",
+     "OffscreenCanvas",
+     "OffscreenCanvas.prototype",
++    "OffscreenCanvas.prototype.clearElementGeometry",
+     "OffscreenCanvas.prototype.convertToBlob",
+     "OffscreenCanvas.prototype.getContext",
++    "OffscreenCanvas.prototype.getElementImageDefaultSize",
+     "OffscreenCanvas.prototype.height",
+     "OffscreenCanvas.prototype.oncontextlost",
+     "OffscreenCanvas.prototype.oncontextrestored",
+     "OffscreenCanvas.prototype.transferToImageBitmap",
++    "OffscreenCanvas.prototype.updateElementGeometry",
+     "OffscreenCanvas.prototype.width",
+     "OffscreenCanvasRenderingContext2D",
+     "OffscreenCanvasRenderingContext2D.prototype",
+@@ -4246,6 +4269,7 @@
+     "OffscreenCanvasRenderingContext2D.prototype.createPattern",
+     "OffscreenCanvasRenderingContext2D.prototype.createRadialGradient",
+     "OffscreenCanvasRenderingContext2D.prototype.direction",
++    "OffscreenCanvasRenderingContext2D.prototype.drawElementImage",
+     "OffscreenCanvasRenderingContext2D.prototype.drawImage",
+     "OffscreenCanvasRenderingContext2D.prototype.ellipse",
+     "OffscreenCanvasRenderingContext2D.prototype.fill",
+@@ -8013,6 +8037,7 @@
+     "WebGL2RenderingContext.prototype.stencilMaskSeparate",
+     "WebGL2RenderingContext.prototype.stencilOp",
+     "WebGL2RenderingContext.prototype.stencilOpSeparate",
++    "WebGL2RenderingContext.prototype.texElementSubImage2D",
+     "WebGL2RenderingContext.prototype.texImage2D",
+     "WebGL2RenderingContext.prototype.texImage3D",
+     "WebGL2RenderingContext.prototype.texParameterf",
+@@ -8204,6 +8229,7 @@
+     "WebGLRenderingContext.prototype.stencilMaskSeparate",
+     "WebGLRenderingContext.prototype.stencilOp",
+     "WebGLRenderingContext.prototype.stencilOpSeparate",
++    "WebGLRenderingContext.prototype.texElementSubImage2D",
+     "WebGLRenderingContext.prototype.texImage2D",
+     "WebGLRenderingContext.prototype.texParameterf",
+     "WebGLRenderingContext.prototype.texParameteri",
+@@ -8363,7 +8389,9 @@
+     "WebTransport.prototype.incomingUnidirectionalStreams",
+     "WebTransport.prototype.protocol",
+     "WebTransport.prototype.ready",
++    "WebTransport.prototype.reliability",
+     "WebTransport.prototype.responseHeaders",
++    "WebTransport.supportsReliableOnly",
+     "WebTransportBidirectionalStream",
+     "WebTransportBidirectionalStream.prototype",
+     "WebTransportBidirectionalStream.prototype.readable",
+@@ -9101,16 +9129,6 @@
+     "XRWebGLSubImage.prototype.motionVectorTexture",
+     "XRWebGLSubImage.prototype.motionVectorTextureHeight",
+     "XRWebGLSubImage.prototype.motionVectorTextureWidth",
+-    "XSLTProcessor",
+-    "XSLTProcessor.prototype",
+-    "XSLTProcessor.prototype.clearParameters",
+-    "XSLTProcessor.prototype.getParameter",
+-    "XSLTProcessor.prototype.importStylesheet",
+-    "XSLTProcessor.prototype.removeParameter",
+-    "XSLTProcessor.prototype.reset",
+-    "XSLTProcessor.prototype.setParameter",
+-    "XSLTProcessor.prototype.transformToDocument",
+-    "XSLTProcessor.prototype.transformToFragment",
+     "alert",
+     "atob",
+     "blur",
+```
+
+  
 #### 157.0.8092.0 (`2026-10-9`) ⚡
 Added 51 APIs, removed 13 (see: [diff](./browser_apis/chrome-unstable_157.0.8081.0_to_157.0.8092.0.diff), [json](./browser_apis/chrome-unstable_157.0.8081.0_to_157.0.8092.0.json), [full list](./browser_apis/chrome-unstable_157.0.8092.0.json))
  ```diff
@@ -2582,29 +2726,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7753.0
   
 #### 148.0.7753.0 (`2026-3-26`) 
 No browser API changes.
-
-  
-#### 148.0.7743.0 (`2026-3-24`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7730.2_to_148.0.7743.0.diff), [json](./browser_apis/chrome-unstable_148.0.7730.2_to_148.0.7743.0.json), [full list](./browser_apis/chrome-unstable_148.0.7743.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_148.0.7730.2.json	2026-03-24 17:17:19.955214282 +0000
-+++ ./browser_apis/chrome-unstable_148.0.7743.0.json	2026-03-24 17:17:59.659789983 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9325,
-+  "browserApiCount": 9326,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1088,6 +1088,7 @@
-     "CreateMonitor.prototype",
-     "CreateMonitor.prototype.ondownloadprogress",
-     "Credential",
-+    "Credential.isConditionalMediationAvailable",
-     "Credential.prototype",
-     "Credential.prototype.id",
-     "Credential.prototype.type",
-```
 
   <!-- browserapis:end -->
