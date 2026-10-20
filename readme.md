@@ -5,6 +5,39 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 156.0.8078.47 (`2026-10-20`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_155.0.8059.84_to_156.0.8078.47.diff), [json](./browser_apis/chrome-stable_155.0.8059.84_to_156.0.8078.47.json), [full list](./browser_apis/chrome-stable_156.0.8078.47.json))
+ ```diff
+--- ./browser_apis/chrome-stable_155.0.8059.84.json	2026-10-20 21:57:43.269022984 +0000
++++ ./browser_apis/chrome-stable_156.0.8078.47.json	2026-10-20 21:58:09.366717991 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 9441,
++  "browserApiCount": 9444,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -9372,6 +9372,7 @@
+     "webkitMediaStream.prototype.onremovetrack",
+     "webkitMediaStream.prototype.removeTrack",
+     "webkitRTCPeerConnection",
++    "webkitRTCPeerConnection.cancelDiagnosticLogging",
+     "webkitRTCPeerConnection.generateCertificate",
+     "webkitRTCPeerConnection.prototype",
+     "webkitRTCPeerConnection.prototype.addIceCandidate",
+@@ -9419,6 +9420,8 @@
+     "webkitRTCPeerConnection.prototype.setLocalDescription",
+     "webkitRTCPeerConnection.prototype.setRemoteDescription",
+     "webkitRTCPeerConnection.prototype.signalingState",
++    "webkitRTCPeerConnection.startDiagnosticLogging",
++    "webkitRTCPeerConnection.stopDiagnosticLogging",
+     "webkitRequestAnimationFrame",
+     "webkitRequestFileSystem",
+     "webkitResolveLocalFileSystemURL",
+```
+
+  
 #### 155.0.8059.84 (`2026-10-15`) 
 No browser API changes.
 
@@ -804,10 +837,6 @@ No browser API changes.
 
   
 #### 149.0.7827.114 (`2026-6-11`) 
-No browser API changes.
-
-  
-#### 149.0.7827.102 (`2026-6-8`) 
 No browser API changes.
 
   
