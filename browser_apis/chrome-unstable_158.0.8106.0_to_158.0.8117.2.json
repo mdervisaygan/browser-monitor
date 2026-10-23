@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "158.0.8106.0",
+    "to": "158.0.8117.2"
+  },
+  "browserApis": {
+    "added": [
+      "PerformanceLongAnimationFrameTiming.prototype.layoutDuration",
+      "PerformanceLongAnimationFrameTiming.prototype.styleDuration",
+      "PerformanceScriptTiming.prototype.forcedLayoutDuration",
+      "PerformanceScriptTiming.prototype.forcedStyleDuration",
+      "SVGTextPathElement.prototype.side"
+    ],
+    "removed": []
+  }
+}

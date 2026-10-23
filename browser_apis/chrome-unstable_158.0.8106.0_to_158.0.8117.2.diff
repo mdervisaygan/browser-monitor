@@ -1,0 +1,42 @@
+--- ./browser_apis/chrome-unstable_158.0.8106.0.json	2026-10-23 17:59:38.313021017 +0000
++++ ./browser_apis/chrome-unstable_158.0.8117.2.json	2026-10-23 18:00:19.680379846 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9497,
++  "browserApiCount": 9502,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4869,11 +4869,13 @@
+     "PerformanceLongAnimationFrameTiming.prototype",
+     "PerformanceLongAnimationFrameTiming.prototype.blockingDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.firstUIEventTimestamp",
++    "PerformanceLongAnimationFrameTiming.prototype.layoutDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.paintTime",
+     "PerformanceLongAnimationFrameTiming.prototype.presentationTime",
+     "PerformanceLongAnimationFrameTiming.prototype.renderStart",
+     "PerformanceLongAnimationFrameTiming.prototype.scripts",
+     "PerformanceLongAnimationFrameTiming.prototype.styleAndLayoutStart",
++    "PerformanceLongAnimationFrameTiming.prototype.styleDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.toJSON",
+     "PerformanceLongTaskTiming",
+     "PerformanceLongTaskTiming.prototype",
+@@ -4958,7 +4960,9 @@
+     "PerformanceScriptTiming",
+     "PerformanceScriptTiming.prototype",
+     "PerformanceScriptTiming.prototype.executionStart",
++    "PerformanceScriptTiming.prototype.forcedLayoutDuration",
+     "PerformanceScriptTiming.prototype.forcedStyleAndLayoutDuration",
++    "PerformanceScriptTiming.prototype.forcedStyleDuration",
+     "PerformanceScriptTiming.prototype.invoker",
+     "PerformanceScriptTiming.prototype.invokerType",
+     "PerformanceScriptTiming.prototype.pauseDuration",
+@@ -6209,6 +6213,7 @@
+     "SVGTextPathElement.prototype",
+     "SVGTextPathElement.prototype.href",
+     "SVGTextPathElement.prototype.method",
++    "SVGTextPathElement.prototype.side",
+     "SVGTextPathElement.prototype.spacing",
+     "SVGTextPathElement.prototype.startOffset",
+     "SVGTextPositioningElement",

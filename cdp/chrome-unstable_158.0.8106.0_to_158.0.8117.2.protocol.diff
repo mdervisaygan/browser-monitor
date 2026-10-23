@@ -1,0 +1,58 @@
+--- ./cdp/chrome-unstable_158.0.8106.0.protocol.json	2026-10-23 17:59:38.747024867 +0000
++++ ./cdp/chrome-unstable_158.0.8117.2.protocol.json	2026-10-23 18:00:19.688379908 +0000
+@@ -2976,7 +2976,7 @@
+       "commands": [
+         {
+           "name": "trigger",
+-          "description": "Trigger autofill on a form identified by the fieldId.\nIf the field and related form cannot be autofilled, returns an error.",
++          "description": "Trigger autofill on a form identified by the fieldId.\nIf the field and related form cannot be autofilled, returns an error.\nReturns once the values have been applied to the form fields.",
+           "parameters": [
+             {
+               "name": "fieldId",
+@@ -4088,7 +4088,7 @@
+           "parameters": [
+             {
+               "name": "deviceId",
+-              "description": "Required non-empty identifier for the mock camera. This is mapped to an\ninternal virtual-device identifier and is not the MediaDeviceInfo.deviceId\nexposed to the page.",
++              "description": "Required non-empty identifier for the mock camera within the current\nDevTools session. Different sessions can use the same identifier\nwithout replacing each other's cameras. This is not the\nMediaDeviceInfo.deviceId exposed to the page.",
+               "type": "string"
+             }
+           ]
+@@ -18425,7 +18425,8 @@
+                 "SigningQuotaExceeded",
+                 "RefreshedAsWaiter",
+                 "TransientSigningError",
+-                "InScopeRefreshNotYetNeeded"
++                "InScopeRefreshNotYetNeeded",
++                "Canceled"
+               ]
+             },
+             {
+@@ -19995,6 +19996,13 @@
+             },
+             {
+               "name": "IPAddress",
++              "description": "Multicast group address.",
++              "type": "string"
++            },
++            {
++              "name": "sourceAddress",
++              "description": "Source address of a source-specific multicast (SSM) membership. Absent\nfor any-source multicast (ASM) memberships.",
++              "optional": true,
+               "type": "string"
+             }
+           ]
+@@ -20009,6 +20017,13 @@
+             },
+             {
+               "name": "IPAddress",
++              "description": "Multicast group address.",
++              "type": "string"
++            },
++            {
++              "name": "sourceAddress",
++              "description": "Source address of a source-specific multicast (SSM) membership. Absent\nfor any-source multicast (ASM) memberships.",
++              "optional": true,
+               "type": "string"
+             }
+           ]

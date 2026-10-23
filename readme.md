@@ -842,6 +842,54 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 158.0.8117.2 (`2026-10-23`) ⚡
+Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_158.0.8106.0_to_158.0.8117.2.diff), [json](./browser_apis/chrome-unstable_158.0.8106.0_to_158.0.8117.2.json), [full list](./browser_apis/chrome-unstable_158.0.8117.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_158.0.8106.0.json	2026-10-23 17:59:38.313021017 +0000
++++ ./browser_apis/chrome-unstable_158.0.8117.2.json	2026-10-23 18:00:19.680379846 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9497,
++  "browserApiCount": 9502,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4869,11 +4869,13 @@
+     "PerformanceLongAnimationFrameTiming.prototype",
+     "PerformanceLongAnimationFrameTiming.prototype.blockingDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.firstUIEventTimestamp",
++    "PerformanceLongAnimationFrameTiming.prototype.layoutDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.paintTime",
+     "PerformanceLongAnimationFrameTiming.prototype.presentationTime",
+     "PerformanceLongAnimationFrameTiming.prototype.renderStart",
+     "PerformanceLongAnimationFrameTiming.prototype.scripts",
+     "PerformanceLongAnimationFrameTiming.prototype.styleAndLayoutStart",
++    "PerformanceLongAnimationFrameTiming.prototype.styleDuration",
+     "PerformanceLongAnimationFrameTiming.prototype.toJSON",
+     "PerformanceLongTaskTiming",
+     "PerformanceLongTaskTiming.prototype",
+@@ -4958,7 +4960,9 @@
+     "PerformanceScriptTiming",
+     "PerformanceScriptTiming.prototype",
+     "PerformanceScriptTiming.prototype.executionStart",
++    "PerformanceScriptTiming.prototype.forcedLayoutDuration",
+     "PerformanceScriptTiming.prototype.forcedStyleAndLayoutDuration",
++    "PerformanceScriptTiming.prototype.forcedStyleDuration",
+     "PerformanceScriptTiming.prototype.invoker",
+     "PerformanceScriptTiming.prototype.invokerType",
+     "PerformanceScriptTiming.prototype.pauseDuration",
+@@ -6209,6 +6213,7 @@
+     "SVGTextPathElement.prototype",
+     "SVGTextPathElement.prototype.href",
+     "SVGTextPathElement.prototype.method",
++    "SVGTextPathElement.prototype.side",
+     "SVGTextPathElement.prototype.spacing",
+     "SVGTextPathElement.prototype.startOffset",
+     "SVGTextPositioningElement",
+```
+
+  
 #### 158.0.8106.0 (`2026-10-16`) ⚡
 Added 28 APIs, removed 10 (see: [diff](./browser_apis/chrome-unstable_157.0.8092.0_to_158.0.8106.0.diff), [json](./browser_apis/chrome-unstable_157.0.8092.0_to_158.0.8106.0.json), [full list](./browser_apis/chrome-unstable_158.0.8106.0.json))
  ```diff
@@ -2751,9 +2799,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7753.0
      "PaymentRequest.prototype.abort",
      "PaymentRequest.prototype.canMakePayment",
 ```
-
-  
-#### 148.0.7753.0 (`2026-3-26`) 
-No browser API changes.
 
   <!-- browserapis:end -->
