@@ -842,6 +842,175 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 159.0.8130.0 (`2026-10-30`) ⚡
+Added 20 APIs, removed 8 (see: [diff](./browser_apis/chrome-unstable_158.0.8117.2_to_159.0.8130.0.diff), [json](./browser_apis/chrome-unstable_158.0.8117.2_to_159.0.8130.0.json), [full list](./browser_apis/chrome-unstable_159.0.8130.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_158.0.8117.2.json	2026-10-30 16:18:24.559546211 +0000
++++ ./browser_apis/chrome-unstable_159.0.8130.0.json	2026-10-30 16:18:55.986072675 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9502,
++  "browserApiCount": 9514,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2088,7 +2088,6 @@
+     "HTMLAllCollection.prototype.namedItem",
+     "HTMLAnchorElement",
+     "HTMLAnchorElement.prototype",
+-    "HTMLAnchorElement.prototype.attributionSrc",
+     "HTMLAnchorElement.prototype.charset",
+     "HTMLAnchorElement.prototype.coords",
+     "HTMLAnchorElement.prototype.download",
+@@ -2120,7 +2119,6 @@
+     "HTMLAreaElement",
+     "HTMLAreaElement.prototype",
+     "HTMLAreaElement.prototype.alt",
+-    "HTMLAreaElement.prototype.attributionSrc",
+     "HTMLAreaElement.prototype.coords",
+     "HTMLAreaElement.prototype.download",
+     "HTMLAreaElement.prototype.hash",
+@@ -2396,7 +2394,6 @@
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
+     "HTMLIFrameElement.prototype.allowPaymentRequest",
+-    "HTMLIFrameElement.prototype.browsingTopics",
+     "HTMLIFrameElement.prototype.contentDocument",
+     "HTMLIFrameElement.prototype.contentWindow",
+     "HTMLIFrameElement.prototype.credentialless",
+@@ -2479,6 +2476,13 @@
+     "HTMLInputElement.prototype.webkitdirectory",
+     "HTMLInputElement.prototype.width",
+     "HTMLInputElement.prototype.willValidate",
++    "HTMLInstallElement",
++    "HTMLInstallElement.prototype",
++    "HTMLInstallElement.prototype.invalidReason",
++    "HTMLInstallElement.prototype.isValid",
++    "HTMLInstallElement.prototype.manifest",
++    "HTMLInstallElement.prototype.manifestId",
++    "HTMLInstallElement.prototype.onvalidationstatuschange",
+     "HTMLLIElement",
+     "HTMLLIElement.prototype",
+     "HTMLLIElement.prototype.type",
+@@ -2652,7 +2656,6 @@
+     "HTMLScriptElement",
+     "HTMLScriptElement.prototype",
+     "HTMLScriptElement.prototype.async",
+-    "HTMLScriptElement.prototype.attributionSrc",
+     "HTMLScriptElement.prototype.blocking",
+     "HTMLScriptElement.prototype.charset",
+     "HTMLScriptElement.prototype.crossOrigin",
+@@ -3090,9 +3093,7 @@
+     "Image.prototype",
+     "Image.prototype.align",
+     "Image.prototype.alt",
+-    "Image.prototype.attributionSrc",
+     "Image.prototype.border",
+-    "Image.prototype.browsingTopics",
+     "Image.prototype.complete",
+     "Image.prototype.constructor",
+     "Image.prototype.crossOrigin",
+@@ -3185,6 +3186,9 @@
+     "InputEvent.prototype.getTargetRanges",
+     "InputEvent.prototype.inputType",
+     "InputEvent.prototype.isComposing",
++    "InstallResultEvent",
++    "InstallResultEvent.prototype",
++    "InstallResultEvent.prototype.result",
+     "Int16Array",
+     "Int16Array.prototype",
+     "Int32Array",
+@@ -3602,6 +3606,7 @@
+     "MathMLElement.prototype.onformdata",
+     "MathMLElement.prototype.ongotpointercapture",
+     "MathMLElement.prototype.oninput",
++    "MathMLElement.prototype.oninstallresult",
+     "MathMLElement.prototype.oninvalid",
+     "MathMLElement.prototype.onkeydown",
+     "MathMLElement.prototype.onkeypress",
+@@ -4005,6 +4010,7 @@
+     "Navigator.prototype.hardwareConcurrency",
+     "Navigator.prototype.hid",
+     "Navigator.prototype.ink",
++    "Navigator.prototype.install",
+     "Navigator.prototype.javaEnabled",
+     "Navigator.prototype.keyboard",
+     "Navigator.prototype.language",
+@@ -4209,6 +4215,7 @@
+     "OfflineAudioContext",
+     "OfflineAudioContext.prototype",
+     "OfflineAudioContext.prototype.audioWorklet",
++    "OfflineAudioContext.prototype.close",
+     "OfflineAudioContext.prototype.constructor",
+     "OfflineAudioContext.prototype.createAnalyser",
+     "OfflineAudioContext.prototype.createBiquadFilter",
+@@ -4557,6 +4564,7 @@
+     "Option.prototype.constructor.prototype.onfullscreenerror",
+     "Option.prototype.constructor.prototype.ongotpointercapture",
+     "Option.prototype.constructor.prototype.oninput",
++    "Option.prototype.constructor.prototype.oninstallresult",
+     "Option.prototype.constructor.prototype.oninvalid",
+     "Option.prototype.constructor.prototype.onkeydown",
+     "Option.prototype.constructor.prototype.onkeypress",
+@@ -6332,6 +6340,7 @@
+     "SVGViewElement.prototype.onformdata",
+     "SVGViewElement.prototype.ongotpointercapture",
+     "SVGViewElement.prototype.oninput",
++    "SVGViewElement.prototype.oninstallresult",
+     "SVGViewElement.prototype.oninvalid",
+     "SVGViewElement.prototype.onkeydown",
+     "SVGViewElement.prototype.onkeypress",
+@@ -8385,11 +8394,14 @@
+     "WebSocketStream.prototype.url",
+     "WebTransport",
+     "WebTransport.prototype",
++    "WebTransport.prototype.anticipatedConcurrentIncomingBidirectionalStreams",
++    "WebTransport.prototype.anticipatedConcurrentIncomingUnidirectionalStreams",
+     "WebTransport.prototype.close",
+     "WebTransport.prototype.closed",
+     "WebTransport.prototype.createBidirectionalStream",
+     "WebTransport.prototype.createUnidirectionalStream",
+     "WebTransport.prototype.datagrams",
++    "WebTransport.prototype.draining",
+     "WebTransport.prototype.incomingBidirectionalStreams",
+     "WebTransport.prototype.incomingUnidirectionalStreams",
+     "WebTransport.prototype.protocol",
+@@ -8528,7 +8540,6 @@
+     "XMLDocument.prototype.ariaNotify",
+     "XMLDocument.prototype.bgColor",
+     "XMLDocument.prototype.body",
+-    "XMLDocument.prototype.browsingTopics",
+     "XMLDocument.prototype.captureEvents",
+     "XMLDocument.prototype.caretPositionFromPoint",
+     "XMLDocument.prototype.caretRangeFromPoint",
+@@ -8655,6 +8666,7 @@
+     "XMLDocument.prototype.onfullscreenerror",
+     "XMLDocument.prototype.ongotpointercapture",
+     "XMLDocument.prototype.oninput",
++    "XMLDocument.prototype.oninstallresult",
+     "XMLDocument.prototype.oninvalid",
+     "XMLDocument.prototype.onkeydown",
+     "XMLDocument.prototype.onkeypress",
+@@ -8782,7 +8794,6 @@
+     "XMLHttpRequest.prototype.responseURL",
+     "XMLHttpRequest.prototype.responseXML",
+     "XMLHttpRequest.prototype.send",
+-    "XMLHttpRequest.prototype.setAttributionReporting",
+     "XMLHttpRequest.prototype.setPrivateToken",
+     "XMLHttpRequest.prototype.setRequestHeader",
+     "XMLHttpRequest.prototype.status",
+@@ -9284,6 +9295,7 @@
+     "ongotpointercapture",
+     "onhashchange",
+     "oninput",
++    "oninstallresult",
+     "oninvalid",
+     "onkeydown",
+     "onkeypress",
+```
+
+  
 #### 158.0.8117.2 (`2026-10-23`) ⚡
 Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_158.0.8106.0_to_158.0.8117.2.diff), [json](./browser_apis/chrome-unstable_158.0.8106.0_to_158.0.8117.2.json), [full list](./browser_apis/chrome-unstable_158.0.8117.2.json))
  ```diff
@@ -2774,30 +2943,6 @@ Added 3 APIs, removed 11 (see: [diff](./browser_apis/chrome-unstable_148.0.7766.
      "WheelEvent.prototype.constructor.prototype.returnValue",
      "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
      "WheelEvent.prototype.constructor.prototype.srcElement",
-```
-
-  
-#### 148.0.7766.3 (`2026-4-2`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_148.0.7753.0_to_148.0.7766.3.diff), [json](./browser_apis/chrome-unstable_148.0.7753.0_to_148.0.7766.3.json), [full list](./browser_apis/chrome-unstable_148.0.7766.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_148.0.7753.0.json	2026-04-02 18:11:33.790315179 +0000
-+++ ./browser_apis/chrome-unstable_148.0.7766.3.json	2026-04-02 18:12:09.000336238 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9326,
-+  "browserApiCount": 9327,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4656,6 +4656,7 @@
-     "PaymentMethodChangeEvent.prototype.methodDetails",
-     "PaymentMethodChangeEvent.prototype.methodName",
-     "PaymentRequest",
-+    "PaymentRequest.getSecurePaymentConfirmationCapabilities",
-     "PaymentRequest.prototype",
-     "PaymentRequest.prototype.abort",
-     "PaymentRequest.prototype.canMakePayment",
 ```
 
   <!-- browserapis:end -->

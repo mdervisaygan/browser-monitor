@@ -1,0 +1,41 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "158.0.8117.2",
+    "to": "159.0.8130.0"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLInstallElement",
+      "HTMLInstallElement.prototype",
+      "HTMLInstallElement.prototype.invalidReason",
+      "HTMLInstallElement.prototype.isValid",
+      "HTMLInstallElement.prototype.manifest",
+      "HTMLInstallElement.prototype.manifestId",
+      "HTMLInstallElement.prototype.onvalidationstatuschange",
+      "InstallResultEvent",
+      "InstallResultEvent.prototype",
+      "InstallResultEvent.prototype.result",
+      "MathMLElement.prototype.oninstallresult",
+      "Navigator.prototype.install",
+      "OfflineAudioContext.prototype.close",
+      "Option.prototype.constructor.prototype.oninstallresult",
+      "SVGViewElement.prototype.oninstallresult",
+      "WebTransport.prototype.anticipatedConcurrentIncomingBidirectionalStreams",
+      "WebTransport.prototype.anticipatedConcurrentIncomingUnidirectionalStreams",
+      "WebTransport.prototype.draining",
+      "XMLDocument.prototype.oninstallresult",
+      "oninstallresult"
+    ],
+    "removed": [
+      "HTMLAnchorElement.prototype.attributionSrc",
+      "HTMLAreaElement.prototype.attributionSrc",
+      "HTMLIFrameElement.prototype.browsingTopics",
+      "HTMLScriptElement.prototype.attributionSrc",
+      "Image.prototype.attributionSrc",
+      "Image.prototype.browsingTopics",
+      "XMLDocument.prototype.browsingTopics",
+      "XMLHttpRequest.prototype.setAttributionReporting"
+    ]
+  }
+}
