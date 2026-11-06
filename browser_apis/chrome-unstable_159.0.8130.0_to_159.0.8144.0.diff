@@ -1,0 +1,51 @@
+--- ./browser_apis/chrome-unstable_159.0.8130.0.json	2026-11-06 21:49:13.426816352 +0000
++++ ./browser_apis/chrome-unstable_159.0.8144.0.json	2026-11-06 21:49:43.162063674 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9514,
++  "browserApiCount": 9515,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2389,7 +2389,6 @@
+     "HTMLHtmlElement.prototype.version",
+     "HTMLIFrameElement",
+     "HTMLIFrameElement.prototype",
+-    "HTMLIFrameElement.prototype.adAuctionHeaders",
+     "HTMLIFrameElement.prototype.align",
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
+@@ -5172,9 +5171,6 @@
+     "PromiseRejectionEvent.prototype",
+     "PromiseRejectionEvent.prototype.promise",
+     "PromiseRejectionEvent.prototype.reason",
+-    "ProtectedAudience",
+-    "ProtectedAudience.prototype",
+-    "ProtectedAudience.prototype.queryFeatureSupport",
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
+@@ -8398,10 +8394,12 @@
+     "WebTransport.prototype.anticipatedConcurrentIncomingUnidirectionalStreams",
+     "WebTransport.prototype.close",
+     "WebTransport.prototype.closed",
++    "WebTransport.prototype.congestionControl",
+     "WebTransport.prototype.createBidirectionalStream",
+     "WebTransport.prototype.createUnidirectionalStream",
+     "WebTransport.prototype.datagrams",
+     "WebTransport.prototype.draining",
++    "WebTransport.prototype.exportKeyingMaterial",
+     "WebTransport.prototype.incomingBidirectionalStreams",
+     "WebTransport.prototype.incomingUnidirectionalStreams",
+     "WebTransport.prototype.protocol",
+@@ -8428,6 +8426,9 @@
+     "WebTransportError.prototype",
+     "WebTransportError.prototype.source",
+     "WebTransportError.prototype.streamErrorCode",
++    "WebTransportReceiveStream",
++    "WebTransportReceiveStream.prototype",
++    "WebTransportReceiveStream.prototype.getStats",
+     "WheelEvent",
+     "WheelEvent.prototype",
+     "WheelEvent.prototype.altKey",

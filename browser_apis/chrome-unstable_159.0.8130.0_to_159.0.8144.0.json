@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "159.0.8130.0",
+    "to": "159.0.8144.0"
+  },
+  "browserApis": {
+    "added": [
+      "WebTransport.prototype.congestionControl",
+      "WebTransport.prototype.exportKeyingMaterial",
+      "WebTransportReceiveStream",
+      "WebTransportReceiveStream.prototype",
+      "WebTransportReceiveStream.prototype.getStats"
+    ],
+    "removed": [
+      "HTMLIFrameElement.prototype.adAuctionHeaders",
+      "ProtectedAudience",
+      "ProtectedAudience.prototype",
+      "ProtectedAudience.prototype.queryFeatureSupport"
+    ]
+  }
+}

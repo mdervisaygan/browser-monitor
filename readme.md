@@ -1164,6 +1164,63 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 159.0.8144.0 (`2026-11-6`) ⚡
+Added 5 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_159.0.8130.0_to_159.0.8144.0.diff), [json](./browser_apis/chrome-unstable_159.0.8130.0_to_159.0.8144.0.json), [full list](./browser_apis/chrome-unstable_159.0.8144.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_159.0.8130.0.json	2026-11-06 21:49:13.426816352 +0000
++++ ./browser_apis/chrome-unstable_159.0.8144.0.json	2026-11-06 21:49:43.162063674 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9514,
++  "browserApiCount": 9515,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2389,7 +2389,6 @@
+     "HTMLHtmlElement.prototype.version",
+     "HTMLIFrameElement",
+     "HTMLIFrameElement.prototype",
+-    "HTMLIFrameElement.prototype.adAuctionHeaders",
+     "HTMLIFrameElement.prototype.align",
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
+@@ -5172,9 +5171,6 @@
+     "PromiseRejectionEvent.prototype",
+     "PromiseRejectionEvent.prototype.promise",
+     "PromiseRejectionEvent.prototype.reason",
+-    "ProtectedAudience",
+-    "ProtectedAudience.prototype",
+-    "ProtectedAudience.prototype.queryFeatureSupport",
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
+@@ -8398,10 +8394,12 @@
+     "WebTransport.prototype.anticipatedConcurrentIncomingUnidirectionalStreams",
+     "WebTransport.prototype.close",
+     "WebTransport.prototype.closed",
++    "WebTransport.prototype.congestionControl",
+     "WebTransport.prototype.createBidirectionalStream",
+     "WebTransport.prototype.createUnidirectionalStream",
+     "WebTransport.prototype.datagrams",
+     "WebTransport.prototype.draining",
++    "WebTransport.prototype.exportKeyingMaterial",
+     "WebTransport.prototype.incomingBidirectionalStreams",
+     "WebTransport.prototype.incomingUnidirectionalStreams",
+     "WebTransport.prototype.protocol",
+@@ -8428,6 +8426,9 @@
+     "WebTransportError.prototype",
+     "WebTransportError.prototype.source",
+     "WebTransportError.prototype.streamErrorCode",
++    "WebTransportReceiveStream",
++    "WebTransportReceiveStream.prototype",
++    "WebTransportReceiveStream.prototype.getStats",
+     "WheelEvent",
+     "WheelEvent.prototype",
+     "WheelEvent.prototype.altKey",
+```
+
+  
 #### 159.0.8130.0 (`2026-10-30`) ⚡
 Added 20 APIs, removed 8 (see: [diff](./browser_apis/chrome-unstable_158.0.8117.2_to_159.0.8130.0.diff), [json](./browser_apis/chrome-unstable_158.0.8117.2_to_159.0.8130.0.json), [full list](./browser_apis/chrome-unstable_159.0.8130.0.json))
  ```diff
@@ -3172,99 +3229,6 @@ Added 32 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_149.0.7779
      "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
      "Worker",
      "Worker.prototype",
-```
-
-  
-#### 149.0.7779.3 (`2026-4-9`) ⚡
-Added 3 APIs, removed 11 (see: [diff](./browser_apis/chrome-unstable_148.0.7766.3_to_149.0.7779.3.diff), [json](./browser_apis/chrome-unstable_148.0.7766.3_to_149.0.7779.3.json), [full list](./browser_apis/chrome-unstable_149.0.7779.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_148.0.7766.3.json	2026-04-09 16:24:38.648637067 +0000
-+++ ./browser_apis/chrome-unstable_149.0.7779.3.json	2026-04-09 16:25:14.369272097 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9327,
-+  "browserApiCount": 9319,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -39,7 +39,6 @@
-     "AnimationEvent.prototype.animationName",
-     "AnimationEvent.prototype.elapsedTime",
-     "AnimationEvent.prototype.pseudoElement",
--    "AnimationEvent.prototype.pseudoTarget",
-     "AnimationPlaybackEvent",
-     "AnimationPlaybackEvent.prototype",
-     "AnimationPlaybackEvent.prototype.currentTime",
-@@ -157,6 +156,7 @@
-     "Audio.prototype.constructor.prototype.ended",
-     "Audio.prototype.constructor.prototype.error",
-     "Audio.prototype.constructor.prototype.load",
-+    "Audio.prototype.constructor.prototype.loading",
-     "Audio.prototype.constructor.prototype.loop",
-     "Audio.prototype.constructor.prototype.mediaKeys",
-     "Audio.prototype.constructor.prototype.muted",
-@@ -721,12 +721,6 @@
-     "CSSPropertyRule.prototype.initialValue",
-     "CSSPropertyRule.prototype.name",
-     "CSSPropertyRule.prototype.syntax",
--    "CSSPseudoElement",
--    "CSSPseudoElement.prototype",
--    "CSSPseudoElement.prototype.element",
--    "CSSPseudoElement.prototype.parent",
--    "CSSPseudoElement.prototype.pseudo",
--    "CSSPseudoElement.prototype.type",
-     "CSSRotate",
-     "CSSRotate.prototype",
-     "CSSRotate.prototype.angle",
-@@ -4515,7 +4509,6 @@
-     "Option.prototype.constructor.prototype.prefix",
-     "Option.prototype.constructor.prototype.prepend",
-     "Option.prototype.constructor.prototype.previousElementSibling",
--    "Option.prototype.constructor.prototype.pseudo",
-     "Option.prototype.constructor.prototype.querySelector",
-     "Option.prototype.constructor.prototype.querySelectorAll",
-     "Option.prototype.constructor.prototype.releasePointerCapture",
-@@ -4792,6 +4785,7 @@
-     "PerformanceResourceTiming.prototype.connectEnd",
-     "PerformanceResourceTiming.prototype.connectStart",
-     "PerformanceResourceTiming.prototype.contentEncoding",
-+    "PerformanceResourceTiming.prototype.contentType",
-     "PerformanceResourceTiming.prototype.decodedBodySize",
-     "PerformanceResourceTiming.prototype.deliveryType",
-     "PerformanceResourceTiming.prototype.domainLookupEnd",
-@@ -6459,7 +6453,6 @@
-     "SharedStorage.prototype.clear",
-     "SharedStorage.prototype.createWorklet",
-     "SharedStorage.prototype.delete",
--    "SharedStorage.prototype.get",
-     "SharedStorage.prototype.run",
-     "SharedStorage.prototype.selectURL",
-     "SharedStorage.prototype.set",
-@@ -7221,7 +7214,6 @@
-     "TransitionEvent.prototype.elapsedTime",
-     "TransitionEvent.prototype.propertyName",
-     "TransitionEvent.prototype.pseudoElement",
--    "TransitionEvent.prototype.pseudoTarget",
-     "Translator",
-     "Translator.availability",
-     "Translator.create",
-@@ -7655,6 +7647,7 @@
-     "WebAssembly.Exception.prototype",
-     "WebAssembly.Exception.prototype.getArg",
-     "WebAssembly.Exception.prototype.is",
-+    "WebAssembly.Exception.prototype.stack",
-     "WebAssembly.Global",
-     "WebAssembly.Global.prototype",
-     "WebAssembly.Global.prototype.value",
-@@ -8256,7 +8249,6 @@
-     "WheelEvent.prototype.constructor.prototype.initEvent",
-     "WheelEvent.prototype.constructor.prototype.initUIEvent",
-     "WheelEvent.prototype.constructor.prototype.preventDefault",
--    "WheelEvent.prototype.constructor.prototype.pseudoTarget",
-     "WheelEvent.prototype.constructor.prototype.returnValue",
-     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
-     "WheelEvent.prototype.constructor.prototype.srcElement",
 ```
 
   <!-- browserapis:end -->
