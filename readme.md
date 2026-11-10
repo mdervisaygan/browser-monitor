@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 157.0.8103.50 (`2026-11-9`) 
+No browser API changes.
+
+  
 #### 157.0.8103.38 (`2026-11-3`) ⚡
 Added 76 APIs, removed 13 (see: [diff](./browser_apis/chrome-stable_156.0.8078.79_to_157.0.8103.38.diff), [json](./browser_apis/chrome-stable_156.0.8078.79_to_157.0.8103.38.json), [full list](./browser_apis/chrome-stable_157.0.8103.38.json))
  ```diff
@@ -1156,10 +1160,6 @@ Added 25 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_149.0.7827.20
      "SpeechRecognition.prototype.stop",
      "SpeechRecognitionErrorEvent",
 ```
-
-  
-#### 149.0.7827.200 (`2026-6-25`) 
-No browser API changes.
 
   
 ### chrome-unstable
