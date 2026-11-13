@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "159.0.8144.0",
+    "to": "160.0.8157.0"
+  },
+  "browserApis": {
+    "added": [
+      "AudioWorklet.prototype.port",
+      "PerformanceResourceTiming.prototype.workerFinalRouterSource",
+      "PerformanceResourceTiming.prototype.workerMatchedRouterSource",
+      "Sanitizer.prototype.setJavascriptURLs",
+      "WebTransport.prototype.createSendGroup",
+      "WebTransport.prototype.getStats",
+      "WebTransportDatagramDuplexStream.prototype.createWritable",
+      "WebTransportDatagramsWritable",
+      "WebTransportDatagramsWritable.prototype",
+      "WebTransportDatagramsWritable.prototype.sendGroup",
+      "WebTransportDatagramsWritable.prototype.sendOrder",
+      "WebTransportSendGroup",
+      "WebTransportSendGroup.prototype",
+      "WebTransportSendGroup.prototype.getStats",
+      "WebTransportSendStream",
+      "WebTransportSendStream.prototype",
+      "WebTransportSendStream.prototype.getStats",
+      "WebTransportSendStream.prototype.sendGroup",
+      "WebTransportSendStream.prototype.sendOrder"
+    ],
+    "removed": []
+  }
+}

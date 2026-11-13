@@ -1023,6 +1023,95 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 160.0.8157.0 (`2026-11-13`) ⚡
+Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_159.0.8144.0_to_160.0.8157.0.diff), [json](./browser_apis/chrome-unstable_159.0.8144.0_to_160.0.8157.0.json), [full list](./browser_apis/chrome-unstable_160.0.8157.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_159.0.8144.0.json	2026-11-13 18:12:17.448663312 +0000
++++ ./browser_apis/chrome-unstable_160.0.8157.0.json	2026-11-13 18:13:06.344439658 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9515,
++  "browserApiCount": 9534,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -314,6 +314,7 @@
+     "AudioWorklet.prototype",
+     "AudioWorklet.prototype.addModule",
+     "AudioWorklet.prototype.constructor",
++    "AudioWorklet.prototype.port",
+     "AudioWorkletNode",
+     "AudioWorkletNode.prototype",
+     "AudioWorkletNode.prototype.onprocessorerror",
+@@ -4960,7 +4961,9 @@
+     "PerformanceResourceTiming.prototype.toJSON",
+     "PerformanceResourceTiming.prototype.transferSize",
+     "PerformanceResourceTiming.prototype.workerCacheLookupStart",
++    "PerformanceResourceTiming.prototype.workerFinalRouterSource",
+     "PerformanceResourceTiming.prototype.workerFinalSourceType",
++    "PerformanceResourceTiming.prototype.workerMatchedRouterSource",
+     "PerformanceResourceTiming.prototype.workerMatchedSourceType",
+     "PerformanceResourceTiming.prototype.workerRouterEvaluationStart",
+     "PerformanceResourceTiming.prototype.workerStart",
+@@ -6418,6 +6421,7 @@
+     "Sanitizer.prototype.replaceElementWithChildren",
+     "Sanitizer.prototype.setComments",
+     "Sanitizer.prototype.setDataAttributes",
++    "Sanitizer.prototype.setJavascriptURLs",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+@@ -8396,10 +8400,12 @@
+     "WebTransport.prototype.closed",
+     "WebTransport.prototype.congestionControl",
+     "WebTransport.prototype.createBidirectionalStream",
++    "WebTransport.prototype.createSendGroup",
+     "WebTransport.prototype.createUnidirectionalStream",
+     "WebTransport.prototype.datagrams",
+     "WebTransport.prototype.draining",
+     "WebTransport.prototype.exportKeyingMaterial",
++    "WebTransport.prototype.getStats",
+     "WebTransport.prototype.incomingBidirectionalStreams",
+     "WebTransport.prototype.incomingUnidirectionalStreams",
+     "WebTransport.prototype.protocol",
+@@ -8413,6 +8419,7 @@
+     "WebTransportBidirectionalStream.prototype.writable",
+     "WebTransportDatagramDuplexStream",
+     "WebTransportDatagramDuplexStream.prototype",
++    "WebTransportDatagramDuplexStream.prototype.createWritable",
+     "WebTransportDatagramDuplexStream.prototype.incomingHighWaterMark",
+     "WebTransportDatagramDuplexStream.prototype.incomingMaxAge",
+     "WebTransportDatagramDuplexStream.prototype.incomingMaxBufferedDatagrams",
+@@ -8422,6 +8429,10 @@
+     "WebTransportDatagramDuplexStream.prototype.outgoingMaxBufferedDatagrams",
+     "WebTransportDatagramDuplexStream.prototype.readable",
+     "WebTransportDatagramDuplexStream.prototype.writable",
++    "WebTransportDatagramsWritable",
++    "WebTransportDatagramsWritable.prototype",
++    "WebTransportDatagramsWritable.prototype.sendGroup",
++    "WebTransportDatagramsWritable.prototype.sendOrder",
+     "WebTransportError",
+     "WebTransportError.prototype",
+     "WebTransportError.prototype.source",
+@@ -8429,6 +8440,14 @@
+     "WebTransportReceiveStream",
+     "WebTransportReceiveStream.prototype",
+     "WebTransportReceiveStream.prototype.getStats",
++    "WebTransportSendGroup",
++    "WebTransportSendGroup.prototype",
++    "WebTransportSendGroup.prototype.getStats",
++    "WebTransportSendStream",
++    "WebTransportSendStream.prototype",
++    "WebTransportSendStream.prototype.getStats",
++    "WebTransportSendStream.prototype.sendGroup",
++    "WebTransportSendStream.prototype.sendOrder",
+     "WheelEvent",
+     "WheelEvent.prototype",
+     "WheelEvent.prototype.altKey",
+```
+
+  
 #### 159.0.8144.0 (`2026-11-6`) ⚡
 Added 5 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_159.0.8130.0_to_159.0.8144.0.diff), [json](./browser_apis/chrome-unstable_159.0.8130.0_to_159.0.8144.0.json), [full list](./browser_apis/chrome-unstable_159.0.8144.0.json))
  ```diff
@@ -2990,104 +3079,6 @@ Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_149.0.7795.
      "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
      "WheelEvent.prototype.constructor.prototype.view",
      "WheelEvent.prototype.constructor.prototype.which",
-```
-
-  
-#### 149.0.7795.2 (`2026-4-17`) ⚡
-Added 32 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_149.0.7779.3_to_149.0.7795.2.diff), [json](./browser_apis/chrome-unstable_149.0.7779.3_to_149.0.7795.2.json), [full list](./browser_apis/chrome-unstable_149.0.7795.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_149.0.7779.3.json	2026-04-17 17:13:17.430789569 +0000
-+++ ./browser_apis/chrome-unstable_149.0.7795.2.json	2026-04-17 17:14:05.166195145 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9319,
-+  "browserApiCount": 9333,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3195,6 +3195,7 @@
-     "Intl.Locale.prototype.region",
-     "Intl.Locale.prototype.script",
-     "Intl.Locale.prototype.toString",
-+    "Intl.Locale.prototype.variants",
-     "Intl.NumberFormat",
-     "Intl.NumberFormat.prototype",
-     "Intl.NumberFormat.prototype.format",
-@@ -3301,6 +3302,19 @@
-     "LanguageDetector.prototype.expectedInputLanguages",
-     "LanguageDetector.prototype.inputQuota",
-     "LanguageDetector.prototype.measureInputUsage",
-+    "LanguageModel",
-+    "LanguageModel.availability",
-+    "LanguageModel.create",
-+    "LanguageModel.prototype",
-+    "LanguageModel.prototype.append",
-+    "LanguageModel.prototype.clone",
-+    "LanguageModel.prototype.contextUsage",
-+    "LanguageModel.prototype.contextWindow",
-+    "LanguageModel.prototype.destroy",
-+    "LanguageModel.prototype.measureContextUsage",
-+    "LanguageModel.prototype.oncontextoverflow",
-+    "LanguageModel.prototype.prompt",
-+    "LanguageModel.prototype.promptStreaming",
-     "LargestContentfulPaint",
-     "LargestContentfulPaint.prototype",
-     "LargestContentfulPaint.prototype.element",
-@@ -8236,27 +8250,9 @@
-     "WheelEvent.prototype.clientY",
-     "WheelEvent.prototype.constructor",
-     "WheelEvent.prototype.constructor.prototype",
--    "WheelEvent.prototype.constructor.prototype.bubbles",
--    "WheelEvent.prototype.constructor.prototype.cancelBubble",
--    "WheelEvent.prototype.constructor.prototype.cancelable",
--    "WheelEvent.prototype.constructor.prototype.composed",
--    "WheelEvent.prototype.constructor.prototype.composedPath",
--    "WheelEvent.prototype.constructor.prototype.constructor",
--    "WheelEvent.prototype.constructor.prototype.currentTarget",
--    "WheelEvent.prototype.constructor.prototype.defaultPrevented",
-     "WheelEvent.prototype.constructor.prototype.detail",
--    "WheelEvent.prototype.constructor.prototype.eventPhase",
--    "WheelEvent.prototype.constructor.prototype.initEvent",
-     "WheelEvent.prototype.constructor.prototype.initUIEvent",
--    "WheelEvent.prototype.constructor.prototype.preventDefault",
--    "WheelEvent.prototype.constructor.prototype.returnValue",
-     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
--    "WheelEvent.prototype.constructor.prototype.srcElement",
--    "WheelEvent.prototype.constructor.prototype.stopImmediatePropagation",
--    "WheelEvent.prototype.constructor.prototype.stopPropagation",
--    "WheelEvent.prototype.constructor.prototype.target",
--    "WheelEvent.prototype.constructor.prototype.timeStamp",
--    "WheelEvent.prototype.constructor.prototype.type",
-     "WheelEvent.prototype.constructor.prototype.view",
-     "WheelEvent.prototype.constructor.prototype.which",
-     "WheelEvent.prototype.ctrlKey",
-@@ -8295,7 +8291,25 @@
-     "WindowControlsOverlay.prototype.visible",
-     "WindowControlsOverlayGeometryChangeEvent",
-     "WindowControlsOverlayGeometryChangeEvent.prototype",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.bubbles",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelBubble",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelable",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.composed",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.composedPath",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.constructor",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.currentTarget",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.defaultPrevented",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.eventPhase",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.initEvent",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.preventDefault",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.returnValue",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.srcElement",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.stopImmediatePropagation",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.stopPropagation",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.target",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.timeStamp",
-     "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.type",
-     "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
-     "Worker",
-     "Worker.prototype",
 ```
 
   <!-- browserapis:end -->

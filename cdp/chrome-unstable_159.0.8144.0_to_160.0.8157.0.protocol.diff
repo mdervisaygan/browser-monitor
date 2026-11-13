@@ -1,0 +1,46 @@
+--- ./cdp/chrome-unstable_159.0.8144.0.protocol.json	2026-11-13 18:12:17.879659296 +0000
++++ ./cdp/chrome-unstable_160.0.8157.0.protocol.json	2026-11-13 18:13:06.356439565 +0000
+@@ -4261,16 +4261,6 @@
+           ]
+         },
+         {
+-          "name": "addPrivacySandboxEnrollmentOverride",
+-          "description": "Allows a site to use privacy sandbox features that require enrollment\nwithout the site actually being enrolled. Only supported on page targets.",
+-          "parameters": [
+-            {
+-              "name": "url",
+-              "type": "string"
+-            }
+-          ]
+-        },
+-        {
+           "name": "getGlobalPrivacyControl",
+           "description": "Gets the current globally-applied privacy control status\nSee https://www.w3.org/TR/gpc/#get-global-privacy-control",
+           "experimental": true,
+@@ -31101,7 +31091,7 @@
+         },
+         {
+           "name": "invokeTool",
+-          "description": "Invokes a registered tool.",
++          "description": "Invokes a registered tool. Exactly one of `toolId` and `toolName` must be specified; the command fails if both or\nneither are.",
+           "parameters": [
+             {
+               "name": "frameId",
+@@ -31109,8 +31099,16 @@
+               "$ref": "Page.FrameId"
+             },
+             {
++              "name": "toolId",
++              "description": "Identifier of the tool to invoke, as reported in `Tool.toolId`. Invokes exactly that tool, and fails if it is no\nlonger registered, even if a different tool has since been registered under the same name.",
++              "optional": true,
++              "$ref": "ToolId"
++            },
++            {
+               "name": "toolName",
+-              "description": "Name of the tool to invoke.",
++              "description": "Name of the tool to invoke. Deprecated: invokes whichever tool is registered under this name when the command\nis handled, which may not be the tool the client observed if the page has since replaced it. Use `toolId`\ninstead.",
++              "deprecated": true,
++              "optional": true,
+               "type": "string"
+             },
+             {
