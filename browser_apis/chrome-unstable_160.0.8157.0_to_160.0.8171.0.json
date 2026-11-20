@@ -1,0 +1,27 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "160.0.8157.0",
+    "to": "160.0.8171.0"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "Fence",
+      "Fence.prototype",
+      "Fence.prototype.getNestedConfigs",
+      "Fence.prototype.reportEvent",
+      "Fence.prototype.setReportEventDataForAutomaticBeacons",
+      "FencedFrameConfig",
+      "FencedFrameConfig.prototype",
+      "HTMLFencedFrameElement",
+      "HTMLFencedFrameElement.prototype",
+      "HTMLFencedFrameElement.prototype.allow",
+      "HTMLFencedFrameElement.prototype.config",
+      "HTMLFencedFrameElement.prototype.height",
+      "HTMLFencedFrameElement.prototype.sandbox",
+      "HTMLFencedFrameElement.prototype.width",
+      "fence"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+--- ./cdp/chrome-unstable_160.0.8157.0.protocol.json	2026-11-20 22:00:22.092108220 +0000
++++ ./cdp/chrome-unstable_160.0.8171.0.protocol.json	2026-11-20 22:01:01.498059206 +0000
+@@ -3601,6 +3601,20 @@
+               "type": "string"
+             }
+           ]
++        },
++        {
++          "name": "simulateGATTMtuChange",
++          "description": "Simulates the ATT MTU exchange procedure from Bluetooth Core Specification\nVol 3 Part F 3.4.2 establishing |mtu| for the connection to the peripheral\nwith |address|.",
++          "parameters": [
++            {
++              "name": "address",
++              "type": "string"
++            },
++            {
++              "name": "mtu",
++              "type": "integer"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -7391,7 +7405,6 @@
+             "select-listbox",
+             "permission-icon",
+             "overscroll-area-parent",
+-            "overscroll-backdrop",
+             "skeleton"
+           ]
+         },
+@@ -26133,7 +26146,8 @@
+             "PrerenderHostReused",
+             "FormSubmitWhenPrerendering",
+             "CrossDocumentRestart",
+-            "PrefetchFailedCrossOriginSubframe"
++            "PrefetchFailedCrossOriginSubframe",
++            "UnexpectedMainFrameNavigation"
+           ]
+         },
+         {
+@@ -28893,7 +28907,7 @@
+             },
+             {
+               "name": "subtype",
+-              "description": "Provides additional details for specific target types. For example, for\nthe type of \"page\", this may be set to \"prerender\".",
++              "description": "Provides additional details for specific target types. For example, for\nthe type of \"page\", this may be set to \"prerender\", and for \"tab\", this\nmay be set to \"unloaded\". An unloaded tab has a history entry, but no\ndocument for it: for example, after the tab was discarded, after\nsession restore without load, or after the renderer crashed. The tab\nstays unloaded until a new document commits. A new tab that has not\nnavigated is not unloaded. Target.targetInfoChanged reports changes of\nthis value for tabs.",
+               "experimental": true,
+               "optional": true,
+               "type": "string"
+@@ -31806,6 +31820,28 @@
+           ]
+         },
+         {
++          "name": "getScopeChain",
++          "description": "Returns the current scope chain of the given call frame. Unlike the scope chain reported\nwith the `paused` event, it reflects changes made to variables since then (e.g. via\n`evaluateOnCallFrame` or `setVariableValue`).",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "callFrameId",
++              "description": "Call frame identifier to get the scope chain for.",
++              "$ref": "CallFrameId"
++            }
++          ],
++          "returns": [
++            {
++              "name": "scopeChain",
++              "description": "Scope chain for the call frame.",
++              "type": "array",
++              "items": {
++                "$ref": "Scope"
++              }
++            }
++          ]
++        },
++        {
+           "name": "getScriptSource",
+           "description": "Returns source for the script with given id.",
+           "parameters": [
+@@ -33635,13 +33671,13 @@
+             },
+             {
+               "name": "value",
+-              "description": "Remote object value in case of primitive values or JSON values (if it was requested).",
++              "description": "Remote object value in case of primitive values or JSON values (if it was requested).\nNot set in `deep` serialization mode, see `deepSerializedValue`.",
+               "optional": true,
+               "type": "any"
+             },
+             {
+               "name": "unserializableValue",
+-              "description": "Primitive value which can not be JSON-stringified does not have `value`, but gets this\nproperty.",
++              "description": "Primitive value which can not be JSON-stringified does not have `value`, but gets this\nproperty. Not set in `deep` serialization mode, see `deepSerializedValue`.",
+               "optional": true,
+               "$ref": "UnserializableValue"
+             },

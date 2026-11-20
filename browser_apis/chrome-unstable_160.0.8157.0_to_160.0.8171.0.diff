@@ -1,0 +1,46 @@
+--- ./browser_apis/chrome-unstable_160.0.8157.0.json	2026-11-20 22:00:21.512109306 +0000
++++ ./browser_apis/chrome-unstable_160.0.8171.0.json	2026-11-20 22:01:01.489059220 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9534,
++  "browserApiCount": 9519,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1565,13 +1565,6 @@
+     "FederatedCredential.prototype.name",
+     "FederatedCredential.prototype.protocol",
+     "FederatedCredential.prototype.provider",
+-    "Fence",
+-    "Fence.prototype",
+-    "Fence.prototype.getNestedConfigs",
+-    "Fence.prototype.reportEvent",
+-    "Fence.prototype.setReportEventDataForAutomaticBeacons",
+-    "FencedFrameConfig",
+-    "FencedFrameConfig.prototype",
+     "FetchLaterResult",
+     "FetchLaterResult.prototype",
+     "FetchLaterResult.prototype.activated",
+@@ -2270,13 +2263,6 @@
+     "HTMLEmbedElement.prototype.src",
+     "HTMLEmbedElement.prototype.type",
+     "HTMLEmbedElement.prototype.width",
+-    "HTMLFencedFrameElement",
+-    "HTMLFencedFrameElement.prototype",
+-    "HTMLFencedFrameElement.prototype.allow",
+-    "HTMLFencedFrameElement.prototype.config",
+-    "HTMLFencedFrameElement.prototype.height",
+-    "HTMLFencedFrameElement.prototype.sandbox",
+-    "HTMLFencedFrameElement.prototype.width",
+     "HTMLFieldSetElement",
+     "HTMLFieldSetElement.prototype",
+     "HTMLFieldSetElement.prototype.checkValidity",
+@@ -9235,7 +9221,6 @@
+     "eval",
+     "event",
+     "external",
+-    "fence",
+     "fetch",
+     "fetchLater",
+     "find",

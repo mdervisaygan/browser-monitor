@@ -1188,6 +1188,58 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 160.0.8171.0 (`2026-11-20`) ⚡
+Added 0 APIs, removed 15 (see: [diff](./browser_apis/chrome-unstable_160.0.8157.0_to_160.0.8171.0.diff), [json](./browser_apis/chrome-unstable_160.0.8157.0_to_160.0.8171.0.json), [full list](./browser_apis/chrome-unstable_160.0.8171.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_160.0.8157.0.json	2026-11-20 22:00:21.512109306 +0000
++++ ./browser_apis/chrome-unstable_160.0.8171.0.json	2026-11-20 22:01:01.489059220 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 9534,
++  "browserApiCount": 9519,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1565,13 +1565,6 @@
+     "FederatedCredential.prototype.name",
+     "FederatedCredential.prototype.protocol",
+     "FederatedCredential.prototype.provider",
+-    "Fence",
+-    "Fence.prototype",
+-    "Fence.prototype.getNestedConfigs",
+-    "Fence.prototype.reportEvent",
+-    "Fence.prototype.setReportEventDataForAutomaticBeacons",
+-    "FencedFrameConfig",
+-    "FencedFrameConfig.prototype",
+     "FetchLaterResult",
+     "FetchLaterResult.prototype",
+     "FetchLaterResult.prototype.activated",
+@@ -2270,13 +2263,6 @@
+     "HTMLEmbedElement.prototype.src",
+     "HTMLEmbedElement.prototype.type",
+     "HTMLEmbedElement.prototype.width",
+-    "HTMLFencedFrameElement",
+-    "HTMLFencedFrameElement.prototype",
+-    "HTMLFencedFrameElement.prototype.allow",
+-    "HTMLFencedFrameElement.prototype.config",
+-    "HTMLFencedFrameElement.prototype.height",
+-    "HTMLFencedFrameElement.prototype.sandbox",
+-    "HTMLFencedFrameElement.prototype.width",
+     "HTMLFieldSetElement",
+     "HTMLFieldSetElement.prototype",
+     "HTMLFieldSetElement.prototype.checkValidity",
+@@ -9235,7 +9221,6 @@
+     "eval",
+     "event",
+     "external",
+-    "fence",
+     "fetch",
+     "fetchLater",
+     "find",
+```
+
+  
 #### 160.0.8157.0 (`2026-11-13`) ⚡
 Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_159.0.8144.0_to_160.0.8157.0.diff), [json](./browser_apis/chrome-unstable_159.0.8144.0_to_160.0.8157.0.json), [full list](./browser_apis/chrome-unstable_160.0.8157.0.json))
  ```diff
@@ -3184,66 +3236,5 @@ No browser API changes.
   
 #### 149.0.7815.2 (`2026-4-30`) 
 No browser API changes.
-
-  
-#### 149.0.7808.0 (`2026-4-24`) ⚡
-Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_149.0.7795.2_to_149.0.7808.0.diff), [json](./browser_apis/chrome-unstable_149.0.7795.2_to_149.0.7808.0.json), [full list](./browser_apis/chrome-unstable_149.0.7808.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_149.0.7795.2.json	2026-04-24 23:10:56.461429440 +0000
-+++ ./browser_apis/chrome-unstable_149.0.7808.0.json	2026-04-24 23:11:29.737021568 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 9333,
-+  "browserApiCount": 9343,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -39,6 +39,7 @@
-     "AnimationEvent.prototype.animationName",
-     "AnimationEvent.prototype.elapsedTime",
-     "AnimationEvent.prototype.pseudoElement",
-+    "AnimationEvent.prototype.pseudoTarget",
-     "AnimationPlaybackEvent",
-     "AnimationPlaybackEvent.prototype",
-     "AnimationPlaybackEvent.prototype.currentTime",
-@@ -721,6 +722,12 @@
-     "CSSPropertyRule.prototype.initialValue",
-     "CSSPropertyRule.prototype.name",
-     "CSSPropertyRule.prototype.syntax",
-+    "CSSPseudoElement",
-+    "CSSPseudoElement.prototype",
-+    "CSSPseudoElement.prototype.element",
-+    "CSSPseudoElement.prototype.parent",
-+    "CSSPseudoElement.prototype.pseudo",
-+    "CSSPseudoElement.prototype.type",
-     "CSSRotate",
-     "CSSRotate.prototype",
-     "CSSRotate.prototype.angle",
-@@ -4523,6 +4530,7 @@
-     "Option.prototype.constructor.prototype.prefix",
-     "Option.prototype.constructor.prototype.prepend",
-     "Option.prototype.constructor.prototype.previousElementSibling",
-+    "Option.prototype.constructor.prototype.pseudo",
-     "Option.prototype.constructor.prototype.querySelector",
-     "Option.prototype.constructor.prototype.querySelectorAll",
-     "Option.prototype.constructor.prototype.releasePointerCapture",
-@@ -7228,6 +7236,7 @@
-     "TransitionEvent.prototype.elapsedTime",
-     "TransitionEvent.prototype.propertyName",
-     "TransitionEvent.prototype.pseudoElement",
-+    "TransitionEvent.prototype.pseudoTarget",
-     "Translator",
-     "Translator.availability",
-     "Translator.create",
-@@ -8252,6 +8261,7 @@
-     "WheelEvent.prototype.constructor.prototype",
-     "WheelEvent.prototype.constructor.prototype.detail",
-     "WheelEvent.prototype.constructor.prototype.initUIEvent",
-+    "WheelEvent.prototype.constructor.prototype.pseudoTarget",
-     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
-     "WheelEvent.prototype.constructor.prototype.view",
-     "WheelEvent.prototype.constructor.prototype.which",
-```
 
   <!-- browserapis:end -->
